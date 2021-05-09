@@ -1,13 +1,73 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,700;1,400;1,600&family=Open+Sans:wght@400;600&display=swap");
+html {
+  scroll-behavior: smooth;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #0B0B14;
 }
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  color: #fff;
+}
+
+@media screen and (min-width: 780px) {
+  .bg-svg-64px {
+    position: absolute;
+    background-color: #00f;
+    top: -64px;
+  }
+  .bg-svg310px {
+    position: absolute;
+    background-color: #00f;
+    top: 310px;
+  }
+  .bg-svg-39px {
+    position: absolute;
+    background-color: #00f;
+    top: -39px;
+  }
+  .bg-svg160px {
+    position: absolute;
+    background-color: #00f;
+    top: 160px;
+  }
+  .bg-svg180px {
+    position: absolute;
+    background-color: #00f;
+    top: 180px;
+  }
+  .bg-svg-9px {
+    position: absolute;
+    background-color: #00f;
+    top: -9px;
+  }
+  .bg-svg-38px {
+    position: absolute;
+    background-color: #00f;
+    top: -38px;
+  }
+  .bg-svg222px {
+    position: absolute;
+    background-color: #00f;
+    top: 222px;
+  }
+}
+
+@media screen and (max-width: 780px) {
+  .bg-svg {
+    position: absolute;
+    top: 500px;
+  }
+}
+
+.music-route {
+  display: -ms-grid;
+  display: grid;
+  padding: 0;
+}
+/*# sourceMappingURL=index.css.map */

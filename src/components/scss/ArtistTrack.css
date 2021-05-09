@@ -1,0 +1,32 @@
+.artist-track-route .artist-track-info {
+  text-align: center;
+}
+
+.artist-track-route .artist-track-info .artist-image-wrapper {
+  margin: 0 auto;
+  width: 150px;
+  height: 150px;
+  background-color: #293EF8;
+  overflow: hidden;
+  border-radius: 18px;
+}
+
+.artist-track-route .artist-track-info .artist-image-wrapper img {
+  width: 100%;
+}
+
+.artist-track-route .artist-track-info .artist-name {
+  font-family: "Montserrat", sans-serif !important;
+  font-weight: 700 !important;
+  font-size: 24px !important;
+  margin-top: 12px;
+}
+
+.artist-track-route .artist-track-info .artist-music-length {
+  font-family: "Open sans", sans-serif !important;
+  font-weight: 500 !important;
+  font-size: 14px !important;
+  opacity: 80%;
+  margin: 3px 0 12px 0;
+}
+/*# sourceMappingURL=ArtistTrack.css.map */

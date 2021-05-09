@@ -1,0 +1,116 @@
+@import '../../mixins.scss';
+
+.music-track-bar {
+  width: 100%;
+  padding: 17px 22px;
+  background-color: $pri-blue;
+  color: #fff;
+  background-color: $pri-blue;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  border-radius: 18px 18px 0 0;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  overflow: hidden;
+
+  @include desktop {
+    display: none;
+    visibility: none;
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  .duration-progress-container {
+    position: absolute;
+    top: 7.5px;
+    left: 22px;
+    height: 3px;
+    width: calc(100% - 44px);
+    transition: 0.1s ease-in-out;
+    
+    .duration-progress {
+      height: 100%;
+      border-radius: 4px;
+      background-color: #fff;
+    }
+  }
+  
+  .click-indication {
+    position: absolute;
+    width: 35px;
+    height: 3px;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 7.5px;
+    border-radius: 4px;
+    background-color: #fff;
+  }
+  
+
+  .music-info-displays {
+    display: flex;
+    white-space: nowrap;
+    overflow: hidden;
+  
+    .music-artist-image {
+      width: 46px;
+      height: 46px;
+      min-width: 46px;
+      min-height: 46px;
+      margin-right: 8px;
+      border-radius: 8px;
+      overflow: hidden;
+
+      img { width: 100%; }
+    }
+
+    .music-texts {
+
+      .music-title {
+        @include fontProp('Montserrat', 700, 18px);
+      }
+
+      .music-artist-name {
+        @include fontProp('Open sans', 400, 12px);
+      }
+    }
+  }
+
+  .music-track-events {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-left: 14px;
+    position: relative;
+
+    &::before {
+      content: '';
+      position: absolute;
+      width: 25px;
+      height: 100%;
+      top: 0;
+      left: -25px;
+      background: linear-gradient(90deg, rgba($pri-blue, 0), $pri-blue);
+      z-index: 2;
+    }
+
+    .prev-but { margin-right: 10px; }
+    .next-but { margin-left: 10px; }
+
+    button {
+      height: 32px;
+      border: none;
+      outline: none;
+      background-color: transparent;
+      padding: 0;
+      margin: 0;
+      cursor: pointer;
+      @include flexCenter;
+
+      &:disabled {
+        opacity: 0.2;
+      }
+    }
+  }
+}

@@ -1,0 +1,116 @@
+@import '../../mixins.scss';
+
+ul {
+  padding: 0;
+  margin: 0;
+
+  li {
+    list-style-type: none;
+    
+    a {
+      text-decoration: none;
+    }
+  }
+}
+
+.route-container {
+  padding: 0 22px calc(80px + 22px) 22px;
+
+  .route-grid-container {
+    grid-template-columns: auto;
+    // position: relative;
+
+    .bx {
+      display: none;
+      width: 250px;
+      height: 300px;
+      border-radius: 24px;
+      background-color: #f00;
+      position: sticky;
+      top: 0;
+    }
+
+    .route-grid-wrap {
+      margin-top: 110px;
+
+      .app-body {
+        width: 100%;
+        background-color: $drk_blue;
+        position: fixed;
+        top: 56px;
+        z-index: 99;
+
+        .location-title {
+          @include fontProp('Montserrat', 700, 36px);
+          margin-top: 12px;
+
+          span {
+            transition: 0.2s ease-out;
+          }
+
+          .back-arrow {
+            position: absolute;
+            cursor: pointer;
+            transition: 0.2s ease-in;
+          }
+        }
+
+        .route-links {
+          @include fontProp('Montserrat', 700, 14px);
+          display: flex;
+
+          li {
+            padding: 12px 0 12px 0;
+            
+            &:not(:last-child) {
+              margin-right: 18px;
+            }
+
+            a {
+              @include fontProp('Montserrat', 700, 14px);
+            }
+
+            @include desktop {
+              &:not(:last-child) {
+                margin-right: 24px;
+              }
+
+              a {
+                @include fontProp('Montserrat', 700, 16px);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  
+  @include desktop {
+    padding: 0 112px 80px 112px;
+
+    .route-grid-container {
+      display: grid;
+      grid-template-columns: auto 250px;
+      grid-gap: 24px;
+
+      .bx { display: block; }
+
+      .route-grid-wrap {
+        // margin-top: 125px;
+        margin-top: 0;
+        padding-top: 24px;
+        height: 722px;
+        overflow-y: scroll;
+
+        .app-body {
+          position: static;
+          top: 78px;
+
+          .location-title {
+            @include fontProp('Montserrat', 700, 48px);
+          } 
+        }
+      }
+    }
+  }
+}

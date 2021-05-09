@@ -1,0 +1,48 @@
+@import '../../mixins.scss';
+
+.nav {
+  width: 100%;
+  padding: 16px 22px;
+  background: $drk_blue;
+  position: sticky;
+  top: 0;
+  z-index: 99;
+  @include flexCenter;
+
+  @include desktop {
+    padding: 24px 112px;
+    justify-content: flex-start;
+    background: linear-gradient($drk_blue, rgba($drk_blue, 0));
+
+    .menu-block-container {
+      display: none;
+    }
+  }
+
+  .menu-block-container {
+    position: absolute;
+    left: 22px;
+  }
+
+  .nav-logo-container {
+    display: grid;
+    grid-template-columns: auto auto;
+
+    img {
+      height: 24px;
+
+      @include desktop {
+        height: 30px;
+      }
+    }
+    .logo-label {
+      margin-left: 24px;
+      display: none;
+      @include fontProp('Montserrat', 700, 24px);
+
+      @include desktop {
+        display: block;
+      }
+    }
+  }
+}

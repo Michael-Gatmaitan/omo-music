@@ -1,0 +1,50 @@
+.music-block {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 46px 1fr;
+      grid-template-columns: 46px 1fr;
+  padding: 5px 0;
+  border-radius: 13px;
+  -webkit-transition: 0.1s ease-in-out;
+  transition: 0.1s ease-in-out;
+}
+
+.music-block:active .music-info .music-title, .music-block:active .music-info .music-artist {
+  color: #293EF8;
+}
+
+.music-block .music-artist-image {
+  width: 46px;
+  height: 46px;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.music-block .music-artist-image img {
+  width: 100%;
+  height: 100%;
+}
+
+.music-block .music-info {
+  white-space: nowrap;
+  overflow: hidden;
+  margin-left: 8px;
+}
+
+.music-block .music-info .music-title {
+  -webkit-transition: 0.1s ease-out;
+  transition: 0.1s ease-out;
+  font-family: "Montserrat", sans-serif !important;
+  font-weight: 700 !important;
+  font-size: 18px !important;
+}
+
+.music-block .music-info .music-artist {
+  -webkit-transition: 0.1s ease-out;
+  transition: 0.1s ease-out;
+  font-family: "Open sans", sans-serif !important;
+  font-weight: 400 !important;
+  font-size: 12px !important;
+  color: rgba(255, 255, 255, 0.58);
+}
+/*# sourceMappingURL=MusicBlock.css.map */

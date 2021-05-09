@@ -1,0 +1,81 @@
+
+@import url(
+  'https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,700;1,400;1,600&family=Open+Sans:wght@400;600&display=swap'
+);
+
+@import './mixins.scss';
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: $drk_blue;
+  // &::-webkit-scrollbar {
+  //   display: none;
+  // }
+}
+
+// ::-webkit-scrollbar {
+//   background-color: #121212;
+// }
+
+// ::-webkit-scrollbar-thumb {
+//   background-color: #00f;
+//   border: solid 5px #121212;
+//   border-radius: 12px;
+// }
+
+// .route-container {
+//   margin-bottom: calc(77px + 24px);
+// }
+
+* {
+  box-sizing: border-box;
+  // @include fontProp('Montserrat', 600, 24px);
+  color: #fff;
+}
+
+// Landing Page
+
+@media screen and (min-width: 780px) {
+  $positionX: -64px, 310px,
+  -39px, 160px, 180px,
+  -9px, -38px, 222px;
+
+  $positionY: -26px, 351px,
+  542px, 691px, 986px,
+  1141px, 1541px, 1788px;
+
+  @each $pos in $positionX {
+
+    .bg-svg#{$pos} {
+      position: absolute;
+      background-color: #00f;
+      top: $pos;
+      // left: #{list.nth($positionY,(list.index($positionX, $pos))
+    }
+  }
+}
+
+@media screen and (max-width: 780px) {
+  $positionX: 500px;
+
+  .bg-svg {
+    position: absolute;
+    top: $positionX;
+  }
+}
+
+
+// Overall components styles
+
+// Musics
+.music-route {
+  display: grid;
+  padding: 0;
+}
+
+// Artists

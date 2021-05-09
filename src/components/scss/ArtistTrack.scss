@@ -1,0 +1,29 @@
+@import '../../mixins.scss';
+
+.artist-track-route {
+
+  .artist-track-info {
+    text-align: center;
+    
+    .artist-image-wrapper {
+      margin: 0 auto;
+      width: 150px;
+      height: 150px;
+      background-color: $pri-blue;
+      overflow: hidden;
+      border-radius: 18px;
+
+      img { width: 100%; }
+    }
+
+    .artist-name {
+      @include fontProp('Montserrat', 700, 24px);
+      margin-top: 12px;
+    }
+    .artist-music-length {
+      @include fontProp('Open sans', 500, 14px);
+      opacity: 80%;
+      margin: 3px 0 12px 0;
+    }
+  }
+}

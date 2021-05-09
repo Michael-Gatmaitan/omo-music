@@ -1,0 +1,49 @@
+@import '../../mixins.scss';
+
+.music-block {
+  display: grid;
+  grid-template-columns: 46px 1fr;
+  padding: 5px 0;
+  border-radius: 13px;;
+  transition: 0.1s ease-in-out;
+  // user-select: none;
+
+  &:active {
+    
+    .music-info {
+      .music-title, .music-artist {
+        color: $pri-blue;
+      }
+    }
+  }
+
+  .music-artist-image {
+    width: 46px;
+    height: 46px;
+    border-radius: 8px;
+    overflow: hidden;
+    
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  .music-info {
+    white-space: nowrap;
+    overflow: hidden;
+    margin-left: 8px;
+
+    .music-title {
+      transition: 0.1s ease-out;
+      @include fontProp('Montserrat', 700, 18px);
+    }
+
+    .music-artist {
+      transition: 0.1s ease-out;
+      // opacity: 0.58;
+      @include fontProp('Open sans', 400, 12px);
+      color: rgba(255, 255, 255, 0.58);
+    }
+  }
+}
