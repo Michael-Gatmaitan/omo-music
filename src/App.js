@@ -71,7 +71,7 @@ function App() {
 
   // State for MusicTrackMobile
 
-  let [isTrackOpen, setIsTrackOpen] = useState(true);
+  let [isTrackOpen, setIsTrackOpen] = useState(false);
 
   return (
     <>
