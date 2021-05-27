@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useContext } from 'react'; 
+import React, { useEffect, useState } from 'react'; 
 import { useParams } from 'react-router-dom';
 import { bodyData } from '../dataSource';
 import MusicBlock from './MusicBlock';
@@ -32,7 +32,7 @@ const ArtistTrack = () => {
           {data.artistName}
         </div>
         <div className="artist-music-length">
-          {data.musics.length} Songs
+          {data.musics.length} {data.musics.length > 1 ? 'Songs' : 'Song'}
         </div>
 
       </div>

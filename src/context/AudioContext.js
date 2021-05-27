@@ -6,7 +6,7 @@ class AudioContextProvider extends Component {
 	
 	state = JSON.parse(localStorage.getItem("bodyState")) || {
 		showBackArrow: false,
-		currentPage: '',
+		currentPage: 'Musics',
 
 		activeMusicRawTitle: '',
 		activeMusic: '',
@@ -29,13 +29,12 @@ class AudioContextProvider extends Component {
 
 		favorites: [],
 
-
 		activeMusicInfo: {
 			path: '',
 			title: '',
 			artistName: ''
 		}
-	}
+	};
 
 	componentDidMount() {
 		if (localStorage.getItem("bodyState") !== null) {
@@ -50,7 +49,7 @@ class AudioContextProvider extends Component {
 
 	triggerShowBackArrow = bool => this.setState({ showBackArrow: bool });
 
-	setCurrentPage = title => this.setState({ setCurrentPage: title });
+	setCurrentPage = title => this.setState({ currentPage: title });
 
 	triggerPlaying = bool => this.setState({ playing: bool });
 
@@ -72,30 +71,33 @@ class AudioContextProvider extends Component {
 		this.updateTrackHistory(data);
 	}
 
-	// 
+	setRecentPlayed = newItem => {
+		let recentPlayed = [...this.state.recentPlayed];
+		recentPlayed.unshift(newItem);
+		this.setState({ recentPlayed });
+	}
 
 	updateTrackHistory = track => {
 		let trackHistory = [...this.state.trackHistory];
 		
-		if (track === trackHistory[trackHistory.length - 1]) {
+		if (!(track === trackHistory[trackHistory.length - 1])) {
 
-		} else {
+			// Moving played song to the bottom if
+			// it exist on trackHistory
 			trackHistory = trackHistory.includes(track)
 			? trackHistory.filter(history => history !== track)
 			: trackHistory;
 
+			// Removing first element when length
+			// of trackList reaches 100
 			if (trackHistory.length >= 100)
 				trackHistory.shift();
 			
 			trackHistory.push(track);
 			this.setState({ trackHistory });
-
-			let recentPlayed = [];
-			for (let i = trackHistory.length; i > 0; i -= 1)
-				recentPlayed.push(trackHistory[i - 1]);
-
-			this.setState({ recentPlayed });
 		}
+
+		this.setRecentPlayed(track);
 		
 		let trackHistoryIndex = trackHistory.lastIndexOf(track);
 		this.setState({ trackHistoryIndex });
@@ -156,7 +158,6 @@ class AudioContextProvider extends Component {
 			trackHistoryIndex += 1;
 			this.setState({ trackHistoryIndex });
 			nextSong = trackHistory[trackHistoryIndex];
-			console.log(nextSong);
 		}
 
 		if (!(trackHistoryIndex !== trackHistory.length - 1)) {
@@ -168,6 +169,14 @@ class AudioContextProvider extends Component {
 	changeMusicEndState = () => {
 		this.setState({ order: !this.state.order });
 		this.setState({ shuffle: !this.state.shuffle });
+	}
+
+	// Music Blocks Option's Function
+	addQueue = music => {
+		let trackListTemp = [...this.state.trackList];
+		trackListTemp.push(music);
+		
+		this.setState({ trackList: trackListTemp });
 	}
 
 	render() {
@@ -186,10 +195,12 @@ class AudioContextProvider extends Component {
 				updateCurrentTime: this.updateCurrentTime,
 			},
 
-			handleChangeMusic: this.handleChangeMusic,
-			handleMusicEnded: this.handleMusicEnded,
-			changeMusicEndState: this.changeMusicEndState,
-			updateTrackLoc: this.updateTrackLoc,
+			...{
+				handleChangeMusic: this.handleChangeMusic,
+				handleMusicEnded: this.handleMusicEnded,
+				changeMusicEndState: this.changeMusicEndState,
+				updateTrackLoc: this.updateTrackLoc,
+			},
 
 			...{
 				musicSelectedFromLoc: this.musicSelectedFromLoc,
@@ -219,7 +230,18 @@ class AudioContextProvider extends Component {
 			...{
 				triggerShowBackArrow: this.triggerShowBackArrow,
 				showBackArrow: this.state.showBackArrow
-			}
+			},
+
+			...{
+				currentPage: this.state.currentPage,
+				setCurrentPage: this.setCurrentPage
+			},
+
+			activeMusicInfo: this.state.activeMusicInfo,
+
+			// Options content's functions
+				/* Add Queue - x */
+			
 		};
 
 		return (

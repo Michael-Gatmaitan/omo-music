@@ -5,9 +5,9 @@
 
 @import './mixins.scss';
 
-html {
-  scroll-behavior: smooth;
-}
+// html {
+//   scroll-behavior: smooth;
+// }
 
 body {
   margin: 0;
@@ -38,38 +38,6 @@ body {
   color: #fff;
 }
 
-// Landing Page
-
-@media screen and (min-width: 780px) {
-  $positionX: -64px, 310px,
-  -39px, 160px, 180px,
-  -9px, -38px, 222px;
-
-  $positionY: -26px, 351px,
-  542px, 691px, 986px,
-  1141px, 1541px, 1788px;
-
-  @each $pos in $positionX {
-
-    .bg-svg#{$pos} {
-      position: absolute;
-      background-color: #00f;
-      top: $pos;
-      // left: #{list.nth($positionY,(list.index($positionX, $pos))
-    }
-  }
-}
-
-@media screen and (max-width: 780px) {
-  $positionX: 500px;
-
-  .bg-svg {
-    position: absolute;
-    top: $positionX;
-  }
-}
-
-
 // Overall components styles
 
 // Musics
@@ -79,3 +47,28 @@ body {
 }
 
 // Artists
+::-webkit-scrollbar {
+  display: none;
+}
+
+@include desktop {
+  ::-webkit-scrollbar {
+    background-color: $drk_blue;
+    display: block;
+    width: 12px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background-color: $drk_blue;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background-color: $pri_blue;
+    border-radius: 10px;
+    min-height: 60px;
+
+    &:hover {
+      background-color: #0a1fda;
+    }
+  }
+}

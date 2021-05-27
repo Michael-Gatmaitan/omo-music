@@ -29,15 +29,16 @@
   top: 7.5px;
   left: 22px;
   height: 3px;
+  overflow: hidden;
   width: calc(100% - 44px);
-  -webkit-transition: 0.1s ease-in-out;
-  transition: 0.1s ease-in-out;
 }
 
 .music-track-bar .duration-progress-container .duration-progress {
   height: 100%;
   border-radius: 4px;
   background-color: #fff;
+  -webkit-transition: 0.1s ease-in-out;
+  transition: 0.1s ease-in-out;
 }
 
 .music-track-bar .click-indication {
@@ -58,6 +59,7 @@
   display: flex;
   white-space: nowrap;
   overflow: hidden;
+  pointer-events: none;
 }
 
 .music-track-bar .music-info-displays .music-artist-image {

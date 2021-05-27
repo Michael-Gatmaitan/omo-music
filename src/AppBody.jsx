@@ -7,7 +7,11 @@ import { AudioContext } from './context/AudioContext';
 
 const AppBody = () => {
 
-  let { showBackArrow } = useContext(AudioContext);
+  let {
+    showBackArrow,
+    currentPage,
+    setCurrentPage
+  } = useContext(AudioContext);
   let history = useHistory();
 
   return (
@@ -28,16 +32,16 @@ const AppBody = () => {
         style={{
           marginLeft: showBackArrow ? '46px' : '0px'
         }}
-      >Musics</span>
+      >{currentPage}</span>
     </div>
     <ul className="route-links">
-      <li>
+      <li onClick={ () => setCurrentPage("Musics") }>
         <Link to="/">Musics</Link>
       </li>
-      <li>
+      <li onClick={ () => setCurrentPage("Playlists") }>
         <Link to="/playlists">Playlists</Link>
       </li> 
-      <li>
+      <li onClick={ () => setCurrentPage("Artists") }>
         <Link to="/artists">Artists</Link>
       </li>
     </ul>

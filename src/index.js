@@ -3,18 +3,17 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 // import LandingPage from './LandingPage';
-import { BrowserRouter } from "react-router-dom";
-
+import { BrowserRouter as Router } from 'react-router-dom';
 // Contexts
 import AudioContextProvider from './context/AudioContext';
 
 ReactDOM.render(
-  <BrowserRouter>
+  <Router>
     <AudioContextProvider>
       {/* {localStorage.length === 0 ? <LandingPage /> : <App />} */}
       <App />
     </AudioContextProvider>
-  </BrowserRouter>,
+  </Router>,
   document.getElementById('root')
 );
 

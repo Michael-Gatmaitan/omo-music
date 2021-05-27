@@ -20,17 +20,6 @@ ul li a {
       grid-template-columns: auto;
 }
 
-.route-container .route-grid-container .bx {
-  display: none;
-  width: 250px;
-  height: 300px;
-  border-radius: 24px;
-  background-color: #f00;
-  position: -webkit-sticky;
-  position: sticky;
-  top: 0;
-}
-
 .route-container .route-grid-container .route-grid-wrap {
   margin-top: 110px;
 }
@@ -103,12 +92,9 @@ ul li a {
   .route-container .route-grid-container {
     display: -ms-grid;
     display: grid;
-    -ms-grid-columns: auto 250px;
-        grid-template-columns: auto 250px;
+    -ms-grid-columns: auto 360px;
+        grid-template-columns: auto 360px;
     grid-gap: 24px;
-  }
-  .route-container .route-grid-container .bx {
-    display: block;
   }
   .route-container .route-grid-container .route-grid-wrap {
     margin-top: 0;

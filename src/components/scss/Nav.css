@@ -23,8 +23,6 @@
     -webkit-box-pack: start;
         -ms-flex-pack: start;
             justify-content: flex-start;
-    background: -webkit-gradient(linear, left top, left bottom, from(#0B0B14), to(rgba(11, 11, 20, 0)));
-    background: linear-gradient(#0B0B14, rgba(11, 11, 20, 0));
   }
   .nav .menu-block-container {
     display: none;

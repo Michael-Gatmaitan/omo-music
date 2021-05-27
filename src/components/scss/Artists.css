@@ -7,6 +7,13 @@
   grid-gap: 10px;
 }
 
+@media (min-width: 780px) {
+  .artists-route {
+    grid-gap: 15px;
+    padding-right: 15px;
+  }
+}
+
 @media (min-width: 460px) {
   .artists-route {
     grid-auto-rows: 203px;
@@ -24,6 +31,20 @@
     -ms-grid-columns: auto auto auto;
         grid-template-columns: auto auto auto;
     grid-auto-rows: 153px;
+  }
+}
+
+@media (min-width: 760px) {
+  .artists-route {
+    grid-auto-rows: 163px;
+  }
+}
+
+@media (min-width: 760px) {
+  .artists-route {
+    -ms-grid-columns: auto auto auto auto;
+        grid-template-columns: auto auto auto auto;
+    grid-auto-rows: 163px;
   }
 }
 

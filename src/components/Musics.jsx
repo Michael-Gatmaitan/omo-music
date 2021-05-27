@@ -13,7 +13,13 @@ const Musics = () => {
 
     setMusicDataTable(dataTemp);
 
-    // setInterval(() => console.clear(), 5000);
+    // artistID aligner
+    // let bDataTemp = [...bodyData];
+    // bDataTemp.map((e, i) => {
+    //   e.artistID = i;
+    // });
+
+    // console.log(bDataTemp);
   }, []);
   
   return (

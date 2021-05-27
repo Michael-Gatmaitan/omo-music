@@ -1,10 +1,11 @@
 
-import React, { useEffect, useRef, useContext } from 'react';
+import React, { useState, useEffect, useRef, useContext } from 'react';
 import ReactAudioPlayer from 'react-audio-player';
 import { useLocation } from 'react-router-dom';
 
 // Components
 import MusicTrackBar from './components/MusicTrackBar';
+import MusicTrackMobile from './components/MusicTrackMobile';
 
 // Contexts 
 import { AudioContext } from './context/AudioContext';
@@ -24,8 +25,9 @@ function App() {
     triggerPlaying,
     // Used for shuffling || ordering music onEnd.
     next,
-    showBackArrow,
-    triggerShowBackArrow
+    triggerShowBackArrow,
+
+    setCurrentPage
   } = audioContext;
 
   let aud = useRef(null);
@@ -51,8 +53,8 @@ function App() {
   }
 
   useEffect(() => {
-    let { pathname } = location;
-    console.log(location);
+    let { pathname } = location
+
     let slashCount = countSlashURL(pathname);
     if (slashCount > 1) {
       triggerShowBackArrow(true);
@@ -60,7 +62,16 @@ function App() {
       triggerShowBackArrow(false);
     }
 
+    setCurrentPage(
+      pathname.length === 1 ? "Musics" :
+      pathname.includes("playlists") ? "Playlists" :
+      pathname.includes("artists") ? "Artists" : ""
+    )
   }, [location]);
+
+  // State for MusicTrackMobile
+
+  let [isTrackOpen, setIsTrackOpen] = useState(true);
 
   return (
     <>
@@ -68,20 +79,27 @@ function App() {
         src={ activeMusic }
         autoPlay
         ref={ e => aud = e }
-        listenInterval={1500}
-        onLoadedMetadata={() => updateTotalDuration(aud.audioEl.current.duration)}
-        onListen={() => updateCurrentTime(aud.audioEl.current.currentTime)}
+        listenInterval={1000}
+        onLoadedMetadata={ _ => updateTotalDuration(aud.audioEl.current.duration) }
+        onListen={ e => updateCurrentTime(e) }
         onEnded={ next }
 
-        onPlay={ () => triggerPlaying(true) }
-        onPause={ () => triggerPlaying(false) }
+        onPlay={ _ => triggerPlaying(true) }
+        onPause={ _ => triggerPlaying(false) }
       />
 
       <Nav />
 
+      <MusicTrackMobile
+        isTrackOpen={isTrackOpen}
+        setIsTrackOpen={setIsTrackOpen}
+      />
+
       <RouteContainer />
 
-      <MusicTrackBar />
+      <MusicTrackBar
+        setIsTrackOpen={setIsTrackOpen}
+      />
     </>
   )
 }

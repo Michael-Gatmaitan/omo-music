@@ -26,13 +26,14 @@
     top: 7.5px;
     left: 22px;
     height: 3px;
+    overflow: hidden;
     width: calc(100% - 44px);
-    transition: 0.1s ease-in-out;
-    
+
     .duration-progress {
       height: 100%;
       border-radius: 4px;
       background-color: #fff;
+      transition: 0.1s ease-in-out;
     }
   }
   
@@ -52,6 +53,7 @@
     display: flex;
     white-space: nowrap;
     overflow: hidden;
+    pointer-events: none;
   
     .music-artist-image {
       width: 46px;

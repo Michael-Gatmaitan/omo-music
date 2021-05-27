@@ -11,6 +11,13 @@
 # production
 /build
 
+# artist_image
+/public/artists-image
+/public/disp-image
+
+# music_data
+/public/music-data
+
 # misc
 .DS_Store
 .env.local
@@ -21,3 +28,6 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+# Local Netlify folder
+.netlify

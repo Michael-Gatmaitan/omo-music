@@ -6,6 +6,11 @@
   grid-auto-rows: 153px;
   grid-gap: 10px;
 
+  @include desktop {
+    grid-gap: 15px;
+    padding-right: 15px;
+  }
+
   @include customMediaQuery(460px) {
     grid-auto-rows: 203px;
   }
@@ -17,6 +22,15 @@
   @include customMediaQuery(660px) {
     grid-template-columns: auto auto auto;
     grid-auto-rows: 153px;
+  }
+
+  @include customMediaQuery(760px) {
+    grid-auto-rows: 163px;
+  }
+  
+  @include customMediaQuery(760px) {
+    grid-template-columns: auto auto auto auto;
+    grid-auto-rows: 163px;
   }
 
   .artist-block {

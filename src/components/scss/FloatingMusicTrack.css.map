@@ -1,0 +1,10 @@
+{
+    "version": 3,
+    "mappings": "AAEA,AAAA,+BAA+B,CAAC;EAC9B,OAAO,EAAE,IAAI;CAYd;;ACIC,MAAM,EAAE,SAAS,EAAE,KAAK;EDjB1B,AAAA,+BAA+B,CAAC;IAI5B,OAAO,EAAE,KAAK;IACd,QAAQ,EAAE,KAAK;IACf,GAAG,EAAE,KAAK;IACV,KAAK,EAAE,KAAK;GAMf;EAbD,AASI,+BAT2B,CAS3B,mBAAmB,CAAC;ICJtB,WAAW,EDKW,YAAY,ECLZ,UAAU,CAAC,UAAU;IAC3C,WAAW,EDIyB,GAAG,CCJlB,UAAU;IAC/B,SAAS,EDGgC,IAAI,CCH5B,UAAU;GDIxB",
+    "sources": [
+        "FloatingMusicTrack.scss",
+        "../../mixins.scss"
+    ],
+    "names": [],
+    "file": "FloatingMusicTrack.css"
+}

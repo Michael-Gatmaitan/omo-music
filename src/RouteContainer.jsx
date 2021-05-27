@@ -9,6 +9,7 @@ import Musics from './components/Musics';
 import Artists from './components/Artists';
 import AppBody from './AppBody.jsx';
 import Playlists from './components/Playlists';
+import FloatingMusicTrack from './components/FloatingMusicTrack.jsx';
 
 import './components/scss/RouteContainer.css';
 
@@ -41,7 +42,7 @@ const RouteContainer = () => {
           </Switch>
         </div>
 
-        <div className="bx" />
+        <FloatingMusicTrack />
 
       </div>
 

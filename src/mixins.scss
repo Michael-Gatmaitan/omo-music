@@ -2,6 +2,7 @@
 $pri-blue: #293EF8;
 $sec-blue: #0000FF;
 $drk_blue: #0B0B14;
+$hgl_blue: rgba(#0A1344, 0.58);
 
 @mixin fontProp($family, $weight, $size) {
   font-family: $family, sans-serif !important;

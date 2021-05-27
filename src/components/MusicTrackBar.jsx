@@ -3,7 +3,7 @@ import { AudioContext } from '../context/AudioContext';
 import './scss/MusicTrackBar.css';
 // import { useHistory } from 'react-router-dom';
 
-const MusicTrackBar = () => {
+const MusicTrackBar = props => {
   const audioContext = useContext(AudioContext);
   const {
     activeMusic,
@@ -14,17 +14,27 @@ const MusicTrackBar = () => {
     trackHistory,
     trackHistoryIndex,
 
+    trackList,
+
     prev,
     next,
     playing,
   } = audioContext;
 
-  // const history = useHistory();
-
   const { title, artistName, path } = activeMusicInfo;
+  const { setIsTrackOpen } = props;
+
+  let trackOpenAction = e => {
+    const { target: t } = e;
+    if (t.className.includes('music-track-bar')) {
+      setIsTrackOpen(true);
+    }
+  }
 
   return (
-    <div className="music-track-bar">
+    <div className="music-track-bar"
+      onClick={ trackOpenAction }
+    >
 
       <div className="duration-progress-container">
         <div className="duration-progress"
@@ -72,7 +82,7 @@ const MusicTrackBar = () => {
 
         <button
           className="next-but"
-          disabled={ activeMusic === '' }
+          disabled={ activeMusic === '' || trackList.length === 1 }
 
           onClick={ next }
         >

@@ -1,8 +1,4 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,700;1,400;1,600&family=Open+Sans:wght@400;600&display=swap");
-html {
-  scroll-behavior: smooth;
-}
-
 body {
   margin: 0;
   padding: 0;
@@ -15,59 +11,32 @@ body {
   color: #fff;
 }
 
-@media screen and (min-width: 780px) {
-  .bg-svg-64px {
-    position: absolute;
-    background-color: #00f;
-    top: -64px;
-  }
-  .bg-svg310px {
-    position: absolute;
-    background-color: #00f;
-    top: 310px;
-  }
-  .bg-svg-39px {
-    position: absolute;
-    background-color: #00f;
-    top: -39px;
-  }
-  .bg-svg160px {
-    position: absolute;
-    background-color: #00f;
-    top: 160px;
-  }
-  .bg-svg180px {
-    position: absolute;
-    background-color: #00f;
-    top: 180px;
-  }
-  .bg-svg-9px {
-    position: absolute;
-    background-color: #00f;
-    top: -9px;
-  }
-  .bg-svg-38px {
-    position: absolute;
-    background-color: #00f;
-    top: -38px;
-  }
-  .bg-svg222px {
-    position: absolute;
-    background-color: #00f;
-    top: 222px;
-  }
-}
-
-@media screen and (max-width: 780px) {
-  .bg-svg {
-    position: absolute;
-    top: 500px;
-  }
-}
-
 .music-route {
   display: -ms-grid;
   display: grid;
   padding: 0;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+@media (min-width: 780px) {
+  ::-webkit-scrollbar {
+    background-color: #0B0B14;
+    display: block;
+    width: 12px;
+  }
+  ::-webkit-scrollbar-track {
+    background-color: #0B0B14;
+  }
+  ::-webkit-scrollbar-thumb {
+    background-color: #293EF8;
+    border-radius: 10px;
+    min-height: 60px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background-color: #0a1fda;
+  }
 }
 /*# sourceMappingURL=index.css.map */

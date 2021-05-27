@@ -1,12 +1,16 @@
 .music-block {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 46px 1fr;
-      grid-template-columns: 46px 1fr;
+  -ms-grid-columns: 46px 1fr 46px;
+      grid-template-columns: 46px 1fr 46px;
   padding: 5px 0;
   border-radius: 13px;
   -webkit-transition: 0.1s ease-in-out;
   transition: 0.1s ease-in-out;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 
 .music-block:active .music-info .music-title, .music-block:active .music-info .music-artist {
@@ -37,6 +41,7 @@
   font-family: "Montserrat", sans-serif !important;
   font-weight: 700 !important;
   font-size: 18px !important;
+  margin-top: 3px;
 }
 
 .music-block .music-info .music-artist {
@@ -46,5 +51,50 @@
   font-weight: 400 !important;
   font-size: 12px !important;
   color: rgba(255, 255, 255, 0.58);
+}
+
+.music-block .music-options {
+  height: 100%;
+  background-color: #f00;
+  padding: 8px;
+}
+
+.music-block .music-options .music-options-button {
+  width: 100%;
+  height: 100%;
+  background-color: #293EF8;
+  border-radius: 8px;
+}
+
+@media (min-width: 780px) {
+  .music-block {
+    -ms-grid-columns: 60px 1fr 60px;
+        grid-template-columns: 60px 1fr 60px;
+    padding: 8px 0;
+  }
+  .music-block .music-artist-image {
+    width: 60px;
+    height: 60px;
+    border-radius: 12px;
+    overflow: hidden;
+  }
+  .music-block .music-artist-image img {
+    width: 100%;
+    height: 100%;
+  }
+  .music-block .music-info {
+    margin-left: 12px;
+  }
+  .music-block .music-info .music-title {
+    font-family: "Montserrat", sans-serif !important;
+    font-weight: 700 !important;
+    font-size: 20px !important;
+    margin-top: 7px;
+  }
+  .music-block .music-info .music-artist {
+    font-family: "Open sans", sans-serif !important;
+    font-weight: 400 !important;
+    font-size: 14px !important;
+  }
 }
 /*# sourceMappingURL=MusicBlock.css.map */

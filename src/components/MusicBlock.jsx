@@ -11,10 +11,32 @@ const MusicBlock = props => {
   return (
     <div
       className="music-block"
-      onClick={() => functionsToFire(data, musicDataTable)}
+      onClick={
+        e => {
+          // functionsToFire(data, musicDataTable);
+
+          // if (e.target.className.includes("options")) {
+          //   // Show options here
+          // } else {
+          //   functionsToFire(data, musicDataTable);
+          // }
+
+          if (e.target.className.includes("options")) {
+            // Show options here
+            // Options' content => /**
+              // Add to Favourites
+              // Add to playing Queue
+              // Add to Playlist
+              // View Artist
+            // */
+          } else {
+            functionsToFire(data, musicDataTable);
+          }
+        }
+      }
     >
       <div className="music-artist-image">
-        <img src={`../artists-image/${customPath}.jpg`} alt="artist-image_music-block" />
+        <img src={`../artists-image/${customPath}.jpg`} alt="" />
       </div>
       
       <div className="music-info">
@@ -25,6 +47,10 @@ const MusicBlock = props => {
           {musicArtist}
         </div>
       </div>
+
+      {/* <div className="music-options">
+        <div className="music-options-button"></div>
+      </div> */}
     </div>
   )
 }

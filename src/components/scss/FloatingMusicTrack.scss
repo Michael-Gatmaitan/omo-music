@@ -1,0 +1,16 @@
+@import '../../mixins.scss';
+
+.floating-music-track-container {
+  display: none;
+
+  @include desktop {
+    display: block;
+    position: fixed;
+    top: 114px;
+    right: 112px;
+    
+    .now-playing-header {
+      @include fontProp('Montserrat', 700, 32px);
+    }
+  }
+}
