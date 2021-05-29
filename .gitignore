@@ -18,6 +18,9 @@
 # music_data
 /public/music-data
 
+# css maps
+.css.map
+
 # misc
 .DS_Store
 .env.local

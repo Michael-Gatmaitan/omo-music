@@ -914,8 +914,8 @@ export const bodyData = [
       "artistID": 69
   },
   {
-      "path": "zack-tabuldo",
-      "artistName": "Zack Tabuldo",
+      "path": "zack-tabudlo",
+      "artistName": "Zack Tabudlo",
       "musics": [
           "Zack Tabudlo - Binibini.mp3",
           "Zack Tabudlo - Hindi Ko Kaya.mp3",
