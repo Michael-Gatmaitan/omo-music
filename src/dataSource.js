@@ -601,8 +601,7 @@ export const bodyData = [
           "Munimuni - Bawat Piyesa.mp3",
           "Munimuni - Kalachuchi.mp3",
           "Munimuni - Sa'yo.mp3",
-          "Munimuni - Simula.mp3",
-          "Munimuni - Bawat Piyesa.mp3"
+          "Munimuni - Simula.mp3"
       ],
       "artistID": 47
   },

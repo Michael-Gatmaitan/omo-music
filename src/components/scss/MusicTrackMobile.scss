@@ -13,8 +13,9 @@
   .track-nav {
     width: 100%;
     padding: 18px 0;
-    background-color: $pri-blue;
-    position: relative;
+    background: linear-gradient(rgba(#000, 0.35), rgba(#000, 0));
+    position: absolute;
+    z-index: 4;
     @include flexCenter;
 
     img { height: 24px; }

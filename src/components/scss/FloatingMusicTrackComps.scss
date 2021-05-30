@@ -4,6 +4,39 @@
   background-color: $pri-blue;
   display: flex;
   flex-direction: column;
+  height: 100%;
+  overflow: hidden;
+
+  .artist-image-bg {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    @include flexCenter;
+
+    img {
+      height: 100%;
+    }
+  }
+
+  .blur-bg {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 0;
+    background-color: rgba(#373737, 0.22);
+    -webkit-backdrop-filter: blur(41px);
+    backdrop-filter: blur(41px);
+    z-index: 2;
+  }
+
+  .floating-childs-parent {
+    position: relative;
+    z-index: 3;
+    top: 114px;
+  }
 
   .floating-artist-image-container {
     width: 200px;
@@ -14,7 +47,8 @@
     display: flex;
     align-self: center;
     margin-top: 35px;
-    
+    margin: 0 auto;
+
     img { width: 100%; }
   }
 
@@ -25,10 +59,12 @@
     
     .music-title {
       @include fontProp('Montserrat', 700, 24px);
+      text-shadow: 0 2px 6px rgba(#000, 0.12);
     }
 
     .artist-name {
       @include fontProp('Open sans', 600, 16px);
+      text-shadow: 0 2px 6px rgba(#000, 0.12);
       margin-top: 6px;
     }
   }
@@ -116,7 +152,7 @@
     .play_pause-but {
       width: 60px;
       height: 60px;
-      background-color: $drk_blue;
+      background-color: $pri_blue;
       border-radius: 12px;
     }
   }
@@ -128,6 +164,18 @@
     margin-top: 12px;
     border-radius: 32px;
     padding: 42px 0;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: cover;
+    position: relative;
+
+    .blur-bg {
+      border-radius: 32px;
+    }
+
+    .floating-childs-parent {
+      top: 0;
+    }
 
     .floating-seekbar {
       margin-top: 38px;
