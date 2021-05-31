@@ -14,7 +14,9 @@ const MusicTrackMobile = props => {
       }}
     >
       <div className="track-nav">
-        <div className="close-track" onClick={ () => setIsTrackOpen(false) }/>
+        <div className="close-track" onClick={ () => setIsTrackOpen(false) }>
+          <img src="../svg/floating-icons/close.svg" width="26" alt="" />
+        </div>
         <img src="../svg/dark-omo-logo.svg" alt="" />
       </div>
       <FloatingMusicTrackComps />

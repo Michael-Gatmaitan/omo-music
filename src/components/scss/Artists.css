@@ -28,22 +28,40 @@
 
 @media (min-width: 660px) {
   .artists-route {
-    -ms-grid-columns: auto auto auto;
-        grid-template-columns: auto auto auto;
+    -ms-grid-columns: (auto)[3];
+        grid-template-columns: repeat(3, auto);
     grid-auto-rows: 153px;
   }
 }
 
 @media (min-width: 760px) {
   .artists-route {
+    -ms-grid-columns: (auto)[4];
+        grid-template-columns: repeat(4, auto);
     grid-auto-rows: 163px;
   }
 }
 
-@media (min-width: 760px) {
+@media (min-width: 780px) {
   .artists-route {
-    -ms-grid-columns: auto auto auto auto;
-        grid-template-columns: auto auto auto auto;
+    -ms-grid-columns: (auto)[2];
+        grid-template-columns: repeat(2, auto);
+    grid-auto-rows: 163px;
+  }
+}
+
+@media (min-width: 1050px) {
+  .artists-route {
+    -ms-grid-columns: (auto)[3];
+        grid-template-columns: repeat(3, auto);
+    grid-auto-rows: 163px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .artists-route {
+    -ms-grid-columns: (auto)[4];
+        grid-template-columns: repeat(4, auto);
     grid-auto-rows: 163px;
   }
 }

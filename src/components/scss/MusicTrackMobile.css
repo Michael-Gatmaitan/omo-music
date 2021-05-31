@@ -33,11 +33,20 @@
 }
 
 .music-track-mobile .track-nav .close-track {
-  width: calc(24px + (18px * 2));
+  padding: 0 22px;
   height: 100%;
   position: absolute;
   top: 0;
   left: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 @media (min-width: 780px) {

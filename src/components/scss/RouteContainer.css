@@ -89,6 +89,33 @@ ul li a {
   .route-container {
     padding: 0 112px 80px 112px;
   }
+}
+
+@media (min-width: 780px) and (min-width: 780px) {
+  .route-container {
+    padding: 0 40px 80px 40px;
+  }
+}
+
+@media (min-width: 780px) and (min-width: 860px) {
+  .route-container {
+    padding: 0 60px 80px 60px;
+  }
+}
+
+@media (min-width: 780px) and (min-width: 980px) {
+  .route-container {
+    padding: 0 90px 80px 90px;
+  }
+}
+
+@media (min-width: 780px) and (min-width: 1180px) {
+  .route-container {
+    padding: 0 112px 80px 112px;
+  }
+}
+
+@media (min-width: 780px) {
   .route-container .route-grid-container {
     display: -ms-grid;
     display: grid;

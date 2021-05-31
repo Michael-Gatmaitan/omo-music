@@ -48,9 +48,11 @@ const MusicBlock = props => {
         </div>
       </div>
 
-      {/* <div className="music-options">
-        <div className="music-options-button"></div>
-      </div> */}
+      <div className="music-options">
+        <div className="music-options-button">
+          <img src="../svg/floating-icons/more.svg" alt="" />
+        </div>
+      </div>
     </div>
   )
 }

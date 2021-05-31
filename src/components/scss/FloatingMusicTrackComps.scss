@@ -68,12 +68,28 @@
       margin-top: 6px;
     }
   }
+
+  .floating-icons {
+    padding: 0 81px;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 34px;
+
+    .icon-container {
+      width: 28px;
+      height: 28px;
+      cursor: pointer;
+      @include flexCenter;
+
+      img { width: 100%; }
+    }
+  }
   
   .floating-seekbar {
     display: grid;
     grid-template-columns: auto 1fr auto;
     align-self: center;
-    margin-top: 90px;
+    margin-top: 28px;
     width: 100%;
     padding: 0 47px;
 
@@ -103,7 +119,7 @@
         outline: none;
         height: 6px;
         border-radius: 6px; 
-        background: $hgl_blue;
+        background: rgba(#000, 0.35);
 
         // Handle
         &::-webkit-slider-thumb {

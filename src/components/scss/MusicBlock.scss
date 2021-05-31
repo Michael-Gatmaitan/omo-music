@@ -49,14 +49,30 @@
 
   .music-options {
     height: 100%;
-    background-color: #f00;
-    padding: 8px;
-
+    width: 46px;
+    position: relative;
+    @include flexCenter;
+    
     .music-options-button {
-      width: 100%;
-      height: 100%;
-      background-color: $pri-blue;
+      // 28px x 28px
+      width: 34px;
+      height: 34px;
       border-radius: 8px;
+      @include flexCenter;
+
+      img {
+        width: 28px;
+      }
+    }
+
+    &::before {
+      content: '';
+      width: 50px;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: -50px;
+      background: linear-gradient(90deg, rgba($drk_blue, 0), rgba($drk_blue, 1));
     }
   }
 
@@ -88,5 +104,19 @@
         @include fontProp('Open sans', 400, 14px);
       }
     }
+
+    .music-options {
+      width: 60px;
+      
+      .music-options-button {
+        width: 38px;
+        height: 38px;
+  
+        img {
+          width: 32px;
+        }
+      }
+    }
   }
+
 }

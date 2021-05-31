@@ -21,11 +21,13 @@
     img { height: 24px; }
 
     .close-track {
-      width: calc(24px + (18px * 2));
+      // width: calc(24px + (18px * 2));
+      padding: 0 22px;
       height: 100%;
       position: absolute;
       top: 0;
       left: 0;
+      @include flexCenter;
       // background-color: $hgl_blue;
     }
   }

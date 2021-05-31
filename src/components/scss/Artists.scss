@@ -20,16 +20,28 @@
   }
 
   @include customMediaQuery(660px) {
-    grid-template-columns: auto auto auto;
+    grid-template-columns: repeat(3, auto);
     grid-auto-rows: 153px;
   }
 
   @include customMediaQuery(760px) {
+    grid-template-columns: repeat(4, auto);
     grid-auto-rows: 163px;
   }
-  
-  @include customMediaQuery(760px) {
-    grid-template-columns: auto auto auto auto;
+
+  // Desktop View
+  @include customMediaQuery(780px) {
+    grid-template-columns: repeat(2, auto);
+    grid-auto-rows: 163px;
+  }
+
+  @include customMediaQuery(1050px) {
+    grid-template-columns: repeat(3, auto);
+    grid-auto-rows: 163px;
+  }
+
+  @include customMediaQuery(1200px) {
+    grid-template-columns: repeat(4, auto);
     grid-auto-rows: 163px;
   }
 

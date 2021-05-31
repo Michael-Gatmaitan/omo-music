@@ -1,6 +1,9 @@
-import { useContext, useRef, useEffect } from 'react';
+import { useContext, useRef, useEffect, useState } from 'react';
 import './scss/FloatingMusicTrackComps.css';
 import { AudioContext } from '../context/AudioContext';
+
+// Components
+import FloatingTracklist from './FloatingTracklist';
 
 const FloatingMusicTrackComps = () => {
 
@@ -20,6 +23,8 @@ const FloatingMusicTrackComps = () => {
     playing,
     next,
 
+    // musicLoading
+
   } = audioContext;
 
   const { title, artistName, path } = activeMusicInfo;
@@ -38,12 +43,15 @@ const FloatingMusicTrackComps = () => {
   }
   let { durMin, durSec } = durTDisp;
 
-  useEffect(() => {
-    console.log(path);
-  }, [path])
+  let [showTracklist, setShowTracklist] = useState(true); // false
 
   return (
     <div className="floating-music-track">
+
+      <FloatingTracklist
+        showTracklist={showTracklist}
+        setShowTracklist={setShowTracklist}
+      />
       
       <div className="artist-image-bg">
         <img src={`../artists-image/${path}.jpg`} alt="" />
@@ -59,6 +67,30 @@ const FloatingMusicTrackComps = () => {
         <div className="floating-music-info">
           <div className="music-title">{title || "OMO Music"}</div>
           <div className="artist-name">{artistName || "M. Gatmaitan, 2021"}</div>
+        </div>
+
+        {/* <div>{musicLoading ? "Loading" : "Not loading"}</div> */}
+
+        <div className="floating-icons">
+
+          {/* tracklist */}
+          <div className="tracklist icon-container"
+            onClick={() => {
+              setShowTracklist(true);
+            }}
+          >
+            <img src={`../svg/floating-icons/tracklist.svg`} alt="" />
+          </div>
+
+          {/* heart */}
+          <div className="heart icon-container">
+            <img src={`../svg/floating-icons/heart_unfilled.svg`} alt="" />
+          </div>
+
+          {/* more */}
+          <div className="more icon-container">
+            <img src={`../svg/floating-icons/more.svg`} alt="" />
+          </div>
         </div>
 
         <div className="floating-seekbar">
@@ -90,7 +122,11 @@ const FloatingMusicTrackComps = () => {
               step="0.25"
               value={currentTime}
               className="slider"
-              onChange={_ => audioEl.currentTime = parseInt(seekBar.value)}
+              onChange={_ => {
+                audioEl.currentTime = parseInt(seekBar.value);
+                // console.log(_);
+              }}
+              // on={_ => console.log("Drag end")}
             />
 
           </div>

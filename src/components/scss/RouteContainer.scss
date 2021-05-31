@@ -80,6 +80,26 @@ ul {
   @include desktop {
     padding: 0 112px 80px 112px;
 
+    // 40
+    @include customMediaQuery(780px) {
+      padding: 0 40px 80px 40px;
+    }
+
+    // 60
+    @include customMediaQuery(860px) {
+      padding: 0 60px 80px 60px;
+    }
+
+    // 90
+    @include customMediaQuery(980px) {
+      padding: 0 90px 80px 90px;
+    }
+
+    // 112
+    @include customMediaQuery(1180px) {
+      padding: 0 112px 80px 112px;
+    }
+
     .route-grid-container {
       display: grid;
       grid-template-columns: auto 360px;

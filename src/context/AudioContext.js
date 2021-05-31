@@ -20,6 +20,8 @@ class AudioContextProvider extends Component {
 
 		playing: false,
 
+		musicLoading: false,
+
 		trackList: [],
 
 		trackHistoryIndex: null,
@@ -46,6 +48,8 @@ class AudioContextProvider extends Component {
 	componentDidUpdate() {
 		localStorage.setItem("bodyState", JSON.stringify(this.state));
 	}
+
+	triggerMusicLoading = bool => this.setState({ musicLoading: bool });
 
 	triggerShowBackArrow = bool => this.setState({ showBackArrow: bool });
 
@@ -238,7 +242,13 @@ class AudioContextProvider extends Component {
 			},
 
 			activeMusicInfo: this.state.activeMusicInfo,
+			
+			...{
+				musicLoading: this.state.musicLoading,
+				triggerMusicLoading: this.triggerMusicLoading
+			},
 
+			trackList: this.state.trackList,
 			// Options content's functions
 				/* Add Queue - x */
 			

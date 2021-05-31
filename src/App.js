@@ -27,7 +27,10 @@ function App() {
     next,
     triggerShowBackArrow,
 
-    setCurrentPage
+    setCurrentPage,
+
+    musicLoading,
+    triggerMusicLoading
   } = audioContext;
 
   let aud = useRef(null);
@@ -73,6 +76,10 @@ function App() {
 
   let [isTrackOpen, setIsTrackOpen] = useState(false);
 
+  useEffect(() => {
+    triggerMusicLoading(true);
+  }, [activeMusic]);
+
   return (
     <>
       <ReactAudioPlayer
@@ -80,7 +87,15 @@ function App() {
         autoPlay
         ref={ e => aud = e }
         listenInterval={1000}
-        onLoadedMetadata={ _ => updateTotalDuration(aud.audioEl.current.duration) }
+        // onLoadedMetadata={ _ => updateTotalDuration(aud.audioEl.current.duration) }
+        // onAbort={ _ => {
+        //   triggerMusicLoading(true);
+        //   console.log("Changed");
+        // }}
+        onCanPlay={ _ => {
+          updateTotalDuration(aud.audioEl.current.duration);
+          triggerMusicLoading(false);
+        }}
         onListen={ e => updateCurrentTime(e) }
         onEnded={ next }
 

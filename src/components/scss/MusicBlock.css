@@ -55,15 +55,47 @@
 
 .music-block .music-options {
   height: 100%;
-  background-color: #f00;
-  padding: 8px;
+  width: 46px;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .music-block .music-options .music-options-button {
-  width: 100%;
-  height: 100%;
-  background-color: #293EF8;
+  width: 34px;
+  height: 34px;
   border-radius: 8px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.music-block .music-options .music-options-button img {
+  width: 28px;
+}
+
+.music-block .music-options::before {
+  content: '';
+  width: 50px;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: -50px;
+  background: -webkit-gradient(linear, left top, right top, from(rgba(11, 11, 20, 0)), to(#0b0b14));
+  background: linear-gradient(90deg, rgba(11, 11, 20, 0), #0b0b14);
 }
 
 @media (min-width: 780px) {
@@ -95,6 +127,16 @@
     font-family: "Open sans", sans-serif !important;
     font-weight: 400 !important;
     font-size: 14px !important;
+  }
+  .music-block .music-options {
+    width: 60px;
+  }
+  .music-block .music-options .music-options-button {
+    width: 38px;
+    height: 38px;
+  }
+  .music-block .music-options .music-options-button img {
+    width: 32px;
   }
 }
 /*# sourceMappingURL=MusicBlock.css.map */

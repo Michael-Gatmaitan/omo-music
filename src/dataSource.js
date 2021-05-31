@@ -20,7 +20,7 @@ export const bodyData = [
           "Air Supply - I'll Never Get Enough of You.mp3",
           "Air Supply - Lonely Is The Night.mp3",
           "Air Supply - Making Love Out of Nothing at All.mp3",
-          "Air Supply - Sweet Dreams.m4a",
+          "Air Supply - Sweet Dreams.mp3",
           "Air Supply - Chances.mp3"
       ],
       "artistID": 1
@@ -53,28 +53,28 @@ export const bodyData = [
       "path": "avicii",
       "artistName": "Avicii",
       "musics": [
-          "Avicii - Addicted To You.m4a",
-          "Avicii - Broken Arrows.m4a",
+          "Avicii - Addicted To You.mp3",
+          "Avicii - Broken Arrows.mp3",
           "Avicii - Fades Away.mp3",
-          "Avicii - For A Better Day.m4a",
+          "Avicii - For A Better Day.mp3",
           "Avicii - Friend Of Mine.mp3",
           "Avicii - Heaven.mp3",
-          "Avicii - Hey Brother.m4a",
-          "Avicii - I Could Be The One.m4a",
-          "Avicii - Lay Me Down.m4a",
+          "Avicii - Hey Brother.mp3",
+          "Avicii - I Could Be The One.mp3",
+          "Avicii - Lay Me Down.mp3",
           "Avicii - Levels.mp3",
-          "Avicii - Lonely Together.m4a",
-          "Avicii - Pure Grinding.m4a",
-          "Avicii - Silhouettes.m4a",
+          "Avicii - Lonely Together.mp3",
+          "Avicii - Pure Grinding.mp3",
+          "Avicii - Silhouettes.mp3",
           "Avicii - SOS.mp3",
           "Avicii - Sunset Jesus.mp3",
           "Avicii - The Days.mp3",
-          "Avicii - The Nights.m4a",
+          "Avicii - The Nights.mp3",
           "Avicii - Trouble.mp3",
-          "Avicii - Waiting For Love.m4a",
-          "Avicii - Wake Me Up.m4a",
-          "Avicii - WithOut You.m4a",
-          "Avicii - You Be Love.m4a"
+          "Avicii - Waiting For Love.mp3",
+          "Avicii - Wake Me Up.mp3",
+          "Avicii - WithOut You.mp3",
+          "Avicii - You Be Love.mp3"
       ],
       "artistID": 4
   },
@@ -84,7 +84,7 @@ export const bodyData = [
       "musics": [
           "Avril Lavigne - Breakaway.mp3",
           "Avril Lavigne - Complicated.mp3",
-          "Avril Lavigne - Head Above Water.m4a",
+          "Avril Lavigne - Head Above Water.mp3",
           "Avril Lavigne - Here's To Never Growing Up.mp3",
           "Avril Lavigne - My Happy Ending.mp3",
           "Avril Lavigne - When You're Gone.mp3",
@@ -97,7 +97,7 @@ export const bodyData = [
       "artistName": "Bazzi",
       "musics": [
           "Bazzi - Beautiful.mp3",
-          "Bazzi - I.F.L.Y..m4a",
+          "Bazzi - I.F.L.Y..mp3",
           "Bazzi - Mine.mp3",
           "Bazzi - Myself.mp3",
           "Bazzi - Paradise.mp3"
@@ -128,9 +128,9 @@ export const bodyData = [
           "Billie Eilish - Bury A Friend.mp3",
           "Billie Eilish - Copycat.mp3",
           "Billie Eilish - Everything I Wanted.mp3",
-          "Billie Eilish - Lovely.m4a",
+          "Billie Eilish - Lovely.mp3",
           "Billie Eilish - Ocean Eyes.mp3",
-          "Billie Eilish - sHE's brOKen.m4a",
+          "Billie Eilish - sHE's brOKen.mp3",
           "Billie Eilish - Therefore I Am.mp3",
           "Billie Eilish - Watch.mp3",
           "Billie Eilish - When The Party's Over.mp3",
@@ -203,7 +203,7 @@ export const bodyData = [
       "musics": [
           "Charlie Puth - Attention.mp3",
           "Charlie Puth - How Long.mp3",
-          "Charlie Puth - Kiss Me.m4a",
+          "Charlie Puth - Kiss Me.mp3",
           "Charlie Puth - Up All Night.mp3",
           "Charlie Puth - We Don't Talk Anymore.mp3"
       ],
@@ -213,19 +213,19 @@ export const bodyData = [
       "path": "chilledcow",
       "artistName": "ChilledCow",
       "musics": [
-          "ChilledCow - 1 A.M Study Session - (lofi hip hop chill beats).m4a",
-          "ChilledCow - 2 A.M Study Session - (lofi hip hop chill beats).m4a",
+          "ChilledCow - 1 A.M Study Session - (lofi hip hop chill beats).mp3",
+          "ChilledCow - 2 A.M Study Session - (lofi hip hop chill beats).mp3",
           "ChilledCow - Brillion. - Bedtime Stories.mp3",
           "ChilledCow - Casiio - Wondering.mp3",
-          "ChilledCow - DLJ - Night Emotions.m4a",
-          "ChilledCow - Dontcry x Glimlip - 777.m4a",
+          "ChilledCow - DLJ - Night Emotions.mp3",
+          "ChilledCow - Dontcry x Glimlip - 777.mp3",
           "ChilledCow - Fatb - Conscious Ego.mp3",
           "ChilledCow - Idealism - Last Time.mp3",
           "ChilledCow - Kupla - Kingdom In Blue.mp3",
           "ChilledCow - Kupla - Life Forms.mp3",
           "ChilledCow - Lazy Sunday - (lofi hip hop chill beats).mp3",
-          "ChilledCow - Mell-ø x Ambulo - Afloat Again.m4a",
-          "ChilledCow - Monma - Calm Lands.m4a",
+          "ChilledCow - Mell-ø x Ambulo - Afloat Again.mp3",
+          "ChilledCow - Monma - Calm Lands.mp3",
           "ChilledCow - Refeeld x Project AER - Chance Encounter.mp3",
           "ChilledCow - Tysu x Spencer Hunt - Window Seat.mp3"
       ],
@@ -260,7 +260,7 @@ export const bodyData = [
       "path": "december-avenue",
       "artistName": "December Avenue",
       "musics": [
-          "December Avenue - Bulong.m4a",
+          "December Avenue - Bulong.mp3",
           "December Avenue - Eroplanong Papel.mp3",
           "December Avenue - Kahit 'Di Mo Alam.mp3",
           "December Avenue - Magkunwari.mp3",
@@ -294,13 +294,13 @@ export const bodyData = [
       "artistName": "Ed Sheeran",
       "musics": [
           "Ed Sheeran - Afterglow.mp3",
-          "Ed Sheeran - Barcelona.m4a",
-          "Ed Sheeran - Castle On The Hill.m4a",
+          "Ed Sheeran - Barcelona.mp3",
+          "Ed Sheeran - Castle On The Hill.mp3",
           "Ed Sheeran - Dive.mp3",
           "Ed Sheeran - How Would You Feel.mp3",
           "Ed Sheeran - Perfect.mp3",
-          "Ed Sheeran - Photograph.m4a",
-          "Ed Sheeran - Shape Of You.m4a"
+          "Ed Sheeran - Photograph.mp3",
+          "Ed Sheeran - Shape Of You.mp3"
       ],
       "artistID": 21
   },
@@ -395,7 +395,7 @@ export const bodyData = [
           "Halsey - 3AM.mp3",
           "Halsey - Alone.mp3",
           "Halsey - Colors.mp3",
-          "Halsey - Eastside.m4a",
+          "Halsey - Eastside.mp3",
           "Halsey - Without Me.mp3"
       ],
       "artistID": 30
@@ -440,8 +440,8 @@ export const bodyData = [
           "IV OF SPADES - Ang Pinagmulan.mp3",
           "IV OF SPADES - Bawat Kaluluwa.mp3",
           "IV OF SPADES - Hey Barbara.mp3",
-          "IV Of Spades - Ilaw Sa Daan.m4a",
-          "IV Of Spades - Mundo.m4a"
+          "IV OF SPADES - Ilaw Sa Daan.mp3",
+          "IV OF SPADES - Mundo.mp3"
       ],
       "artistID": 34
   },
@@ -486,7 +486,7 @@ export const bodyData = [
       "artistName": "Khalid",
       "musics": [
           "Khalid - 8TEEN.mp3",
-          "Khalid - Better.m4a",
+          "Khalid - Better.mp3",
           "Khalid - Location.mp3",
           "Khalid - OTW.mp3",
           "Khalid - Saturday Nights.mp3",
@@ -511,8 +511,8 @@ export const bodyData = [
       "artistName": "LANY",
       "musics": [
           "LANY - Good Guys.mp3",
-          "LANY - ILYSB.m4a",
-          "LANY - Malibu Nights.m4a",
+          "LANY - ILYSB.mp3",
+          "LANY - Malibu Nights.mp3",
           "LANY - Super Far.mp3"
       ],
       "artistID": 40
@@ -544,14 +544,14 @@ export const bodyData = [
       "path": "marshmello",
       "artistName": "Marshmello",
       "musics": [
-          "Marshmello - Alone.m4a",
-          "Marshmello - Be Kind.mp3",
-          "Marshmello - Fly.m4a",
-          "Marshmello - Friends.m4a",
-          "Marshmello - Keep It Mello.m4a",
-          "Marshmello - Room To Fall.mp3",
-          "Marshmello - Spotlight.m4a",
-          "Marshmello - Take It Back.m4a"
+        "Marshmello - Alone.mp3",
+        "Marshmello - Be Kind.mp3",
+        "Marshmello - FLY.mp3",
+        "Marshmello - FRIENDS.mp3",
+        "Marshmello - Keep It Mello.mp3",
+        "Marshmello - Room To Fall.mp3",
+        "Marshmello - Spotlight.mp3",
+        "Marshmello - Take It Back.mp3"
       ],
       "artistID": 43
   },
@@ -695,7 +695,7 @@ export const bodyData = [
           "Planetshakers - Bring It On.mp3",
           "Planetshakers - Dance.mp3",
           "Planetshakers - I'm Forever Yours.mp3",
-          "Planetshakers - Nothing Is Impossible.m4a"
+          "Planetshakers - Nothing Is Impossible.mp3"
       ],
       "artistID": 54
   },
@@ -707,8 +707,8 @@ export const bodyData = [
           "Post Malone - Circles.mp3",
           "Post Malone - Congratulations.mp3",
           "Post Malone - Goodbyes.mp3",
-          "Post Malone - I Fall Apart.m4a",
-          "Post Malone - Psycho.m4a",
+          "Post Malone - I Fall Apart.mp3",
+          "Post Malone - Psycho.mp3",
           "Post Malone - Sunflower.mp3",
           "Post Malone - White Iverson.mp3"
       ],
@@ -719,7 +719,7 @@ export const bodyData = [
       "artistName": "Powfu",
       "musics": [
           "Powfu - Days we had.mp3",
-          "Powfu - Death bed.m4a",
+          "Powfu - Death bed.mp3",
           "Powfu - Don't fall asleep yet.mp3",
           "Powfu - I can't sleep.mp3",
           "Powfu - Letters in december.mp3",
@@ -875,13 +875,13 @@ export const bodyData = [
       "path": "twenty-one-pilots",
       "artistName": "Twenty One Pilots",
       "musics": [
-          "Twenty One Pilots - Cancer.m4a",
+          "Twenty One Pilots - Cancer.mp3",
           "Twenty One Pilots - Chlorine.mp3",
           "Twenty One Pilots - Choker.mp3",
           "Twenty One Pilots - Level of Concern.mp3",
-          "Twenty One Pilots - Morph.m4a",
-          "Twenty One Pilots - My Blood.m4a",
-          "Twenty One Pilots - Ride.m4a",
+          "Twenty One Pilots - Morph.mp3",
+          "Twenty One Pilots - My Blood.mp3",
+          "Twenty One Pilots - Ride.mp3",
           "Twenty One Pilots - Shy Away.mp3",
           "Twenty One Pilots - Stressed Out.mp3",
           "Twenty One Pilots - The Hype.mp3"
@@ -929,8 +929,8 @@ export const bodyData = [
       "artistName": "Zedd",
       "musics": [
           "Zedd - Clarity.mp3",
-          "Zedd - Grey The Middle.m4a",
-          "Zedd - Stay.mp3"
+          "Zedd - Stay.mp3",
+          "Zedd - The Middle.mp3"
       ],
       "artistID": 71
   }
@@ -1019,7 +1019,7 @@ export const playlists = [
       "Air Supply - I'll Never Get Enough of You.mp3",
       "Air Supply - Lonely Is The Night.mp3",
       "Air Supply - Making Love Out of Nothing at All.mp3",
-      "Air Supply - Sweet Dreams.m4a",
+      "Air Supply - Sweet Dreams.mp3",
       "Barbara Dickson - Caravan.mp3",
       "Barbra Streisand - Woman In Love.mp3",
       "Bon Jovi - Never Say Goodbye.mp3",
