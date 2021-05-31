@@ -43,7 +43,7 @@ const FloatingMusicTrackComps = () => {
   }
   let { durMin, durSec } = durTDisp;
 
-  let [showTracklist, setShowTracklist] = useState(true); // false
+  let [showTracklist, setShowTracklist] = useState(false); // false
 
   return (
     <div className="floating-music-track">

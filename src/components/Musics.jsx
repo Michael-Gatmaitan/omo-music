@@ -1,8 +1,9 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, Suspense, lazy } from 'react';
 import { bodyData } from '../dataSource';
-import MusicBlock from './MusicBlock';
-
 import './scss/MusicBlock.css';
+// import MusicBlock from './MusicBlock';
+
+const MusicBlock = lazy(() => import('./MusicBlock'));
 
 const Musics = () => {
   let [musicDataTable, setMusicDataTable] = useState([]);
@@ -25,11 +26,13 @@ const Musics = () => {
   return (
     <div className="music-route">
       {musicDataTable.map((data, i) => (
-        <MusicBlock
-          musicDataTable={musicDataTable}
-          data={data}
-          key={i}
-        />
+        <Suspense fallback={<div>...loading</div>}>
+          <MusicBlock
+            musicDataTable={musicDataTable}
+            data={data}
+            key={i}
+          />
+        </Suspense>
       ))}
     </div>
   );

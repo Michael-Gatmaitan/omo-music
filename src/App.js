@@ -87,7 +87,6 @@ function App() {
         autoPlay
         ref={ e => aud = e }
         listenInterval={1000}
-        // onLoadedMetadata={ _ => updateTotalDuration(aud.audioEl.current.duration) }
         // onAbort={ _ => {
         //   triggerMusicLoading(true);
         //   console.log("Changed");
