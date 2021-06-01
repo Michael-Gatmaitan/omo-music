@@ -7,11 +7,12 @@ const FloatingTracklist = props => {
   const audioContext = useContext(AudioContext);
   const {
     showTracklist,
-    setShowTracklist
+    setShowTracklist,
   } = props;
 
   const {
-    trackList
+    trackList,
+    functionsToFire
   } = audioContext;
 
   useEffect(() => {
@@ -37,9 +38,17 @@ const FloatingTracklist = props => {
             {trackList.map((e, i) => (
               <div className="tracklist-music-block"
                 key={i}
+                onClick={ () => functionsToFire(e, trackList) }
               >
-                Hotdog #{i}
+                
+              <div className="tl-music-info">
+                <div className="tl-title">{e.slice(e.indexOf(" - ") + 3, -4)}</div>
+                <div className="tl-artist">{e.slice(0, e.indexOf(" - "))}</div>
               </div>
+        
+              <div className="tl-liner" />
+        
+            </div>
             ))}
 
           </div>

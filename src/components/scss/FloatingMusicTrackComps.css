@@ -62,7 +62,7 @@
   display: flex;
   -ms-flex-item-align: center;
       align-self: center;
-  margin-top: 35px;
+  margin-top: 25px;
   margin: 0 auto;
 }
 
@@ -206,7 +206,7 @@
   -ms-grid-columns: auto auto auto;
       grid-template-columns: auto auto auto;
   grid-gap: 24px;
-  margin-top: 50px;
+  margin-top: 51px;
 }
 
 .floating-music-track .music-track-events button {
@@ -297,9 +297,8 @@
     font-size: 14px !important;
     margin-top: 6px;
   }
-}
-
-.floating-music-track .music-track-events {
-  margin-top: 24px;
+  .floating-music-track .music-track-events {
+    margin-top: 24px;
+  }
 }
 /*# sourceMappingURL=FloatingMusicTrackComps.css.map */

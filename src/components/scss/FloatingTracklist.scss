@@ -42,10 +42,32 @@
       }
 
       .tracklist-content {
+        content-visibility: auto;
+        scroll-behavior: smooth;
         
-        // height: 2000px;
         .tracklist-music-block {
-          color: #121212;
+          padding: 10px 0 8px 0;
+          position: relative;
+
+          .tl-music-info {
+            .tl-title {
+              color: #121212;
+              padding-right: 40px;
+              @include fontProp('Montserrat', 700, 18px);
+            }
+            .tl-artist {
+              color: rgba(#121212, 0.58);
+              @include fontProp('Open sans', 400, 12px);
+            }
+          }
+
+          .tl-liner {
+            width: 100%;
+            height: 0.5px;
+            background-color: rgba(#323232, .35);
+            position: absolute;
+            bottom: 0;
+          }
         }
       }
     }

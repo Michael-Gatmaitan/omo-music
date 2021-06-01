@@ -57,8 +57,37 @@
   background-color: #EEEFF8;
 }
 
+.floating-tracklist .tracklist-container .tracklist-content-parent .tracklist-content {
+  content-visibility: auto;
+  scroll-behavior: smooth;
+}
+
 .floating-tracklist .tracklist-container .tracklist-content-parent .tracklist-content .tracklist-music-block {
+  padding: 10px 0 8px 0;
+  position: relative;
+}
+
+.floating-tracklist .tracklist-container .tracklist-content-parent .tracklist-content .tracklist-music-block .tl-music-info .tl-title {
   color: #121212;
+  padding-right: 40px;
+  font-family: "Montserrat", sans-serif !important;
+  font-weight: 700 !important;
+  font-size: 18px !important;
+}
+
+.floating-tracklist .tracklist-container .tracklist-content-parent .tracklist-content .tracklist-music-block .tl-music-info .tl-artist {
+  color: rgba(18, 18, 18, 0.58);
+  font-family: "Open sans", sans-serif !important;
+  font-weight: 400 !important;
+  font-size: 12px !important;
+}
+
+.floating-tracklist .tracklist-container .tracklist-content-parent .tracklist-content .tracklist-music-block .tl-liner {
+  width: 100%;
+  height: 0.5px;
+  background-color: rgba(50, 50, 50, 0.35);
+  position: absolute;
+  bottom: 0;
 }
 
 .floating-tracklist .tracklist-container .close-tracklist {

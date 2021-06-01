@@ -46,7 +46,7 @@
     box-shadow: 0 6px 12px rgba(#000, 0.12);
     display: flex;
     align-self: center;
-    margin-top: 35px;
+    margin-top: 25px;
     margin: 0 auto;
 
     img { width: 100%; }
@@ -148,7 +148,7 @@
     justify-content: center;
     grid-template-columns: auto auto auto;
     grid-gap: 24px;
-    margin-top: 50px;
+    margin-top: 51px;
 
     button {
       height: 32px;
@@ -230,9 +230,9 @@
         margin-top: 6px;
       }
     }
-  }
 
-  .music-track-events {
-    margin-top: 24px;
+    .music-track-events {
+      margin-top: 24px;
+    }
   }
 }
