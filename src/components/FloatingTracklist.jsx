@@ -1,19 +1,26 @@
 import { useContext, useEffect } from 'react';
 import { AudioContext } from '../context/AudioContext';
+import { EventContext } from '../context/EventContext';
+
 import './scss/FloatingTracklist.css';
 
 const FloatingTracklist = props => {
 
   const audioContext = useContext(AudioContext);
   const {
-    showTracklist,
-    setShowTracklist,
-  } = props;
-
-  const {
     trackList,
     functionsToFire
   } = audioContext;
+
+  const eventContext = useContext(EventContext);
+  const {
+    showTracklist,
+    setShowTracklist
+  } = eventContext;
+  // const {
+  //   showTracklist,
+  //   setShowTracklist,
+  // } = props;
 
   useEffect(() => {
     console.log(trackList);
@@ -30,7 +37,7 @@ const FloatingTracklist = props => {
 
       <div className="tracklist-container">
 
-        <div className="tracklist-head">Tracklist</div>
+        <div className="tracklist-head">xTracklist</div>
 
         <div className="tracklist-content-parent">
           <div className="tracklist-content">
@@ -41,14 +48,14 @@ const FloatingTracklist = props => {
                 onClick={ () => functionsToFire(e, trackList) }
               >
                 
-              <div className="tl-music-info">
-                <div className="tl-title">{e.slice(e.indexOf(" - ") + 3, -4)}</div>
-                <div className="tl-artist">{e.slice(0, e.indexOf(" - "))}</div>
+                <div className="tl-music-info">
+                  <div className="tl-title">{e.slice(e.indexOf(" - ") + 3, -4)}</div>
+                  <div className="tl-artist">{e.slice(0, e.indexOf(" - "))}</div>
+                </div>
+          
+                <div className="tl-liner" />
+          
               </div>
-        
-              <div className="tl-liner" />
-        
-            </div>
             ))}
 
           </div>

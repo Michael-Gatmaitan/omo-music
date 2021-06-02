@@ -1,6 +1,7 @@
 import { useContext, useRef, useEffect, useState } from 'react';
 import './scss/FloatingMusicTrackComps.css';
 import { AudioContext } from '../context/AudioContext';
+import { EventContext } from '../context/EventContext';
 
 // Components
 import FloatingTracklist from './FloatingTracklist';
@@ -21,37 +22,21 @@ const FloatingMusicTrackComps = () => {
     prev,
     activeMusic,
     playing,
-    next,
-
-    // musicLoading
-
+    next
   } = audioContext;
 
+  const eventContext = useContext(EventContext);
+  const { setShowTracklist } = eventContext;
+
   const { title, artistName, path } = activeMusicInfo;
-  let seekBar = useRef(null);
-  
-  let audioEl = document.getElementsByTagName("audio")[0];
-  let curTDisp = {
-    curMin: Math.floor(currentTime / 60).toString(),
-    curSec: Math.round(currentTime % 60).toString(),
-  }
-  let { curMin, curSec } = curTDisp;
 
-  let durTDisp = {
-    durMin: Math.floor(duration / 60).toString(),
-    durSec: Math.round(duration % 60).toString(),
-  }
-  let { durMin, durSec } = durTDisp;
-
-  let [showTracklist, setShowTracklist] = useState(false); // false
+  let { curMin, curSec } = { curMin: Math.floor(currentTime / 60).toString(), curSec: Math.round(currentTime % 60).toString() };
+  let { durMin, durSec } = { durMin: Math.floor(duration / 60).toString(), durSec: Math.round(duration % 60).toString() };
 
   return (
     <div className="floating-music-track">
 
-      <FloatingTracklist
-        showTracklist={showTracklist}
-        setShowTracklist={setShowTracklist}
-      />
+      <FloatingTracklist />
       
       <div className="artist-image-bg">
         <img src={`../artists-image/${path}.jpg`} alt="" />
@@ -68,8 +53,6 @@ const FloatingMusicTrackComps = () => {
           <div className="music-title">{title || "OMO Music"}</div>
           <div className="artist-name">{artistName || "M. Gatmaitan, 2021"}</div>
         </div>
-
-        {/* <div>{musicLoading ? "Loading" : "Not loading"}</div> */}
 
         <div className="floating-icons">
 
@@ -88,7 +71,11 @@ const FloatingMusicTrackComps = () => {
           </div>
 
           {/* more */}
-          <div className="more icon-container">
+          <div className="more icon-container"
+            onClick={() => {
+              // setShowOptions(true);
+            }}
+          >
             <img src={`../svg/floating-icons/more.svg`} alt="" />
           </div>
         </div>
@@ -106,29 +93,14 @@ const FloatingMusicTrackComps = () => {
           </div>
           
           <div className="seekbar-container">
-            <div
-              className="slider-progress"
-              style={{
-                width: `${currentDurPercent}%`
-              }}
-            />
-            
-            <input
-              ref={e => seekBar = e }
-
-              type="range"
-              min="0"
-              max={duration}
-              step="0.25"
-              value={currentTime}
-              className="slider"
-              onChange={_ => {
-                audioEl.currentTime = parseInt(seekBar.value);
-                // console.log(_);
-              }}
-              // on={_ => console.log("Drag end")}
-            />
-
+            <div className="slider-progress-container">
+              <div
+                className="slider-progress"
+                style={{
+                  width: `${currentDurPercent}%`
+                }}
+              />
+            </div>
           </div>
           
           <div className="total-time seekbar-times">

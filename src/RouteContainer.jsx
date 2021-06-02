@@ -10,6 +10,7 @@ import Artists from './components/Artists';
 import AppBody from './AppBody.jsx';
 import Playlists from './components/Playlists';
 import FloatingMusicTrack from './components/FloatingMusicTrack.jsx';
+import MoreMusicOptions from "./components/MoreMusicOptions";
 
 import './components/scss/RouteContainer.css';
 
@@ -35,7 +36,7 @@ const RouteContainer = () => {
               <Artists />
             </Route>
 
-            {/* sub routes ??  */}
+            {/* nested routes */}
             <Route path="/artists/:artistID">
               <ArtistTrack />
             </Route>
@@ -43,6 +44,7 @@ const RouteContainer = () => {
         </div>
 
         <FloatingMusicTrack />
+        <MoreMusicOptions />
 
       </div>
 

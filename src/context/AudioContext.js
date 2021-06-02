@@ -1,8 +1,8 @@
-import React, { Component, createContext } from 'react';
+import { Component, createContext } from 'react';
 
 export const AudioContext = createContext();
 
-class AudioContextProvider extends Component {
+export default class AudioContextProvider extends Component {
 	
 	state = JSON.parse(localStorage.getItem("bodyState")) || {
 		showBackArrow: false,
@@ -268,5 +268,3 @@ class AudioContextProvider extends Component {
 		)
 	}
 }
-
-export default AudioContextProvider;

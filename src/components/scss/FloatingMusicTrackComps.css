@@ -148,7 +148,6 @@
 }
 
 .floating-music-track .floating-seekbar .seekbar-container {
-  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -158,40 +157,20 @@
   overflow: hidden;
 }
 
-.floating-music-track .floating-seekbar .seekbar-container .slider-progress {
-  height: 6px;
-  background-color: #fff;
-  position: absolute;
-  border-radius: 6px 0 0 6px;
-}
-
-.floating-music-track .floating-seekbar .seekbar-container .slider {
-  -webkit-appearance: none;
+.floating-music-track .floating-seekbar .seekbar-container .slider-progress-container {
+  position: relative;
   width: 100%;
-  -moz-appearance: none;
-       appearance: none;
-  outline: none;
   height: 6px;
   border-radius: 6px;
+  overflow: hidden;
   background: rgba(0, 0, 0, 0.35);
 }
 
-.floating-music-track .floating-seekbar .seekbar-container .slider::-webkit-slider-thumb {
-  -webkit-appearance: none;
-  appearance: none;
-  width: 18px;
-  height: 18px;
-  border-radius: 50%;
-  background: #fff;
-  cursor: pointer;
-}
-
-.floating-music-track .floating-seekbar .seekbar-container .slider::-moz-range-thumb {
-  width: 18px;
-  height: 18px;
-  border-radius: 50%;
-  background: #fff;
-  cursor: pointer;
+.floating-music-track .floating-seekbar .seekbar-container .slider-progress {
+  height: 100%;
+  background-color: #fff;
+  position: absolute;
+  border-radius: 6px;
 }
 
 .floating-music-track .music-track-events {
