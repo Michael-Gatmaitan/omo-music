@@ -2,7 +2,7 @@ import { useContext } from 'react';
 import { AudioContext } from '../context/AudioContext';
 
 const MusicBlock = props => {
-  const { data, musicDataTable } = props;
+  const { data, musicDataTable, displayArtistImage } = props;
   let { functionsToFire } = useContext(AudioContext);
 
   const musicArtist = data.slice(0, data.indexOf(" - "));
@@ -10,7 +10,13 @@ const MusicBlock = props => {
 
   return (
     <div
-      className="music-block"
+      className={
+        `${
+          displayArtistImage ? 'music-block'
+          :'music-block music-block-no-artist-image'
+        }`
+      }
+
       onClick={
         e => {
           // functionsToFire(data, musicDataTable);
@@ -35,7 +41,11 @@ const MusicBlock = props => {
         }
       }
     >
-      <div className="music-artist-image">
+      <div className="music-artist-image"
+        style={{
+          display: displayArtistImage ? 'block' : 'none'
+        }}
+      >
         <img src={`../artists-image/${customPath}.jpg`} alt="" />
       </div>
       

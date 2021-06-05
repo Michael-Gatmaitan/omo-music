@@ -1,4 +1,4 @@
-import { useContext, useEffect } from 'react';
+import { useContext } from 'react';
 import { AudioContext } from '../context/AudioContext';
 import { EventContext } from '../context/EventContext';
 
@@ -22,10 +22,6 @@ const FloatingTracklist = props => {
   //   setShowTracklist,
   // } = props;
 
-  useEffect(() => {
-    console.log(trackList);
-  }, []);
-
   return (
     <div className="floating-tracklist"
       style={{
@@ -37,7 +33,7 @@ const FloatingTracklist = props => {
 
       <div className="tracklist-container">
 
-        <div className="tracklist-head">xTracklist</div>
+        <div className="tracklist-head">Tracklist</div>
 
         <div className="tracklist-content-parent">
           <div className="tracklist-content">
@@ -61,7 +57,7 @@ const FloatingTracklist = props => {
           </div>
         </div>
 
-        <div className="close-tracklist"
+        <div className="close-tracklist close-modal"
           onClick={ _ => setShowTracklist(false) }
         >
           Close

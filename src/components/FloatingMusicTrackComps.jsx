@@ -1,4 +1,4 @@
-import { useContext, useRef, useEffect, useState } from 'react';
+import { useContext } from 'react';
 import './scss/FloatingMusicTrackComps.css';
 import { AudioContext } from '../context/AudioContext';
 import { EventContext } from '../context/EventContext';
@@ -26,7 +26,7 @@ const FloatingMusicTrackComps = () => {
   } = audioContext;
 
   const eventContext = useContext(EventContext);
-  const { setShowTracklist } = eventContext;
+  const { setShowTracklist, setShowMusicOptions } = eventContext;
 
   const { title, artistName, path } = activeMusicInfo;
 
@@ -73,7 +73,7 @@ const FloatingMusicTrackComps = () => {
           {/* more */}
           <div className="more icon-container"
             onClick={() => {
-              // setShowOptions(true);
+              setShowMusicOptions(true);
             }}
           >
             <img src={`../svg/floating-icons/more.svg`} alt="" />

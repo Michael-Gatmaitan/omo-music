@@ -57,11 +57,6 @@
   background-color: #EEEFF8;
 }
 
-.floating-tracklist .tracklist-container .tracklist-content-parent .tracklist-content {
-  content-visibility: auto;
-  scroll-behavior: smooth;
-}
-
 .floating-tracklist .tracklist-container .tracklist-content-parent .tracklist-content .tracklist-music-block {
   padding: 10px 0 8px 0;
   position: relative;
@@ -90,7 +85,7 @@
   bottom: 0;
 }
 
-.floating-tracklist .tracklist-container .close-tracklist {
+.floating-tracklist .tracklist-container .close-modal {
   width: 100%;
   padding: 16px 0;
   color: #323232;
@@ -110,11 +105,21 @@
   font-family: "Montserrat", sans-serif !important;
   font-weight: 700 !important;
   font-size: 18px !important;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 
-.floating-tracklist .tracklist-container .close-tracklist:hover {
+.floating-tracklist .tracklist-container .close-modal:hover {
   background-color: #293EF8;
   color: #fff;
+}
+
+@media (min-width: 780px) {
+  .floating-tracklist .tracklist-container .close-modal {
+    border-radius: 14px;
+  }
 }
 
 @media (min-width: 780px) {
@@ -123,9 +128,6 @@
   }
   .floating-tracklist .tracklist-container {
     max-height: 100%;
-  }
-  .floating-tracklist .tracklist-container .close-tracklist {
-    border-radius: 14px;
   }
 }
 /*# sourceMappingURL=FloatingTracklist.css.map */

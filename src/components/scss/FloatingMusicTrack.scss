@@ -2,6 +2,7 @@
 
 .floating-music-track-container {
   display: none;
+  // position: relative;
 
   @include desktop {
     display: block;

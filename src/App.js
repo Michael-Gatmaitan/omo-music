@@ -9,6 +9,7 @@ import MusicTrackMobile from './components/MusicTrackMobile';
 
 // Contexts 
 import { AudioContext } from './context/AudioContext';
+// import { EventContext } from './context/EventContext';
 
 // Routes
 import Nav from './components/Nav';
@@ -72,10 +73,6 @@ function App() {
     )
   }, [location]);
 
-  // State for MusicTrackMobile
-
-  let [isTrackOpen, setIsTrackOpen] = useState(false);
-
   useEffect(() => {
     triggerMusicLoading(true);
   }, [activeMusic]);
@@ -100,16 +97,11 @@ function App() {
 
       <Nav />
 
-      <MusicTrackMobile
-        isTrackOpen={isTrackOpen}
-        setIsTrackOpen={setIsTrackOpen}
-      />
+      <MusicTrackMobile />
 
       <RouteContainer />
 
-      <MusicTrackBar
-        setIsTrackOpen={setIsTrackOpen}
-      />
+      <MusicTrackBar />
     </>
   )
 }

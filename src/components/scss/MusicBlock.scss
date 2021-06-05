@@ -118,5 +118,20 @@
       }
     }
   }
+}
 
+.music-block-no-artist-image {
+  grid-template-columns: 1fr 46px !important;
+
+  .music-info {
+    margin-left: 0;
+  }
+
+  @include desktop {
+    grid-template-columns: 1fr 60px !important;
+
+    .music-info {
+      margin-left: 0;
+    }
+  }
 }

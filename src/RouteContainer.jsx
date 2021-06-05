@@ -10,7 +10,6 @@ import Artists from './components/Artists';
 import AppBody from './AppBody.jsx';
 import Playlists from './components/Playlists';
 import FloatingMusicTrack from './components/FloatingMusicTrack.jsx';
-import MoreMusicOptions from "./components/MoreMusicOptions";
 
 import './components/scss/RouteContainer.css';
 
@@ -23,6 +22,7 @@ const RouteContainer = () => {
 
         <div className="route-grid-wrap">
 
+          {/* Routes inside AppBody */}
           <AppBody />
 
           <Switch>
@@ -44,8 +44,7 @@ const RouteContainer = () => {
         </div>
 
         <FloatingMusicTrack />
-        <MoreMusicOptions />
-
+        
       </div>
 
     </div>

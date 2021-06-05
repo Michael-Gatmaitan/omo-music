@@ -17,12 +17,15 @@ const ArtistBlock = props => {
       <div className="dark-fade" />
 
       <div className="artist-info">
+
+        {/* Link */}
         <Link to={`artists/${data.path}`}>
           <div className="artist-name-blck">
             {data.artistName}
           </div>
           <div className="artist-songs-length">{data.musics.length} Songs</div>
         </Link>
+        
       </div>
     </div>
   )

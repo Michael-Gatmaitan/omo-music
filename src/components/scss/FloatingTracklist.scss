@@ -42,8 +42,6 @@
       }
 
       .tracklist-content {
-        content-visibility: auto;
-        scroll-behavior: smooth;
         
         .tracklist-music-block {
           padding: 10px 0 8px 0;
@@ -72,20 +70,8 @@
       }
     }
 
-    .close-tracklist {
-      width: 100%;
-      padding: 16px 0;
-      color: #323232;
-      border: solid 5px $pri-blue;
-      border-radius: 12px;
-      transition: 0.1s ease-in;
-      @include flexCenter;
-      @include fontProp('Montserrat', 700, 18px);
-
-      &:hover {
-        background-color: $pri-blue;
-        color: #fff;
-      }
+    .close-modal {
+      @include closeModal;
     }
   }
 
@@ -94,10 +80,6 @@
 
     .tracklist-container {
       max-height: 100%;
-
-      .close-tracklist {
-        border-radius: 14px;
-      }
     }
   }
 }

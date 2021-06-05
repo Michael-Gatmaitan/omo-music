@@ -1,9 +1,10 @@
 import React, { useContext } from 'react';
 import { AudioContext } from '../context/AudioContext';
+import { EventContext } from '../context/EventContext';
 import './scss/MusicTrackBar.css';
 // import { useHistory } from 'react-router-dom';
 
-const MusicTrackBar = props => {
+const MusicTrackBar = () => {
   const audioContext = useContext(AudioContext);
   const {
     activeMusic,
@@ -21,13 +22,17 @@ const MusicTrackBar = props => {
     playing,
   } = audioContext;
 
+  const eventContext = useContext(EventContext);
+  const {
+    setShowMusicTrackMobile
+  } = eventContext;
+
   const { title, artistName, path } = activeMusicInfo;
-  const { setIsTrackOpen } = props;
 
   let trackOpenAction = e => {
     const { target: t } = e;
     if (t.className.includes('music-track-bar')) {
-      setIsTrackOpen(true);
+      setShowMusicTrackMobile(true);
     }
   }
 

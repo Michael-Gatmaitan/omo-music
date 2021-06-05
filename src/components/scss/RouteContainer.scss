@@ -15,6 +15,7 @@ ul {
 
 .route-container {
   padding: 0 22px calc(80px + 22px) 22px;
+  // position: relative;
 
   .route-grid-container {
     grid-template-columns: auto;
@@ -118,7 +119,7 @@ ul {
 
           .location-title {
             @include fontProp('Montserrat', 700, 48px);
-          } 
+          }
         }
       }
     }

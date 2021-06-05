@@ -26,11 +26,11 @@ const Musics = () => {
   return (
     <div className="music-route">
       {musicDataTable.map((data, i) => (
-        <Suspense fallback={<div>...loading</div>}>
+        <Suspense fallback={<div>...loading</div>} key={i}>
           <MusicBlock
             musicDataTable={musicDataTable}
             data={data}
-            key={i}
+            displayArtistImage={false}
           />
         </Suspense>
       ))}

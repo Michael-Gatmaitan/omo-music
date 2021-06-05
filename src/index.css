@@ -3,6 +3,8 @@ body {
   margin: 0;
   padding: 0;
   background-color: #0B0B14;
+  -webkit-transition: 0.2s ease-in;
+  transition: 0.2s ease-in;
 }
 
 * {

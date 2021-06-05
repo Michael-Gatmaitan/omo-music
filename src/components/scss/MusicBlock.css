@@ -139,4 +139,23 @@
     width: 32px;
   }
 }
+
+.music-block-no-artist-image {
+  -ms-grid-columns: 1fr 46px !important;
+      grid-template-columns: 1fr 46px !important;
+}
+
+.music-block-no-artist-image .music-info {
+  margin-left: 0;
+}
+
+@media (min-width: 780px) {
+  .music-block-no-artist-image {
+    -ms-grid-columns: 1fr 60px !important;
+        grid-template-columns: 1fr 60px !important;
+  }
+  .music-block-no-artist-image .music-info {
+    margin-left: 0;
+  }
+}
 /*# sourceMappingURL=MusicBlock.css.map */

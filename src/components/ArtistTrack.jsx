@@ -17,6 +17,8 @@ const ArtistTrack = () => {
   let [musicDataTable, setMusicDataTable] = useState([]);
   
   useEffect(() => {
+    console.log(params);
+
     let dataFilt = bodyData.filter(o => o.path === artistID)[0];
     setData(dataFilt);
     setMusicDataTable(dataFilt.musics);
