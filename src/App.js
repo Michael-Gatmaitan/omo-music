@@ -1,5 +1,5 @@
 
-import React, { useState, useEffect, useRef, useContext } from 'react';
+import { useEffect, useRef, useContext } from 'react';
 import ReactAudioPlayer from 'react-audio-player';
 import { useLocation } from 'react-router-dom';
 
@@ -30,7 +30,8 @@ function App() {
 
     setCurrentPage,
 
-    musicLoading,
+    // TODO,
+    // musicLoading,
     triggerMusicLoading
   } = audioContext;
 
@@ -70,11 +71,13 @@ function App() {
       pathname.length === 1 ? "Musics" :
       pathname.includes("playlists") ? "Playlists" :
       pathname.includes("artists") ? "Artists" : ""
-    )
+    );
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [location]);
 
   useEffect(() => {
     triggerMusicLoading(true);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [activeMusic]);
 
   return (

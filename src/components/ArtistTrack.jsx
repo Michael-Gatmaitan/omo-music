@@ -22,6 +22,8 @@ const ArtistTrack = () => {
     let dataFilt = bodyData.filter(o => o.path === artistID)[0];
     setData(dataFilt);
     setMusicDataTable(dataFilt.musics);
+
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return (
@@ -44,6 +46,7 @@ const ArtistTrack = () => {
             musicDataTable={musicDataTable}
             data={data}
             key={i}
+            displayArtistImage={true}
           />
         ))}
       </div>

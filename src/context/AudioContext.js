@@ -49,6 +49,21 @@ export default class AudioContextProvider extends Component {
 		localStorage.setItem("bodyState", JSON.stringify(this.state));
 	}
 
+	updateFavorites = item => {
+		let favoritesTemp = [...this.state.favorites];
+
+		if (favoritesTemp.includes(item)) {
+			favoritesTemp.splice(favoritesTemp.indexOf(item), 1);
+		} else {
+			favoritesTemp.unshift(item);
+		}
+
+		// Callback used for debugging purpose only
+		this.setState({ favorites: favoritesTemp }, () => {
+			console.log(this.state.favorites);
+		});
+	}
+
 	triggerMusicLoading = bool => this.setState({ musicLoading: bool });
 
 	triggerShowBackArrow = bool => this.setState({ showBackArrow: bool });
@@ -75,7 +90,7 @@ export default class AudioContextProvider extends Component {
 		this.updateTrackHistory(data);
 	}
 
-	setRecentPlayed = newItem => {
+	updateRecentPlayed = newItem => {
 		let recentPlayed = [...this.state.recentPlayed];
 		recentPlayed.unshift(newItem);
 		this.setState({ recentPlayed });
@@ -101,7 +116,7 @@ export default class AudioContextProvider extends Component {
 			this.setState({ trackHistory });
 		}
 
-		this.setRecentPlayed(track);
+		this.updateRecentPlayed(track);
 		
 		let trackHistoryIndex = trackHistory.lastIndexOf(track);
 		this.setState({ trackHistoryIndex });
@@ -189,9 +204,9 @@ export default class AudioContextProvider extends Component {
 			triggerPlaying: this.triggerPlaying,
 
 			...{
-				currentTime: this.state.currentTime,
-				duration: this.state.duration,
-				currentDurPercent: this.state.currentDurPercent,
+				// currentTime: this.state.currentTime,
+				// duration: this.state.duration,
+				// currentDurPercent: this.state.currentDurPercent,
 			},
 
 			...{
@@ -215,11 +230,11 @@ export default class AudioContextProvider extends Component {
 			functionsToFire: this.functionsToFire,
 
 			...{
-				trackHistory: this.state.trackHistory,
-				trackHistoryIndex: this.state.trackHistoryIndex,
+				// trackHistory: this.state.trackHistory,
+				// trackHistoryIndex: this.state.trackHistoryIndex,
 			},
 
-			activeMusic: this.state.activeMusic,
+			// activeMusic: this.state.activeMusic,
 
 			...{
 				prev: this.prev,
@@ -227,30 +242,33 @@ export default class AudioContextProvider extends Component {
 			},
 
 			...{
-				order: this.state.order,
-				shuffle: this.state.shuffle,
+				// order: this.state.order,
+				// shuffle: this.state.shuffle,
 			},
 			
 			...{
 				triggerShowBackArrow: this.triggerShowBackArrow,
-				showBackArrow: this.state.showBackArrow
+				// showBackArrow: this.state.showBackArrow
 			},
 
 			...{
-				currentPage: this.state.currentPage,
+				// currentPage: this.state.currentPage,
 				setCurrentPage: this.setCurrentPage
 			},
 
-			activeMusicInfo: this.state.activeMusicInfo,
+			// activeMusicInfo: this.state.activeMusicInfo,
 			
 			...{
-				musicLoading: this.state.musicLoading,
+				// musicLoading: this.state.musicLoading,
 				triggerMusicLoading: this.triggerMusicLoading
 			},
 
-			trackList: this.state.trackList,
-			// Options content's functions
-				/* Add Queue - x */
+			// trackList: this.state.trackList,
+			
+			...{
+				// favorites: this.state.favorites,
+				updateFavorites: this.updateFavorites
+			},
 			
 		};
 

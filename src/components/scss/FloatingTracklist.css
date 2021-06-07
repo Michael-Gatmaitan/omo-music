@@ -109,6 +109,7 @@
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
+  cursor: pointer;
 }
 
 .floating-tracklist .tracklist-container .close-modal:hover {

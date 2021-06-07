@@ -3,7 +3,6 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 // import LandingPage from './LandingPage';
-import MoreMusicOptions from './components/MoreMusicOptions';
 
 import { BrowserRouter as Router } from 'react-router-dom';
 // Contexts
@@ -16,7 +15,6 @@ ReactDOM.render(
       {/* {localStorage.length === 0 ? <LandingPage /> : <App />} */}
       <EventContextProvider>
         <App />
-        <MoreMusicOptions />
       </EventContextProvider>
     </AudioContextProvider>
   </Router>,

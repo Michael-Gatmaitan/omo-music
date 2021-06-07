@@ -33,7 +33,7 @@ const FloatingTracklist = props => {
 
       <div className="tracklist-container">
 
-        <div className="tracklist-head">Tracklist</div>
+        <div className="tracklist-head">Tracklist ({trackList.length})</div>
 
         <div className="tracklist-content-parent">
           <div className="tracklist-content">

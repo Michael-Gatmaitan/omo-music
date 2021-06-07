@@ -1,4 +1,4 @@
-import { useContext } from 'react';
+import { useContext, useState, useEffect } from 'react';
 import './scss/FloatingMusicTrackComps.css';
 import { AudioContext } from '../context/AudioContext';
 import { EventContext } from '../context/EventContext';
@@ -10,6 +10,7 @@ const FloatingMusicTrackComps = () => {
 
   const audioContext = useContext(AudioContext);
   const {
+    activeMusicRawTitle,
     activeMusicInfo,
     currentTime,
     duration,
@@ -22,16 +23,43 @@ const FloatingMusicTrackComps = () => {
     prev,
     activeMusic,
     playing,
-    next
+    next,
+
+    favorites,
+    updateFavorites,
   } = audioContext;
 
   const eventContext = useContext(EventContext);
-  const { setShowTracklist, setShowMusicOptions } = eventContext;
+  const { setShowTracklist } = eventContext;
 
   const { title, artistName, path } = activeMusicInfo;
 
   let { curMin, curSec } = { curMin: Math.floor(currentTime / 60).toString(), curSec: Math.round(currentTime % 60).toString() };
   let { durMin, durSec } = { durMin: Math.floor(duration / 60).toString(), durSec: Math.round(duration % 60).toString() };
+
+  let [isInFavorites, setIsInFavorites] = useState(false);
+  
+  useEffect(() => {
+
+    if (activeMusicRawTitle !== '') {
+      if (favorites.includes(activeMusicRawTitle))
+        setIsInFavorites(true);
+      else
+        setIsInFavorites(false);
+    }
+
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [activeMusicRawTitle]);
+
+  useEffect(() => {
+
+    if (favorites.includes(activeMusicRawTitle))
+      setIsInFavorites(true);
+    else
+      setIsInFavorites(false);
+
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [favorites])
 
   return (
     <div className="floating-music-track">
@@ -41,6 +69,7 @@ const FloatingMusicTrackComps = () => {
       <div className="artist-image-bg">
         <img src={`../artists-image/${path}.jpg`} alt="" />
       </div>
+      
       <div className="blur-bg" />
 
       <div className="floating-childs-parent">
@@ -58,26 +87,18 @@ const FloatingMusicTrackComps = () => {
 
           {/* tracklist */}
           <div className="tracklist icon-container"
-            onClick={() => {
-              setShowTracklist(true);
-            }}
+            onClick={() => setShowTracklist(true) }
           >
             <img src={`../svg/floating-icons/tracklist.svg`} alt="" />
           </div>
 
           {/* heart */}
-          <div className="heart icon-container">
-            <img src={`../svg/floating-icons/heart_unfilled.svg`} alt="" />
+          <div className="heart icon-container"
+            onClick={() => updateFavorites(activeMusicRawTitle) }
+          >
+            <img src={`../svg/floating-icons/heart_${isInFavorites ? 'filled' : 'unfilled'}.svg`} alt="" />
           </div>
 
-          {/* more */}
-          <div className="more icon-container"
-            onClick={() => {
-              setShowMusicOptions(true);
-            }}
-          >
-            <img src={`../svg/floating-icons/more.svg`} alt="" />
-          </div>
         </div>
 
         <div className="floating-seekbar">
