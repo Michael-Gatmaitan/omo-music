@@ -46,25 +46,24 @@
     box-shadow: 0 6px 12px rgba(#000, 0.12);
     display: flex;
     align-self: center;
-    margin-top: 25px;
     margin: 0 auto;
 
     img { width: 100%; }
   }
 
   .floating-music-info {
-    margin: 41px auto 0 auto;
+    margin: 28px auto 42px auto;
     text-align: center;
     padding: 0 24px;
     
+    div { text-shadow: 0 2px 6px rgba(#000, 0.12); }
+   
     .music-title {
       @include fontProp('Montserrat', 700, 24px);
-      text-shadow: 0 2px 6px rgba(#000, 0.12);
     }
 
     .artist-name {
       @include fontProp('Open sans', 600, 16px);
-      text-shadow: 0 2px 6px rgba(#000, 0.12);
       margin-top: 6px;
     }
   }
@@ -73,7 +72,6 @@
     padding: 0 120px;
     display: flex;
     justify-content: space-between;
-    margin-top: 34px;
 
     .icon-container {
       width: 28px;
@@ -131,6 +129,8 @@
     grid-gap: 24px;
     margin-top: 51px;
 
+    img { filter: drop-shadow(0 4px 6px rgba(#000, .12)); }
+
     button {
       height: 32px;
       border: none;
@@ -149,7 +149,9 @@
     .play_pause-but {
       width: 60px;
       height: 60px;
-      background-color: $pri_blue;
+      background-color: rgba(#000, 0.15);
+      -webkit-backdrop-filter: blur(32px);
+      backdrop-filter: blur(32px);
       border-radius: 12px;
     }
   }
@@ -177,9 +179,7 @@
     .floating-seekbar {
       margin-top: 38px;
 
-      .seekbar-times {
-        @include fontProp('Open sans', 600, 12px);
-      }
+      .seekbar-times { font-size: 12px; }
       .current-time { padding-right: 8px; }
       .total-time { padding-left: 8px; }
     }
@@ -188,32 +188,15 @@
       width: 180px;
       height: 180px;
     }
-
+    
     .floating-music-info {
-      margin: 41px auto 0 auto;
-    }
-
-    .floating-artist-image-container {
-      margin-top: 0;
-    }
-
-    .floating-music-info {
-      margin: 24px auto 0 auto;
-      text-align: center;
-      padding: 0 24px;
+      margin: 24px auto 38px auto;
       
-      .music-title {
-        @include fontProp('Montserrat', 700, 20px);
-      }
+      .music-title { font-size: 20px; }
   
-      .artist-name {
-        @include fontProp('Open sans', 600, 14px);
-        margin-top: 6px;
-      }
+      .artist-name { font-size: 14px; }
     }
 
-    .music-track-events {
-      margin-top: 24px;
-    }
+    .music-track-events { margin-top: 24px; }
   }
 }

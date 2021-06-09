@@ -135,6 +135,8 @@ export default class AudioContextProvider extends Component {
 			artistName: musicArtist
 		}
 
+		document.title = mscName.slice(0, -4);
+
 		this.handleChangeMusic(mscName, music, musicInfo);
 	}
 	

@@ -40,6 +40,10 @@ const RouteContainer = () => {
             <Route path="/artists/:artistID">
               <ArtistTrack />
             </Route>
+
+            {/* <Route path="/playlists/:playlistID">
+
+            </Route> */}
           </Switch>
         </div>
 

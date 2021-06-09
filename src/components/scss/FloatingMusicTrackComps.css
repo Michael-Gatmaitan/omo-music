@@ -62,7 +62,6 @@
   display: flex;
   -ms-flex-item-align: center;
       align-self: center;
-  margin-top: 25px;
   margin: 0 auto;
 }
 
@@ -71,23 +70,25 @@
 }
 
 .floating-music-track .floating-music-info {
-  margin: 41px auto 0 auto;
+  margin: 28px auto 42px auto;
   text-align: center;
   padding: 0 24px;
+}
+
+.floating-music-track .floating-music-info div {
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.12);
 }
 
 .floating-music-track .floating-music-info .music-title {
   font-family: "Montserrat", sans-serif !important;
   font-weight: 700 !important;
   font-size: 24px !important;
-  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.12);
 }
 
 .floating-music-track .floating-music-info .artist-name {
   font-family: "Open sans", sans-serif !important;
   font-weight: 600 !important;
   font-size: 16px !important;
-  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.12);
   margin-top: 6px;
 }
 
@@ -99,7 +100,6 @@
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  margin-top: 34px;
 }
 
 .floating-music-track .floating-icons .icon-container {
@@ -188,6 +188,11 @@
   margin-top: 51px;
 }
 
+.floating-music-track .music-track-events img {
+  -webkit-filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.12));
+          filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.12));
+}
+
 .floating-music-track .music-track-events button {
   height: 32px;
   border: none;
@@ -214,7 +219,9 @@
 .floating-music-track .music-track-events .play_pause-but {
   width: 60px;
   height: 60px;
-  background-color: #293EF8;
+  background-color: rgba(0, 0, 0, 0.15);
+  -webkit-backdrop-filter: blur(32px);
+  backdrop-filter: blur(32px);
   border-radius: 12px;
 }
 
@@ -240,9 +247,7 @@
     margin-top: 38px;
   }
   .floating-music-track .floating-seekbar .seekbar-times {
-    font-family: "Open sans", sans-serif !important;
-    font-weight: 600 !important;
-    font-size: 12px !important;
+    font-size: 12px;
   }
   .floating-music-track .floating-seekbar .current-time {
     padding-right: 8px;
@@ -255,26 +260,13 @@
     height: 180px;
   }
   .floating-music-track .floating-music-info {
-    margin: 41px auto 0 auto;
-  }
-  .floating-music-track .floating-artist-image-container {
-    margin-top: 0;
-  }
-  .floating-music-track .floating-music-info {
-    margin: 24px auto 0 auto;
-    text-align: center;
-    padding: 0 24px;
+    margin: 24px auto 38px auto;
   }
   .floating-music-track .floating-music-info .music-title {
-    font-family: "Montserrat", sans-serif !important;
-    font-weight: 700 !important;
-    font-size: 20px !important;
+    font-size: 20px;
   }
   .floating-music-track .floating-music-info .artist-name {
-    font-family: "Open sans", sans-serif !important;
-    font-weight: 600 !important;
-    font-size: 14px !important;
-    margin-top: 6px;
+    font-size: 14px;
   }
   .floating-music-track .music-track-events {
     margin-top: 24px;
