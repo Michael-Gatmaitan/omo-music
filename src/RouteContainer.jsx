@@ -7,9 +7,11 @@ import {
 import ArtistTrack from './components/ArtistTrack';
 import Musics from './components/Musics';
 import Artists from './components/Artists';
-import AppBody from './AppBody.jsx';
+import AppBody from './AppBody';
 import Playlists from './components/Playlists';
-import FloatingMusicTrack from './components/FloatingMusicTrack.jsx';
+import FloatingMusicTrack from './components/FloatingMusicTrack';
+
+import PlaylistTrack from './components/PlaylistTrack';
 
 import './components/scss/RouteContainer.css';
 
@@ -25,26 +27,35 @@ const RouteContainer = () => {
           {/* Routes inside AppBody */}
           <AppBody />
 
-          <Switch>
-            <Route exact path="/">
-              <Musics />
-            </Route>
-            <Route path="/playlists">
-              <Playlists />
-            </Route>
-            <Route exact path="/artists">
-              <Artists />
-            </Route>
+          <div style={{ paddingTop: "12px" }}>
+            <Switch>
+              <Route exact path="/">
+                <Musics />
+              </Route>
+              <Route exact path="/playlists">
+                <Playlists />
+              </Route>
+              <Route exact path="/artists">
+                <Artists />
+              </Route>
 
-            {/* nested routes */}
-            <Route path="/artists/:artistID">
-              <ArtistTrack />
-            </Route>
+              {/* nested routes */}
+              <Route path="/artists/:artistID">
+                <ArtistTrack />
+              </Route>
 
-            {/* <Route path="/playlists/:playlistID">
+              {/* Routers for "Playlists" */}
+              {/* 
+                  ** Favorites
+                  ** Made For You
+                  ** Custom Playlists
+              */}
 
-            </Route> */}
-          </Switch>
+              <Route path="/playlists/:playlistID">
+                <PlaylistTrack />
+              </Route>
+            </Switch>
+          </div>
         </div>
 
         <FloatingMusicTrack />

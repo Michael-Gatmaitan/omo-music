@@ -1,10 +1,15 @@
-import { useContext, useState, useEffect } from 'react';
+import { useContext, useState, useEffect, useMemo } from 'react';
 import './scss/FloatingMusicTrackComps.css';
 import { AudioContext } from '../context/AudioContext';
 import { EventContext } from '../context/EventContext';
 
 // Components
 import FloatingTracklist from './FloatingTracklist';
+
+const calculatePercentage = (currentTime, totalDur) => {
+			// this.state.currentTime / this.state.duration) * 100
+    return (currentTime / totalDur) * 100;
+}
 
 const FloatingMusicTrackComps = () => {
 
@@ -14,7 +19,7 @@ const FloatingMusicTrackComps = () => {
     activeMusicInfo,
     currentTime,
     duration,
-    currentDurPercent,
+    // currentDurPercent,
 
     trackList,
 
@@ -38,6 +43,12 @@ const FloatingMusicTrackComps = () => {
   let { durMin, durSec } = { durMin: Math.floor(duration / 60).toString(), durSec: Math.round(duration % 60).toString() };
 
   let [isInFavorites, setIsInFavorites] = useState(false);
+
+  // let [durationPercent, setDurationPercent] = useState();
+
+  let durationPercent = useMemo(() => {
+    return calculatePercentage(currentTime, duration);
+  }, [currentTime]);
   
   useEffect(() => {
 
@@ -49,17 +60,7 @@ const FloatingMusicTrackComps = () => {
     }
 
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [activeMusicRawTitle]);
-
-  useEffect(() => {
-
-    if (favorites.includes(activeMusicRawTitle))
-      setIsInFavorites(true);
-    else
-      setIsInFavorites(false);
-
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [favorites])
+  }, [activeMusicRawTitle, favorites]);
 
   return (
     <div className="floating-music-track">
@@ -118,7 +119,7 @@ const FloatingMusicTrackComps = () => {
               <div
                 className="slider-progress"
                 style={{
-                  width: `${currentDurPercent}%`
+                  width: `${durationPercent}%`
                 }}
               />
             </div>

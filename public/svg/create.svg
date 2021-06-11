@@ -1,0 +1,12 @@
+<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect x="9.5" width="5" height="24" rx="2.5" fill="white"/>
+<rect y="14.5" width="5" height="24" rx="2.5" transform="rotate(-90 0 14.5)" fill="white"/>
+<rect width="2.75" height="2.75" transform="matrix(-1 0 0 1 9.5 14.5)" fill="white"/>
+<circle r="2.75" transform="matrix(-1 0 0 1 6.75 17.25)" fill="#293EF8"/>
+<rect x="9.5" y="9.5" width="2.75" height="2.75" transform="rotate(-180 9.5 9.5)" fill="white"/>
+<circle cx="6.75" cy="6.75" r="2.75" transform="rotate(-180 6.75 6.75)" fill="#293EF8"/>
+<rect x="14.5" y="14.5" width="2.75" height="2.75" fill="white"/>
+<circle cx="17.25" cy="17.25" r="2.75" fill="#293EF8"/>
+<rect width="2.75" height="2.75" transform="matrix(1 0 0 -1 14.5 9.5)" fill="white"/>
+<circle r="2.75" transform="matrix(1 0 0 -1 17.25 6.75)" fill="#293EF8"/>
+</svg>

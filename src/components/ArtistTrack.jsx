@@ -6,37 +6,38 @@ import './scss/ArtistTrack.css';
 
 const ArtistTrack = () => {
 
-  const params = useParams();
-  const { artistID } = params;
-  let [data, setData] = useState({
+  const { artistID } = useParams();
+  let [artistData, setArtistData] = useState({
     path: '',
     artistName: '',
     musics: [],
     artistID: Number
   });
+
   let [musicDataTable, setMusicDataTable] = useState([]);
   
   useEffect(() => {
-    console.log(params);
 
     let dataFilt = bodyData.filter(o => o.path === artistID)[0];
-    setData(dataFilt);
+    setArtistData(dataFilt);
     setMusicDataTable(dataFilt.musics);
 
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
+  const { path, artistName, musics } = artistData;
+
   return (
     <div className="artist-track-route">
       <div className="artist-track-info">
         <div className="artist-image-wrapper">
-          <img src={`../artists-image/${data.path}.jpg`} alt={data.path} />
+          <img src={`../artists-image/${path}.jpg`} alt="" />
         </div>
         <div className="artist-name">
-          {data.artistName}
+          {artistName}
         </div>
         <div className="artist-music-length">
-          {data.musics.length} {data.musics.length > 1 ? 'Songs' : 'Song'}
+          {musics.length} {musics.length > 1 ? 'Songs' : 'Song'}
         </div>
 
       </div>

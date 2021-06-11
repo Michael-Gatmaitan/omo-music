@@ -9,8 +9,9 @@ const MusicTrackBar = () => {
   const {
     activeMusic,
     activeMusicInfo,
-    
-    currentDurPercent,
+
+    currentTime,
+    duration,
 
     trackHistory,
     trackHistoryIndex,
@@ -44,7 +45,7 @@ const MusicTrackBar = () => {
       <div className="duration-progress-container">
         <div className="duration-progress"
           style={{
-            width: `${currentDurPercent}%`,
+            width: `${(currentTime / duration) * 100}%`,
           }}
         />
       </div>

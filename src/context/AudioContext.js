@@ -13,7 +13,6 @@ export default class AudioContextProvider extends Component {
 
 		currentTime: 0,
 		duration: 0,
-		currentDurPercent: 0,
 		
 		order: false,
 		shuffle: true,
@@ -148,12 +147,8 @@ export default class AudioContextProvider extends Component {
 
 	updateTrackList = trackList => this.setState({ trackList });
 
-	updateCurrentTime = currentTime => {
-		this.setState({ currentDurPercent: (
-			this.state.currentTime / this.state.duration) * 100
-		});
-		this.setState({ currentTime });
-	}
+	updateCurrentTime = currentTime => this.setState({ currentTime });
+	
 	updateTotalDuration = duration => this.setState({ duration });
 
 	handleMusicEnded = () => {

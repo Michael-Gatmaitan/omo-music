@@ -11,6 +11,10 @@ ul li a {
   text-decoration: none;
 }
 
+a {
+  text-decoration: none;
+}
+
 .route-container {
   padding: 0 22px calc(80px + 22px) 22px;
 }
