@@ -1,0 +1,69 @@
+@import '../../mixins.scss';
+
+.music-options-container {
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: column;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding: 8px;
+  background: linear-gradient(rgba(#000, 0.3), rgba(#000, 1));
+  z-index: 500;
+  transition: 0.1s ease-in;
+
+  .music-options-content {
+    width: 100%;
+    background-color: #EEEFF8;
+    padding: 18px;
+    border-radius: 16px;
+    display: grid;
+    grid-gap: 32px;
+    grid-template-columns: 100%;
+    grid-template-rows: 184px auto;
+
+    .music-info-block-container {
+      width: 100%;
+      height: 184px;
+      background-color: #0ff;
+
+      .music-info-block {
+        height: 100%;
+        width: 184px;
+        background-color: #f00;
+        margin: 0 auto;
+      }
+    }
+
+    .options-selection-container {
+      display: grid;
+      grid-gap: 18px;
+
+      .option-selection {
+        display: grid;
+        grid-gap: 16px;
+        
+        .option {
+          display: flex;
+          align-items: center;
+          cursor: pointer;
+
+          .option-icon {
+            width: 28px;
+            height: 28px;
+            background-color: #f00;
+            img { width: 100%; }
+          }
+          .option-title {
+            @include fontProp('Montserrat', 600, 18px);
+            color: #000;
+            margin-left: 12px;
+          }
+        }
+      }
+
+    }
+  }
+}

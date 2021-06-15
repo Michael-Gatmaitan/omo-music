@@ -1,0 +1,23 @@
+@import '../../mixins.scss';
+
+.close-modal {
+  width: 100%;
+  padding: 16px 0;
+  color: #000;
+  border: solid 5px $pri-blue;
+  border-radius: 12px;
+  transition: 0.1s ease-in;
+  @include flexCenter;
+  @include fontProp('Montserrat', 700, 18px);
+  user-select: none;
+  cursor: pointer;
+
+  &:hover {
+    background-color: $pri-blue;
+    color: #fff;
+  }
+
+  @include desktop {
+    border-radius: 14px;
+  }
+}

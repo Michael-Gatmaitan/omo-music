@@ -6,6 +6,7 @@ import { useLocation } from 'react-router-dom';
 // Components
 import MusicTrackBar from './components/MusicTrackBar';
 import MusicTrackMobile from './components/MusicTrackMobile';
+import MusicOptions from './components/MusicOptions';
 
 // Contexts 
 import { AudioContext } from './context/AudioContext';
@@ -105,6 +106,8 @@ function App() {
       <RouteContainer />
 
       <MusicTrackBar />
+
+      <MusicOptions />
     </>
   )
 }

@@ -1,0 +1,38 @@
+.close-modal {
+  width: 100%;
+  padding: 16px 0;
+  color: #000;
+  border: solid 5px #293EF8;
+  border-radius: 12px;
+  -webkit-transition: 0.1s ease-in;
+  transition: 0.1s ease-in;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-family: "Montserrat", sans-serif !important;
+  font-weight: 700 !important;
+  font-size: 18px !important;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  cursor: pointer;
+}
+
+.close-modal:hover {
+  background-color: #293EF8;
+  color: #fff;
+}
+
+@media (min-width: 780px) {
+  .close-modal {
+    border-radius: 14px;
+  }
+}
+/*# sourceMappingURL=CloseButton.css.map */

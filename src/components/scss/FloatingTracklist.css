@@ -31,7 +31,7 @@
   height: 100%;
   max-height: 520px;
   background-color: #EEEFF8;
-  border-radius: 17px;
+  border-radius: 16px;
   padding: 18px;
   display: -ms-grid;
   display: grid;
@@ -63,7 +63,7 @@
 }
 
 .floating-tracklist .tracklist-container .tracklist-content-parent .tracklist-content .tracklist-music-block .tl-music-info .tl-title {
-  color: #121212;
+  color: #323232;
   padding-right: 40px;
   font-family: "Montserrat", sans-serif !important;
   font-weight: 700 !important;
@@ -71,7 +71,7 @@
 }
 
 .floating-tracklist .tracklist-container .tracklist-content-parent .tracklist-content .tracklist-music-block .tl-music-info .tl-artist {
-  color: rgba(18, 18, 18, 0.58);
+  color: rgba(50, 50, 50, 0.58);
   font-family: "Open sans", sans-serif !important;
   font-weight: 400 !important;
   font-size: 12px !important;

@@ -27,25 +27,3 @@ $hgl_blue: rgba(#0A1344, 0.58);
     @content;
   }
 }
-
-@mixin closeModal {
-  width: 100%;
-  padding: 16px 0;
-  color: #323232;
-  border: solid 5px $pri-blue;
-  border-radius: 12px;
-  transition: 0.1s ease-in;
-  @include flexCenter;
-  @include fontProp('Montserrat', 700, 18px);
-  user-select: none;
-  cursor: pointer;
-
-  &:hover {
-    background-color: $pri-blue;
-    color: #fff;
-  }
-
-  @include desktop {
-    border-radius: 14px;
-  }
-}

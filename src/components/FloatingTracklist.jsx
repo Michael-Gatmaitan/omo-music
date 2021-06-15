@@ -2,6 +2,8 @@ import { useContext } from 'react';
 import { AudioContext } from '../context/AudioContext';
 import { EventContext } from '../context/EventContext';
 
+import CloseButton from './Buttons/CloseButton';
+
 import './scss/FloatingTracklist.css';
 
 const FloatingTracklist = props => {
@@ -57,11 +59,7 @@ const FloatingTracklist = props => {
           </div>
         </div>
 
-        <div className="close-tracklist close-modal"
-          onClick={ _ => setShowTracklist(false) }
-        >
-          Close
-        </div>
+        <CloseButton closeFunction={ setShowTracklist } />
 
       </div>
 

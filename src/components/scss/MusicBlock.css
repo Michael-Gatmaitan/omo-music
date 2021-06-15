@@ -53,7 +53,7 @@
   color: rgba(255, 255, 255, 0.58);
 }
 
-.music-block .music-options {
+.music-block .music-options-parent {
   height: 100%;
   width: 46px;
   position: relative;
@@ -68,7 +68,7 @@
           align-items: center;
 }
 
-.music-block .music-options .music-options-button {
+.music-block .music-options-parent .music-options-button {
   width: 34px;
   height: 34px;
   border-radius: 8px;
@@ -83,11 +83,11 @@
           align-items: center;
 }
 
-.music-block .music-options .music-options-button img {
+.music-block .music-options-parent .music-options-button img {
   width: 28px;
 }
 
-.music-block .music-options::before {
+.music-block .music-options-parent::before {
   content: '';
   width: 50px;
   height: 100%;
@@ -128,14 +128,14 @@
     font-weight: 400 !important;
     font-size: 14px !important;
   }
-  .music-block .music-options {
+  .music-block .music-options-parent {
     width: 60px;
   }
-  .music-block .music-options .music-options-button {
+  .music-block .music-options-parent .music-options-button {
     width: 38px;
     height: 38px;
   }
-  .music-block .music-options .music-options-button img {
+  .music-block .music-options-parent .music-options-button img {
     width: 32px;
   }
 }

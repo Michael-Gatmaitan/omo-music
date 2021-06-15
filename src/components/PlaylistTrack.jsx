@@ -39,11 +39,4 @@ const PlaylistTrack = () => {
   )
 }
 
-{/* <MusicBlock
-  musicDataTable={musicDataTable}
-  data={data}
-  key={i}
-  displayArtistImage={true}
-/> */}
-
 export default PlaylistTrack;
