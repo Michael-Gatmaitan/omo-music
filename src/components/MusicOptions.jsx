@@ -1,6 +1,7 @@
-import { useContext } from 'react';
+import { useContext, useState, useEffect } from 'react';
 import './scss/MusicOptions.css';
 import CloseButton from './Buttons/CloseButton';
+import { AudioContext } from '../context/AudioContext';
 import { EventContext } from '../context/EventContext';
 
 const MusicOptions = () => {
@@ -11,13 +12,17 @@ const MusicOptions = () => {
     showSelectPlaylist,
     
     closeAllMusicOptions,
-    setShowMusicOptions,
+    // setShowMusicOptions,
     setShowSelectPlaylist,
     musicOptionsData,
 
   } = useContext(EventContext);
-
-  const { rawTitle, title, artist } = musicOptionsData;
+  
+  const {
+    favorites,
+    updateFavorites,
+    addQueue
+  } = useContext(AudioContext);
 
   return (
     <div className="music-options-container"
@@ -34,8 +39,17 @@ const MusicOptions = () => {
 
         <div className="options-selection-container">
 
-          {/* Conditional Rendering will happen below  */}
-          <OptionSelection />
+          { showSelectPlaylist ?
+              <SelectPlaylist /> :
+              <OptionSelection
+                setShowSelectPlaylist={setShowSelectPlaylist}
+                favorites={favorites}
+                musicOptionsData={musicOptionsData}
+                updateFavorites={updateFavorites}
+                closeAllMusicOptions={closeAllMusicOptions}
+                addQueue={addQueue}
+              />
+          }
 
           <CloseButton closeFunction={closeAllMusicOptions} />
 
@@ -47,38 +61,99 @@ const MusicOptions = () => {
   )
 }
 
-const MusicInfoBlock = ({ rawTitle, title, artist }) => (
+const MusicInfoBlock = ({ musicOptionsData }) => {
   
-  <div className="music-info-block-container">
-    <div className="music-info-block">{rawTitle}</div>
-  </div>
-);
+  const { title, artist } = musicOptionsData;
+  const artistImage = artist.replaceAll(" ", "-");
 
-const OptionSelection = () => (
-  <div className="option-selection">
+  return (
+    <div className="music-info-block-container">
+      
+      <div className="music-info-block">
+        <img
+          src={`../artists-image/${artistImage}.jpg`}
+          alt=""
+        />
 
-    <div className="option">
-      <div className="option-icon">
-        <img src="../svg/black-icons/play_next_black.svg" alt="" />
+        <div className="darken-bg">
+          <div className="music-info">
+            <div className="title">{title}</div>
+            <div className="artist">{artist}</div>
+          </div>
+        </div>
       </div>
-      <div className="option-title">Add to playing queue</div>
-    </div>
 
-    <div className="option">
-      <div className="option-icon">
-        <img src="../svg/black-icons/heart_filled.svg" alt="" />
+    </div>
+  )
+}
+
+const OptionSelection = props => {
+  const {
+    setShowSelectPlaylist,
+    favorites,
+    musicOptionsData,
+    updateFavorites,
+    closeAllMusicOptions,
+    addQueue
+  } = props;
+
+  let [isInFavorites, setIsInFavorites] = useState(false);
+  let { rawTitle } = musicOptionsData;
+
+  useEffect(() => {
+    if(favorites.includes(rawTitle)) {
+      setIsInFavorites(true);
+    } else {
+      setIsInFavorites(false);
+    }
+    
+    // eslint-disable-next-line
+  }, [rawTitle]);
+
+
+  return (
+    <div className="option-selection">
+
+      <div className="option" onClick={
+          () => {
+            addQueue(rawTitle);
+            closeAllMusicOptions();
+          }
+        }>
+        <div className="option-icon">
+          <img src="../svg/black-icons/play_next_black.svg" alt="" />
+        </div>
+        <div className="option-title">Add to playing queue</div>
       </div>
-      <div className="option-title">Remove to Favorites</div>
-    </div>
 
-    <div className="option">
-      <div className="option-icon">
-        <img src="../svg/black-icons/add_to_playlist_black.svg" alt="" />
+      <div className="option" onClick={
+        () => {
+          updateFavorites(rawTitle);
+          closeAllMusicOptions();
+        }
+      }>
+        <div className="option-icon">
+          <img
+            src={`../svg/black-icons/${isInFavorites ? "heart_filled" : "heart_unfilled"}.svg`}
+            alt=""
+          />
+        </div>
+        <div className="option-title">{isInFavorites ? "Remove" : "Add"} to Favorites</div>
       </div>
-      <div className="option-title">Add to Playlist</div>
-    </div>
 
-  </div>
+      <div className="option" onClick={ () => setShowSelectPlaylist(true) }>
+        <div className="option-icon">
+          <img src="../svg/black-icons/add_to_playlist_black.svg" alt="" />
+        </div>
+        <div className="option-title">Add to Playlist</div>
+      </div>
+
+    </div>
+  )
+}
+
+const SelectPlaylist = () => (
+  <div className="select-playlist">Select Playlist</div>
 );
 
 export default MusicOptions;

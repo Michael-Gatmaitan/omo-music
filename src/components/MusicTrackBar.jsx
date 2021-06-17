@@ -37,9 +37,11 @@ const MusicTrackBar = () => {
     }
   }
 
+  const imgSrc = path ? `../artists-image/${path}.jpg` : "../svg/dark-omo-logo.svg";
+
   return (
     <div className="music-track-bar"
-      onClick={ trackOpenAction }
+      onClick={ path ? trackOpenAction : null }
     >
 
       <div className="duration-progress-container">
@@ -55,11 +57,11 @@ const MusicTrackBar = () => {
       <div className="music-info-displays">
 
         <div className="music-artist-image">
-          <img src={`../artists-image/${path}.jpg`} alt={path} />
+          {/* {`../artists-image/${path}.jpg`} */}
+          <img src={imgSrc} alt="" />
         </div>
 
         <div className="music-texts">
-          {/* <div className="text-color-fade" /> */}
           <div className="music-title">{title || "OMO Music"}</div>
           <div className="music-artist-name">{artistName || "M. Gatmaitan, 2021"}</div>
         </div>

@@ -35,9 +35,9 @@ export default class EventContextProvider extends Component {
   setShowSelectPlaylist = bool => this.setState({ showSelectPlaylist: bool });
 
   // Overall function for 'MusicOptions.jsx'
-  closeAllMusicOptions = bool => {
-    this.setState({ showMusicOptions: bool });
-    this.setState({ showSelectPlaylist: bool });
+  closeAllMusicOptions = () => {
+    this.setState({ showMusicOptions: false });
+    this.setState({ showSelectPlaylist: false });
   }
 
   setMusicOptionsData = (data, title, artist) => {

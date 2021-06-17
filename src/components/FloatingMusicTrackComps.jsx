@@ -48,6 +48,8 @@ const FloatingMusicTrackComps = () => {
 
   let durationPercent = useMemo(() => {
     return calculatePercentage(currentTime, duration);
+
+    // eslint-disable-next-line
   }, [currentTime]);
   
   useEffect(() => {

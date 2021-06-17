@@ -189,10 +189,10 @@ export default class AudioContextProvider extends Component {
 
 	// Music Blocks Option's Function
 	addQueue = music => {
-		let trackListTemp = [...this.state.trackList];
-		trackListTemp.push(music);
+		let trackHistoryTemp = [...this.state.trackHistory];
+		trackHistoryTemp.push(music);
 		
-		this.setState({ trackList: trackListTemp });
+		this.setState({ trackHistory: trackHistoryTemp });
 	}
 
 	render() {
@@ -266,6 +266,8 @@ export default class AudioContextProvider extends Component {
 				// favorites: this.state.favorites,
 				updateFavorites: this.updateFavorites
 			},
+
+			addQueue: this.addQueue
 			
 		};
 

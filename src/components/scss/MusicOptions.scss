@@ -27,13 +27,40 @@
     .music-info-block-container {
       width: 100%;
       height: 184px;
-      background-color: #0ff;
 
       .music-info-block {
         height: 100%;
         width: 184px;
-        background-color: #f00;
         margin: 0 auto;
+        border-radius: 16px;
+        overflow: hidden;
+        position: relative;
+
+        img { width: 100%; }
+
+        .darken-bg {
+          width: 100%;
+          height: 100%;
+          position: absolute;
+          top: 0;
+          left: 0;
+          background: linear-gradient(rgba(#000, 0), rgba(#000, .6));
+
+          .music-info {
+            position: absolute;
+            bottom: 15px;
+            left: 15px;
+            padding-right: 15px;
+
+            .title {
+              @include fontProp('Montserrat', 700, 18px);
+            }
+
+            .artist {
+              @include fontProp('Open sans', 500, 12px);
+            }
+          }
+        }
       }
     }
 
@@ -53,7 +80,7 @@
           .option-icon {
             width: 28px;
             height: 28px;
-            background-color: #f00;
+
             img { width: 100%; }
           }
           .option-title {
@@ -62,6 +89,12 @@
             margin-left: 12px;
           }
         }
+      }
+
+      .select-playlist {
+        width: 100%;
+        height: 215px;
+        background-color: #f00;
       }
 
     }

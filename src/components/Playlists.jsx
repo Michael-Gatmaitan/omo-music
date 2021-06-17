@@ -1,4 +1,4 @@
-import { useContext, useEffect } from 'react';
+import { useContext, useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { AudioContext } from '../context/AudioContext';
 import { playlists } from '../dataSource';
@@ -21,12 +21,23 @@ const Playlists = () => {
 
       ...playlists
 
-    ],
+    ]
+  };
 
-    // Your playlists
-  }
+  // eslint-disable-next-line
+  let [yourPlaylists, setYourPlaylists] = useState(JSON.parse(localStorage.getItem("yourPlaylists")) || [
+    {
+      playlistID: 0,
+      playlistName: "Working",
+      musics: [
+        "Avril Lavigne - Complicated.mp3"
+      ]
+    }
+  ]);
 
-  useEffect(() => console.log(playlistList.made_for_you), []);
+  useEffect(() => {
+    localStorage.setItem("yourPlaylists", JSON.stringify(yourPlaylists));
+  }, [yourPlaylists]);
 
   return (
     <div className="playlists-route">
@@ -53,12 +64,19 @@ const Playlists = () => {
         </div>
         <div className="create-text">Create</div>
       </div>
+      
+      <div className="pl-section">
+        {yourPlaylists.map(pl => (
+          <PlaylistBlock pl={pl} key={pl.playlistID} />
+        ))}
+      </div>
+
     </div>
   );
 }
 
 const PlaylistBlock = ({ pl }) => {
-  const { playlistID, playlistName, musics } = pl;
+  const { playlistName, musics } = pl;
   return (
     <div className="pl-block">
 

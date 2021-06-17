@@ -7,21 +7,30 @@ import MusicBlock from './MusicBlock';
 
 const PlaylistTrack = () => {
   const { favorites } = useContext(AudioContext);
-  const { playlistID } = useParams();
+  const { playlistID: playlistParam } = useParams();
 
   let [dataTable, setDataTable] = useState([]);
   useEffect(() => {
-    if (playlistID === "Favorites") {
+    if (playlistParam === "Favorites") {
       setDataTable(favorites);
     } else {
-      const searchedPlaylist = playlists.filter(e => e.playlistName === playlistID)[0];
+      let searchedPlaylist = playlists.filter(e => e.playlistName === playlistParam)[0];
+      
+      // If user select a playlist that he created, statement below will fire.
+      if (searchedPlaylist === undefined) {
+        const createdPlaylist = JSON.parse(localStorage.getItem("yourPlaylists"));
+        searchedPlaylist = createdPlaylist.filter(e => e.playlistName === playlistParam)[0];
+      }
+
       setDataTable(searchedPlaylist.musics);
     }
+    
+    // eslint-disable-next-line
   }, []);
 
   return (
     <div className="playlist-track-route">
-      <div className="pl-track-title">{playlistID}</div>
+      <div className="pl-track-title">{playlistParam}</div>
 
       {dataTable.length < 1 ? <div className="pl-empty">This playlist is Empty</div> : ''}
 

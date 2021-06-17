@@ -63,6 +63,7 @@
       margin-right: 8px;
       border-radius: 8px;
       overflow: hidden;
+      @include flexCenter;
 
       img { width: 100%; }
     }
