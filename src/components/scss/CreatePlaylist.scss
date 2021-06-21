@@ -1,0 +1,26 @@
+@import '../../mixins.scss';
+
+.create-playlist-modal {
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: column;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding: 8px;
+  background: linear-gradient(rgba(#000, 0.3), rgba(#000, 1));
+  z-index: 500;
+  transition: 0.1s ease-in;
+
+  .music-options-content {
+    width: 100%;
+    background-color: #EEEFF8;
+    padding: 18px;
+    border-radius: 16px;
+    display: grid;
+    grid-gap: 32px;
+    grid-template-columns: 100%;
+  }
+}

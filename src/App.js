@@ -7,6 +7,7 @@ import { useLocation } from 'react-router-dom';
 import MusicTrackBar from './components/MusicTrackBar';
 import MusicTrackMobile from './components/MusicTrackMobile';
 import MusicOptions from './components/MusicOptions';
+import CreatePlaylist from './components/CreatePlaylist';
 
 // Contexts 
 import { AudioContext } from './context/AudioContext';
@@ -108,6 +109,8 @@ function App() {
       <MusicTrackBar />
 
       <MusicOptions />
+
+      <CreatePlaylist />
     </>
   )
 }

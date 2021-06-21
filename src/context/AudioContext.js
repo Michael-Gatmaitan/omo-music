@@ -34,7 +34,9 @@ export default class AudioContextProvider extends Component {
 			path: '',
 			title: '',
 			artistName: ''
-		}
+		},
+
+		// playlists
 	};
 
 	componentDidMount() {
@@ -80,7 +82,15 @@ export default class AudioContextProvider extends Component {
 		this.musicSelectedFromLoc(stepBack);
 	}
 	
-	next = () => this.musicSelectedFromLoc(this.handleMusicEnded());
+	next = () => {
+		if (this.state.trackList.length > 1) {
+			this.musicSelectedFromLoc(this.handleMusicEnded());
+		} else {
+			let audEl = document.getElementsByTagName("audio")[0];
+			this.setState({ currentTime: 0 });
+			audEl.pause();
+		}
+	};
 
 	// Functions compiled
 	functionsToFire = (data, dataTable) => {

@@ -108,7 +108,7 @@ const OptionSelection = props => {
     }
     
     // eslint-disable-next-line
-  }, [rawTitle]);
+  }, [favorites]);
 
 
   return (
