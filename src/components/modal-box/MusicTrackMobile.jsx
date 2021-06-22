@@ -1,8 +1,7 @@
 import { useContext } from 'react';
-import { EventContext } from '../context/EventContext';
-import FloatingMusicTrackComps from './FloatingMusicTrackComps.jsx';
-import './scss/MusicTrackMobile.css';
-
+import { EventContext } from '../../context/EventContext';
+import FloatingMusicTrackComps from '../FloatingMusicTrackComps.jsx';
+import '../scss/MusicTrackMobile.css';
 
 const MusicTrackMobile = () => {
   const eventContext = useContext(EventContext);

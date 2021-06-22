@@ -14,13 +14,80 @@
   z-index: 500;
   transition: 0.1s ease-in;
 
-  .music-options-content {
+  .create-playlist-content {
     width: 100%;
     background-color: #EEEFF8;
     padding: 18px;
     border-radius: 16px;
     display: grid;
-    grid-gap: 32px;
     grid-template-columns: 100%;
+
+    .header {
+      @include fontProp('Montserrat', 700, 24px);
+      color: #000;
+    }
+
+
+    .input-field {
+
+      .input-con {
+
+        input {
+          width: 100%;
+          margin-top: 12px;
+          padding: 16px 12px;
+          @include fontProp('Montserrat', 600, 18px);
+          color: #323232;
+          border-radius: 8px;
+
+          &::placeholder {
+            color: rgba(#323232, .58);
+          }
+        }
+      }
+    }
+
+    .error, .warning {
+      margin: 8px 0 0 0;
+      @include fontProp('Montserrat', 500, 14px);
+    }
+
+    .error {
+      color: #F85F57;
+    }
+
+    .warning {
+      color: #F8851B;
+    }
+
+    .button-option {
+      width: 100%;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-gap: 8px;
+      margin-top: 18px;
+
+      .but-con {
+
+        button {
+          // padding: 0 21px;
+          width: 100%;
+          height: 100%;
+          @include fontProp('Montserrat', 500, 15px);
+          background-color: $green;
+          border-radius: 8px;
+          transition: 0.1s ease-in;
+          
+          &:hover { background-color: #67b56f; }
+
+          &:disabled { opacity: 0.38; }
+        }
+      }
+    }
   }
+}
+
+input, button {
+  border: none;
+  outline: none;
 }

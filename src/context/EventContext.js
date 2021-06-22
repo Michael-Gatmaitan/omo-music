@@ -11,7 +11,6 @@ export default class EventContextProvider extends Component {
     // for 'FloatingTrackList.jsx'
     showTracklist: false,
 
-
     // States for 'MusicOptions.jsx'
       // On going :P
     showMusicOptions: false,
@@ -20,7 +19,10 @@ export default class EventContextProvider extends Component {
       rawTitle: '',
       title: '',
       artist: ''
-    }
+    },
+
+    // showCreatePlaylist: false
+    showCreatePlaylist: false,
   }
   
   // Event Functions for 'MusicTrackMobile.jsx'
@@ -39,6 +41,8 @@ export default class EventContextProvider extends Component {
     this.setState({ showMusicOptions: false });
     this.setState({ showSelectPlaylist: false });
   }
+
+  setShowCreatePlaylist = bool => this.setState({ showCreatePlaylist: bool });
 
   setMusicOptionsData = (data, title, artist) => {
     let musicOptionsData = {
@@ -63,7 +67,9 @@ export default class EventContextProvider extends Component {
         setShowSelectPlaylist: this.setShowSelectPlaylist,
         closeAllMusicOptions: this.closeAllMusicOptions,
         setMusicOptionsData: this.setMusicOptionsData,
-      }
+      },
+
+      setShowCreatePlaylist: this.setShowCreatePlaylist
     };
 
     return (

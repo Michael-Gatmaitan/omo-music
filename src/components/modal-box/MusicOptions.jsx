@@ -1,8 +1,9 @@
 import { useContext, useState, useEffect } from 'react';
-import './scss/MusicOptions.css';
-import CloseButton from './Buttons/CloseButton';
-import { AudioContext } from '../context/AudioContext';
-import { EventContext } from '../context/EventContext';
+import '../scss/MusicOptions.css';
+// import CloseButton from '../../buttons/CloseButton';
+import CloseButton from '../buttons/CloseButton';
+import { AudioContext } from '../../context/AudioContext';
+import { EventContext } from '../../context/EventContext';
 
 const MusicOptions = () => {
 

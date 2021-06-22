@@ -1,8 +1,8 @@
 import './CloseButton.css';
 
-const CloseButton = ({ closeFunction }) => (
+const CloseButton = ({ value, closeFunction }) => (
   <div className="close-modal" onClick={ _ => closeFunction(false) }>
-    Close
+    {value || "Close"}
   </div>
 )
 

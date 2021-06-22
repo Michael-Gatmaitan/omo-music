@@ -1,13 +1,13 @@
 import { useContext, useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { AudioContext } from '../context/AudioContext';
+import { EventContext } from '../context/EventContext';
 import { playlists } from '../dataSource';
 import './scss/Playlists.css';
 
 const Playlists = () => {
-  const audioContext = useContext(AudioContext);
-  const { favorites } = audioContext;
-
+  const { favorites, yourPlaylists } = useContext(AudioContext);
+  const { setShowCreatePlaylist } = useContext(EventContext);
   let playlistList = {
     made_for_you: [
       
@@ -25,15 +25,15 @@ const Playlists = () => {
   };
 
   // eslint-disable-next-line
-  let [yourPlaylists, setYourPlaylists] = useState(JSON.parse(localStorage.getItem("yourPlaylists")) || [
-    {
-      playlistID: 0,
-      playlistName: "Working",
-      musics: [
-        "Avril Lavigne - Complicated.mp3"
-      ]
-    }
-  ]);
+  // let [yourPlaylists, setYourPlaylists] = useState(JSON.parse(localStorage.getItem("yourPlaylists")) || [
+    // {
+    //   playlistID: 0,
+    //   playlistName: "Working",
+    //   musics: [
+    //     "Avril Lavigne - Complicated.mp3"
+    //   ]
+    // }
+  // ]);
 
   useEffect(() => {
     localStorage.setItem("yourPlaylists", JSON.stringify(yourPlaylists));
@@ -58,11 +58,14 @@ const Playlists = () => {
         Your Playlists
       </div>
 
-      <div className="create-pl">
+      <div className="create-pl" onClick={() => {
+        setShowCreatePlaylist(true);
+        document.getElementById("create-playlist").focus();
+      }}>
         <div className="create-logo">
           <img src="../svg/create.svg" alt="" />
         </div>
-        <div className="create-text">Create</div>
+        <div className="create-text">Create Playlist</div>
       </div>
       
       <div className="pl-section">
@@ -79,7 +82,6 @@ const PlaylistBlock = ({ pl }) => {
   const { playlistName, musics } = pl;
   return (
     <div className="pl-block">
-
       <Link to={`playlists/${playlistName}`}>
         
         <div className="pl-image"></div>
@@ -94,7 +96,6 @@ const PlaylistBlock = ({ pl }) => {
         </div>
 
       </Link>
-
     </div>
   )
 }

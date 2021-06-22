@@ -30,6 +30,24 @@ export default class AudioContextProvider extends Component {
 
 		favorites: [],
 
+		yourPlaylists: [
+			{
+				playlistID: 0,
+				playlistName: "Working",
+				musics: [
+					"Avril Lavigne - Complicated.mp3"
+				]
+			},
+			{
+				playlistID: 1,
+				playlistName: "Coding vibes",
+				musics: [
+					"Coldplay - Paradise.mp3",
+					"Avicii - Fades Away.mp3"
+				]
+			}
+		],
+
 		activeMusicInfo: {
 			path: '',
 			title: '',
@@ -48,6 +66,12 @@ export default class AudioContextProvider extends Component {
 
 	componentDidUpdate() {
 		localStorage.setItem("bodyState", JSON.stringify(this.state));
+	}
+
+	updateYourPlaylists = obj => {
+		let yourPlaylistsTemp = [...this.state.yourPlaylists];
+		yourPlaylistsTemp.push(obj);
+		this.setState({ yourPlaylists: yourPlaylistsTemp });
 	}
 
 	updateFavorites = item => {
@@ -277,7 +301,9 @@ export default class AudioContextProvider extends Component {
 				updateFavorites: this.updateFavorites
 			},
 
-			addQueue: this.addQueue
+			addQueue: this.addQueue,
+
+			updateYourPlaylists: this.updateYourPlaylists,
 			
 		};
 

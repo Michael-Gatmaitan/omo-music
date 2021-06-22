@@ -5,9 +5,9 @@ import { useLocation } from 'react-router-dom';
 
 // Components
 import MusicTrackBar from './components/MusicTrackBar';
-import MusicTrackMobile from './components/MusicTrackMobile';
-import MusicOptions from './components/MusicOptions';
-import CreatePlaylist from './components/CreatePlaylist';
+import MusicTrackMobile from './components/modal-box/MusicTrackMobile';
+import MusicOptions from './components/modal-box/MusicOptions';
+import CreatePlaylist from './components/modal-box/CreatePlaylist';
 
 // Contexts 
 import { AudioContext } from './context/AudioContext';
