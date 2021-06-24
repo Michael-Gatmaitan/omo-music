@@ -1,4 +1,4 @@
-import { useContext, useEffect, useState } from 'react';
+import { useContext, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { AudioContext } from '../context/AudioContext';
 import { EventContext } from '../context/EventContext';
@@ -48,7 +48,7 @@ const Playlists = () => {
 
       <div className="pl-section">
         {playlistList.made_for_you.map(pl => (
-          <PlaylistBlock pl={pl} key={pl.playlistID} />
+          <PlaylistBlock pl={pl} key={pl.playlistID} hasImageLink={false} />
         ))}
       </div>
 
@@ -70,7 +70,7 @@ const Playlists = () => {
       
       <div className="pl-section">
         {yourPlaylists.map(pl => (
-          <PlaylistBlock pl={pl} key={pl.playlistID} />
+          <PlaylistBlock pl={pl} key={pl.playlistID} hasImageLink={true} />
         ))}
       </div>
 
@@ -78,13 +78,18 @@ const Playlists = () => {
   );
 }
 
-const PlaylistBlock = ({ pl }) => {
+const PlaylistBlock = ({ pl, hasImageLink }) => {
   const { playlistName, musics } = pl;
   return (
     <div className="pl-block">
       <Link to={`playlists/${playlistName}`}>
         
-        <div className="pl-image"></div>
+        <div className="pl-image">
+          {hasImageLink ?
+          pl.imageLink === "" ? <img src="../svg/omo-logo.svg" className="svg" alt="" />
+          : <img src={pl.imageLink} className="link" alt="" />
+          : <img src="../svg/omo-logo.svg" className="svg" alt="" />}
+        </div>
 
         <div className="pl-info">
           <div className="name">

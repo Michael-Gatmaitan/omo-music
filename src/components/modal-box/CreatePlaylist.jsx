@@ -3,6 +3,7 @@ import '../scss/CreatePlaylist.css';
 import CloseButton from '../buttons/CloseButton';
 import { EventContext } from '../../context/EventContext';
 import { AudioContext } from '../../context/AudioContext';
+import { playlists } from '../../dataSource';
 
 const CreatePlaylist = () => {
   
@@ -13,8 +14,11 @@ const CreatePlaylist = () => {
   
   useEffect(() => {
     let playlistNamesTemp = yourPlaylists.map(e => e.playlistName);
-    setPlaylistNames(playlistNamesTemp);
+    let madeForYouPlaylists = playlists.map(e => e.playlistName);
+    console.log([...playlistNamesTemp, ...madeForYouPlaylists]);
+    setPlaylistNames([...playlistNamesTemp, ...madeForYouPlaylists]);
   }, [yourPlaylists]);
+
   
   // error
   let [titleExist, setTitleExist] = useState(false);
@@ -23,13 +27,18 @@ const CreatePlaylist = () => {
   let [titleEmpty, setTitleEmpty] = useState(true);
 
   let inputText = useRef(null);
+  let imageLinkVal = useRef(null);
+
+  useEffect(() => {
+    imageLinkVal.value = "";
+    inputText.value = "";
+    setTitleEmpty(true);
+  }, [showCreatePlaylist]);
 
   const closeModal = () => {
     setShowCreatePlaylist(false);
-    inputText.value = "";
   }
-
-  let [playlistTitle, setPlaylistTitle] = useState("");
+  
   let handleChange = e => {
     let val = e.target.value;
     val = val.trim();
@@ -43,10 +52,8 @@ const CreatePlaylist = () => {
 
       if (playlistNames.includes(val)) {
         setTitleExist(true);
-        console.log("Title exists");
       } else {
         setTitleExist(false);
-        console.log("Passed.");
 
         return val;
       }
@@ -57,7 +64,8 @@ const CreatePlaylist = () => {
     let playlistTemp = {
       playlistID: yourPlaylists.length,
       playlistName: val,
-      musics: []
+      musics: [],
+      imageLink: imageLinkVal.value.trim()
     };
     // playlistID: 1,
     //   playlistName: "Coding vibes",
@@ -91,6 +99,7 @@ const CreatePlaylist = () => {
               placeholder="Playlist Title"
               name="playlistname"
               id="create-playlist"
+              maxLength="20"
               onChange={ handleChange }
               ref={ e => inputText = e }
             />
@@ -104,6 +113,17 @@ const CreatePlaylist = () => {
         {titleEmpty ?<div className="warning">
           Playlist Title cannot be empty.
         </div> : ""}
+
+        <div className="image-link-con">
+          <input
+            type="text"
+            placeholder="Image Link"
+            name="image-link"
+            id="image-link"
+            // onChange={ }
+            ref={ e => imageLinkVal = e }
+          />
+        </div>
 
         <div className="button-option">
           <CloseButton value="Cancel" closeFunction={ closeModal }/>

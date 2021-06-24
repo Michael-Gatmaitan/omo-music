@@ -77,7 +77,11 @@ const FloatingMusicTrackComps = () => {
 
       <div className="floating-childs-parent">
 
-        <div className="floating-artist-image-container">
+        <div className="floating-artist-image-container"
+          style={{
+            opacity: path ? 1 : 0
+          }}
+        >
           <img src={`../artists-image/${path}.jpg`} alt="" />
         </div>
 
@@ -91,6 +95,10 @@ const FloatingMusicTrackComps = () => {
           {/* tracklist */}
           <div className="tracklist icon-container"
             onClick={() => setShowTracklist(true) }
+            style={{
+              opacity: activeMusic ? 1 : 0.38,
+              pointerEvents: activeMusic ? 'auto' : 'none'
+            }}
           >
             <img src={`../svg/floating-icons/tracklist.svg`} alt="" />
           </div>
@@ -98,6 +106,10 @@ const FloatingMusicTrackComps = () => {
           {/* heart */}
           <div className="heart icon-container"
             onClick={() => updateFavorites(activeMusicRawTitle) }
+            style={{
+              opacity: activeMusic ? 1 : 0.38,
+              pointerEvents: activeMusic ? 'auto' : 'none'
+            }}
           >
             <img src={`../svg/floating-icons/heart_${isInFavorites ? 'filled' : 'unfilled'}.svg`} alt="" />
           </div>

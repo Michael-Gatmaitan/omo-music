@@ -31,21 +31,24 @@ export default class AudioContextProvider extends Component {
 		favorites: [],
 
 		yourPlaylists: [
-			{
-				playlistID: 0,
-				playlistName: "Working",
-				musics: [
-					"Avril Lavigne - Complicated.mp3"
-				]
-			},
-			{
-				playlistID: 1,
-				playlistName: "Coding vibes",
-				musics: [
-					"Coldplay - Paradise.mp3",
-					"Avicii - Fades Away.mp3"
-				]
-			}
+			// {
+			// 	playlistID: 0,
+			// 	playlistName: "Working",
+			// 	musics: [
+			// 		"Avril Lavigne - Complicated.mp3"
+			// 	],
+			// 	imageLink: "https://aileen-molina-18.netlify.app/static/media/block4.009849d3.jpg"
+			// },
+			// {
+			// 	playlistID: 1,
+			// 	playlistName: "Coding vibes",
+			// 	musics: [
+			// 		"Coldplay - Paradise.mp3",
+			// 		"Avicii - Fades Away.mp3"
+			// 	],
+			// 	imageLink: "https://aileen-molina-18.netlify.app/static/media/block2.add0064c.jpeg"
+				
+			// }
 		],
 
 		activeMusicInfo: {
@@ -68,10 +71,29 @@ export default class AudioContextProvider extends Component {
 		localStorage.setItem("bodyState", JSON.stringify(this.state));
 	}
 
+	updatePlaylistMusics = (obj, rawTitle) => {
+		let yourPlaylistsTemp = [...this.state.yourPlaylists];
+
+		let index = yourPlaylistsTemp.indexOf(obj);
+		let updateObj = yourPlaylistsTemp[index];
+
+		if (updateObj.musics.includes(rawTitle)) {
+			alert(`${rawTitle} is already in playlist ${updateObj.playlistName}`);
+		} else {
+			updateObj.musics.push(rawTitle);
+			yourPlaylistsTemp[index] = updateObj;
+			this.setState({ yourPlaylists: yourPlaylistsTemp });
+		}
+	}
+
 	updateYourPlaylists = obj => {
 		let yourPlaylistsTemp = [...this.state.yourPlaylists];
 		yourPlaylistsTemp.push(obj);
 		this.setState({ yourPlaylists: yourPlaylistsTemp });
+	}
+
+	addMusicInPlaylist = music => {
+		
 	}
 
 	updateFavorites = item => {
@@ -234,77 +256,35 @@ export default class AudioContextProvider extends Component {
 		const events_states = {
 			triggerPlaying: this.triggerPlaying,
 
-			...{
-				// currentTime: this.state.currentTime,
-				// duration: this.state.duration,
-				// currentDurPercent: this.state.currentDurPercent,
-			},
+			updateTotalDuration: this.updateTotalDuration,
+			updateCurrentTime: this.updateCurrentTime,
 
-			...{
-				updateTotalDuration: this.updateTotalDuration,
-				updateCurrentTime: this.updateCurrentTime,
-			},
+			handleChangeMusic: this.handleChangeMusic,
+			handleMusicEnded: this.handleMusicEnded,
+			changeMusicEndState: this.changeMusicEndState,
+			updateTrackLoc: this.updateTrackLoc,
 
-			...{
-				handleChangeMusic: this.handleChangeMusic,
-				handleMusicEnded: this.handleMusicEnded,
-				changeMusicEndState: this.changeMusicEndState,
-				updateTrackLoc: this.updateTrackLoc,
-			},
-
-			...{
-				musicSelectedFromLoc: this.musicSelectedFromLoc,
-				updateTrackList: this.updateTrackList,
-				updateTrackHistory: this.updateTrackHistory,
-			},
+			musicSelectedFromLoc: this.musicSelectedFromLoc,
+			updateTrackList: this.updateTrackList,
+			updateTrackHistory: this.updateTrackHistory,
 
 			functionsToFire: this.functionsToFire,
 
-			...{
-				// trackHistory: this.state.trackHistory,
-				// trackHistoryIndex: this.state.trackHistoryIndex,
-			},
-
-			// activeMusic: this.state.activeMusic,
-
-			...{
-				prev: this.prev,
-				next: this.next,
-			},
-
-			...{
-				// order: this.state.order,
-				// shuffle: this.state.shuffle,
-			},
+			prev: this.prev,
+			next: this.next,
 			
-			...{
-				triggerShowBackArrow: this.triggerShowBackArrow,
-				// showBackArrow: this.state.showBackArrow
-			},
+			triggerShowBackArrow: this.triggerShowBackArrow,
 
-			...{
-				// currentPage: this.state.currentPage,
-				setCurrentPage: this.setCurrentPage
-			},
+			setCurrentPage: this.setCurrentPage,
 
-			// activeMusicInfo: this.state.activeMusicInfo,
-			
-			...{
-				// musicLoading: this.state.musicLoading,
-				triggerMusicLoading: this.triggerMusicLoading
-			},
+			triggerMusicLoading: this.triggerMusicLoading,
 
-			// trackList: this.state.trackList,
-			
-			...{
-				// favorites: this.state.favorites,
-				updateFavorites: this.updateFavorites
-			},
+			updateFavorites: this.updateFavorites,
 
 			addQueue: this.addQueue,
 
 			updateYourPlaylists: this.updateYourPlaylists,
-			
+			updatePlaylistMusics: this.updatePlaylistMusics
 		};
 
 		return (

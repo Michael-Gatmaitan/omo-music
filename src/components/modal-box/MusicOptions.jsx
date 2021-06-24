@@ -41,15 +41,15 @@ const MusicOptions = () => {
         <div className="options-selection-container">
 
           { showSelectPlaylist ?
-              <SelectPlaylist /> :
-              <OptionSelection
-                setShowSelectPlaylist={setShowSelectPlaylist}
-                favorites={favorites}
-                musicOptionsData={musicOptionsData}
-                updateFavorites={updateFavorites}
-                closeAllMusicOptions={closeAllMusicOptions}
-                addQueue={addQueue}
-              />
+            <SelectPlaylist /> :
+            <OptionSelection
+              setShowSelectPlaylist={setShowSelectPlaylist}
+              favorites={favorites}
+              musicOptionsData={musicOptionsData}
+              updateFavorites={updateFavorites}
+              closeAllMusicOptions={closeAllMusicOptions}
+              addQueue={addQueue}
+            />
           }
 
           <CloseButton closeFunction={closeAllMusicOptions} />
@@ -153,8 +153,33 @@ const OptionSelection = props => {
   )
 }
 
-const SelectPlaylist = () => (
-  <div className="select-playlist">Select Playlist</div>
-);
+const SelectPlaylist = () => {
+  const { yourPlaylists, updatePlaylistMusics } = useContext(AudioContext);
+  const {
+    musicOptionsData,
+    closeAllMusicOptions
+  } = useContext(EventContext);
+  
+  const { rawTitle } = musicOptionsData;
+
+  let addMusicToPlaylist = (obj, rawTitle) => {
+    updatePlaylistMusics(obj, rawTitle);
+    closeAllMusicOptions();
+  }
+
+  return (
+    <div className="select-playlist">
+      <div className="playlist-option-container">
+        {yourPlaylists.map((obj, i) => (
+          <div
+            className="playlist-option"
+            onClick={() => addMusicToPlaylist(obj, rawTitle)}
+            key={i}
+          >{obj.playlistName}</div>
+        ))}
+      </div>
+    </div>
+  )
+};
 
 export default MusicOptions;

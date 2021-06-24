@@ -49,6 +49,13 @@
   font-size: 18px !important;
   color: #323232;
   border-radius: 8px;
+  background-color: #D8DAED;
+  -webkit-transition: 0.1s ease-in;
+  transition: 0.1s ease-in;
+}
+
+.create-playlist-modal .create-playlist-content .input-field .input-con input:focus {
+  background-color: #D1D4ED;
 }
 
 .create-playlist-modal .create-playlist-content .input-field .input-con input::-webkit-input-placeholder {
@@ -80,6 +87,44 @@
 
 .create-playlist-modal .create-playlist-content .warning {
   color: #F8851B;
+}
+
+.create-playlist-modal .create-playlist-content .image-link-con {
+  width: 100%;
+}
+
+.create-playlist-modal .create-playlist-content .image-link-con input {
+  width: 100%;
+  margin-top: 12px;
+  padding: 8px 12px;
+  font-family: "Montserrat", sans-serif !important;
+  font-weight: 600 !important;
+  font-size: 12px !important;
+  color: #323232;
+  border-radius: 8px;
+  background-color: #D8DAED;
+  -webkit-transition: 0.1s ease-in;
+  transition: 0.1s ease-in;
+}
+
+.create-playlist-modal .create-playlist-content .image-link-con input:focus {
+  background-color: #D1D4ED;
+}
+
+.create-playlist-modal .create-playlist-content .image-link-con input::-webkit-input-placeholder {
+  color: rgba(50, 50, 50, 0.58);
+}
+
+.create-playlist-modal .create-playlist-content .image-link-con input:-ms-input-placeholder {
+  color: rgba(50, 50, 50, 0.58);
+}
+
+.create-playlist-modal .create-playlist-content .image-link-con input::-ms-input-placeholder {
+  color: rgba(50, 50, 50, 0.58);
+}
+
+.create-playlist-modal .create-playlist-content .image-link-con input::placeholder {
+  color: rgba(50, 50, 50, 0.58);
 }
 
 .create-playlist-modal .create-playlist-content .button-option {

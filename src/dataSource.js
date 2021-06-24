@@ -655,6 +655,18 @@ export const bodyData = [
     "artistID": 50
   },
   {
+    "path": "oasis",
+    "artistName": "Oasis",
+    "musics": [
+      "Oasis - Don't Go Away.mp3",
+      "Oasis - Don't Look Back In Anger.mp3",
+      "Oasis - Stand By Me.mp3",
+      "Oasis - Stop Crying Your Heart Out.mp3",
+      "Oasis - Wonderwall.mp3"
+    ],
+    "artistID": 51
+  },
+  {
     "path": "oh-wonder",
     "artistName": "Oh Wonder",
     "musics": [
@@ -665,18 +677,21 @@ export const bodyData = [
       "Oh Wonder - Ultralife.mp3",
       "Oh Wonder - Without You.mp3"
     ],
-    "artistID": 51
+    "artistID": 52
   },
   {
     "path": "olivia-rodrigo",
     "artistName": "Olivia Rodrigo",
     "musics": [
+      "Olivia Rodrigo - All I Want.mp3",
       "Olivia Rodrigo - deja vu.mp3",
       "Olivia Rodrigo - drivers license.mp3",
       "Olivia Rodrigo - favorite crime.mp3",
-      "Olivia Rodrigo - hope ur ok.mp3"
+      "Olivia Rodrigo - happier.mp3",
+      "Olivia Rodrigo - hope ur ok.mp3",
+      "Olivia Rodrigo - traitor.mp3"
     ],
-    "artistID": 52
+    "artistID": 53
   },
   {
     "path": "one-direction",
@@ -691,7 +706,7 @@ export const bodyData = [
       "One Direction - What Makes You Beautiful.mp3",
       "One Direction - You and I.mp3"
     ],
-    "artistID": 53
+    "artistID": 54
   },
   {
     "path": "onerepublic",
@@ -701,7 +716,7 @@ export const bodyData = [
       "OneRepublic - Good Life.mp3",
       "OneRepublic - If I Lose Myself.mp3"
     ],
-    "artistID": 54
+    "artistID": 55
   },
   {
     "path": "owl-city",
@@ -711,7 +726,7 @@ export const bodyData = [
       "Owl City - Fireflies.mp3",
       "Owl City - Vanilla Twilight.mp3"
     ],
-    "artistID": 55
+    "artistID": 56
   },
   {
     "path": "paramore",
@@ -732,7 +747,7 @@ export const bodyData = [
       "Paramore - Turn It Off.mp3",
       "Paramore - When It Rains.mp3"
     ],
-    "artistID": 56
+    "artistID": 57
   },
   {
     "path": "parokya-ni-edgar",
@@ -756,7 +771,7 @@ export const bodyData = [
       "Parokya Ni Edgar - Wag Mo Na Sana.mp3",
       "Parokya Ni Edgar - Your Song.mp3"
     ],
-    "artistID": 57
+    "artistID": 58
   },
   {
     "path": "planetshakers",
@@ -769,7 +784,7 @@ export const bodyData = [
       "Planetshakers - I'm Forever Yours.mp3",
       "Planetshakers - Nothing Is Impossible.mp3"
     ],
-    "artistID": 58
+    "artistID": 59
   },
   {
     "path": "post-malone",
@@ -784,7 +799,7 @@ export const bodyData = [
       "Post Malone - Sunflower.mp3",
       "Post Malone - White Iverson.mp3"
     ],
-    "artistID": 59
+    "artistID": 60
   },
   {
     "path": "powfu",
@@ -799,7 +814,7 @@ export const bodyData = [
       "Powfu - Step into my life.mp3",
       "Powfu - Would look perfect.mp3"
     ],
-    "artistID": 60
+    "artistID": 61
   },
   {
     "path": "queen",
@@ -816,7 +831,7 @@ export const bodyData = [
       "Queen - We Will Rock You.mp3",
       "Queen - Who Wants To Live Forever.mp3"
     ],
-    "artistID": 61
+    "artistID": 62
   },
   {
     "path": "rini",
@@ -826,7 +841,7 @@ export const bodyData = [
       "RINI - Meet Me in Amsterdam.mp3",
       "RINI - Oceane ft. Olivia Escuyos.mp3"
     ],
-    "artistID": 62
+    "artistID": 63
   },
   {
     "path": "silent-sanctuary",
@@ -849,7 +864,7 @@ export const bodyData = [
       "Silent Sanctuary - Sana Ngayong Pasko.mp3",
       "Silent Sanctuary - Sayo.mp3"
     ],
-    "artistID": 63
+    "artistID": 64
   },
   {
     "path": "system-of-a-down",
@@ -860,7 +875,7 @@ export const bodyData = [
       "System Of A Down - Chop Suey!.mp3",
       "System Of A Down - Toxicity.mp3"
     ],
-    "artistID": 64
+    "artistID": 65
   },
   {
     "path": "taylor-swift",
@@ -880,7 +895,20 @@ export const bodyData = [
       "Taylor Swift - The Way I Loved You.mp3",
       "Taylor Swift - You Belong With Me.mp3"
     ],
-    "artistID": 65
+    "artistID": 66
+  },
+  {
+    "path": "the-black-eyed-peas",
+    "artistName": "The Black Eyed Peas",
+    "musics": [
+      "The Black Eyed Peas - I Gotta Feeling.mp3",
+      "The Black Eyed Peas - My Humps.mp3",
+      "The Black Eyed Peas - Shut Up.mp3",
+      "The Black Eyed Peas - The APL Song.mp3",
+      "The Black Eyed Peas - The Time.mp3",
+      "The Black Eyed Peas - Where Is The Love.mp3"
+    ],
+    "artistID": 67
   },
   {
     "path": "the-bootleg-boy",
@@ -892,7 +920,7 @@ export const bodyData = [
       "The Bootleg Boy - lofi songs if you're having a rough day.mp3",
       "The Bootleg Boy - Teqkoi - afraid of loving you.mp3"
     ],
-    "artistID": 66
+    "artistID": 68
   },
   {
     "path": "the-chainsmokers",
@@ -907,7 +935,7 @@ export const bodyData = [
       "The Chainsmokers - Roses.mp3",
       "The Chainsmokers - Something Just Like This.mp3"
     ],
-    "artistID": 67
+    "artistID": 69
   },
   {
     "path": "the-script",
@@ -917,7 +945,7 @@ export const bodyData = [
       "The Script - Superheroes.mp3",
       "The Script - The Man Who Can’t Be Moved.mp3"
     ],
-    "artistID": 68
+    "artistID": 70
   },
   {
     "path": "the-weeknd",
@@ -930,7 +958,7 @@ export const bodyData = [
       "The Weeknd - The Hills.mp3",
       "The Weeknd - The Morning.mp3"
     ],
-    "artistID": 69
+    "artistID": 71
   },
   {
     "path": "trap-nation",
@@ -941,7 +969,7 @@ export const bodyData = [
       "Trap Nation - Vanic - Save Yourself.mp3",
       "Trap Nation - Vanic x K.Flay - So Slow.mp3"
     ],
-    "artistID": 70
+    "artistID": 72
   },
   {
     "path": "twenty-one-pilots",
@@ -958,7 +986,7 @@ export const bodyData = [
       "Twenty One Pilots - Stressed Out.mp3",
       "Twenty One Pilots - The Hype.mp3"
     ],
-    "artistID": 71
+    "artistID": 73
   },
   {
     "path": "we-the-kings",
@@ -968,7 +996,7 @@ export const bodyData = [
       "We The Kings - Sad Song.mp3",
       "We The Kings - We'll Be A Dream.mp3"
     ],
-    "artistID": 72
+    "artistID": 74
   },
   {
     "path": "wiz-khalifa",
@@ -982,7 +1010,7 @@ export const bodyData = [
       "Wiz Khalifa - Work Hard Play Hard.mp3",
       "Wiz Khalifa - Young, Wild & Free.mp3"
     ],
-    "artistID": 73
+    "artistID": 75
   },
   {
     "path": "zack-tabudlo",
@@ -994,7 +1022,7 @@ export const bodyData = [
       "Zack Tabudlo - Nangangamba.mp3",
       "Zack Tabudlo - Sigurado.mp3"
     ],
-    "artistID": 74
+    "artistID": 76
   },
   {
     "path": "zedd",
@@ -1004,7 +1032,7 @@ export const bodyData = [
       "Zedd - Stay.mp3",
       "Zedd - The Middle.mp3"
     ],
-    "artistID": 75
+    "artistID": 77
   }
 ];
 

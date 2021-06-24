@@ -109,6 +109,24 @@
   height: 46px;
   background-color: #fff;
   border-radius: 8px;
+  overflow: hidden;
+  position: relative;
+}
+
+.playlists-route .pl-block a .pl-image .link {
+  width: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.playlists-route .pl-block a .pl-image .svg {
+  width: 80%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
 }
 
 .playlists-route .pl-block a .pl-info {
