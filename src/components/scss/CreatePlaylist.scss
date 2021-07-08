@@ -105,19 +105,66 @@
           height: 100%;
           @include fontProp('Montserrat', 500, 15px);
           background-color: $green;
-          border-radius: 8px;
+          border-radius: 12px;
           transition: 0.1s ease-in;
           
           &:hover { background-color: #67b56f; }
 
-          &:disabled { opacity: 0.38; }
+          &:disabled {
+            opacity: 0.38;
+
+            &:hover {
+              background-color: #ff0040;
+            }
+          }
         }
       }
     }
-  }
-}
 
-input, button {
-  border: none;
-  outline: none;
+    @include desktop {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 415px;
+
+      .header {
+        font-size: 32px !important;
+      }
+
+      .input-field {
+        .input-con {
+
+          input {
+            margin-top: 14px;
+            padding: 18px 14px;
+            font-size: 22px !important;
+          }
+          
+        }
+      }
+
+      .image-link-con {
+
+        input {
+          padding: 10px 14px;
+          font-size: 14px !important;
+        }
+
+      }
+
+      .button-option {
+        grid-gap: 12px;
+
+        .but-con {
+
+          button {
+            font-size: 18px !important;
+          }
+
+        }
+      }
+    }
+
+  }
 }

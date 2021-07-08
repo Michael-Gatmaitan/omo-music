@@ -31,6 +31,18 @@
   height: 100%;
 }
 
+.floating-music-track .icon {
+  -webkit-transition: 0.1s ease-in;
+  transition: 0.1s ease-in;
+  -webkit-filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.12));
+          filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.12));
+}
+
+.floating-music-track .icon:hover {
+  -webkit-filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.3));
+          filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.3));
+}
+
 .floating-music-track .blur-bg {
   width: 100%;
   height: 100%;
@@ -86,14 +98,20 @@
 }
 
 .floating-music-track .floating-music-info .artist-name {
+  -webkit-transition: 0.1s ease-in;
+  transition: 0.1s ease-in;
   font-family: "Open sans", sans-serif !important;
   font-weight: 600 !important;
   font-size: 16px !important;
   margin-top: 6px;
 }
 
+.floating-music-track .floating-music-info .artist-name:hover {
+  color: #293EF8 !important;
+}
+
 .floating-music-track .floating-icons {
-  padding: 0 120px;
+  padding: 0 60px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -186,11 +204,6 @@
       grid-template-columns: auto auto auto;
   grid-gap: 24px;
   margin-top: 51px;
-}
-
-.floating-music-track .music-track-events img {
-  -webkit-filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.12));
-          filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.12));
 }
 
 .floating-music-track .music-track-events button {

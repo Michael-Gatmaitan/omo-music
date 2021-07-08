@@ -20,8 +20,7 @@ export const bodyData = [
       "Air Supply - I'll Never Get Enough of You.mp3",
       "Air Supply - Lonely Is The Night.mp3",
       "Air Supply - Making Love Out of Nothing at All.mp3",
-      "Air Supply - Sweet Dreams.mp3",
-      "Air Supply - Chances.mp3"
+      "Air Supply - Sweet Dreams.mp3"
     ],
     "artistID": 1
   },
@@ -210,11 +209,24 @@ export const bodyData = [
     "artistID": 14
   },
   {
+    "path": "chelsea-cutler",
+    "artistName": "Chelsea Cutler",
+    "musics": [
+      "Chelsea Cutler - Are You Listening.mp3",
+      "Chelsea Cutler - Parent song.mp3",
+      "Chelsea Cutler - Sixteen.mp3",
+      "Chelsea Cutler - The stars.mp3",
+      "Chelsea Cutler - Your Shirt.mp3"
+    ],
+    "artistID": 0
+  },
+  {
     "path": "chilledcow",
     "artistName": "ChilledCow",
     "musics": [
       "ChilledCow - 1 A.M Study Session - (lofi hip hop chill beats).mp3",
       "ChilledCow - 2 A.M Study Session - (lofi hip hop chill beats).mp3",
+      "ChilledCow - 4 A.M Study Session - (lofi hip hop chill beats).mp3",
       "ChilledCow - Brillion. - Bedtime Stories.mp3",
       "ChilledCow - Casiio - Wondering.mp3",
       "ChilledCow - DLJ - Night Emotions.mp3",
@@ -228,6 +240,20 @@ export const bodyData = [
       "ChilledCow - Monma - Calm Lands.mp3",
       "ChilledCow - Refeeld x Project AER - Chance Encounter.mp3",
       "ChilledCow - Tysu x Spencer Hunt - Window Seat.mp3"
+    ],
+    "artistID": 15
+  },
+  {
+    "path": "chillhop-music",
+    "artistName": "Chillhop Music",
+    "musics": [
+      "Chillhop Music - Chillhop Essentials · Spring 2021 [instrumental beats compilation].mp3",
+      "Chillhop Music - Chillhop Essentials · Summer 2021 [instrumental beats compilation].mp3",
+      "Chillhop Music - Chillhop Essentials · Winter 2018 [lofi hip hop & chill beats].mp3",
+      "Chillhop Music - Chillhop Yearmix 2018 [chillhop & lofi hip hop].mp3",
+      "Chillhop Music - Chillhop Yearmix 2020 [instrumental beats & lofi hip hop].mp3",
+      "Chillhop Music - Endless Sunday [Chillhop instrumental beats].mp3",
+      "Chillhop Music - Endless Sunday 2 [lofi jazz instrumental hip hop beats].mp3",
     ],
     "artistID": 15
   },
@@ -250,6 +276,7 @@ export const bodyData = [
       "Coldplay - Clocks.mp3",
       "Coldplay - Cry Cry Cry.mp3",
       "Coldplay - Fix You.mp3",
+      "Coldplay - Higher Power.mp3",
       "Coldplay - In My Place.mp3",
       "Coldplay - O.mp3",
       "Coldplay - Paradise.mp3",
@@ -265,6 +292,15 @@ export const bodyData = [
       "Creed - My Sacrifice.mp3",
       "Creed - One Last Breath.mp3",
       "Creed - With Arms Wide Open.mp3"
+    ],
+    "artistID": 18
+  },
+  {
+    "path": "daughtry",
+    "artistName": "Daughtry",
+    "musics": [
+      "Daughtry - Home.mp3",
+      "Daughtry - Over You.mp3"
     ],
     "artistID": 18
   },
@@ -294,10 +330,20 @@ export const bodyData = [
     "path": "dreamy",
     "artistName": "Dreamy",
     "musics": [
-      "Dreamy - Because music cures every problem.mp3",
-      "Dreamy - Breathing dreams like air.mp3",
-      "Dreamy - Let's just stay here forever.mp3",
-      "Dreamy - Solitude.mp3"
+      "Dreamy - Because music cures every problem ~ lofi hip hop mix.mp3",
+      "Dreamy - Believe in the dream ~ lofi hip hop mix.mp3",
+      "Dreamy - Breathing dreams like air ~ lofi hip hop mix.mp3",
+      "Dreamy - Guitar Vibe ~ lofi hip hop mix.mp3",
+      "Dreamy - It's 2am. I need you here ~ lofi hip hop mix.mp3",
+      "Dreamy - Let's just stay here forever ~ lofi hip hop mix.mp3",
+      "Dreamy - Lullaby to the Stars ~ lofi hip hop mix - study beats.mp3",
+      "Dreamy - Night walks on the rooftops ~ lofi relax stress relief.mp3",
+      "Dreamy - Raining day ~ lofi hip hop mix.mp3",
+      "Dreamy - Solitude ~ lofi hip hop mix.mp3",
+      "Dreamy - Stay with me ~ lofi hip hop mix.mp3",
+      "Dreamy - Your smile — My everything ~ lofi hip hop mix.mp3",
+      "Dreamy - Yūgen ~ Japanese Lofi Hip-Hop.mp3",
+      "Dreamy - Because music cures every problem ~ lofi hip hop mix.mp3",
     ],
     "artistID": 21
   },
@@ -375,6 +421,20 @@ export const bodyData = [
     "artistID": 26
   },
   {
+    "path": "finding-hope",
+    "artistName": "Finding Hope",
+    "musics": [
+      "Finding Hope - 3 AM.mp3",
+      "Finding Hope - Heaven.mp3",
+      "Finding Hope - Love.mp3",
+      "Finding Hope - More & More.mp3",
+      "Finding Hope - Strangers.mp3",
+      "Finding Hope - Valentine's Day.mp3",
+      "Finding Hope - Without You.mp3"
+    ],
+    "artistID": 26
+  },
+  {
     "path": "five-for-fighting",
     "artistName": "Five For Fighting",
     "musics": [
@@ -391,6 +451,17 @@ export const bodyData = [
       "FM Static - Moment Of Truth.mp3",
       "FM Static - Tonight.mp3",
       "FM Static - What It Feels Like.mp3"
+    ],
+    "artistID": 28
+  },
+  {
+    "path": "藤井-風-(fujii-kaze)",
+    "artistName": "藤井 風 (Fujii Kaze)",
+    "musics": [
+      "藤井 風 (Fujii Kaze) - もうええわ (Mo-Eh-Wa).mp3",
+      "藤井 風 (Fujii Kaze) - 優しさ (YASASHISA).mp3",
+      "藤井 風 (Fujii Kaze) - 帰ろう (Kaerou).mp3",
+      "藤井 風 (Fujii Kaze) - 旅路 (Tabiji).mp3"
     ],
     "artistID": 28
   },
@@ -561,6 +632,25 @@ export const bodyData = [
       "Lauv - Getting Over You.mp3",
       "Lauv - I Like Me Better.mp3",
       "Lauv - Paris In The Rain.mp3"
+    ],
+    "artistID": 43
+  },
+  {
+    "path": "linkin-park",
+    "artistName": "Linkin Park",
+    "musics": [
+      "Linkin Park - In The End.mp3",
+      "Linkin Park - Numb.mp3"
+    ],
+    "artistID": 43
+  },
+  {
+    "path": "lowly",
+    "artistName": "Lowly",
+    "musics": [
+      "Lowly - INZO - Angst.mp3",
+      "Lowly - INZO - Overthinker.mp3",
+      "Lowly - LIHO - Surrender.mp3"
     ],
     "artistID": 43
   },
@@ -805,13 +895,20 @@ export const bodyData = [
     "path": "powfu",
     "artistName": "Powfu",
     "musics": [
+      "Powfu - A world of chaos.mp3",
       "Powfu - Days we had.mp3",
       "Powfu - Death bed.mp3",
       "Powfu - Don't fall asleep yet.mp3",
       "Powfu - I can't sleep.mp3",
+      "Powfu - I know you're not happy.mp3",
       "Powfu - Letters in december.mp3",
+      "Powfu - Life is Changing.mp3",
       "Powfu - Life with you.mp3",
+      "Powfu - stay4ever.mp3",
       "Powfu - Step into my life.mp3",
+      "Powfu - Talk Tomorrow.mp3",
+      "powfu - The way that you see me.mp3",
+      "Powfu - When the hospital was my home.mp3",
       "Powfu - Would look perfect.mp3"
     ],
     "artistID": 61
@@ -914,11 +1011,21 @@ export const bodyData = [
     "path": "the-bootleg-boy",
     "artistName": "The Bootleg Boy",
     "musics": [
+      "The Bootleg Boy - Chevy - I Know a Place.mp3",
       "The Bootleg Boy - Imfinenow & Joshua Mine - Be With You.mp3",
+      "The Bootleg Boy - Julia Alexa - if u can take my pain away.mp3",
       "The Bootleg Boy - Kayou. & fawlin - I Tried.mp3",
+      "The Bootleg Boy - lofi songs for childhood days.mp3",
+      "The Bootleg Boy - lofi songs for rainy days.mp3",
       "The Bootleg Boy - lofi songs for warm days.mp3",
+      "The Bootleg Boy - lofi songs for when you can't sleep.mp3",
+      "The Bootleg Boy - lofi songs if you're having a bad week.mp3",
       "The Bootleg Boy - lofi songs if you're having a rough day.mp3",
-      "The Bootleg Boy - Teqkoi - afraid of loving you.mp3"
+      "The Bootleg Boy - Love hurts ~ sad lofi mix.mp3",
+      "The Bootleg Boy - NÜ - i can't fight this (ft. Ivri).mp3",
+      "The Bootleg Boy - Rnla & zevia - Toxicity.mp3",
+      "The Bootleg Boy - Teqkoi - afraid of loving you.mp3",
+      "The Bootleg Boy - Zaini - you felt like home.mp3"
     ],
     "artistID": 68
   },
@@ -953,6 +1060,7 @@ export const bodyData = [
     "musics": [
       "The Weeknd - Blinding Lights.mp3",
       "The Weeknd - Can't Feel My Face.mp3",
+      "The Weeknd - Die For You.mp3",
       "The Weeknd - Save Your Tears.mp3",
       "The Weeknd - Starboy.mp3",
       "The Weeknd - The Hills.mp3",
@@ -993,6 +1101,7 @@ export const bodyData = [
     "artistName": "We The Kings",
     "musics": [
       "We The Kings - Heaven Can Wait.mp3",
+      "We The Kings - Sad Song (Slowed).mp3",
       "We The Kings - Sad Song.mp3",
       "We The Kings - We'll Be A Dream.mp3"
     ],
@@ -1044,19 +1153,56 @@ export const playlists = [
       "Zack Tabudlo - Nangangamba.mp3",
       "Zack Tabudlo - Sigurado.mp3",
       "Silent Sanctuary - 14.mp3",
-      "Silent Sanctuary - Ikaw Lamang.mp3",
+      "Silent Sanctuary - Ikaw Lamang.mp3"
     ]
   },
   {
     playlistID: 1,
     playlistName: 'Lofi',
     musics: [
-      "Dreamy - Solitude.mp3",
       "ChilledCow - 1 A.M Study Session - (lofi hip hop chill beats).mp3",
+      "ChilledCow - 2 A.M Study Session - (lofi hip hop chill beats).mp3",
+      "ChilledCow - 4 A.M Study Session - (lofi hip hop chill beats).mp3",
+      "ChilledCow - Brillion. - Bedtime Stories.mp3",
       "ChilledCow - Casiio - Wondering.mp3",
       "ChilledCow - DLJ - Night Emotions.mp3",
+      "ChilledCow - Dontcry x Glimlip - 777.mp3",
+      "ChilledCow - Fatb - Conscious Ego.mp3",
       "ChilledCow - Idealism - Last Time.mp3",
+      "ChilledCow - Kupla - Kingdom In Blue.mp3",
+      "ChilledCow - Kupla - Life Forms.mp3",
+      "ChilledCow - Lazy Sunday - (lofi hip hop chill beats).mp3",
+      "ChilledCow - Mell-ø x Ambulo - Afloat Again.mp3",
       "ChilledCow - Monma - Calm Lands.mp3",
+      "ChilledCow - Refeeld x Project AER - Chance Encounter.mp3",
+      "ChilledCow - Tysu x Spencer Hunt - Window Seat.mp3",
+      "Dreamy - Because music cures every problem ~ lofi hip hop mix.mp3",
+      "Dreamy - Believe in the dream ~ lofi hip hop mix.mp3",
+      "Dreamy - Breathing dreams like air ~ lofi hip hop mix.mp3",
+      "Dreamy - Guitar Vibe ~ lofi hip hop mix.mp3",
+      "Dreamy - It's 2am. I need you here ~ lofi hip hop mix.mp3",
+      "Dreamy - Let's just stay here forever ~ lofi hip hop mix.mp3",
+      "Dreamy - Lullaby to the Stars ~ lofi hip hop mix - study beats.mp3",
+      "Dreamy - Raining day ~ lofi hip hop mix.mp3",
+      "Dreamy - Solitude ~ lofi hip hop mix.mp3",
+      "Dreamy - Stay with me ~ lofi hip hop mix.mp3",
+      "Dreamy - Your smile — My everything ~ lofi hip hop mix.mp3",
+      "Dreamy - Yūgen ~ Japanese Lofi Hip-Hop.mp3",
+      "The Bootleg Boy - Chevy - I Know a Place.mp3",
+      "The Bootleg Boy - Imfinenow & Joshua Mine - Be With You.mp3",
+      "The Bootleg Boy - Julia Alexa - if u can take my pain away.mp3",
+      "The Bootleg Boy - Kayou. & fawlin - I Tried.mp3",
+      "The Bootleg Boy - lofi songs for childhood days.mp3",
+      "The Bootleg Boy - lofi songs for rainy days.mp3",
+      "The Bootleg Boy - lofi songs for warm days.mp3",
+      "The Bootleg Boy - lofi songs for when you can't sleep.mp3",
+      "The Bootleg Boy - lofi songs if you're having a bad week.mp3",
+      "The Bootleg Boy - lofi songs if you're having a rough day.mp3",
+      "The Bootleg Boy - Love hurts ~ sad lofi mix.mp3",
+      "The Bootleg Boy - NÜ - i can't fight this (ft. Ivri).mp3",
+      "The Bootleg Boy - Rnla & zevia - Toxicity.mp3",
+      "The Bootleg Boy - Teqkoi - afraid of loving you.mp3",
+      "The Bootleg Boy - Zaini - you felt like home.mp3"
     ]
   }
 ]

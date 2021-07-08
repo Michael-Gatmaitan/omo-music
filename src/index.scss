@@ -31,27 +31,24 @@ body {
   // }
 }
 
-// ::-webkit-scrollbar {
-//   background-color: #121212;
-// }
-
-// ::-webkit-scrollbar-thumb {
-//   background-color: #00f;
-//   border: solid 5px #121212;
-//   border-radius: 12px;
-// }
-
-// .route-container {
-//   margin-bottom: calc(77px + 24px);
-// }
-
 * {
   box-sizing: border-box;
-  // @include fontProp('Montserrat', 600, 24px);
   color: #fff;
 }
 
 // Overall components styles
+input, button {
+  border: none;
+  outline: none;
+}
+
+button {
+  cursor: pointer;
+
+  &:disabled {
+    cursor: default;
+  }
+}
 
 // Musics
 .music-route {

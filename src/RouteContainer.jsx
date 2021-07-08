@@ -1,6 +1,8 @@
 import {
   Switch,
-  Route
+  Route,
+  // useHistory,
+  // useLocation
 } from "react-router-dom";
 
 // Components
@@ -17,6 +19,17 @@ import './components/scss/RouteContainer.css';
 
 const RouteContainer = () => {
 
+  // const history = useHistory();
+  // const location = useLocation();
+
+  // useEffect(() => {
+  //   return history.listen(loc => {
+  //     if (history.location === "POP") {
+  //       history.go(1);
+  //     }
+  //   });
+  // }, [])
+
   return (
     <div className="route-container">
 
@@ -27,7 +40,7 @@ const RouteContainer = () => {
           {/* Routes inside AppBody */}
           <AppBody />
 
-          <div style={{ paddingTop: "12px" }}>
+          <div id="main-routes-container" style={{ paddingTop: "12px" }}>
             <Switch>
               <Route exact path="/">
                 <Musics />

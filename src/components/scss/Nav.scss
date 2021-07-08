@@ -13,6 +13,25 @@
     padding: 24px 112px;
     justify-content: flex-start;
 
+    @include customMediaQuery(780px) {
+      padding: 24px 40px;
+    }
+
+    // +80
+    @include customMediaQuery(860px) {
+      padding: 24px 60px;
+    }
+
+    // +120
+    @include customMediaQuery(980px) {
+      padding: 24px 90px;
+    }
+
+    // +200
+    @include customMediaQuery(1180px) {
+      padding: 24px 112px;
+    }
+
     .menu-block-container {
       display: none;
     }

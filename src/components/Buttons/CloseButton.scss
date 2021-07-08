@@ -8,9 +8,12 @@
   border-radius: 12px;
   transition: 0.1s ease-in;
   @include flexCenter;
-  @include fontProp('Montserrat', 700, 18px);
+  @include fontProp('Montserrat', 700, 15px);
   user-select: none;
   cursor: pointer;
+
+  min-height: 61px;
+  max-height: 64px;
 
   &:hover {
     background-color: $pri-blue;
@@ -19,5 +22,6 @@
 
   @include desktop {
     border-radius: 14px;
+    font-size: 18px !important;
   }
 }

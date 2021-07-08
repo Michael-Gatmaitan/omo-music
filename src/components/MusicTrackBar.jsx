@@ -21,6 +21,7 @@ const MusicTrackBar = () => {
     prev,
     next,
     playing,
+    musicLoading
   } = audioContext;
 
   const eventContext = useContext(EventContext);
@@ -30,7 +31,7 @@ const MusicTrackBar = () => {
 
   const { title, artistName, path } = activeMusicInfo;
 
-  let trackOpenAction = e => {
+  let handleTrackOpenAction = e => {
     const { target: t } = e;
     if (t.className.includes('music-track-bar')) {
       setShowMusicTrackMobile(true);
@@ -41,7 +42,7 @@ const MusicTrackBar = () => {
 
   return (
     <div className="music-track-bar"
-      onClick={ path ? trackOpenAction : null }
+      onClick={ path ? handleTrackOpenAction : null }
     >
 
       <div className="duration-progress-container">
@@ -70,27 +71,29 @@ const MusicTrackBar = () => {
       <div className="music-track-events">
         <button
           className="prev-but"
-          disabled={
-            trackHistory.length <= 1 || trackHistoryIndex === 0
-          }
+          disabled={ trackHistory.length <= 1 || trackHistoryIndex === 0}
           onClick={ prev }
         >
           <img src="../svg/prev.svg" alt="prev" />
         </button>
 
         <button className="play_pause-but"
-          disabled={ activeMusic === '' }
+          disabled={ !activeMusic }
           onClick={() => {
             const aud = document.getElementsByTagName("audio")[0];
             playing ? aud.pause() : aud.play();
           }}
         >
-          <img src={`../svg/${playing ? 'pause' : 'play'}.svg`} alt="play_pause" />
+          {musicLoading ? "loading"
+          : <img
+            src={`../svg/${playing ? 'pause' : 'play'}.svg`}
+            alt=""
+          />}
         </button>
 
         <button
           className="next-but"
-          disabled={ activeMusic === '' || trackList.length === 1 }
+          disabled={ !activeMusic || trackList.length === 1 }
 
           onClick={ next }
         >

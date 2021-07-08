@@ -17,12 +17,14 @@
           align-items: center;
   font-family: "Montserrat", sans-serif !important;
   font-weight: 700 !important;
-  font-size: 18px !important;
+  font-size: 15px !important;
   -webkit-user-select: none;
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
   cursor: pointer;
+  min-height: 61px;
+  max-height: 64px;
 }
 
 .close-modal:hover {
@@ -33,6 +35,7 @@
 @media (min-width: 780px) {
   .close-modal {
     border-radius: 14px;
+    font-size: 18px !important;
   }
 }
 /*# sourceMappingURL=CloseButton.css.map */

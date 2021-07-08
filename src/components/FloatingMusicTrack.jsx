@@ -1,16 +1,10 @@
 import FloatingMusicTrackComps from './FloatingMusicTrackComps.jsx';
 import './scss/FloatingMusicTrack.css';
 
-const FloatingMusicTrack = () => {
-
-
-  return (
-    <div className="floating-music-track-container">
-      <div className="now-playing-header">Now Playing</div>
-
-      <FloatingMusicTrackComps />
-    </div>
-  )
-}
+const FloatingMusicTrack = () => (
+  <div className="floating-music-track-container">
+    <FloatingMusicTrackComps />
+  </div>
+)
 
 export default FloatingMusicTrack;

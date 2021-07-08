@@ -56,33 +56,39 @@ a {
 }
 
 .route-container .route-grid-container .route-grid-wrap .app-body .route-links {
-  font-family: "Montserrat", sans-serif !important;
-  font-weight: 700 !important;
-  font-size: 14px !important;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
-.route-container .route-grid-container .route-grid-wrap .app-body .route-links li {
-  padding: 12px 0 12px 0;
+.route-container .route-grid-container .route-grid-wrap .app-body .route-links .active-route a {
+  color: #293EF8 !important;
 }
 
-.route-container .route-grid-container .route-grid-wrap .app-body .route-links li:not(:last-child) {
+.route-container .route-grid-container .route-grid-wrap .app-body .route-links .route-button {
+  padding: 12px 0 12px 0;
+  color: #fff;
+}
+
+.route-container .route-grid-container .route-grid-wrap .app-body .route-links .route-button:hover a {
+  color: #293EF8 !important;
+}
+
+.route-container .route-grid-container .route-grid-wrap .app-body .route-links .route-button:not(:last-child) {
   margin-right: 18px;
 }
 
-.route-container .route-grid-container .route-grid-wrap .app-body .route-links li a {
+.route-container .route-grid-container .route-grid-wrap .app-body .route-links .route-button a {
   font-family: "Montserrat", sans-serif !important;
   font-weight: 700 !important;
   font-size: 14px !important;
 }
 
 @media (min-width: 780px) {
-  .route-container .route-grid-container .route-grid-wrap .app-body .route-links li:not(:last-child) {
+  .route-container .route-grid-container .route-grid-wrap .app-body .route-links .route-button:not(:last-child) {
     margin-right: 24px;
   }
-  .route-container .route-grid-container .route-grid-wrap .app-body .route-links li a {
+  .route-container .route-grid-container .route-grid-wrap .app-body .route-links .route-button a {
     font-family: "Montserrat", sans-serif !important;
     font-weight: 700 !important;
     font-size: 16px !important;

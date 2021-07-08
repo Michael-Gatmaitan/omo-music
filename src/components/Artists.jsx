@@ -5,8 +5,9 @@ import { bodyData } from '../dataSource';
 
 const Artists = () => (
   <div className="artists-route">
-    {bodyData.map(data => (
-      <ArtistBlock data={data} key={data.artistID} />
+    {bodyData.map((data, i) => (
+      // <ArtistBlock data={data} key={data.artistID} />
+      <ArtistBlock data={data} key={i} />
     ))}
   </div>
 )

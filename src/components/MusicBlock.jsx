@@ -1,55 +1,90 @@
-import { useContext } from 'react';
+import { useContext, useEffect, useState } from 'react';
+import { useHistory } from 'react-router-dom';
 import { AudioContext } from '../context/AudioContext';
 import { EventContext } from '../context/EventContext';
 
 const MusicBlock = props => {
-  const { data, musicDataTable, displayArtistImage } = props;
-  const { functionsToFire } = useContext(AudioContext);
+  const history = useHistory();
+
+  const {
+    data,
+    musicDataTable,
+    displayArtistImage,
+    isInCustomPlaylist,
+    playlistParam
+  } = props;
+
+  const {
+    functionsToFire,
+    removeMusicInPlaylist,
+    activeMusicInfo
+  } = useContext(AudioContext);
 
   const {
     setShowMusicOptions,
-    setMusicOptionsData
+    setMusicOptionsData,
+    setShowMusicTrackMobile
   } = useContext(EventContext);
+
+  let [isActiveMusic, setIsActiveMusic] = useState(false);
+
+  useEffect(() => {
+    const { title, artistName } = activeMusicInfo;
+    
+    setIsActiveMusic(data === `${artistName} - ${title}.mp3`);
+  }, [activeMusicInfo]);
 
   const musicTitle = data.slice(data.indexOf(" - ") + 3, -4);
   const musicArtist = data.slice(0, data.indexOf(" - "));
   const customPath = musicArtist.replaceAll(" ", "-").toLowerCase();
   
+  const mbClassIsActiveMusic = isActiveMusic ? 'active-music' : "";
+  const mbClassHasImage = displayArtistImage ? "" : 'music-block music-block-no-artist-image';
+  const mbClassHasRemove = isInCustomPlaylist ? 'removable-music-block' : "";
+
+
+  const handleOptionsEvent = e => {
+    e.stopPropagation();
+    setShowMusicOptions(true);
+    setMusicOptionsData(data, musicTitle, musicArtist);
+  }
+
+  const handleRemoveEvent = e => {
+    e.stopPropagation();
+    removeMusicInPlaylist(playlistParam, data);
+    /* Direct to previous section when
+       some music deleted in playlist */
+    history.goBack();
+  }
+
+  const handleMusicEvent = e => isActiveMusic ? setShowMusicTrackMobile(true) : functionsToFire(data, musicDataTable);
+
+  let musicArtistImageStyle = {
+    display: displayArtistImage ? 'block' : 'none'
+  }
+
   return (
     <div
-      className={
-        `${ displayArtistImage ? 'music-block' :'music-block music-block-no-artist-image' }`
-      }
-
-      onClick={
-        e => {
-          if (e.target.className.includes("options")) {
-            setShowMusicOptions(true);
-            setMusicOptionsData(data, musicTitle, musicArtist);
-          } else {
-            functionsToFire(data, musicDataTable);
-          }
-        }
-      }
+      className={`music-block ${mbClassIsActiveMusic} ${mbClassHasImage} ${mbClassHasRemove}`}
+      onClick={ handleMusicEvent }
     >
       <div className="music-artist-image"
-        style={{
-          display: displayArtistImage ? 'block' : 'none'
-        }}
+        style={ musicArtistImageStyle }
       >
         <img src={`../artists-image/${customPath}.jpg`} alt="" />
       </div>
       
       <div className="music-info">
-        <div className="music-title">
-          {musicTitle}
-        </div>
-        <div className="music-artist">
-          {musicArtist}
-        </div>
+        <div className="music-title">{musicTitle}</div>
+
+        <div className="music-artist">{musicArtist}</div>
       </div>
 
-      <div className="music-options-parent">
+      {isInCustomPlaylist ?
+      <div className="remove" onClick={ handleRemoveEvent }></div>
+      : ""}
+
+      <div className="music-options-parent" onClick={ handleOptionsEvent }>
         <div className="music-options-button">
           <img src="../svg/floating-icons/more.svg" className="options" alt="" />
         </div>

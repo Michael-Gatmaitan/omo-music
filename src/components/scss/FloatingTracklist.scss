@@ -46,6 +46,8 @@
         .tracklist-music-block {
           padding: 10px 0 8px 0;
           position: relative;
+          user-select: none;
+          cursor: pointer;
 
           .tl-music-info {
             .tl-title {
@@ -68,10 +70,6 @@
           }
         }
       }
-    }
-
-    .close-modal {
-      @include closeModal;
     }
   }
 

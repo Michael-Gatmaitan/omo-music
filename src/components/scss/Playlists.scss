@@ -66,10 +66,28 @@
   // Playlist Block
   .pl-block {
     width: 100%;
+    display: grid;
+    align-items: center;
+    grid-template-columns: auto 46px;
+
+    @include desktop {
+      grid-template-columns: auto 60px;
+    }
+
+
+    &:hover {
+      a {
+        .pl-info {
+          .name, .song-len {
+            color: $pri-blue !important;
+          }
+        }
+      }
+    }
 
     a {
       display: grid;
-      grid-template-columns: 46px 1fr;
+      grid-template-columns: 46px auto;
       grid-gap: 8px;
       padding: 5px 0;
 
@@ -86,7 +104,6 @@
           position: absolute;
           left: 0;
           top: 0;
-          // transform: translate(50%, 50%);
         }
 
         .svg {
@@ -100,13 +117,32 @@
 
       .pl-info {
         margin-top: 3px;
+        white-space: nowrap;
+        overflow: hidden;
+        position: relative;
+
+        &:before {
+          content: '';
+          width: 50px;
+          height: 100%;
+          position: absolute;
+          top: 0;
+          right: 0;
+          background: linear-gradient(90deg, rgba($drk_blue, 0), rgba($drk_blue, 1));
+        }
+
+        .name, .song-len { transition: 0.1s ease-in; }
 
         .name { @include fontProp('Montserrat', 700, 18px); }
         .song-len { @include fontProp('Open sans', 400, 12px); color: rgba(#fff, 0.58); }
       }
 
+      .more {
+        background-color: #f00;
+      }
+
       @include desktop {
-        grid-template-columns: 60px 1fr;
+        grid-template-columns: 60px auto;
         grid-gap: 12px;
         padding: 10px 0;
 
@@ -124,8 +160,21 @@
         }
       }
     }
+
+    .more {
+      height: 46px;
+      cursor: pointer;
+      background-color: #f00;
+      border: solid 2px #fff;
+
+      @include desktop {
+        height: 60px;
+      }
+    }
   }
 }
+
+// PlaylistTrack.jsx
 
 .playlist-track-route {
   display: grid;
@@ -136,6 +185,20 @@
   }
 
   .pl-track-title {
+    white-space: nowrap;
+    overflow: hidden;
+    position: relative;
+
+    &:before {
+      content: '';
+      width: 50px;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      right: 0;
+      background: linear-gradient(90deg, rgba($drk_blue, 0), rgba($drk_blue, 1));
+    }
+
     @include fontProp('Montserrat', 700, 24px);
     
     @include desktop {
@@ -149,3 +212,5 @@
     margin-top: 24px;
   }
 }
+  // grid-template-columns: 46px 1fr 46px;
+  // grid-template-columns: 60px 1fr 60px;

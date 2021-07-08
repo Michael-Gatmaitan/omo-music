@@ -4,11 +4,10 @@ import FloatingMusicTrackComps from '../FloatingMusicTrackComps.jsx';
 import '../scss/MusicTrackMobile.css';
 
 const MusicTrackMobile = () => {
-  const eventContext = useContext(EventContext);
   const {
     showMusicTrackMobile,
     setShowMusicTrackMobile
-  } = eventContext;
+  } = useContext(EventContext);
 
   return (
     <div className="music-track-mobile"

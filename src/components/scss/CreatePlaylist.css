@@ -144,7 +144,7 @@
   font-weight: 500 !important;
   font-size: 15px !important;
   background-color: #60CE6B;
-  border-radius: 8px;
+  border-radius: 12px;
   -webkit-transition: 0.1s ease-in;
   transition: 0.1s ease-in;
 }
@@ -157,8 +157,36 @@
   opacity: 0.38;
 }
 
-input, button {
-  border: none;
-  outline: none;
+.create-playlist-modal .create-playlist-content .button-option .but-con button:disabled:hover {
+  background-color: #ff0040;
+}
+
+@media (min-width: 780px) {
+  .create-playlist-modal .create-playlist-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+    width: 415px;
+  }
+  .create-playlist-modal .create-playlist-content .header {
+    font-size: 32px !important;
+  }
+  .create-playlist-modal .create-playlist-content .input-field .input-con input {
+    margin-top: 14px;
+    padding: 18px 14px;
+    font-size: 22px !important;
+  }
+  .create-playlist-modal .create-playlist-content .image-link-con input {
+    padding: 10px 14px;
+    font-size: 14px !important;
+  }
+  .create-playlist-modal .create-playlist-content .button-option {
+    grid-gap: 12px;
+  }
+  .create-playlist-modal .create-playlist-content .button-option .but-con button {
+    font-size: 18px !important;
+  }
 }
 /*# sourceMappingURL=CreatePlaylist.css.map */

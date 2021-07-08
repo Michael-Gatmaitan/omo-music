@@ -11,7 +11,7 @@
   left: 0;
   padding: 8px;
   background: linear-gradient(rgba(#000, 0.3), rgba(#000, 1));
-  z-index: 500;
+  z-index: 300;
   transition: 0.1s ease-in;
 
   .music-options-content {
@@ -116,6 +116,13 @@
             @include fontProp('Montserrat', 600, 18px);
             color: #000;
             margin-left: 12px;
+            transition: 0.1s ease-in;
+          }
+
+          &:hover {
+            .option-title {
+              color: $pri-blue !important;
+            }
           }
         }
       }
@@ -135,10 +142,14 @@
 
         .playlist-option-container {
           display: grid;
+          grid-auto-rows: auto;
           grid-gap: 6px;
 
           .playlist-option {
             width: 100%;
+            height: auto;
+            max-height: 58px;
+            white-space: nowrap;
             padding: 18px 12px;
             border-radius: 12px;
             background-color: #b7b5ff;
@@ -152,6 +163,27 @@
         }
       }
 
+      .bottom-buttons {
+        display: grid;
+        grid-gap: 12px;
+        grid-template-columns: 1fr auto;
+
+        .download-music-button {
+          border: solid 5px $green;
+          border-radius: 12px;
+          transition: 0.1s ease-in;
+          width: 61px;
+          background-color: #fff;
+
+          &:hover {
+            background-color: $green;
+          }
+
+          @include desktop {
+            width: 64px;
+          }
+        }
+      }
 
       @include desktop {
         grid-gap: 24px;

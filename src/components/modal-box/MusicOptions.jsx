@@ -49,10 +49,14 @@ const MusicOptions = () => {
               updateFavorites={updateFavorites}
               closeAllMusicOptions={closeAllMusicOptions}
               addQueue={addQueue}
+              showMusicOptions={showMusicOptions}
             />
           }
 
-          <CloseButton closeFunction={closeAllMusicOptions} />
+          <div className="bottom-buttons">
+            <CloseButton closeFunction={closeAllMusicOptions} />
+            <button className="download-music-button"></button>
+          </div>
 
         </div>
 
@@ -95,22 +99,15 @@ const OptionSelection = props => {
     musicOptionsData,
     updateFavorites,
     closeAllMusicOptions,
-    addQueue
+    addQueue,
+    showMusicOptions
   } = props;
 
   let [isInFavorites, setIsInFavorites] = useState(false);
   let { rawTitle } = musicOptionsData;
 
-  useEffect(() => {
-    if(favorites.includes(rawTitle)) {
-      setIsInFavorites(true);
-    } else {
-      setIsInFavorites(false);
-    }
-    
-    // eslint-disable-next-line
-  }, [favorites]);
-
+  // eslint-disable-next-line
+  useEffect(() => setIsInFavorites(favorites.includes(rawTitle)), [favorites, showMusicOptions]);
 
   return (
     <div className="option-selection">

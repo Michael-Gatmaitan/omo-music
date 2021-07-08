@@ -53,6 +53,11 @@
     border-radius: 12px;
     overflow: hidden;
     position: relative;
+    transition: 0.1 ease-in;
+
+    &:focus {
+      border: solid 2px #fff;
+    }
 
     .dark-fade {
       background: linear-gradient(rgba(#000, 0), rgba(#000, 0.7));
@@ -75,12 +80,29 @@
         text-decoration: none;
       }
 
+      div {
+        transition: 0.1s ease-in;
+      }
+
       .artist-name-blck {
         @include fontProp('Montserrat', 700, 18px);
       }
       
       .artist-songs-length {
         @include fontProp('Open Sans', 600, 12px);
+      }
+    }
+
+    @include desktop {
+
+      // Desktop micro-interaction
+      &:hover {
+        .artist-info {
+          .artist-name-blck,
+          .artist-songs-length {
+            color: $pri-blue !important;
+          }
+        }
       }
     }
   }

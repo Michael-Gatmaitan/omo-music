@@ -1,4 +1,4 @@
-import { useContext } from 'react';
+import { useContext, useEffect } from 'react';
 import {
   Link,
   useHistory
@@ -12,14 +12,35 @@ const AppBody = () => {
     currentPage,
     setCurrentPage
   } = useContext(AudioContext);
+
   let history = useHistory();
+
+  let routes = [
+    { routeName: 'Musics', url: '/', id: 0 },
+    { routeName: 'Playlists', url: '/playlists', id: 1 },
+    { routeName: 'Artists', url: '/artists', id: 2 },
+  ];
+
+  let routeButtons;
+
+  const handleSetPage = (page, id) => {
+    routeButtons = [...document.getElementsByClassName("route-button")];
+    setCurrentPage(page);
+
+    routeButtons.map((e, i) => {
+      if (id === i)
+        e.classList.add("active-route");
+      else
+        e.classList.remove("active-route");
+    });
+  }
 
   return (
     <div className="app-body">
     
     <div className="location-title">
       <div className="back-arrow"
-        onClick={() => history.goBack() }
+        onClick={ () => history.goBack() }
         style={{
           opacity: showBackArrow ? 1 : 0,
           pointerEvents: showBackArrow ? 'auto' : 'none'
@@ -35,15 +56,15 @@ const AppBody = () => {
       >{currentPage}</span>
     </div>
     <ul className="route-links">
-      <li onClick={ () => setCurrentPage("Musics") }>
-        <Link to="/">Musics</Link>
-      </li>
-      <li onClick={ () => setCurrentPage("Playlists") }>
-        <Link to="/playlists">Playlists</Link>
-      </li> 
-      <li onClick={ () => setCurrentPage("Artists") }>
-        <Link to="/artists">Artists</Link>
-      </li>
+      {routes.map(e => (
+        <li
+          onClick={ () => handleSetPage(e.routeName, e.id) }
+          key={ e.id }
+          className={`route-button ${e.id === 0 ? "active-route" : ""}`}
+        >
+          <Link to={e.url}>{e.routeName}</Link>
+        </li>
+      ))}
     </ul>
   </div>
   )

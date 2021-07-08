@@ -44,6 +44,8 @@ function App() {
     if (activeMusic !== '') {
       aud.audioEl.current.load(); 
     }
+
+    triggerMusicLoading(true);
   }, [activeMusic]);
 
   let location = useLocation();
@@ -60,14 +62,8 @@ function App() {
   }
 
   useEffect(() => {
-    let { pathname } = location
-
-    let slashCount = countSlashURL(pathname);
-    if (slashCount > 1) {
-      triggerShowBackArrow(true);
-    } else {
-      triggerShowBackArrow(false);
-    }
+    let { pathname } = location;
+    triggerShowBackArrow(countSlashURL(pathname) > 1);
 
     setCurrentPage(
       pathname.length === 1 ? "Musics" :
@@ -76,11 +72,6 @@ function App() {
     );
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [location]);
-
-  useEffect(() => {
-    triggerMusicLoading(true);
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [activeMusic]);
 
   return (
     <>

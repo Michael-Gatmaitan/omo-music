@@ -28,11 +28,5 @@
     @include customMediaQuery(1180px) {
       right: 112px;
     }
-
-    
-    
-    .now-playing-header {
-      @include fontProp('Montserrat', 700, 32px);
-    }
   }
 }

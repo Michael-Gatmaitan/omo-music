@@ -24,17 +24,6 @@ const Playlists = () => {
     ]
   };
 
-  // eslint-disable-next-line
-  // let [yourPlaylists, setYourPlaylists] = useState(JSON.parse(localStorage.getItem("yourPlaylists")) || [
-    // {
-    //   playlistID: 0,
-    //   playlistName: "Working",
-    //   musics: [
-    //     "Avril Lavigne - Complicated.mp3"
-    //   ]
-    // }
-  // ]);
-
   useEffect(() => {
     localStorage.setItem("yourPlaylists", JSON.stringify(yourPlaylists));
   }, [yourPlaylists]);
@@ -46,9 +35,10 @@ const Playlists = () => {
         Made for you
       </div>
 
+      {/* Built-in playlist like [Favorites, OPM, etc...] */}
       <div className="pl-section">
         {playlistList.made_for_you.map(pl => (
-          <PlaylistBlock pl={pl} key={pl.playlistID} hasImageLink={false} />
+          <PlaylistBlock pl={pl} key={pl.playlistID} hasImageLink={false} deletable={false} />
         ))}
       </div>
 
@@ -68,9 +58,10 @@ const Playlists = () => {
         <div className="create-text">Create Playlist</div>
       </div>
       
+      {/* Custom-built playlist by user */}
       <div className="pl-section">
         {yourPlaylists.map(pl => (
-          <PlaylistBlock pl={pl} key={pl.playlistID} hasImageLink={true} />
+          <PlaylistBlock pl={pl} key={pl.playlistID} hasImageLink={true} deletable={true} />
         ))}
       </div>
 
@@ -78,7 +69,7 @@ const Playlists = () => {
   );
 }
 
-const PlaylistBlock = ({ pl, hasImageLink }) => {
+const PlaylistBlock = ({ pl, hasImageLink, deletable }) => {
   const { playlistName, musics } = pl;
   return (
     <div className="pl-block">
@@ -101,6 +92,8 @@ const PlaylistBlock = ({ pl, hasImageLink }) => {
         </div>
 
       </Link>
+      
+      {deletable ? <div className="more"></div> : <div></div>}
     </div>
   )
 }

@@ -53,11 +53,24 @@ a {
         }
 
         .route-links {
-          @include fontProp('Montserrat', 700, 14px);
           display: flex;
 
-          li {
+          .active-route {
+
+            a {
+              color: $pri-blue !important;
+            }
+          }
+          
+          .route-button {
             padding: 12px 0 12px 0;
+            color: #fff;
+            
+            &:hover {
+              a {
+                color: $pri-blue !important;
+              }
+            }
             
             &:not(:last-child) {
               margin-right: 18px;

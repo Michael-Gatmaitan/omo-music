@@ -21,8 +21,14 @@ export default class EventContextProvider extends Component {
       artist: ''
     },
 
-    // showCreatePlaylist: false
     showCreatePlaylist: false,
+
+    showPlaylistOptions: false,
+
+    // Permissions to delete { "Playlists", "Musics in Playlists" }
+    showPermissionToDeleteMusic: false,
+    showEditPlaylist: false,
+    showPermissionToDeletePlaylist: false,
   }
   
   // Event Functions for 'MusicTrackMobile.jsx'
@@ -41,9 +47,7 @@ export default class EventContextProvider extends Component {
     this.setState({ showMusicOptions: false });
     this.setState({ showSelectPlaylist: false });
   }
-
-  setShowCreatePlaylist = bool => this.setState({ showCreatePlaylist: bool });
-
+  
   setMusicOptionsData = (data, title, artist) => {
     let musicOptionsData = {
       rawTitle: data,
@@ -53,6 +57,15 @@ export default class EventContextProvider extends Component {
 
     this.setState({ musicOptionsData });
   }
+
+  setShowCreatePlaylist = bool => this.setState({ showCreatePlaylist: bool });
+
+  setShowPlaylistOptions = bool => this.setState({ showPlaylistOptions: bool });
+
+  // Permissions mainly in Playlists
+  setShowPermissionToDeleteMusic = bool => this.state({ showPermissionToDeleteMusic: bool });
+  setShowEditPlaylist = bool => this.state({ showEditPlaylist: bool });
+  setShowPermissionToDeletePlaylist = bool => this.state({ showPermissionToDeletePlaylist: bool });
 
   render() {
 
@@ -69,17 +82,18 @@ export default class EventContextProvider extends Component {
         setMusicOptionsData: this.setMusicOptionsData,
       },
 
-      setShowCreatePlaylist: this.setShowCreatePlaylist
+      setShowCreatePlaylist: this.setShowCreatePlaylist,
+
+      setShowPlaylistOptions: this.setShowPlaylistOptions,
+
+      setShowPermissionToDeleteMusic: this.setShowPermissionToDeleteMusic,
+      setShowEditPlaylist: this.setShowEditPlaylist,
+      setShowPermissionToDeletePlaylist: this.setShowPermissionToDeletePlaylist,
     };
 
     return (
       <EventContext.Provider
-				value={
-					{
-						...this.state,
-						...events_states
-					}
-				}
+				value={{ ...this.state, ...events_states }}
 			>
 				{this.props.children}
 			</EventContext.Provider>

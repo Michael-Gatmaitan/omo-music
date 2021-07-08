@@ -24,6 +24,33 @@
         -ms-flex-pack: start;
             justify-content: flex-start;
   }
+}
+
+@media (min-width: 780px) and (min-width: 780px) {
+  .nav {
+    padding: 24px 40px;
+  }
+}
+
+@media (min-width: 780px) and (min-width: 860px) {
+  .nav {
+    padding: 24px 60px;
+  }
+}
+
+@media (min-width: 780px) and (min-width: 980px) {
+  .nav {
+    padding: 24px 90px;
+  }
+}
+
+@media (min-width: 780px) and (min-width: 1180px) {
+  .nav {
+    padding: 24px 112px;
+  }
+}
+
+@media (min-width: 780px) {
   .nav .menu-block-container {
     display: none;
   }

@@ -15,16 +15,14 @@ const CreatePlaylist = () => {
   useEffect(() => {
     let playlistNamesTemp = yourPlaylists.map(e => e.playlistName);
     let madeForYouPlaylists = playlists.map(e => e.playlistName);
-    console.log([...playlistNamesTemp, ...madeForYouPlaylists]);
+    
     setPlaylistNames([...playlistNamesTemp, ...madeForYouPlaylists]);
   }, [yourPlaylists]);
 
-  
-  // error
+  // Errors and warnings
   let [titleExist, setTitleExist] = useState(false);
-  
-  // warning
   let [titleEmpty, setTitleEmpty] = useState(true);
+  let [invalidChar, setInvalidChar] = useState(false);
 
   let inputText = useRef(null);
   let imageLinkVal = useRef(null);
@@ -39,20 +37,22 @@ const CreatePlaylist = () => {
     setShowCreatePlaylist(false);
   }
   
-  let handleChange = e => {
-    let val = e.target.value;
-    val = val.trim();
+  let handleChange = ({ target }) => {
+    let val = target.value.trim();
 
     if (val === "") {
       setTitleExist(false);
       setTitleEmpty(true);
+      setInvalidChar(false);
     } else {
-
       setTitleEmpty(false);
 
       if (playlistNames.includes(val)) {
         setTitleExist(true);
+      } else if (val.includes("/") || val.includes("#") || val.includes("?") || val.includes("%")) {
+        setInvalidChar(true);
       } else {
+        setInvalidChar(false);
         setTitleExist(false);
 
         return val;
@@ -62,18 +62,12 @@ const CreatePlaylist = () => {
 
   let handleCreatePlaylist = (val) => {
     let playlistTemp = {
-      playlistID: yourPlaylists.length,
-      playlistName: val,
-      musics: [],
-      imageLink: imageLinkVal.value.trim()
+      playlistID: yourPlaylists.length,    // number
+      playlistName: val,                   // string
+      musics: [],                          // string[]
+      imageLink: imageLinkVal.value.trim() // string.trim()
     };
-    // playlistID: 1,
-    //   playlistName: "Coding vibes",
-    //   musics: [
-    //     "Coldplay - Paradise.mp3",
-    //     "Avicii - Fades Away.mp3"
-    //   ]
-    // }
+
     updateYourPlaylists(playlistTemp);
     closeModal();
   }
@@ -88,11 +82,8 @@ const CreatePlaylist = () => {
     >
 
       <div className="create-playlist-content">
-
         <div className="header">Create Playlist</div>
-
         <div className="input-field">
-
           <div className="input-con">
             <input
               type="text"
@@ -104,16 +95,17 @@ const CreatePlaylist = () => {
               ref={ e => inputText = e }
             />
           </div>
-          
-        </div>
 
+        </div>
         {titleExist ? <div className="error">
           Playlist Title alread existed.
         </div> : ""}
-        {titleEmpty ?<div className="warning">
+        {titleEmpty ? <div className="warning">
           Playlist Title cannot be empty.
         </div> : ""}
-
+        {invalidChar ? <div className="error">
+          Playlist Title cannot include "/", "#", "?" or "%".
+        </div> : ""}
         <div className="image-link-con">
           <input
             type="text"
@@ -124,20 +116,19 @@ const CreatePlaylist = () => {
             ref={ e => imageLinkVal = e }
           />
         </div>
-
         <div className="button-option">
           <CloseButton value="Cancel" closeFunction={ closeModal }/>
 
           <div className="but-con">
             <button
-              disabled={ titleExist || titleEmpty }
+              disabled={ titleExist || titleEmpty || invalidChar }
               className="create"
               onClick={() => handleCreatePlaylist(inputText.value) }
             >Create</button>
           </div>
         </div>
       </div>
-      
+
     </div>
   )
 }

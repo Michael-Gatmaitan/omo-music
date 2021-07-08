@@ -24,6 +24,19 @@ body {
   color: #fff;
 }
 
+input, button {
+  border: none;
+  outline: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+button:disabled {
+  cursor: default;
+}
+
 .music-route {
   display: -ms-grid;
   display: grid;

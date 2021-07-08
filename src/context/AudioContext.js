@@ -1,5 +1,4 @@
 import { Component, createContext } from 'react';
-
 export const AudioContext = createContext();
 
 export default class AudioContextProvider extends Component {
@@ -32,23 +31,11 @@ export default class AudioContextProvider extends Component {
 
 		yourPlaylists: [
 			// {
-			// 	playlistID: 0,
-			// 	playlistName: "Working",
-			// 	musics: [
-			// 		"Avril Lavigne - Complicated.mp3"
-			// 	],
-			// 	imageLink: "https://aileen-molina-18.netlify.app/static/media/block4.009849d3.jpg"
+			// 	playlistID: number,
+			// 	playlistName: string,
+			// 	musics: string[],
+			// 	imageLink: string
 			// },
-			// {
-			// 	playlistID: 1,
-			// 	playlistName: "Coding vibes",
-			// 	musics: [
-			// 		"Coldplay - Paradise.mp3",
-			// 		"Avicii - Fades Away.mp3"
-			// 	],
-			// 	imageLink: "https://aileen-molina-18.netlify.app/static/media/block2.add0064c.jpeg"
-				
-			// }
 		],
 
 		activeMusicInfo: {
@@ -63,12 +50,28 @@ export default class AudioContextProvider extends Component {
 	componentDidMount() {
 		if (localStorage.getItem("bodyState") !== null) {
 			let audioEl = document.getElementsByTagName("audio")[0];
+			audioEl.pause();
 			audioEl.load();
 		}
 	}
 
-	componentDidUpdate() {
-		localStorage.setItem("bodyState", JSON.stringify(this.state));
+	componentWillUpdate(nextProps, nextState) {
+		let isOnlyCurrentTimeChanged = !(this.state.currentTime === nextState.currentTime);
+		if (isOnlyCurrentTimeChanged) {
+			// Only seconds changed
+		} else {
+			// Something changed
+			localStorage.setItem("bodyState", JSON.stringify(this.state));
+		}	
+	}
+
+	removeMusicInPlaylist = (objName, rawTitle) => {		
+		let yourPlaylistsTemp = [...this.state.yourPlaylists];
+		let musicObjParent = yourPlaylistsTemp.filter(e => e.playlistName === objName)[0];
+		let { musics } = musicObjParent;
+		musics.splice(musics.indexOf(rawTitle), 1);
+
+		this.setState({ yourPlaylists: yourPlaylistsTemp });
 	}
 
 	updatePlaylistMusics = (obj, rawTitle) => {
@@ -90,10 +93,6 @@ export default class AudioContextProvider extends Component {
 		let yourPlaylistsTemp = [...this.state.yourPlaylists];
 		yourPlaylistsTemp.push(obj);
 		this.setState({ yourPlaylists: yourPlaylistsTemp });
-	}
-
-	addMusicInPlaylist = music => {
-		
 	}
 
 	updateFavorites = item => {
@@ -156,8 +155,8 @@ export default class AudioContextProvider extends Component {
 		
 		if (!(track === trackHistory[trackHistory.length - 1])) {
 
-			// Moving played song to the bottom if
-			// it exist on trackHistory
+			// If track is already in history, it will be removed then
+			// it'll be at the bottom to avoid history duplication.
 			trackHistory = trackHistory.includes(track)
 			? trackHistory.filter(history => history !== track)
 			: trackHistory;
@@ -284,7 +283,9 @@ export default class AudioContextProvider extends Component {
 			addQueue: this.addQueue,
 
 			updateYourPlaylists: this.updateYourPlaylists,
-			updatePlaylistMusics: this.updatePlaylistMusics
+			updatePlaylistMusics: this.updatePlaylistMusics,
+			
+			removeMusicInPlaylist: this.removeMusicInPlaylist
 		};
 
 		return (

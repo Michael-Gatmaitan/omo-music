@@ -13,6 +13,7 @@
   display: grid;
   grid-template-columns: 1fr auto;
   overflow: hidden;
+  z-index: 100;
 
   @include desktop {
     display: none;

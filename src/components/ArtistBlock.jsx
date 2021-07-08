@@ -6,7 +6,7 @@ const ArtistBlock = ({ data }) => (
   <div
     className="artist-block"
     style={{
-      backgroundImage: `url('../artists-image/${data.path}.jpg')`
+      backgroundImage: `url("../artists-image/${data.path}.jpg")`
     }}
   >
     <Link to={`artists/${data.path}`}>
