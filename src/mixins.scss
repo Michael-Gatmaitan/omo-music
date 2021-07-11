@@ -5,6 +5,8 @@ $drk_blue: #0B0B14;
 $hgl_blue: rgba(#0A1344, 0.58);
 $error: #F85F57;
 $green: #60CE6B;
+$hover_green: #67b56f;
+$white: #EEEFF8;
 
 @mixin fontProp($family, $weight, $size) {
   font-family: $family, sans-serif !important;
@@ -28,4 +30,44 @@ $green: #60CE6B;
   @media (min-width: $size) {
     @content;
   }
+}
+
+@mixin modalBoxContainerFlex {
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: column;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding: 8px;
+  background: linear-gradient(rgba(#000, 0.3), rgba(#000, 1));
+  z-index: 500;
+  transition: 0.1s ease-in
+}
+
+@mixin modalBoxContentGrid {
+  width: 100%;
+  background-color: #EEEFF8;
+  padding: 18px;
+  border-radius: 16px;
+  display: grid;
+  // Customs
+  // grid-gap;
+  // grid-template-columns;
+  // grid-template-rows;
+}
+
+@mixin modalBoxContentDesktop {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 20px;
+  width: auto;
+  // Customs
+  // grid-gap;
+  // grid-template-columns;
+  // grid-template-rows;
 }

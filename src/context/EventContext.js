@@ -24,11 +24,15 @@ export default class EventContextProvider extends Component {
     showCreatePlaylist: false,
 
     showPlaylistOptions: false,
-
-    // Permissions to delete { "Playlists", "Musics in Playlists" }
-    showPermissionToDeleteMusic: false,
+    
     showEditPlaylist: false,
-    showPermissionToDeletePlaylist: false,
+    showDeletePlaylist: false,
+
+    playlistOptionsData: {
+      playlistID: null,
+      playlistName: "",
+      imageLink: ""
+    }
   }
   
   // Event Functions for 'MusicTrackMobile.jsx'
@@ -48,24 +52,27 @@ export default class EventContextProvider extends Component {
     this.setState({ showSelectPlaylist: false });
   }
   
-  setMusicOptionsData = (data, title, artist) => {
-    let musicOptionsData = {
-      rawTitle: data,
-      title: title,
-      artist: artist
-    };
-
+  setMusicOptionsData = (rawTitle, title, artist) => {
+    let musicOptionsData = { rawTitle, title, artist };
     this.setState({ musicOptionsData });
   }
 
   setShowCreatePlaylist = bool => this.setState({ showCreatePlaylist: bool });
-
+  
   setShowPlaylistOptions = bool => this.setState({ showPlaylistOptions: bool });
+  setShowEditPlaylist = bool => this.setState({ showEditPlaylist: bool });
+  setShowDeletePlaylist = bool => this.setState({ showDeletePlaylist: bool });
 
-  // Permissions mainly in Playlists
-  setShowPermissionToDeleteMusic = bool => this.state({ showPermissionToDeleteMusic: bool });
-  setShowEditPlaylist = bool => this.state({ showEditPlaylist: bool });
-  setShowPermissionToDeletePlaylist = bool => this.state({ showPermissionToDeletePlaylist: bool });
+  closeAllPlaylistOptions = () => {
+    this.setState({ showPlaylistOptions: false });
+    this.setState({ showEditPlaylist: false });
+    this.setState({ showDeletePlaylist: false });
+  }
+
+  setPlaylistOptionsData = (playlistID, playlistName, imageLink) => {
+    let playlistOptionsData = { playlistID, playlistName, imageLink };
+    this.setState({ playlistOptionsData });
+  }
 
   render() {
 
@@ -84,11 +91,15 @@ export default class EventContextProvider extends Component {
 
       setShowCreatePlaylist: this.setShowCreatePlaylist,
 
-      setShowPlaylistOptions: this.setShowPlaylistOptions,
+      ...{
+        setShowPlaylistOptions: this.setShowPlaylistOptions,
+        
+        setShowEditPlaylist: this.setShowEditPlaylist,
+        setShowDeletePlaylist: this.setShowDeletePlaylist,
 
-      setShowPermissionToDeleteMusic: this.setShowPermissionToDeleteMusic,
-      setShowEditPlaylist: this.setShowEditPlaylist,
-      setShowPermissionToDeletePlaylist: this.setShowPermissionToDeletePlaylist,
+        setPlaylistOptionsData: this.setPlaylistOptionsData,
+        closeAllPlaylistOptions: this.closeAllPlaylistOptions,
+      }
     };
 
     return (

@@ -1,6 +1,6 @@
 import { useContext, useState, useEffect } from 'react';
-import '../scss/MusicOptions.css';
-// import CloseButton from '../../buttons/CloseButton';
+import { Link } from 'react-router-dom';
+import './MusicOptions.css';
 import CloseButton from '../buttons/CloseButton';
 import { AudioContext } from '../../context/AudioContext';
 import { EventContext } from '../../context/EventContext';
@@ -25,13 +25,18 @@ const MusicOptions = () => {
     addQueue
   } = useContext(AudioContext);
 
+  const musicOptionsStyle = {
+    opacity: showMusicOptions ? 1 : 0,
+    pointerEvents: showMusicOptions ? 'auto' : 'none',
+    transform: `translateY(${showMusicOptions ? '0' : '20px'})`
+  };
+
+  const { rawTitle, artist } = musicOptionsData;
+  const artistFolder = artist.toLowerCase().replaceAll(" ", "-");
+  
   return (
     <div className="music-options-container"
-      style={{
-        opacity: showMusicOptions ? 1 : 0,
-        pointerEvents: showMusicOptions ? 'auto' : 'none',
-        transform: `translateY(${showMusicOptions ? '0' : '20px'})`
-      }}
+      style={musicOptionsStyle}
     >
       
       <div className="music-options-content">
@@ -55,7 +60,16 @@ const MusicOptions = () => {
 
           <div className="bottom-buttons">
             <CloseButton closeFunction={closeAllMusicOptions} />
-            <button className="download-music-button"></button>
+            <Link
+              to={`../../music-data/${artistFolder}/${rawTitle}`}
+              // rel="noopener noreferrer"
+              target="_blank"
+              download
+            >
+              <button className="download-music-button" onClick={ closeAllMusicOptions }>
+                <img src="../svg/download.svg" alt="" />
+              </button>
+            </Link>
           </div>
 
         </div>
@@ -113,11 +127,11 @@ const OptionSelection = props => {
     <div className="option-selection">
 
       <div className="option" onClick={
-          () => {
-            addQueue(rawTitle);
-            closeAllMusicOptions();
-          }
-        }>
+        () => {
+          addQueue(rawTitle);
+          closeAllMusicOptions();
+        }
+      }>
         <div className="option-icon">
           <img src="../svg/black-icons/play_next_black.svg" alt="" />
         </div>

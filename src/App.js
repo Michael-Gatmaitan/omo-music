@@ -8,6 +8,7 @@ import MusicTrackBar from './components/MusicTrackBar';
 import MusicTrackMobile from './components/modal-box/MusicTrackMobile';
 import MusicOptions from './components/modal-box/MusicOptions';
 import CreatePlaylist from './components/modal-box/CreatePlaylist';
+import PlaylistOptions from './components/modal-box/PlaylistOptions';
 
 // Contexts 
 import { AudioContext } from './context/AudioContext';
@@ -102,6 +103,8 @@ function App() {
       <MusicOptions />
 
       <CreatePlaylist />
+
+      <PlaylistOptions />
     </>
   )
 }
