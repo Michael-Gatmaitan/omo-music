@@ -71,3 +71,88 @@ $white: #EEEFF8;
   // grid-template-columns;
   // grid-template-rows;
 }
+
+@mixin option_musicBlock {
+  height: 100%;
+  width: 46px;
+  position: relative;
+  @include flexCenter;
+  
+  .music-options-button {
+    // 28px x 28px
+    width: 34px;
+    height: 34px;
+    border-radius: 8px;
+    @include flexCenter;
+
+    &:hover {
+      background-color: rgba(#fff, 0.1);
+    }
+
+    img {
+      width: 28px;
+    }
+  }
+
+  &::before {
+    content: '';
+    width: 50px;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: -50px;
+    z-index: 5;
+    background: linear-gradient(90deg, rgba($drk_blue, 0), rgba($drk_blue, 1));
+    pointer-events: none;
+  }
+
+  @include desktop {
+    .music-options-parent {
+      width: 60px;
+      
+      .music-options-button {
+        width: 38px;
+        height: 38px;
+  
+        img {
+          width: 32px;
+        }
+      }
+    }
+  }
+}
+
+@mixin option_playlistBlock {
+  // height: 100%;
+  
+  // .music-options-button {
+  //   // 28px x 28px
+  //   width: 34px;
+  //   height: 34px;
+  //   border-radius: 8px;
+  //   @include flexCenter;
+
+  //   &:hover {
+  //     background-color: rgba(#fff, 0.1);
+  //   }
+
+  //   img {
+  //     width: 28px;
+  //   }
+  // }
+
+  // @include desktop {
+  //   .music-options-parent {
+  //     width: 80px;
+      
+  //     .music-options-button {
+  //       width: 38px;
+  //       height: 38px;
+  
+  //       img {
+  //         width: 32px;
+  //       }
+  //     }
+  //   }
+  // }
+}

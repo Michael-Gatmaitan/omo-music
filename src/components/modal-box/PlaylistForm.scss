@@ -19,7 +19,7 @@
 
       input {
         width: 100%;
-        margin-top: 12px;
+        margin-top: 16px;
         padding: 16px 12px;
         @include fontProp('Montserrat', 600, 18px);
         color: #323232;
@@ -129,6 +129,7 @@
 
         .but-con {
           button {
+            border-radius: 14px;
             font-size: 18px !important;
           }
         }

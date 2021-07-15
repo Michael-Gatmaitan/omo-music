@@ -79,7 +79,7 @@
 
       .option-selection {
         display: grid;
-        grid-gap: 16px;
+        grid-gap: 12px;
         
         .option {
           display: flex;
@@ -93,7 +93,8 @@
             img { width: 100%; }
           }
           .option-title {
-            @include fontProp('Montserrat', 600, 18px);
+            font-size: 18px;
+            font-family: 'Montserrat', sans-serif;
             color: #000;
             margin-left: 12px;
             transition: 0.1s ease-in;

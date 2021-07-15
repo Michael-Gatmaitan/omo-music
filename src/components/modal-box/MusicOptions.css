@@ -134,7 +134,7 @@
 .music-options-container .music-options-content .options-selection-container .option-selection {
   display: -ms-grid;
   display: grid;
-  grid-gap: 16px;
+  grid-gap: 12px;
 }
 
 .music-options-container .music-options-content .options-selection-container .option-selection .option {
@@ -157,9 +157,8 @@
 }
 
 .music-options-container .music-options-content .options-selection-container .option-selection .option .option-title {
-  font-family: "Montserrat", sans-serif !important;
-  font-weight: 600 !important;
-  font-size: 18px !important;
+  font-size: 18px;
+  font-family: 'Montserrat', sans-serif;
   color: #000;
   margin-left: 12px;
   -webkit-transition: 0.1s ease-in;

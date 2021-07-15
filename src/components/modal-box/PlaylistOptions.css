@@ -48,6 +48,51 @@
   grid-gap: 18px;
 }
 
+.playlist-options-container .playlist-options-content .option-selection-container .delete-playlist-content {
+  display: -ms-grid;
+  display: grid;
+}
+
+.playlist-options-container .playlist-options-content .option-selection-container .delete-playlist-content .delete-message {
+  font-family: "Montserrat", sans-serif !important;
+  font-weight: 400 !important;
+  font-size: 18px !important;
+  color: #000;
+  margin: 16px 0 18px 0;
+}
+
+.playlist-options-container .playlist-options-content .option-selection-container .delete-playlist-content .bottom-buttons {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: auto auto;
+      grid-template-columns: auto auto;
+  grid-gap: 8px;
+}
+
+.playlist-options-container .playlist-options-content .option-selection-container .delete-playlist-content .bottom-buttons .delete-button {
+  height: 100%;
+  color: #fff;
+  background-color: #FF0058;
+  border-radius: 12px;
+  font-family: "Montserrat", sans-serif !important;
+  font-weight: 700 !important;
+  font-size: 15px !important;
+}
+
+.playlist-options-container .playlist-options-content .option-selection-container .delete-playlist-content .bottom-buttons .delete-button:hover {
+  background-color: #eb0858;
+}
+
+@media (min-width: 780px) {
+  .playlist-options-container .playlist-options-content .option-selection-container .delete-playlist-content .bottom-buttons {
+    grid-gap: 12px;
+  }
+  .playlist-options-container .playlist-options-content .option-selection-container .delete-playlist-content .bottom-buttons .delete-button {
+    border-radius: 14px;
+    font-size: 18px !important;
+  }
+}
+
 .playlist-options-container .playlist-options-content .option-selection-container .option-selection {
   display: -ms-grid;
   display: grid;
@@ -55,7 +100,7 @@
       grid-template-columns: 100%;
   -ms-grid-rows: auto;
       grid-template-rows: auto;
-  grid-gap: 16px;
+  grid-gap: 12px;
 }
 
 .playlist-options-container .playlist-options-content .option-selection-container .option-selection .option {

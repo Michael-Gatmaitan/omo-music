@@ -89,13 +89,20 @@ export default class AudioContextProvider extends Component {
 		}
 	}
 
+	deleteYourPlaylists = plObj => {
+		let yourPlaylistsTemp = [...this.state.yourPlaylists];
+
+		yourPlaylistsTemp.splice(plObj, 1);
+		this.setState({ yourPlaylists: yourPlaylistsTemp });
+	}
+
 	editYourPlaylists = (index, plObj) => {
 		let yourPlaylistsTemp = [...this.state.yourPlaylists];
 		yourPlaylistsTemp[index] = {
 			playlistID: yourPlaylistsTemp[index].playlistID,
 			...plObj
 		};
-		console.log(yourPlaylistsTemp[index]);
+
 		this.setState({ yourPlaylists: yourPlaylistsTemp });
 	}
 	
@@ -113,8 +120,6 @@ export default class AudioContextProvider extends Component {
 		} else {
 			favoritesTemp.unshift(item);
 		}
-
-		// Callback used for debugging purpose only
 		this.setState({ favorites: favoritesTemp });
 	}
 
@@ -290,6 +295,7 @@ export default class AudioContextProvider extends Component {
 
 			addQueue: this.addQueue,
 
+			deleteYourPlaylists: this.deleteYourPlaylists,
 			createYourPlaylists: this.createYourPlaylists,
 			editYourPlaylists: this.editYourPlaylists,
 

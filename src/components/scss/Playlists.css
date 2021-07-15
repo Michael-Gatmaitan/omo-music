@@ -183,10 +183,6 @@
   color: rgba(255, 255, 255, 0.58);
 }
 
-.playlists-route .pl-block a .more {
-  background-color: #f00;
-}
-
 @media (min-width: 780px) {
   .playlists-route .pl-block a {
     -ms-grid-columns: 60px auto;
@@ -207,19 +203,6 @@
   }
   .playlists-route .pl-block a .pl-info .song-len {
     font-size: 14px !important;
-  }
-}
-
-.playlists-route .pl-block .more {
-  height: 46px;
-  cursor: pointer;
-  background-color: #f00;
-  border: solid 2px #fff;
-}
-
-@media (min-width: 780px) {
-  .playlists-route .pl-block .more {
-    height: 60px;
   }
 }
 

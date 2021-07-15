@@ -83,7 +83,7 @@
   }
 
   .floating-icons {
-    padding: 0 60px;
+    padding: 0 50px;
     display: flex;
     justify-content: space-between;
 
@@ -94,6 +94,22 @@
       @include flexCenter;
 
       img { width: 100%; }
+    }
+
+    @include customMediaQuery(450px) {
+      padding: 0 70px;
+    }
+
+    @include customMediaQuery(550px) {
+      padding: 0 90px;
+    }
+
+    @include customMediaQuery(650px) {
+      padding: 0 110px;
+    }
+
+    @include desktop {
+      padding: 0 50px;
     }
   }
   
@@ -132,6 +148,22 @@
         position: absolute;
         border-radius: 6px;
       }
+    }
+
+    @include customMediaQuery(450px) {
+      padding: 0 70px;
+    }
+
+    @include customMediaQuery(550px) {
+      padding: 0 90px;
+    }
+
+    @include customMediaQuery(650px) {
+      padding: 0 110px;
+    }
+
+    @include desktop {
+      padding: 0 50px;
     }
   }
 

@@ -15,6 +15,8 @@ const CreatePlaylist = () => {
   }
 
   let handleCreatePlaylist = (plNameVal, plImgVal) => {
+    closeCreatePlaylistModal();
+    
     let playlistTemp = {
       playlistID: yourPlaylists.length,    // number
       playlistName: plNameVal.trim(),      // string
@@ -23,7 +25,6 @@ const CreatePlaylist = () => {
     };
 
     createYourPlaylists(playlistTemp);
-    closeCreatePlaylistModal();
   }
 
   return (

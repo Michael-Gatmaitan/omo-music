@@ -100,16 +100,23 @@ const PlaylistBlock = ({ pl, hasImageLink, deletable }) => {
       </Link>
       
       {deletable ?
-      <div className="more"
-        onClick={
+
+      <div
+        className="music-options-parent"
+        onClick={ 
           () => {
             setPlaylistOptionsData(playlistID, playlistName, imageLink);
             setShowPlaylistOptions(true);
           }
         }
       >
+        <div className="music-options-button">
+          <img src="../svg/floating-icons/more.svg" className="options" alt="" />
+        </div>
       </div>
-      : <div />}
+      
+      : ""}
+
     </div>
   )
 }

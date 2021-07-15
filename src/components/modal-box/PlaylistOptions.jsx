@@ -43,9 +43,8 @@ const PlaylistOptions = () => {
         </div>
 
         <div className="option-selection-container">
-
           {(showEditPlaylist || showDeletePlaylist) ?
-            showEditPlaylist ? <EditPlaylist /> : "Delete Playlist"
+            showEditPlaylist ? <EditPlaylist /> : <DeletePlaylist />
           : <OptionSelection />}
         </div>
 
@@ -114,7 +113,6 @@ const EditPlaylist = () => {
 
   const {
     showPlaylistOptions,
-
     playlistOptionsData,
     closeAllPlaylistOptions,
   } = useContext(EventContext);
@@ -127,6 +125,7 @@ const EditPlaylist = () => {
   } = useContext(AudioContext);
 
   const handleEditPlaylist = (plNameVal, plImgVal) => {
+    closeAllPlaylistOptions();
 
     let editingPlaylistIndex = yourPlaylists.indexOf(yourPlaylists.filter(e => e.playlistID === playlistID)[0]);
 
@@ -137,7 +136,6 @@ const EditPlaylist = () => {
     };
 
     editYourPlaylists(editingPlaylistIndex, playlistTemp);
-    closeAllPlaylistOptions();
   }
 
   return (
@@ -153,6 +151,43 @@ const EditPlaylist = () => {
       playlistNameVal={ playlistName }
       playlistImageLinkVal={ imageLink }
     />
+  )
+}
+
+const DeletePlaylist = () => {
+
+  const { deleteYourPlaylists, yourPlaylists } = useContext(AudioContext);
+  const {
+    playlistOptionsData,
+    closeAllPlaylistOptions
+  } = useContext(EventContext);
+
+  const { playlistName } = playlistOptionsData;
+
+  const findObjToDelete = (_plName) => {
+    closeAllPlaylistOptions();
+    
+    let obj = yourPlaylists.find(e => e.playlistName === _plName);
+    let index = yourPlaylists.indexOf(obj);
+    let objToDelete = yourPlaylists[index];
+
+    deleteYourPlaylists(objToDelete);
+  }
+
+  return (
+    <div className="delete-playlist-content">
+      <div className="header delete-header">Delete Playlist</div>
+      <div className="delete-message">
+      “{playlistName}” will be deleted.
+      </div>
+
+      <div className="bottom-buttons">
+        <CloseButton value="Cancel" closeFunction={ closeAllPlaylistOptions } />
+        <button className="delete-button" onClick={ () => findObjToDelete(playlistName) }>
+          Delete
+        </button>
+      </div>
+    </div>
   )
 }
 

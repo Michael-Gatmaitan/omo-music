@@ -1,18 +1,14 @@
-# Getting Started with Create React App
+# OMO Music
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project is a web-based music player. It haves more than 500 musics and 50+ artists.
 
-## Available Scripts
+## Why React?
 
-In the project directory, you can run:
+I used reactjs in this project because react is where I capable with and It can be helpful for the project to manage states properly by using React's Context.
 
-### `yarn start`
+### Feb, 2021 - July 2021
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+It takes me 5 months to build this project due to internet connection problems (financial prolems), and lots of responsibilities as a teenager.
 
 ### `yarn test`
 

@@ -146,16 +146,6 @@
     font-weight: 400 !important;
     font-size: 14px !important;
   }
-  .music-block .music-options-parent {
-    width: 60px;
-  }
-  .music-block .music-options-parent .music-options-button {
-    width: 38px;
-    height: 38px;
-  }
-  .music-block .music-options-parent .music-options-button img {
-    width: 32px;
-  }
 }
 
 .music-block-no-artist-image {

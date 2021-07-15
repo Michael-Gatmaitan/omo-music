@@ -47,6 +47,7 @@ function App() {
     }
 
     triggerMusicLoading(true);
+    // eslint-disable-next-line
   }, [activeMusic]);
 
   let location = useLocation();
