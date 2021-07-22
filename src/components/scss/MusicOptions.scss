@@ -1,16 +1,36 @@
 @import '../../mixins.scss';
 
 .music-options-container {
-  @include modalBoxContainerFlex;
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: column;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding: 8px;
+  background: linear-gradient(rgba(#000, 0.3), rgba(#000, 1));
+  z-index: 300;
+  transition: 0.1s ease-in;
 
   .music-options-content {
-    @include modalBoxContentGrid;
+    width: 100%;
+    background-color: #EEEFF8;
+    padding: 18px;
+    border-radius: 16px;
+    display: grid;
     grid-gap: 32px;
     grid-template-columns: 100%;
     grid-template-rows: 184px auto;
 
     @include desktop {
-      @include modalBoxContentDesktop;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      padding: 20px;
+      width: auto;
       grid-gap: 24px;
       grid-template-columns: 232px 350px;
       grid-template-rows: 232px;
@@ -137,7 +157,7 @@
             cursor: pointer;
 
             &:hover {
-              background-color: $error;
+              background-color: $pri_blue;
             }
           }
         }
@@ -147,35 +167,20 @@
         display: grid;
         grid-gap: 12px;
         grid-template-columns: 1fr auto;
-        grid-template-rows: 100%;
 
-        a {
-          height: 100%;
-          
-          .download-music-button {
+        .download-music-button {
+          border: solid 5px $green;
+          border-radius: 12px;
+          transition: 0.1s ease-in;
+          width: 61px;
+          background-color: #fff;
+
+          &:hover {
             background-color: $green;
-            border-radius: 12px;
-            transition: 0.1s ease-in;
+          }
+
+          @include desktop {
             width: 64px;
-            padding: 18px;
-            height: 100%;
-            @include flexCenter;
-
-            img {
-              width: 28px;
-            }
-  
-            &:hover {
-              background-color: $hover_green;
-            }
-  
-            @include desktop {
-              width: 64px;
-
-              img {
-                width: 32px;
-              }
-            }
           }
         }
       }

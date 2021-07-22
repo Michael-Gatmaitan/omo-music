@@ -70,21 +70,15 @@ const Playlists = () => {
 }
 
 const PlaylistBlock = ({ pl, hasImageLink, deletable }) => {
-  const {
-    setPlaylistOptionsData,
-    setShowPlaylistOptions
-  } = useContext(EventContext);
-
-  const { playlistID, playlistName, imageLink, musics } = pl;
-
+  const { playlistName, musics } = pl;
   return (
     <div className="pl-block">
       <Link to={`playlists/${playlistName}`}>
         
         <div className="pl-image">
           {hasImageLink ?
-          imageLink === "" ? <img src="../svg/omo-logo.svg" className="svg" alt="" />
-          : <img src={imageLink} className="link" alt="" />
+          pl.imageLink === "" ? <img src="../svg/omo-logo.svg" className="svg" alt="" />
+          : <img src={pl.imageLink} className="link" alt="" />
           : <img src="../svg/omo-logo.svg" className="svg" alt="" />}
         </div>
 
@@ -99,17 +93,7 @@ const PlaylistBlock = ({ pl, hasImageLink, deletable }) => {
 
       </Link>
       
-      {deletable ?
-      <div className="more"
-        onClick={
-          () => {
-            setPlaylistOptionsData(playlistID, playlistName, imageLink);
-            setShowPlaylistOptions(true);
-          }
-        }
-      >
-      </div>
-      : <div />}
+      {deletable ? <div className="more"></div> : <div></div>}
     </div>
   )
 }

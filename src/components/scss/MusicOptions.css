@@ -17,7 +17,7 @@
   padding: 8px;
   background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.3)), to(black));
   background: linear-gradient(rgba(0, 0, 0, 0.3), black);
-  z-index: 500;
+  z-index: 300;
   -webkit-transition: 0.1s ease-in;
   transition: 0.1s ease-in;
 }
@@ -207,7 +207,7 @@
 }
 
 .music-options-container .music-options-content .options-selection-container .select-playlist .playlist-option-container .playlist-option:hover {
-  background-color: #F85F57;
+  background-color: #293EF8;
 }
 
 .music-options-container .music-options-content .options-selection-container .bottom-buttons {
@@ -216,47 +216,24 @@
   grid-gap: 12px;
   -ms-grid-columns: 1fr auto;
       grid-template-columns: 1fr auto;
-  -ms-grid-rows: 100%;
-      grid-template-rows: 100%;
 }
 
-.music-options-container .music-options-content .options-selection-container .bottom-buttons a {
-  height: 100%;
-}
-
-.music-options-container .music-options-content .options-selection-container .bottom-buttons a .download-music-button {
-  background-color: #60CE6B;
+.music-options-container .music-options-content .options-selection-container .bottom-buttons .download-music-button {
+  border: solid 5px #60CE6B;
   border-radius: 12px;
   -webkit-transition: 0.1s ease-in;
   transition: 0.1s ease-in;
-  width: 64px;
-  padding: 18px;
-  height: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  width: 61px;
+  background-color: #fff;
 }
 
-.music-options-container .music-options-content .options-selection-container .bottom-buttons a .download-music-button img {
-  width: 28px;
-}
-
-.music-options-container .music-options-content .options-selection-container .bottom-buttons a .download-music-button:hover {
-  background-color: #67b56f;
+.music-options-container .music-options-content .options-selection-container .bottom-buttons .download-music-button:hover {
+  background-color: #60CE6B;
 }
 
 @media (min-width: 780px) {
-  .music-options-container .music-options-content .options-selection-container .bottom-buttons a .download-music-button {
+  .music-options-container .music-options-content .options-selection-container .bottom-buttons .download-music-button {
     width: 64px;
-  }
-  .music-options-container .music-options-content .options-selection-container .bottom-buttons a .download-music-button img {
-    width: 32px;
   }
 }
 

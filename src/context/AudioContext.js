@@ -56,13 +56,13 @@ export default class AudioContextProvider extends Component {
 	}
 
 	componentWillUpdate(nextProps, nextState) {
-		let isOnlyCurrentTimeChanged = this.state.playing && this.state.currentTime !== nextState.currentTime;
+		let isOnlyCurrentTimeChanged = !(this.state.currentTime === nextState.currentTime);
 		if (isOnlyCurrentTimeChanged) {
 			// Only seconds changed
 		} else {
 			// Something changed
 			localStorage.setItem("bodyState", JSON.stringify(this.state));
-		}
+		}	
 	}
 
 	removeMusicInPlaylist = (objName, rawTitle) => {		
@@ -83,25 +83,15 @@ export default class AudioContextProvider extends Component {
 		if (updateObj.musics.includes(rawTitle)) {
 			alert(`${rawTitle} is already in playlist ${updateObj.playlistName}`);
 		} else {
-			updateObj.musics.unshift(rawTitle);
+			updateObj.musics.push(rawTitle);
 			yourPlaylistsTemp[index] = updateObj;
 			this.setState({ yourPlaylists: yourPlaylistsTemp });
 		}
 	}
 
-	editYourPlaylists = (index, plObj) => {
+	updateYourPlaylists = obj => {
 		let yourPlaylistsTemp = [...this.state.yourPlaylists];
-		yourPlaylistsTemp[index] = {
-			playlistID: yourPlaylistsTemp[index].playlistID,
-			...plObj
-		};
-		console.log(yourPlaylistsTemp[index]);
-		this.setState({ yourPlaylists: yourPlaylistsTemp });
-	}
-	
-	createYourPlaylists = plObj => {
-		let yourPlaylistsTemp = [...this.state.yourPlaylists];
-		yourPlaylistsTemp.unshift(plObj);
+		yourPlaylistsTemp.push(obj);
 		this.setState({ yourPlaylists: yourPlaylistsTemp });
 	}
 
@@ -115,7 +105,9 @@ export default class AudioContextProvider extends Component {
 		}
 
 		// Callback used for debugging purpose only
-		this.setState({ favorites: favoritesTemp });
+		this.setState({ favorites: favoritesTemp }, () => {
+			console.log(this.state.favorites);
+		});
 	}
 
 	triggerMusicLoading = bool => this.setState({ musicLoading: bool });
@@ -290,10 +282,9 @@ export default class AudioContextProvider extends Component {
 
 			addQueue: this.addQueue,
 
-			createYourPlaylists: this.createYourPlaylists,
-			editYourPlaylists: this.editYourPlaylists,
-
+			updateYourPlaylists: this.updateYourPlaylists,
 			updatePlaylistMusics: this.updatePlaylistMusics,
+			
 			removeMusicInPlaylist: this.removeMusicInPlaylist
 		};
 
