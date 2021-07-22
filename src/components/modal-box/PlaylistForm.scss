@@ -1,0 +1,147 @@
+@import '../../mixins.scss';
+
+.playlist-form-content {
+  width: 100%;
+  background-color: $white;
+  padding: 18px;
+  border-radius: 16px;
+  display: grid;
+  grid-template-columns: 100%;
+
+  .header {
+    @include fontProp('Montserrat', 700, 24px);
+    color: #000;
+  }
+
+  .input-field {
+
+    .input-con {
+
+      input {
+        width: 100%;
+        margin-top: 16px;
+        padding: 16px 12px;
+        @include fontProp('Montserrat', 600, 18px);
+        color: #323232;
+        border-radius: 8px;
+        background-color: #D8DAED;
+        transition: 0.1s ease-in;
+
+        &:focus { background-color: #D1D4ED; }
+        &::placeholder { color: rgba(#323232, .58); }
+      }
+    }
+    
+    .error, .warning {
+      margin: 8px 0 0 0;
+      @include fontProp('Montserrat', 500, 14px);
+    }
+    .error {
+      color: #F85F57;
+    }
+    .warning {
+      color: #F8851B;
+    }
+
+    .image-link-con {
+      width: 100%;
+
+      input {
+        width: 100%;
+        margin-top: 12px;
+        padding: 8px 12px;
+        @include fontProp('Montserrat', 600, 12px);
+        color: #323232;
+        border-radius: 8px;
+        background-color: #D8DAED;
+        transition: 0.1s ease-in;
+
+        &:focus {
+          background-color: #D1D4ED;
+        }
+
+        &::placeholder {
+          color: rgba(#323232, .58);
+        }
+      }
+    }
+
+    .button-option {
+      width: 100%;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-gap: 8px;
+      margin-top: 18px;
+
+      .but-con {
+
+        button {
+          // padding: 0 21px;
+          width: 100%;
+          height: 100%;
+          @include fontProp('Montserrat', 500, 15px);
+          background-color: $green;
+          border-radius: 12px;
+          transition: 0.1s ease-in;
+          
+          &:hover { background-color: $hover_green; }
+
+          &:disabled {
+            opacity: 0.38;
+
+            &:hover { background-color: #ff0040; }
+          }
+        }
+      }
+    }
+  }
+
+  @include desktop {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 415px;
+
+    .header {
+      font-size: 32px !important;
+    }
+
+    .input-field {
+
+      .input-con {
+        input {
+          margin-top: 14px;
+          padding: 18px 14px;
+          font-size: 22px !important;
+        }
+      }
+
+      .image-link-con {
+        input {
+          padding: 10px 14px;
+          font-size: 14px !important;
+        }
+      }
+
+      .button-option {
+        grid-gap: 12px;
+
+        .but-con {
+          button {
+            border-radius: 14px;
+            font-size: 18px !important;
+          }
+        }
+      }
+    }
+  }
+}
+
+.edit-mode {
+  padding: 0;
+
+  @include desktop {
+    padding: 20px;
+  }
+}

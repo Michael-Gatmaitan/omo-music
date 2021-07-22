@@ -1,0 +1,5 @@
+@import '../../mixins.scss';
+
+.create-playlist-modal {
+  @include modalBoxContainerFlex;
+}

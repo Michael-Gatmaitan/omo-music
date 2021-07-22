@@ -56,13 +56,13 @@ export default class AudioContextProvider extends Component {
 	}
 
 	componentWillUpdate(nextProps, nextState) {
-		let isOnlyCurrentTimeChanged = !(this.state.currentTime === nextState.currentTime);
+		let isOnlyCurrentTimeChanged = this.state.playing && this.state.currentTime !== nextState.currentTime;
 		if (isOnlyCurrentTimeChanged) {
 			// Only seconds changed
 		} else {
 			// Something changed
 			localStorage.setItem("bodyState", JSON.stringify(this.state));
-		}	
+		}
 	}
 
 	removeMusicInPlaylist = (objName, rawTitle) => {		
@@ -83,15 +83,32 @@ export default class AudioContextProvider extends Component {
 		if (updateObj.musics.includes(rawTitle)) {
 			alert(`${rawTitle} is already in playlist ${updateObj.playlistName}`);
 		} else {
-			updateObj.musics.push(rawTitle);
+			updateObj.musics.unshift(rawTitle);
 			yourPlaylistsTemp[index] = updateObj;
 			this.setState({ yourPlaylists: yourPlaylistsTemp });
 		}
 	}
 
-	updateYourPlaylists = obj => {
+	deleteYourPlaylists = plObj => {
 		let yourPlaylistsTemp = [...this.state.yourPlaylists];
-		yourPlaylistsTemp.push(obj);
+
+		yourPlaylistsTemp.splice(plObj, 1);
+		this.setState({ yourPlaylists: yourPlaylistsTemp });
+	}
+
+	editYourPlaylists = (index, plObj) => {
+		let yourPlaylistsTemp = [...this.state.yourPlaylists];
+		yourPlaylistsTemp[index] = {
+			playlistID: yourPlaylistsTemp[index].playlistID,
+			...plObj
+		};
+
+		this.setState({ yourPlaylists: yourPlaylistsTemp });
+	}
+	
+	createYourPlaylists = plObj => {
+		let yourPlaylistsTemp = [...this.state.yourPlaylists];
+		yourPlaylistsTemp.unshift(plObj);
 		this.setState({ yourPlaylists: yourPlaylistsTemp });
 	}
 
@@ -103,11 +120,7 @@ export default class AudioContextProvider extends Component {
 		} else {
 			favoritesTemp.unshift(item);
 		}
-
-		// Callback used for debugging purpose only
-		this.setState({ favorites: favoritesTemp }, () => {
-			console.log(this.state.favorites);
-		});
+		this.setState({ favorites: favoritesTemp });
 	}
 
 	triggerMusicLoading = bool => this.setState({ musicLoading: bool });
@@ -282,9 +295,11 @@ export default class AudioContextProvider extends Component {
 
 			addQueue: this.addQueue,
 
-			updateYourPlaylists: this.updateYourPlaylists,
+			deleteYourPlaylists: this.deleteYourPlaylists,
+			createYourPlaylists: this.createYourPlaylists,
+			editYourPlaylists: this.editYourPlaylists,
+
 			updatePlaylistMusics: this.updatePlaylistMusics,
-			
 			removeMusicInPlaylist: this.removeMusicInPlaylist
 		};
 

@@ -1,0 +1,108 @@
+@import '../../mixins.scss';
+
+.playlist-options-container  {
+  @include modalBoxContainerFlex;
+
+  .playlist-options-content {
+    @include modalBoxContentGrid;
+    grid-template-columns: 100%;
+    grid-auto-rows: auto;
+    grid-gap: 12px;
+    
+    .header {
+      @include fontProp("Montserrat", 700, 24px);
+      color: #000;
+    }
+
+    .option-selection-container {
+      display: grid;
+      grid-gap: 18px;
+
+      .delete-playlist-content {
+        display: grid;
+        
+        .delete-message {
+          @include fontProp("Montserrat", 400, 18px);
+          color: #000;
+          margin: 16px 0 18px 0;
+        }
+
+        .bottom-buttons {
+          display: grid;
+          grid-template-columns: auto auto;
+          grid-gap: 8px;
+
+          .delete-button {
+            height: 100%;
+            color: #fff;
+            background-color: #FF0058;
+            border-radius: 12px;
+            @include fontProp("Montserrat", 700, 15px);
+
+            
+            &:hover {
+              background-color: #eb0858;
+            }
+          }
+
+          @include desktop {
+            grid-gap: 12px;
+
+            .delete-button {
+              border-radius: 14px;
+              font-size: 18px !important;
+            }
+          }
+        }
+      }
+
+      .option-selection {
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows: auto;
+        grid-gap: 12px;
+
+        .option {
+          width: 100%;
+          display: grid;
+          grid-template-columns: 28px 1fr;
+          grid-gap: 12px;
+          cursor: pointer;
+          align-items: center;
+
+          .option-icon {
+            @include flexCenter;
+
+            img { width: 100%; }
+          }
+
+          .option-title {
+            @include fontProp("Montserrat", 400, 18px);
+            color: #000;
+            transition: 0.1s ease-in;
+          }
+
+          &:hover {
+            .option-title {
+              color: $pri-blue;
+            }
+          }
+
+          @include desktop {
+            grid-template-columns: 32px 1fr;
+            grid-gap: 14px;
+          }
+        }
+        
+        @include desktop {
+          grid-gap: 24px;
+        }
+      }
+    }
+
+    @include desktop {
+      @include modalBoxContentDesktop;
+      width: 350px;
+    }
+  }
+}

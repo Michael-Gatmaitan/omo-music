@@ -31,7 +31,7 @@ const FloatingMusicTrackComps = () => {
     musicLoading,
 
     shuffle,
-    order,
+    // order,
     changeMusicEndState
   } = useContext(AudioContext);
 
@@ -60,7 +60,7 @@ const FloatingMusicTrackComps = () => {
   }, [activeMusicRawTitle, favorites]);
 
   const iconStyle = {
-    opacity: activeMusic ? 1 : 0.38,
+    opacity: activeMusic ? 1 : 0.30,
     display: activeMusic ? 'block' : 'none'
   };
 
@@ -115,9 +115,12 @@ const FloatingMusicTrackComps = () => {
           {/* Shuffle / Order */}
           <div className="shuf-ord icon-container"
             onClick={ changeMusicEndState }
-            style={iconStyle}
+            style={{
+              ...iconStyle,
+                opacity: activeMusic ? shuffle ? 1 : 0.30 : 0.30
+            }}
           >
-            {shuffle ? "shu" : "ord"}
+            <img className="icon"src="../svg/floating-icons/shuffle.svg" alt="" />
           </div>
 
           {/* heart */}

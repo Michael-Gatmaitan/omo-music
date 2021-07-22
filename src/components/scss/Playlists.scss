@@ -74,7 +74,6 @@
       grid-template-columns: auto 60px;
     }
 
-
     &:hover {
       a {
         .pl-info {
@@ -94,7 +93,7 @@
       .pl-image {
         width: 46px;
         height: 46px;
-        background-color: #fff;
+        background-color: $drk_blue;
         border-radius: 8px;
         overflow: hidden;
         position: relative;
@@ -137,10 +136,6 @@
         .song-len { @include fontProp('Open sans', 400, 12px); color: rgba(#fff, 0.58); }
       }
 
-      .more {
-        background-color: #f00;
-      }
-
       @include desktop {
         grid-template-columns: 60px auto;
         grid-gap: 12px;
@@ -161,16 +156,8 @@
       }
     }
 
-    .more {
-      height: 46px;
-      cursor: pointer;
-      background-color: #f00;
-      border: solid 2px #fff;
-
-      @include desktop {
-        height: 60px;
-      }
-    }
+    // @include option_playlistBlock;
+    // 
   }
 }
 

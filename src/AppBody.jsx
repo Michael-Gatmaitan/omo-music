@@ -1,8 +1,5 @@
-import { useContext, useEffect } from 'react';
-import {
-  Link,
-  useHistory
-} from 'react-router-dom';
+import { useContext } from 'react';
+import { Link, useHistory } from 'react-router-dom';
 import { AudioContext } from './context/AudioContext';
 
 const AppBody = () => {
@@ -32,6 +29,7 @@ const AppBody = () => {
         e.classList.add("active-route");
       else
         e.classList.remove("active-route");
+      return
     });
   }
 

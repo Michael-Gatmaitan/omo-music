@@ -1,36 +1,16 @@
 @import '../../mixins.scss';
 
 .music-options-container {
-  display: flex;
-  justify-content: flex-end;
-  flex-direction: column;
-  width: 100vw;
-  height: 100vh;
-  position: fixed;
-  top: 0;
-  left: 0;
-  padding: 8px;
-  background: linear-gradient(rgba(#000, 0.3), rgba(#000, 1));
-  z-index: 300;
-  transition: 0.1s ease-in;
+  @include modalBoxContainerFlex;
 
   .music-options-content {
-    width: 100%;
-    background-color: #EEEFF8;
-    padding: 18px;
-    border-radius: 16px;
-    display: grid;
+    @include modalBoxContentGrid;
     grid-gap: 32px;
     grid-template-columns: 100%;
     grid-template-rows: 184px auto;
 
     @include desktop {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      padding: 20px;
-      width: auto;
+      @include modalBoxContentDesktop;
       grid-gap: 24px;
       grid-template-columns: 232px 350px;
       grid-template-rows: 232px;
@@ -99,7 +79,7 @@
 
       .option-selection {
         display: grid;
-        grid-gap: 16px;
+        grid-gap: 12px;
         
         .option {
           display: flex;
@@ -113,7 +93,8 @@
             img { width: 100%; }
           }
           .option-title {
-            @include fontProp('Montserrat', 600, 18px);
+            font-size: 18px;
+            font-family: 'Montserrat', sans-serif;
             color: #000;
             margin-left: 12px;
             transition: 0.1s ease-in;
@@ -157,7 +138,7 @@
             cursor: pointer;
 
             &:hover {
-              background-color: $pri_blue;
+              background-color: $error;
             }
           }
         }
@@ -167,20 +148,35 @@
         display: grid;
         grid-gap: 12px;
         grid-template-columns: 1fr auto;
+        grid-template-rows: 100%;
 
-        .download-music-button {
-          border: solid 5px $green;
-          border-radius: 12px;
-          transition: 0.1s ease-in;
-          width: 61px;
-          background-color: #fff;
-
-          &:hover {
+        a {
+          height: 100%;
+          
+          .download-music-button {
             background-color: $green;
-          }
-
-          @include desktop {
+            border-radius: 12px;
+            transition: 0.1s ease-in;
             width: 64px;
+            padding: 18px;
+            height: 100%;
+            @include flexCenter;
+
+            img {
+              width: 28px;
+            }
+  
+            &:hover {
+              background-color: $hover_green;
+            }
+  
+            @include desktop {
+              width: 64px;
+
+              img {
+                width: 32px;
+              }
+            }
           }
         }
       }

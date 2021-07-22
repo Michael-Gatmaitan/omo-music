@@ -32,6 +32,7 @@ const MusicBlock = props => {
     const { title, artistName } = activeMusicInfo;
     
     setIsActiveMusic(data === `${artistName} - ${title}.mp3`);
+    // eslint-disable-next-line
   }, [activeMusicInfo]);
 
   const musicTitle = data.slice(data.indexOf(" - ") + 3, -4);

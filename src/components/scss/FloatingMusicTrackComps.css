@@ -111,7 +111,7 @@
 }
 
 .floating-music-track .floating-icons {
-  padding: 0 60px;
+  padding: 0 50px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -137,6 +137,30 @@
 
 .floating-music-track .floating-icons .icon-container img {
   width: 100%;
+}
+
+@media (min-width: 450px) {
+  .floating-music-track .floating-icons {
+    padding: 0 70px;
+  }
+}
+
+@media (min-width: 550px) {
+  .floating-music-track .floating-icons {
+    padding: 0 90px;
+  }
+}
+
+@media (min-width: 650px) {
+  .floating-music-track .floating-icons {
+    padding: 0 110px;
+  }
+}
+
+@media (min-width: 780px) {
+  .floating-music-track .floating-icons {
+    padding: 0 50px;
+  }
 }
 
 .floating-music-track .floating-seekbar {
@@ -189,6 +213,30 @@
   background-color: #fff;
   position: absolute;
   border-radius: 6px;
+}
+
+@media (min-width: 450px) {
+  .floating-music-track .floating-seekbar {
+    padding: 0 70px;
+  }
+}
+
+@media (min-width: 550px) {
+  .floating-music-track .floating-seekbar {
+    padding: 0 90px;
+  }
+}
+
+@media (min-width: 650px) {
+  .floating-music-track .floating-seekbar {
+    padding: 0 110px;
+  }
+}
+
+@media (min-width: 780px) {
+  .floating-music-track .floating-seekbar {
+    padding: 0 50px;
+  }
 }
 
 .floating-music-track .music-track-events {

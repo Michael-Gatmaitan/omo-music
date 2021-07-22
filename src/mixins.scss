@@ -5,6 +5,8 @@ $drk_blue: #0B0B14;
 $hgl_blue: rgba(#0A1344, 0.58);
 $error: #F85F57;
 $green: #60CE6B;
+$hover_green: #67b56f;
+$white: #EEEFF8;
 
 @mixin fontProp($family, $weight, $size) {
   font-family: $family, sans-serif !important;
@@ -28,4 +30,129 @@ $green: #60CE6B;
   @media (min-width: $size) {
     @content;
   }
+}
+
+@mixin modalBoxContainerFlex {
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: column;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding: 8px;
+  background: linear-gradient(rgba(#000, 0.3), rgba(#000, 1));
+  z-index: 500;
+  transition: 0.1s ease-in
+}
+
+@mixin modalBoxContentGrid {
+  width: 100%;
+  background-color: #EEEFF8;
+  padding: 18px;
+  border-radius: 16px;
+  display: grid;
+  // Customs
+  // grid-gap;
+  // grid-template-columns;
+  // grid-template-rows;
+}
+
+@mixin modalBoxContentDesktop {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 20px;
+  width: auto;
+  // Customs
+  // grid-gap;
+  // grid-template-columns;
+  // grid-template-rows;
+}
+
+@mixin option_musicBlock {
+  height: 100%;
+  width: 46px;
+  position: relative;
+  @include flexCenter;
+  
+  .music-options-button {
+    // 28px x 28px
+    width: 34px;
+    height: 34px;
+    border-radius: 8px;
+    @include flexCenter;
+
+    &:hover {
+      background-color: rgba(#fff, 0.1);
+    }
+
+    img {
+      width: 28px;
+    }
+  }
+
+  &::before {
+    content: '';
+    width: 50px;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: -50px;
+    z-index: 5;
+    background: linear-gradient(90deg, rgba($drk_blue, 0), rgba($drk_blue, 1));
+    pointer-events: none;
+  }
+
+  @include desktop {
+    .music-options-parent {
+      width: 60px;
+      
+      .music-options-button {
+        width: 38px;
+        height: 38px;
+  
+        img {
+          width: 32px;
+        }
+      }
+    }
+  }
+}
+
+@mixin option_playlistBlock {
+  // height: 100%;
+  
+  // .music-options-button {
+  //   // 28px x 28px
+  //   width: 34px;
+  //   height: 34px;
+  //   border-radius: 8px;
+  //   @include flexCenter;
+
+  //   &:hover {
+  //     background-color: rgba(#fff, 0.1);
+  //   }
+
+  //   img {
+  //     width: 28px;
+  //   }
+  // }
+
+  // @include desktop {
+  //   .music-options-parent {
+  //     width: 80px;
+      
+  //     .music-options-button {
+  //       width: 38px;
+  //       height: 38px;
+  
+  //       img {
+  //         width: 32px;
+  //       }
+  //     }
+  //   }
+  // }
 }
