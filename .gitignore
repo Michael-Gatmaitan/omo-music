@@ -12,8 +12,8 @@
 /build
 
 # artist_image
-/public/artists-image
 /public/disp-image
+# /public/artists-image
 
 # music_data
 /public/music-data
