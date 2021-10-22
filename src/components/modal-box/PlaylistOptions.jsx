@@ -1,7 +1,8 @@
+// @ts-nocheck
 import { useContext } from 'react';
 import { EventContext } from '../../context/EventContext';
 import { AudioContext } from '../../context/AudioContext';
-import CloseButton from  '../buttons/CloseButton';
+import CloseButton from '../Buttons/CloseButton';
 import './PlaylistOptions.css';
 
 // 

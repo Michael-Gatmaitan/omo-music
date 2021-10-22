@@ -2,7 +2,7 @@ import { useContext } from 'react';
 import { AudioContext } from '../context/AudioContext';
 import { EventContext } from '../context/EventContext';
 
-import CloseButton from './buttons/CloseButton';
+import CloseButton from './Buttons/CloseButton';
 
 import './scss/FloatingTracklist.css';
 

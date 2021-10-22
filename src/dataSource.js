@@ -1,3 +1,10 @@
+// Missing
+// TWICE
+// The 1975
+// Rex Orange County
+// Clairo
+// Cigarettes After Sex
+
 export const bodyData = [
   {
     "path": "aerosmith",
@@ -258,8 +265,22 @@ export const bodyData = [
     "artistID": 15
   },
   {
-    "path": "claire-rosinkranz",
-    "artistName": "Claire Rosinkranz",
+    "path": "cigarettes-after-sex",
+    "artistName": "Cigarettes After Sex",
+    "musics": [
+      "Cigarettes After Sex - Affection.mp3",
+      "Cigarettes After Sex - Apocalypse.mp3",
+      "Cigarettes After Sex - Dreaming Of You.mp3",
+      "Cigarettes After Sex - Heavenly.mp3",
+      "Cigarettes After Sex - K..mp3",
+      "Cigarettes After Sex - Nothing's Gonna Hurt You Baby.mp3",
+      "Cigarettes After Sex - Sweet.mp3",
+    ],
+    "artistID": 103
+  },
+  {
+    "path": "clairo",
+    "artistName": "Clairo",
     "musics": [
       "Claire Rosinkranz - Backyard Boy.mp3",
       "Claire Rosinkranz - BeVerly Hills BoYfRiEnd.mp3",
@@ -268,6 +289,18 @@ export const bodyData = [
       "Claire Rosinkranz - Tough Guy.mp3"
     ],
     "artistID": 16
+  },
+  {
+    "path": "claire-rosinkranz",
+    "artistName": "Claire Rosinkranz",
+    "musics": [
+      "Clairo - 4EVER.mp3",
+      "Clairo - Bags.mp3",
+      "Clairo - Bubble Gum.mp3",
+      "Clairo - Pretty Girl.mp3",
+      "Clairo - Sofia.mp3"
+    ],
+    "artistID": 100
   },
   {
     "path": "coldplay",
@@ -931,6 +964,16 @@ export const bodyData = [
     "artistID": 62
   },
   {
+    "path": "rex-orange-county",
+    "artistName": "Rex Orange County",
+    "musics": [
+      "Rex Orange County - Best Friend.mp3",
+      "Rex Orange County - Loving is Easy.mp3",
+      "Rex Orange County - Sunflower.mp3"
+    ],
+    "artistID": 102
+  },
+  {
     "path": "rini",
     "artistName": "RINI",
     "musics": [
@@ -993,6 +1036,19 @@ export const bodyData = [
       "Taylor Swift - You Belong With Me.mp3"
     ],
     "artistID": 66
+  },
+  {
+    "path": "the-1975",
+    "artistName": "The 1975",
+    "musics": [
+      "The 1975 - Chocolate.mp3",
+      "The 1975 - Girls.mp3",
+      "The 1975 - Love Me.mp3",
+      "The 1975 - Robbers.mp3",
+      "The 1975 - Somebody Else.mp3",
+      "The 1975 - The Sound.mp3",
+    ],
+    "artistID": 99
   },
   {
     "path": "the-black-eyed-peas",
@@ -1095,6 +1151,18 @@ export const bodyData = [
       "Twenty One Pilots - The Hype.mp3"
     ],
     "artistID": 73
+  },
+  {
+    "path": "twice",
+    "artistName": "TWICE",
+    "musics": [
+      "TWICE - CHEER UP.mp3",
+      "TWICE - Heart Shaker.mp3",
+      "TWICE - LIKELY.mp3",
+      "TWICE - TT.mp3",
+      "TWICE - What is Love.mp3",
+    ],
+    "artistID": 0
   },
   {
     "path": "we-the-kings",

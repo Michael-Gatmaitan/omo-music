@@ -1,3 +1,4 @@
+// @ts-nocheck
 
 import { useEffect, useRef, useContext } from 'react';
 import ReactAudioPlayer from 'react-audio-player';

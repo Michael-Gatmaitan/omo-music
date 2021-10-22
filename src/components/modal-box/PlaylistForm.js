@@ -1,5 +1,6 @@
+// @ts-nocheck
 import { useEffect, useState, useRef, useContext } from 'react';
-import CloseButton from '../buttons/CloseButton';
+import CloseButton from '../Buttons/CloseButton';
 import { playlists } from '../../dataSource';
 import { AudioContext } from '../../context/AudioContext';
 import './PlaylistForm.css';

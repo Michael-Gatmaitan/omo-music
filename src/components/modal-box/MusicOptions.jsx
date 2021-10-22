@@ -1,7 +1,7 @@
 import { useContext, useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import './MusicOptions.css';
-import CloseButton from '../buttons/CloseButton';
+import CloseButton from '../Buttons/CloseButton';
 import { AudioContext } from '../../context/AudioContext';
 import { EventContext } from '../../context/EventContext';
 
