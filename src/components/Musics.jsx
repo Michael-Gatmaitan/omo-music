@@ -15,9 +15,16 @@ const Musics = () => {
     setMusicDataTable(dataTemp);
 
     // artistID aligner
-    // let bDataTemp = [...bodyData];
-    // bDataTemp.map((e, i) => e.artistID = i);
-    // console.log(bDataTemp);
+    let bDataTemp = [...bodyData];
+    bDataTemp.map((e, i) => e.artistID = i);
+    console.log(bDataTemp);
+
+    let totalSongs = 0;
+    for (var i of bDataTemp) {
+      totalSongs += i["musics"].length;
+    }
+
+    console.log(totalSongs);
   }, []);
   
   return (

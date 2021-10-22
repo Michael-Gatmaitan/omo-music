@@ -56,6 +56,16 @@ export const bodyData = [
     "artistID": 3
   },
   {
+    "path": "arthur-nery",
+    "artistName": "Arthur Nery",
+    "musics": [
+      "Arthur Nery - Binhi.mp3",
+      "Arthur Nery - Pagsamo.mp3",
+      "Arthur Nery - TAKE ALL THE LOVE.mp3"
+    ],
+    "artistID": 104
+  },
+  {
     "path": "avicii",
     "artistName": "Avicii",
     "musics": [
@@ -204,6 +214,20 @@ export const bodyData = [
     "artistID": 13
   },
   {
+    "path": "cavetown",
+    "artistName": "Cavetown",
+    "musics": [
+      "Cavetown - Feb 14.mp3",
+      "Cavetown - Idea of Her.mp3",
+      "Cavetown - Paul.mp3",
+      "Cavetown - Sharpener.mp3",
+      "Cavetown - Telescope.mp3",
+      "Cavetown - Trying.mp3",
+      "Cavetown - Wishing Well.mp3"
+    ],
+    "artistID": 105
+  },
+  {
     "path": "charlie-puth",
     "artistName": "Charlie Puth",
     "musics": [
@@ -279,8 +303,21 @@ export const bodyData = [
     "artistID": 103
   },
   {
-    "path": "clairo",
-    "artistName": "Clairo",
+    "path": "claire-cottrill",
+    "artistName": "Claire Cottrill",
+    "musics": [
+      "Claire Cottrill - 4EVER.mp3",
+      "Claire Cottrill - Bags.mp3",
+      "Claire Cottrill - Bubble Gum.mp3",
+      "Claire Cottrill - Pretty Girl.mp3",
+      "Claire Cottrill - Sofia.mp3",
+      "Claire Cottrill - Softly.mp3"
+    ],
+    "artistID": 100
+  },
+  {
+    "path": "claire-rosinkranz",
+    "artistName": "Claire Rosinkranz",
     "musics": [
       "Claire Rosinkranz - Backyard Boy.mp3",
       "Claire Rosinkranz - BeVerly Hills BoYfRiEnd.mp3",
@@ -289,18 +326,6 @@ export const bodyData = [
       "Claire Rosinkranz - Tough Guy.mp3"
     ],
     "artistID": 16
-  },
-  {
-    "path": "claire-rosinkranz",
-    "artistName": "Claire Rosinkranz",
-    "musics": [
-      "Clairo - 4EVER.mp3",
-      "Clairo - Bags.mp3",
-      "Clairo - Bubble Gum.mp3",
-      "Clairo - Pretty Girl.mp3",
-      "Clairo - Sofia.mp3"
-    ],
-    "artistID": 100
   },
   {
     "path": "coldplay",
@@ -327,6 +352,19 @@ export const bodyData = [
       "Creed - With Arms Wide Open.mp3"
     ],
     "artistID": 18
+  },
+  {
+    "path": "cueshe",
+    "artistName": "Cueshe",
+    "musics": [
+      "Cueshe - 24 Hours.mp3",
+      "Cueshe - Back To Me.mp3",
+      "Cueshe - Borrowed Time.mp3",
+      "Cueshe - Can't Let You Go.mp3",
+      "Cueshe - Stay.mp3",
+      "Cueshe - Ulan.mp3"
+    ],
+    "artistID": 106
   },
   {
     "path": "daughtry",
@@ -592,6 +630,7 @@ export const bodyData = [
     "musics": [
       "Joji - Ew.mp3",
       "Joji - Run.mp3",
+      "Joji - Sanctuary.mp3",
       "Joji - slow dancing in the dark.mp3",
       "Joji - Tick Tock.mp3",
       "Joji - Upgrade.mp3",
@@ -604,11 +643,14 @@ export const bodyData = [
     "path": "juice-wrld",
     "artistName": "Juice WRLD",
     "musics": [
+      "Juice WRLD - Empty.mp3",
       "Juice WRLD - Lucid Dreams.mp3",
       "Juice WRLD - Real Shit.mp3",
       "Juice WRLD - Reminds Me Of You.mp3",
+      "Juice WRLD - Robbery.mp3",
+      "Juice WRLD - sad.mp3",
       "Juice WRLD - Smile.mp3",
-      "Juice WRLD - Wishing Well.mp3"
+      "Juice WRLD - Wishing Well.mp3",
     ],
     "artistID": 38
   },
@@ -651,10 +693,15 @@ export const bodyData = [
     "path": "lany",
     "artistName": "LANY",
     "musics": [
+      "LANY - 13.mp3",
       "LANY - Good Guys.mp3",
+      "LANY - Hericane.mp3",
+      "LANY - If this is the last time.mp3",
       "LANY - ILYSB.mp3",
       "LANY - Malibu Nights.mp3",
-      "LANY - Super Far.mp3"
+      "LANY - Super Far.mp3",
+      "LANY - Valentine's Day.mp3",
+      "LANY - you!.mp3",
     ],
     "artistID": 42
   },
@@ -667,6 +714,26 @@ export const bodyData = [
       "Lauv - Paris In The Rain.mp3"
     ],
     "artistID": 43
+  },
+  {
+    "path": "lil-uzi-vert",
+    "artistName": "Lil Uzi Vert",
+    "musics": [
+      "Lil Uzi Vert - 7AM.mp3",
+      "Lil Uzi Vert - 20 Min.mp3",
+      "Lil Uzi Vert - Do What I Want.mp3",
+      "Lil Uzi Vert - Go Off.mp3",
+      "Lil Uzi Vert - Money Longer.mp3",
+      "Lil Uzi Vert - Sauce It Up.mp3",
+      "Lil Uzi Vert - That Way.mp3",
+      "Lil Uzi Vert - The Way Life Goes.mp3",
+      "Lil Uzi Vert - Top.mp3",
+      "Lil Uzi Vert - XO Tour Llif3.mp3",
+      "Lil Uzi Vert - Yessirskiii ft. 21 Savage.mp3",
+      "Lil Uzi Vert - You Was Right.mp3",
+      "Lil Uzi Vert - 7AM.mp3",
+    ],
+    "artistID": 109
   },
   {
     "path": "linkin-park",
@@ -914,13 +981,22 @@ export const bodyData = [
     "artistName": "Post Malone",
     "musics": [
       "Post Malone - Better Now.mp3",
+      "Post Malone - Broken Whiskey Glass.mp3",
       "Post Malone - Circles.mp3",
       "Post Malone - Congratulations.mp3",
+      "Post Malone - Deja Vu.mp3",
+      "Post Malone - Feel.mp3",
+      "Post Malone - Go Flex.mp3",
       "Post Malone - Goodbyes.mp3",
       "Post Malone - I Fall Apart.mp3",
+      "Post Malone - No Option.mp3",
+      "Post Malone - Patient.mp3",
       "Post Malone - Psycho.mp3",
       "Post Malone - Sunflower.mp3",
-      "Post Malone - White Iverson.mp3"
+      "Post Malone - Too Young.mp3",
+      "Post Malone - Up There.mp3",
+      "Post Malone - White Iverson.mp3",
+      "Post Malone - Yours Truly, Austin Post.mp3",
     ],
     "artistID": 60
   },
@@ -947,6 +1023,14 @@ export const bodyData = [
     "artistID": 61
   },
   {
+    "path": "public",
+    "artistName": "Public",
+    "musics": [
+      "Public - Make You Mine.mp3"
+    ],
+    "artistID": 110
+  },
+  {
     "path": "queen",
     "artistName": "Queen",
     "musics": [
@@ -964,6 +1048,15 @@ export const bodyData = [
     "artistID": 62
   },
   {
+    "path": "radwimps",
+    "artistName": "RADWIMPS",
+    "musics": [
+      "RADWIMPS - Nandemonaiya.mp3",
+      "RADWIMPS - Sparkle.mp3"
+    ],
+    "artistID": 111
+  },
+  {
     "path": "rex-orange-county",
     "artistName": "Rex Orange County",
     "musics": [
@@ -972,6 +1065,16 @@ export const bodyData = [
       "Rex Orange County - Sunflower.mp3"
     ],
     "artistID": 102
+  },
+  {
+    "path": "ricky-montgomery",
+    "artistName": "Ricky Montgomery",
+    "musics": [
+      "Ricky Montgomery - Line Without a Hook.mp3",
+      "Ricky Montgomery - Mr Loverman.mp3",
+      "Ricky Montgomery - Sorry for Me.mp3"
+    ],
+    "artistID": 112
   },
   {
     "path": "rini",
@@ -1111,14 +1214,31 @@ export const bodyData = [
     "artistID": 70
   },
   {
+    "path": "the-walters",
+    "artistName": "The Walters",
+    "musics": [
+      "The Walters - Autumn Leaves.mp3",
+      "The Walters - Cottage Roads.mp3",
+      "The Walters - Goodbye Baby.mp3",
+      "The Walters - I Love You So.mp3",
+      "The Walters - Life.mp3",
+      "The Walters - Sweet Marie.mp3",
+      "The Walters - What's Left.mp3"
+    ],
+    "artistID": 113
+  },
+  {
     "path": "the-weeknd",
     "artistName": "The Weeknd",
     "musics": [
       "The Weeknd - Blinding Lights.mp3",
+      "The Weeknd - Call Out My Name.mp3",
       "The Weeknd - Can't Feel My Face.mp3",
       "The Weeknd - Die For You.mp3",
+      "The Weeknd - Heartless.mp3",
       "The Weeknd - Save Your Tears.mp3",
       "The Weeknd - Starboy.mp3",
+      "The Weeknd - Take My Breath.mp3",
       "The Weeknd - The Hills.mp3",
       "The Weeknd - The Morning.mp3"
     ],
