@@ -55,13 +55,17 @@ const AppBody = () => {
     </div>
     <ul className="route-links">
       {routes.map(e => (
-        <li
+        <Link
           onClick={ () => handleSetPage(e.routeName, e.id) }
           key={ e.id }
+          to={e.url}
           className={`route-button ${e.id === 0 ? "active-route" : ""}`}
         >
-          <Link to={e.url}>{e.routeName}</Link>
-        </li>
+          <li
+          >
+              {e.routeName}
+          </li>
+        </Link>
       ))}
     </ul>
   </div>

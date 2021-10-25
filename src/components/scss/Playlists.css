@@ -253,21 +253,43 @@
 }
 
 .playlist-track-route .mentioned-artists {
-  display: -ms-grid;
-  display: grid;
+  overflow-x: scroll;
+  border-radius: 4px;
+}
+
+.playlist-track-route .mentioned-artists .mentioned-artists-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   gap: 8px;
 }
 
-.playlist-track-route .mentioned-artists div {
+.playlist-track-route .mentioned-artists .mentioned-artists-wrapper div {
+  white-space: nowrap;
   display: inline-block;
 }
 
-.playlist-track-route .mentioned-artists .artist {
-  padding: 6px;
+.playlist-track-route .mentioned-artists .mentioned-artists-wrapper .artist {
+  padding: 10px 8px;
   border-radius: 4px;
   background-color: #293EF8;
   font-family: "Montserrat", sans-serif !important;
   font-weight: 500 !important;
   font-size: 14px !important;
+}
+
+.playlist-track-route .mentioned-artists .mentioned-artists-wrapper .artist:hover {
+  background-color: rgba(6, 24, 181, 0.3);
+  color: #293EF8 !important;
+}
+
+@media (min-width: 780px) {
+  .playlist-track-route .mentioned-artists {
+    padding-bottom: 8px;
+  }
+  .playlist-track-route .mentioned-artists .mentioned-artists-wrapper .artists {
+    padding: 12px 10px;
+    font-size: 16px !important;
+  }
 }
 /*# sourceMappingURL=Playlists.css.map */

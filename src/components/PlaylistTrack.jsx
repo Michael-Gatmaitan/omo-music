@@ -22,7 +22,6 @@ const PlaylistTrack = () => {
   // current page is a custom created playlist
   useEffect(() => {
     let yourPlaylistsTemp = [...yourPlaylists];
-    // let mentionedArtistTemp = [];
 
     for (let i of yourPlaylistsTemp) {
       if (playlistParam === i.playlistName) {
@@ -53,14 +52,17 @@ const PlaylistTrack = () => {
     }
     // eslint-disable-next-line
   }, []);
+
   // Setting mentioned Artists
   useEffect(() => {
     let mentionedAritstList = [];
+
     dataTable.forEach(data => {
-      let artist = data.slice(0, data.indexOf("-") - 1);
+      let artist = data.slice(0, data.indexOf(" - "));
       if (!mentionedAritstList.includes(artist))
         mentionedAritstList.push(artist);
     });
+    
     setMentionedArtist(mentionedAritstList.sort());
   }, [dataTable]);
 
@@ -71,16 +73,19 @@ const PlaylistTrack = () => {
       {dataTable.length < 1 ? <div className="pl-empty">This playlist is Empty</div> : ''}
 
       <div className="mentioned-artists">
-        {mentionedArtist.map(artist => {
-          let artistLink = `/artists/${artist.toLowerCase().replaceAll(" ", "-")}`;
-          return (
-            <Link to={artistLink}>
-              <div className="artist">
-                {artist} hotdog
-              </div>
-            </Link>
-          );
-        })}
+        <div className="mentioned-artists-wrapper">
+          {mentionedArtist.map(artist => {
+            let artistLink = `/artists/${artist.toLowerCase().replaceAll(" ", "-")}`;
+            
+            return (
+              <Link to={artistLink}>
+                <div className="artist">
+                  {artist}
+                </div>
+              </Link>
+            );
+          })}
+        </div>
       </div>
 
       <div className="pl-track-content">

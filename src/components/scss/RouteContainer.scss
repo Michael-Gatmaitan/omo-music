@@ -54,38 +54,35 @@ a {
 
         .route-links {
           display: flex;
+          gap: 8px;
+          padding: 8px 0;
 
           .active-route {
-
-            a {
+            background-color: rgba($darken_pri_blue, 0.3);
+            
+            li {
               color: $pri-blue !important;
             }
           }
           
           .route-button {
-            padding: 12px 0 12px 0;
+            border-radius: 4px;
+            padding: 10px;
             color: #fff;
             
             &:hover {
-              a {
+              li {
                 color: $pri-blue !important;
               }
             }
-            
-            &:not(:last-child) {
-              margin-right: 18px;
-            }
 
-            a {
+            li {
               @include fontProp('Montserrat', 700, 14px);
             }
 
             @include desktop {
-              &:not(:last-child) {
-                margin-right: 24px;
-              }
 
-              a {
+              li {
                 @include fontProp('Montserrat', 700, 16px);
               }
             }

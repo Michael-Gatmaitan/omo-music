@@ -59,36 +59,36 @@ a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  gap: 8px;
+  padding: 8px 0;
 }
 
-.route-container .route-grid-container .route-grid-wrap .app-body .route-links .active-route a {
+.route-container .route-grid-container .route-grid-wrap .app-body .route-links .active-route {
+  background-color: rgba(6, 24, 181, 0.3);
+}
+
+.route-container .route-grid-container .route-grid-wrap .app-body .route-links .active-route li {
   color: #293EF8 !important;
 }
 
 .route-container .route-grid-container .route-grid-wrap .app-body .route-links .route-button {
-  padding: 12px 0 12px 0;
+  border-radius: 4px;
+  padding: 10px;
   color: #fff;
 }
 
-.route-container .route-grid-container .route-grid-wrap .app-body .route-links .route-button:hover a {
+.route-container .route-grid-container .route-grid-wrap .app-body .route-links .route-button:hover li {
   color: #293EF8 !important;
 }
 
-.route-container .route-grid-container .route-grid-wrap .app-body .route-links .route-button:not(:last-child) {
-  margin-right: 18px;
-}
-
-.route-container .route-grid-container .route-grid-wrap .app-body .route-links .route-button a {
+.route-container .route-grid-container .route-grid-wrap .app-body .route-links .route-button li {
   font-family: "Montserrat", sans-serif !important;
   font-weight: 700 !important;
   font-size: 14px !important;
 }
 
 @media (min-width: 780px) {
-  .route-container .route-grid-container .route-grid-wrap .app-body .route-links .route-button:not(:last-child) {
-    margin-right: 24px;
-  }
-  .route-container .route-grid-container .route-grid-wrap .app-body .route-links .route-button a {
+  .route-container .route-grid-container .route-grid-wrap .app-body .route-links .route-button li {
     font-family: "Montserrat", sans-serif !important;
     font-weight: 700 !important;
     font-size: 16px !important;
