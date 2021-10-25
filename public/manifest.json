@@ -1,6 +1,6 @@
 {
   "short_name": "OMO Music",
-  "name": "Designed and Developed by Michael Gatmaitan, 2021",
+  "name": "Designed & Developed by Michael Gatmaitan, 2021",
   "icons": [
     {
       "src": "favicon.ico",
@@ -20,6 +20,6 @@
   ],
   "start_url": ".",
   "display": "standalone",
-  "theme_color": "#000000",
-  "background_color": "#ffffff"
+  "theme_color": "#ffffff",
+  "background_color": "#293EF8"
 }
