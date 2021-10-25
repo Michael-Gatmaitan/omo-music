@@ -173,16 +173,6 @@
   }
 }
 
-.removable-music-block .music-options-parent::before {
-  left: calc(-50px + -46px);
-}
-
-@media (min-width: 780px) {
-  .removable-music-block .music-options-parent::before {
-    left: calc(-50px + -60px);
-  }
-}
-
 .removable-music-block .remove {
   height: 46px;
   width: 46px;
@@ -191,7 +181,15 @@
   right: 46px;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
-  background-color: #f00;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   z-index: 10;
 }
 

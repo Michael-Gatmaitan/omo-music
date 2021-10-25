@@ -106,10 +106,10 @@
   // Style elements that need to adjust
   .music-options-parent::before {
 
-    left: calc(-50px + -46px);
+    // left: calc(-50px + -46px);
 
     @include desktop {
-      left: calc(-50px + -60px);
+      // left: calc(-50px + -60px);
     }
   }
   
@@ -120,7 +120,7 @@
     top: 50%;
     right: 46px;
     transform: translateY(-50%);
-    background-color: #f00;
+    @include flexCenter;
     z-index: 10;
 
     @include desktop {

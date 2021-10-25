@@ -251,4 +251,23 @@
   text-align: center;
   margin-top: 24px;
 }
+
+.playlist-track-route .mentioned-artists {
+  display: -ms-grid;
+  display: grid;
+  gap: 8px;
+}
+
+.playlist-track-route .mentioned-artists div {
+  display: inline-block;
+}
+
+.playlist-track-route .mentioned-artists .artist {
+  padding: 6px;
+  border-radius: 4px;
+  background-color: #293EF8;
+  font-family: "Montserrat", sans-serif !important;
+  font-weight: 500 !important;
+  font-size: 14px !important;
+}
 /*# sourceMappingURL=Playlists.css.map */

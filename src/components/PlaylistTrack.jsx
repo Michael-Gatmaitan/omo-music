@@ -1,6 +1,8 @@
+// @ts-nocheck
 import { useEffect, useState, useContext } from 'react';
 import { useParams } from 'react-router-dom';
 import { AudioContext } from '../context/AudioContext';
+import { Link } from 'react-router-dom';
 // import { EventContext } from '../context/EventContext';
 import { playlists } from '../dataSource'; 
 
@@ -10,7 +12,9 @@ const PlaylistTrack = () => {
 
   const { favorites, yourPlaylists } = useContext(AudioContext);
   // const { setMusicOptionsData } = useContext(EventContext);
+  let [dataTable, setDataTable] = useState([]);
   let [isInCustomPlaylist, setIsInCustomPlaylist] = useState(false);
+  let [mentionedArtist, setMentionedArtist] = useState([]);
 
   const { playlistID: playlistParam } = useParams();
 
@@ -18,7 +22,8 @@ const PlaylistTrack = () => {
   // current page is a custom created playlist
   useEffect(() => {
     let yourPlaylistsTemp = [...yourPlaylists];
-    
+    // let mentionedArtistTemp = [];
+
     for (let i of yourPlaylistsTemp) {
       if (playlistParam === i.playlistName) {
         setIsInCustomPlaylist(true);
@@ -28,7 +33,6 @@ const PlaylistTrack = () => {
     // eslint-disable-next-line
   }, [yourPlaylists]);
 
-  let [dataTable, setDataTable] = useState([]);
   /* If the current page is "favorites"
      We will get the dataTable in states
      of AudioContext */
@@ -52,11 +56,37 @@ const PlaylistTrack = () => {
     // eslint-disable-next-line
   }, []);
 
+  // Setting mentioned Artists
+  useEffect(() => {
+    let mentionedAritstList = [];
+
+    dataTable.forEach(data => {
+      let artist = data.slice(0, data.indexOf("-") - 1);
+      if (!mentionedAritstList.includes(artist))
+        mentionedAritstList.push(artist);
+    });
+
+    setMentionedArtist(mentionedAritstList.sort());
+  }, [dataTable]);
+
   return (
     <div className="playlist-track-route">
       <div className="pl-track-title">{playlistParam}</div>
 
       {dataTable.length < 1 ? <div className="pl-empty">This playlist is Empty</div> : ''}
+
+      <div className="mentioned-artists">
+        {mentionedArtist.map(artist => {
+          let artistLink = `/artists/${artist.toLowerCase().replaceAll(" ", "-")}`;
+          return (
+            <Link to={artistLink}>
+              <div className="artist">
+                {artist}
+              </div>
+            </Link>
+          );
+        })}
+      </div>
 
       <div className="pl-track-content">
         {dataTable.map((data, i) => (
