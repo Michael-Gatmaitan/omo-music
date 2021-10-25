@@ -49,23 +49,18 @@ const PlaylistTrack = () => {
           console.error("Playlist cannot found.");
           return new Error("Playlist didn't found.");
         })();
-
       setDataTable(searchedPlaylist.musics);
     }
-    
     // eslint-disable-next-line
   }, []);
-
   // Setting mentioned Artists
   useEffect(() => {
     let mentionedAritstList = [];
-
     dataTable.forEach(data => {
       let artist = data.slice(0, data.indexOf("-") - 1);
       if (!mentionedAritstList.includes(artist))
         mentionedAritstList.push(artist);
     });
-
     setMentionedArtist(mentionedAritstList.sort());
   }, [dataTable]);
 
@@ -81,7 +76,7 @@ const PlaylistTrack = () => {
           return (
             <Link to={artistLink}>
               <div className="artist">
-                {artist}
+                {artist} hotdog
               </div>
             </Link>
           );

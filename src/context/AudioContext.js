@@ -1,3 +1,4 @@
+// @ts-nocheck
 import { Component, createContext } from 'react';
 export const AudioContext = createContext();
 
