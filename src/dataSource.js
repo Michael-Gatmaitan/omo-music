@@ -131,7 +131,9 @@ export const bodyData = [
       "Ben&Ben - Maybe The Night.mp3",
       "Ben&Ben - Nakikinig ka ba sa Akin.mp3",
       "Ben&Ben - Pagtingin.mp3",
-      "Ben&Ben - Ride Home.mp3"
+      "Ben&Ben - Pasalubong (feat. Moira Dela Torre).mp3",
+      "Ben&Ben - Ride Home.mp3",
+      "Ben&Ben - Sugat (feat. Munimuni).mp3",
     ],
     "artistID": 7
   },
@@ -156,6 +158,16 @@ export const bodyData = [
       "Billie Eilish - Your Power.mp3"
     ],
     "artistID": 8
+  },
+  {
+    "path": "blackpink",
+    "artistName": "BLACKPINK",
+    "musics": [
+      "BLACKPINK - How You Like That.mp3",
+      "BLACKPINK - Ice Cream.mp3",
+      "BLACKPINK - Lovesick Girls.mp3",
+    ],
+    "artistID": 111
   },
   {
     "path": "blink-182",
@@ -404,6 +416,7 @@ export const bodyData = [
       "Dreamy - Because music cures every problem ~ lofi hip hop mix.mp3",
       "Dreamy - Believe in the dream ~ lofi hip hop mix.mp3",
       "Dreamy - Breathing dreams like air ~ lofi hip hop mix.mp3",
+      "Dreamy - Dream keeps me alive ~ lofi hip hop mixconv.mp3",
       "Dreamy - Guitar Vibe ~ lofi hip hop mix.mp3",
       "Dreamy - It's 2am. I need you here ~ lofi hip hop mix.mp3",
       "Dreamy - Let's just stay here forever ~ lofi hip hop mix.mp3",
@@ -417,6 +430,21 @@ export const bodyData = [
       "Dreamy - Because music cures every problem ~ lofi hip hop mix.mp3",
     ],
     "artistID": 21
+  },
+  {
+    "path": "e-ve",
+    "artistName": "E ve",
+    "musics": [
+      "E ve - Dramaturgy.mp3",
+      "E ve - Heart Forecast.mp3",
+      "E ve - YORUWA HONOKA (Night is Faint).mp3",
+      "E ve - 平行線.mp3",
+      "E ve - 廻廻奇譚.mp3",
+      "E ve - 群青讃歌.mp3",
+      "E ve - 蒼のワルツ.mp3",
+      "E ve - 遊生夢死(Living idly and dying as if dreaming).mp3",
+    ],
+    "artistID": 110
   },
   {
     "path": "ed-sheeran",
@@ -545,6 +573,25 @@ export const bodyData = [
     "artistID": 29
   },
   {
+    "path": "giveon",
+    "artistName": "Giveon",
+    "musics": [
+      "Giveon - All To Me.mp3",
+      "Giveon - Favorite Mistake.mp3",
+      "Giveon - For Tonight.mp3",
+      "Giveon - Heartbreak Anniversary.mp3",
+      "Giveon - Like I Want You.mp3",
+      "Giveon - Still Your Best.mp3",
+      "Giveon - Stuck On You.mp3",
+      "Giveon - Take Time (Interlude).mp3",
+      "Giveon - The Beach.mp3",
+      "Giveon - This Ain't Love.mp3",
+      "Giveon - VANISH.mp3",
+      "Giveon - WORLD WE CREATED.mp3",
+    ],
+    "artistID": 112
+  },
+  {
     "path": "green-day",
     "artistName": "Green Day",
     "musics": [
@@ -665,6 +712,23 @@ export const bodyData = [
     "artistID": 39
   },
   {
+    "path": "kamikazee",
+    "artistName": "Kamikazee",
+    "musics": [
+      "Kamikazee - Chiksilog.mp3",
+      "Kamikazee - Doo Bidoo.mp3",
+      "Kamikazee - Huling Sayaw (feat. Kyla).mp3",
+      "Kamikazee - Kislap.mp3",
+      "Kamikazee - Martyr Nyebera.mp3",
+      "Kamikazee - Meron Akong Ano.mp3",
+      "Kamikazee - Narda.mp3",
+      "Kamikazee - Seksi! Seksi!.mp3",
+      "Kamikazee - Tsinelas.mp3",
+      "Kamikazee - Unang Tikim.mp3",
+    ],
+    "artistID": 40
+  },
+  {
     "path": "khalid",
     "artistName": "Khalid",
     "musics": [
@@ -739,6 +803,7 @@ export const bodyData = [
     "path": "linkin-park",
     "artistName": "Linkin Park",
     "musics": [
+      "Linkin Park - Bleed It Out.mp3",
       "Linkin Park - In The End.mp3",
       "Linkin Park - Numb.mp3"
     ],
@@ -836,6 +901,7 @@ export const bodyData = [
     "path": "my-chemical-romance",
     "artistName": "My Chemical Romance",
     "musics": [
+      "My Chemical Romance - Disenchanted.mp3",
       "My Chemical Romance - Famous Last Words.mp3",
       "My Chemical Romance - Helena.mp3",
       "My Chemical Romance - I Don't Love You.mp3",
@@ -1004,21 +1070,28 @@ export const bodyData = [
     "path": "powfu",
     "artistName": "Powfu",
     "musics": [
+      "Powfu - a castle by the sea.mp3",
       "Powfu - A world of chaos.mp3",
       "Powfu - Days we had.mp3",
       "Powfu - Death bed.mp3",
       "Powfu - Don't fall asleep yet.mp3",
       "Powfu - I can't sleep.mp3",
       "Powfu - I know you're not happy.mp3",
+      "Powfu - ice heart.mp3",
+      "Powfu - Jomie, Skinny Atlas - future diary.mp3",
       "Powfu - Letters in december.mp3",
       "Powfu - Life is Changing.mp3",
       "Powfu - Life with you.mp3",
+      "Powfu - long fights, short tempers..mp3",
+      "Powfu - Sara Kays, Sarcastic Sounds - the long way home.mp3",
+      "Powfu - snowflake ft. Jaden, Sarcastic Sounds.mp3",
       "Powfu - stay4ever.mp3",
       "Powfu - Step into my life.mp3",
       "Powfu - Talk Tomorrow.mp3",
       "powfu - The way that you see me.mp3",
+      "Powfu - Travis Barker - mario kart.mp3",
       "Powfu - When the hospital was my home.mp3",
-      "Powfu - Would look perfect.mp3"
+      "Powfu - Would look perfect.mp3",
     ],
     "artistID": 61
   },
@@ -1052,15 +1125,27 @@ export const bodyData = [
     "artistName": "RADWIMPS",
     "musics": [
       "RADWIMPS - Nandemonaiya.mp3",
-      "RADWIMPS - Sparkle.mp3"
+      "RADWIMPS - Sparkle.mp3",
+      "RADWIMPS - 前前前世 (Zen Zen Zense).mp3",
     ],
     "artistID": 111
+  },
+  {
+    "path": "red-hot-chili-peppers",
+    "artistName": "Red Hot Chili Peppers",
+    "musics": [
+      "Red Hot Chili Peppers - Californication.mp3",
+      "Red Hot Chili Peppers - Otherside.mp3",
+      "Red Hot Chili Peppers - Scar Tissue.mp3",
+    ],
+    "artistID": 113
   },
   {
     "path": "rex-orange-county",
     "artistName": "Rex Orange County",
     "musics": [
       "Rex Orange County - Best Friend.mp3",
+      "Rex Orange County - Happiness.mp3",
       "Rex Orange County - Loving is Easy.mp3",
       "Rex Orange County - Sunflower.mp3"
     ],
@@ -1108,6 +1193,18 @@ export const bodyData = [
       "Silent Sanctuary - Sayo.mp3"
     ],
     "artistID": 64
+  },
+  {
+    "path": "slipknot",
+    "artistName": "Slipknot",
+    "musics": [
+      "Slipknot - Before I Forget.mp3",
+      "Slipknot - Dead Memories.mp3",
+      "Slipknot - Psychosocial.mp3",
+      "Slipknot - Spit It Out.mp3",
+      "Slipknot - Wait And Bleed.mp3",
+    ],
+    "artistID": 115
   },
   {
     "path": "system-of-a-down",
@@ -1170,6 +1267,7 @@ export const bodyData = [
     "path": "the-bootleg-boy",
     "artistName": "The Bootleg Boy",
     "musics": [
+      "The Bootleg Boy - Addict. & Rewind - have you ever been in love_.mp3",
       "The Bootleg Boy - Chevy - I Know a Place.mp3",
       "The Bootleg Boy - Imfinenow & Joshua Mine - Be With You.mp3",
       "The Bootleg Boy - Julia Alexa - if u can take my pain away.mp3",
@@ -1182,9 +1280,11 @@ export const bodyData = [
       "The Bootleg Boy - lofi songs if you're having a rough day.mp3",
       "The Bootleg Boy - Love hurts ~ sad lofi mix.mp3",
       "The Bootleg Boy - NÜ - i can't fight this (ft. Ivri).mp3",
+      "The Bootleg Boy - RAINING IN ＮＡＧＡＳＡＫＩ (Lofi HipHop).mp3",
       "The Bootleg Boy - Rnla & zevia - Toxicity.mp3",
+      "The Bootleg Boy - sad lofi for haunted souls.mp3",
       "The Bootleg Boy - Teqkoi - afraid of loving you.mp3",
-      "The Bootleg Boy - Zaini - you felt like home.mp3"
+      "The Bootleg Boy - Zaini - you felt like home.mp3",
     ],
     "artistID": 68
   },
@@ -1276,13 +1376,31 @@ export const bodyData = [
     "path": "twice",
     "artistName": "TWICE",
     "musics": [
+      "TWICE - BDZ.mp3",
       "TWICE - CHEER UP.mp3",
+      "TWICE - CHILLAX.mp3",
+      "TWICE - CRY FOR ME.mp3",
+      "TWICE - Dance The Night Away.mp3",
+      "TWICE - FANCY.mp3",
+      "TWICE - Feel Special.mp3",
       "TWICE - Heart Shaker.mp3",
+      "TWICE - HO!.mp3",
+      "TWICE - I CAN'T STOP ME.mp3",
+      "TWICE - KNOCK KNOCK.mp3",
+      "TWICE - Kura Kura.mp3",
       "TWICE - LIKELY.mp3",
+      "TWICE - LIKEY.mp3",
+      "TWICE - MORE & MORE.mp3",
+      "TWICE - Shot thru the heart.mp3",
+      "TWICE - Strawberry Moon.mp3",
+      "TWICE - STUCK.mp3",
+      "TWICE - Touchdown.mp3",
       "TWICE - TT.mp3",
       "TWICE - What is Love.mp3",
+      "TWICE - YES or YES.mp3",
+      "TWICE - 다시 해줘 Do it again.mp3",
     ],
-    "artistID": 0
+    "artistID": 1200
   },
   {
     "path": "we-the-kings",
@@ -1430,6 +1548,17 @@ export const playlists = [
       "The Bootleg Boy - Rnla & zevia - Toxicity.mp3",
       "The Bootleg Boy - Teqkoi - afraid of loving you.mp3",
       "The Bootleg Boy - Zaini - you felt like home.mp3"
+    ]
+  }, {
+    playlistID: 2,
+    playlistName: "Japanese Songs ❤",
+    musics: [
+      "藤井 風 (Fujii Kaze) - もうええわ (Mo-Eh-Wa).mp3",
+      "藤井 風 (Fujii Kaze) - 優しさ (YASASHISA).mp3",
+      "藤井 風 (Fujii Kaze) - 帰ろう (Kaerou).mp3",
+      "藤井 風 (Fujii Kaze) - 旅路 (Tabiji).mp3",
+      "RADWIMPS - Nandemonaiya.mp3",
+      "RADWIMPS - Sparkle.mp3",
     ]
   }
 ]

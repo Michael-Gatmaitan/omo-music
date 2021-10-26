@@ -57,12 +57,11 @@ const AppBody = () => {
       {routes.map(e => (
         <Link
           onClick={ () => handleSetPage(e.routeName, e.id) }
-          key={ e.id }
+          key={e.id}
           to={e.url}
           className={`route-button ${e.id === 0 ? "active-route" : ""}`}
         >
-          <li
-          >
+          <li>
               {e.routeName}
           </li>
         </Link>
