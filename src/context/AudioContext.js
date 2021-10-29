@@ -56,7 +56,7 @@ export default class AudioContextProvider extends Component {
 		}
 	}
 
-	componentWillUpdate(nextProps, nextState) {
+	UNSAFE_componentWillUpdate(nextProps, nextState) {
 		let isOnlyCurrentTimeChanged = this.state.playing && this.state.currentTime !== nextState.currentTime;
 		if (isOnlyCurrentTimeChanged) {
 			// Only seconds changed

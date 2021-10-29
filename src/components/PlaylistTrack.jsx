@@ -74,11 +74,11 @@ const PlaylistTrack = () => {
 
       <div className="mentioned-artists">
         <div className="mentioned-artists-wrapper">
-          {mentionedArtist.map(artist => {
+          {mentionedArtist.map((artist, i) => {
             let artistLink = `/artists/${artist.toLowerCase().replaceAll(" ", "-")}`;
             
             return (
-              <Link to={artistLink}>
+              <Link to={artistLink} key={i}>
                 <div className="artist">
                   {artist}
                 </div>

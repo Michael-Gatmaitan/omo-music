@@ -29,7 +29,7 @@ const AppBody = () => {
         e.classList.add("active-route");
       else
         e.classList.remove("active-route");
-      return
+      return 0;
     });
   }
 

@@ -20,7 +20,10 @@ const PlaylistOptions = () => {
 
   } = useContext(EventContext);
 
-  const { playlistName, imageLink } = playlistOptionsData;
+  const {
+    playlistName,
+    // imageLink
+  } = playlistOptionsData;
 
   const playlistOptionsStyle = {
     opacity: showPlaylistOptions ? 1 : 0,

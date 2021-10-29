@@ -1,10 +1,3 @@
-// Missing
-// TWICE
-// The 1975
-// Rex Orange County
-// Clairo
-// Cigarettes After Sex
-
 export const bodyData = [
   {
     "path": "aerosmith",
