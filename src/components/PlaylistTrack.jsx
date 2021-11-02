@@ -59,6 +59,7 @@ const PlaylistTrack = () => {
 
     dataTable.forEach(data => {
       let artist = data.slice(0, data.indexOf(" - "));
+      
       if (!mentionedAritstList.includes(artist))
         mentionedAritstList.push(artist);
     });
@@ -75,12 +76,19 @@ const PlaylistTrack = () => {
       <div className="mentioned-artists">
         <div className="mentioned-artists-wrapper">
           {mentionedArtist.map((artist, i) => {
-            let artistLink = `/artists/${artist.toLowerCase().replaceAll(" ", "-")}`;
+            let artistFilteredName = artist.toLowerCase().replaceAll(" ", "-");
+            let artistLink = `/artists/${artistFilteredName}`;
             
             return (
               <Link to={artistLink} key={i}>
                 <div className="artist">
+
+                  <div className="mentioned-artist-image">
+                    <img src={`../artists-image/${artistFilteredName}.jpg`} alt="" />
+                  </div>
+
                   {artist}
+
                 </div>
               </Link>
             );
