@@ -1,18 +1,18 @@
 export const bodyData = [
   {
-    "path": "aerosmith",
-    "artistName": "Aerosmith",
-    "musics": [
+    path: "aerosmith",
+    artistName: "Aerosmith",
+    musics: [
       "Aerosmith - Crazy.mp3",
       "Aerosmith - Cryin'.mp3",
-      "Aerosmith - I Don't Want to Miss a Thing.mp3"
+      "Aerosmith - I Don't Want to Miss a Thing.mp3",
     ],
-    "artistID": 0
+    artistID: 0,
   },
   {
-    "path": "air-supply",
-    "artistName": "Air Supply",
-    "musics": [
+    path: "air-supply",
+    artistName: "Air Supply",
+    musics: [
       "Air Supply - Chances.mp3",
       "Air Supply - Having You Near Me.mp3",
       "Air Supply - I Can Wait Forever.mp3",
@@ -20,48 +20,48 @@ export const bodyData = [
       "Air Supply - I'll Never Get Enough of You.mp3",
       "Air Supply - Lonely Is The Night.mp3",
       "Air Supply - Making Love Out of Nothing at All.mp3",
-      "Air Supply - Sweet Dreams.mp3"
+      "Air Supply - Sweet Dreams.mp3",
     ],
-    "artistID": 1
+    artistID: 1,
   },
   {
-    "path": "ali-gatie",
-    "artistName": "Ali Gatie",
-    "musics": [
+    path: "ali-gatie",
+    artistName: "Ali Gatie",
+    musics: [
       "Ali Gatie - Do You Believe.mp3",
       "Ali Gatie - How Things Used To Be.mp3",
       "Ali Gatie - It's You.mp3",
       "Ali Gatie - Moonlight.mp3",
-      "Ali Gatie - What If I Told You That I Love You.mp3"
+      "Ali Gatie - What If I Told You That I Love You.mp3",
     ],
-    "artistID": 2
+    artistID: 2,
   },
   {
-    "path": "ariana-grande",
-    "artistName": "Ariana Grande",
-    "musics": [
+    path: "ariana-grande",
+    artistName: "Ariana Grande",
+    musics: [
       "Ariana Grande - 34 + 35.mp3",
       "Ariana Grande - Break Free.mp3",
       "Ariana Grande - Dangerous Woman.mp3",
       "Ariana Grande - Positions.mp3",
-      "Ariana Grande - 7 rings.mp3"
+      "Ariana Grande - 7 rings.mp3",
     ],
-    "artistID": 3
+    artistID: 3,
   },
   {
-    "path": "arthur-nery",
-    "artistName": "Arthur Nery",
-    "musics": [
+    path: "arthur-nery",
+    artistName: "Arthur Nery",
+    musics: [
       "Arthur Nery - Binhi.mp3",
       "Arthur Nery - Pagsamo.mp3",
-      "Arthur Nery - TAKE ALL THE LOVE.mp3"
+      "Arthur Nery - TAKE ALL THE LOVE.mp3",
     ],
-    "artistID": 104
+    artistID: 4,
   },
   {
-    "path": "avicii",
-    "artistName": "Avicii",
-    "musics": [
+    path: "avicii",
+    artistName: "Avicii",
+    musics: [
       "Avicii - Addicted To You.mp3",
       "Avicii - Broken Arrows.mp3",
       "Avicii - Fades Away.mp3",
@@ -83,40 +83,40 @@ export const bodyData = [
       "Avicii - Waiting For Love.mp3",
       "Avicii - Wake Me Up.mp3",
       "Avicii - WithOut You.mp3",
-      "Avicii - You Be Love.mp3"
+      "Avicii - You Be Love.mp3",
     ],
-    "artistID": 4
+    artistID: 5,
   },
   {
-    "path": "avril-lavigne",
-    "artistName": "Avril Lavigne",
-    "musics": [
+    path: "avril-lavigne",
+    artistName: "Avril Lavigne",
+    musics: [
       "Avril Lavigne - Breakaway.mp3",
       "Avril Lavigne - Complicated.mp3",
       "Avril Lavigne - Head Above Water.mp3",
       "Avril Lavigne - Here's To Never Growing Up.mp3",
       "Avril Lavigne - My Happy Ending.mp3",
       "Avril Lavigne - When You're Gone.mp3",
-      "Avril Lavigne - Wish You Were Here.mp3"
+      "Avril Lavigne - Wish You Were Here.mp3",
     ],
-    "artistID": 5
+    artistID: 6,
   },
   {
-    "path": "bazzi",
-    "artistName": "Bazzi",
-    "musics": [
+    path: "bazzi",
+    artistName: "Bazzi",
+    musics: [
       "Bazzi - Beautiful.mp3",
       "Bazzi - I.F.L.Y..mp3",
       "Bazzi - Mine.mp3",
       "Bazzi - Myself.mp3",
-      "Bazzi - Paradise.mp3"
+      "Bazzi - Paradise.mp3",
     ],
-    "artistID": 6
+    artistID: 7,
   },
   {
-    "path": "ben&ben",
-    "artistName": "Ben&Ben",
-    "musics": [
+    path: "ben&ben",
+    artistName: "Ben&Ben",
+    musics: [
       "Ben&Ben - Araw-Araw.mp3",
       "Ben&Ben - Bibingka.mp3",
       "Ben&Ben - Di Ka Sayang.mp3",
@@ -128,12 +128,12 @@ export const bodyData = [
       "Ben&Ben - Ride Home.mp3",
       "Ben&Ben - Sugat (feat. Munimuni).mp3",
     ],
-    "artistID": 7
+    artistID: 8,
   },
   {
-    "path": "billie-eilish",
-    "artistName": "Billie Eilish",
-    "musics": [
+    path: "billie-eilish",
+    artistName: "Billie Eilish",
+    musics: [
       "Billie Eilish - Bad Guy.mp3",
       "Billie Eilish - Bellyache.mp3",
       "Billie Eilish - Bury A Friend.mp3",
@@ -148,47 +148,47 @@ export const bodyData = [
       "Billie Eilish - Wish You Were Gay.mp3",
       "Billie Eilish - Xanny.mp3",
       "Billie Eilish - You Should See Me In A Crown.mp3",
-      "Billie Eilish - Your Power.mp3"
+      "Billie Eilish - Your Power.mp3",
     ],
-    "artistID": 8
+    artistID: 9,
   },
   {
-    "path": "blackpink",
-    "artistName": "BLACKPINK",
-    "musics": [
+    path: "blackpink",
+    artistName: "BLACKPINK",
+    musics: [
       "BLACKPINK - How You Like That.mp3",
       "BLACKPINK - Ice Cream.mp3",
       "BLACKPINK - Lovesick Girls.mp3",
     ],
-    "artistID": 111
+    artistID: 10,
   },
   {
-    "path": "blink-182",
-    "artistName": "Blink-182",
-    "musics": [
+    path: "blink-182",
+    artistName: "Blink-182",
+    musics: [
       "Blink-182 - Adam's Song.mp3",
       "Blink-182 - All The Small Things.mp3",
       "Blink-182 - First Date.mp3",
       "Blink-182 - I Miss You.mp3",
       "Blink-182 - Stay Together For The Kids.mp3",
-      "Blink-182 - What's My Age Again.mp3"
+      "Blink-182 - What's My Age Again.mp3",
     ],
-    "artistID": 9
+    artistID: 11,
   },
   {
-    "path": "bon-jovi",
-    "artistName": "Bon Jovi",
-    "musics": [
+    path: "bon-jovi",
+    artistName: "Bon Jovi",
+    musics: [
       "Bon Jovi - Bed Of Roses.mp3",
       "Bon Jovi - It's My Life.mp3",
-      "Bon Jovi - Livin' On A Prayer.mp3"
+      "Bon Jovi - Livin' On A Prayer.mp3",
     ],
-    "artistID": 10
+    artistID: 12,
   },
   {
-    "path": "bruno-mars",
-    "artistName": "Bruno Mars",
-    "musics": [
+    path: "bruno-mars",
+    artistName: "Bruno Mars",
+    musics: [
       "Bruno Mars - Count On Me.mp3",
       "Bruno Mars - Grenade.mp3",
       "Bruno Mars - It Will Rain.mp3",
@@ -196,70 +196,68 @@ export const bodyData = [
       "Bruno Mars - Locked Out Of Heaven.mp3",
       "Bruno Mars - That's What I Like.mp3",
       "Bruno Mars - Today My Life Begins.mp3",
-      "Bruno Mars - Versace On The Floor.mp3"
+      "Bruno Mars - Versace On The Floor.mp3",
     ],
-    "artistID": 11
+    artistID: 13,
   },
   {
-    "path": "bruz",
-    "artistName": "BRUZ",
-    "musics": [
-      "BRUZ - SHYBOI.mp3"
-    ],
-    "artistID": 12
+    path: "bruz",
+    artistName: "BRUZ",
+    musics: ["BRUZ - SHYBOI.mp3"],
+    artistID: 14,
   },
   {
-    "path": "bryan-adams",
-    "artistName": "Bryan Adams",
-    "musics": [
+    path: "bryan-adams",
+    artistName: "Bryan Adams",
+    musics: [
       "Bryan Adams - (Everything I Do) I Do It For You.mp3",
       "Bryan Adams - Please Forgive Me.mp3",
-      "Bryan Adams - Summer Of '69.mp3"
+      "Bryan Adams - Summer Of '69.mp3",
     ],
-    "artistID": 13
+    artistID: 15,
   },
   {
-    "path": "cavetown",
-    "artistName": "Cavetown",
-    "musics": [
+    path: "cavetown",
+    artistName: "Cavetown",
+    musics: [
       "Cavetown - Feb 14.mp3",
       "Cavetown - Idea of Her.mp3",
       "Cavetown - Paul.mp3",
       "Cavetown - Sharpener.mp3",
       "Cavetown - Telescope.mp3",
       "Cavetown - Trying.mp3",
-      "Cavetown - Wishing Well.mp3"
+      "Cavetown - Wishing Well.mp3",
     ],
-    "artistID": 105
+    artistID: 16,
   },
   {
-    "path": "charlie-puth",
-    "artistName": "Charlie Puth",
-    "musics": [
+    path: "charlie-puth",
+    artistName: "Charlie Puth",
+    musics: [
       "Charlie Puth - Attention.mp3",
       "Charlie Puth - How Long.mp3",
       "Charlie Puth - Kiss Me.mp3",
       "Charlie Puth - Up All Night.mp3",
-      "Charlie Puth - We Don't Talk Anymore.mp3"
+      "Charlie Puth - We Don't Talk Anymore.mp3",
     ],
-    "artistID": 14
+    artistID: 17,
   },
   {
-    "path": "chelsea-cutler",
-    "artistName": "Chelsea Cutler",
-    "musics": [
+    path: "chelsea-cutler",
+    artistName: "Chelsea Cutler",
+    musics: [
       "Chelsea Cutler - Are You Listening.mp3",
       "Chelsea Cutler - Parent song.mp3",
       "Chelsea Cutler - Sixteen.mp3",
       "Chelsea Cutler - The stars.mp3",
-      "Chelsea Cutler - Your Shirt.mp3"
+      "Chelsea Cutler - Your Shirt.mp3",
     ],
-    "artistID": 0
+    artistID: 18,
   },
   {
-    "path": "chilledcow",
-    "artistName": "ChilledCow",
-    "musics": [
+    path: "chilledcow",
+    artistName: "ChilledCow",
+    musics: [
       "ChilledCow - 1 A.M Study Session - (lofi hip hop chill beats).mp3",
       "ChilledCow - 2 A.M Study Session - (lofi hip hop chill beats).mp3",
       "ChilledCow - 4 A.M Study Session - (lofi hip hop chill beats).mp3",
@@ -275,14 +273,14 @@ export const bodyData = [
       "ChilledCow - Mell-ø x Ambulo - Afloat Again.mp3",
       "ChilledCow - Monma - Calm Lands.mp3",
       "ChilledCow - Refeeld x Project AER - Chance Encounter.mp3",
-      "ChilledCow - Tysu x Spencer Hunt - Window Seat.mp3"
+      "ChilledCow - Tysu x Spencer Hunt - Window Seat.mp3",
     ],
-    "artistID": 15
+    artistID: 19,
   },
   {
-    "path": "chillhop-music",
-    "artistName": "Chillhop Music",
-    "musics": [
+    path: "chillhop-music",
+    artistName: "Chillhop Music",
+    musics: [
       "Chillhop Music - Chillhop Essentials · Spring 2021 [instrumental beats compilation].mp3",
       "Chillhop Music - Chillhop Essentials · Summer 2021 [instrumental beats compilation].mp3",
       "Chillhop Music - Chillhop Essentials · Winter 2018 [lofi hip hop & chill beats].mp3",
@@ -291,12 +289,12 @@ export const bodyData = [
       "Chillhop Music - Endless Sunday [Chillhop instrumental beats].mp3",
       "Chillhop Music - Endless Sunday 2 [lofi jazz instrumental hip hop beats].mp3",
     ],
-    "artistID": 15
+    artistID: 20,
   },
   {
-    "path": "cigarettes-after-sex",
-    "artistName": "Cigarettes After Sex",
-    "musics": [
+    path: "cigarettes-after-sex",
+    artistName: "Cigarettes After Sex",
+    musics: [
       "Cigarettes After Sex - Affection.mp3",
       "Cigarettes After Sex - Apocalypse.mp3",
       "Cigarettes After Sex - Dreaming Of You.mp3",
@@ -305,37 +303,37 @@ export const bodyData = [
       "Cigarettes After Sex - Nothing's Gonna Hurt You Baby.mp3",
       "Cigarettes After Sex - Sweet.mp3",
     ],
-    "artistID": 103
+    artistID: 21,
   },
   {
-    "path": "claire-cottrill",
-    "artistName": "Claire Cottrill",
-    "musics": [
+    path: "claire-cottrill",
+    artistName: "Claire Cottrill",
+    musics: [
       "Claire Cottrill - 4EVER.mp3",
       "Claire Cottrill - Bags.mp3",
       "Claire Cottrill - Bubble Gum.mp3",
       "Claire Cottrill - Pretty Girl.mp3",
       "Claire Cottrill - Sofia.mp3",
-      "Claire Cottrill - Softly.mp3"
+      "Claire Cottrill - Softly.mp3",
     ],
-    "artistID": 100
+    artistID: 22,
   },
   {
-    "path": "claire-rosinkranz",
-    "artistName": "Claire Rosinkranz",
-    "musics": [
+    path: "claire-rosinkranz",
+    artistName: "Claire Rosinkranz",
+    musics: [
       "Claire Rosinkranz - Backyard Boy.mp3",
       "Claire Rosinkranz - BeVerly Hills BoYfRiEnd.mp3",
       "Claire Rosinkranz - Frankenstein.mp3",
       "Claire Rosinkranz - Real Life.mp3",
-      "Claire Rosinkranz - Tough Guy.mp3"
+      "Claire Rosinkranz - Tough Guy.mp3",
     ],
-    "artistID": 16
+    artistID: 23,
   },
   {
-    "path": "coldplay",
-    "artistName": "Coldplay",
-    "musics": [
+    path: "coldplay",
+    artistName: "Coldplay",
+    musics: [
       "Coldplay - Clocks.mp3",
       "Coldplay - Cry Cry Cry.mp3",
       "Coldplay - Fix You.mp3",
@@ -344,68 +342,65 @@ export const bodyData = [
       "Coldplay - O.mp3",
       "Coldplay - Paradise.mp3",
       "Coldplay - The Scientist.mp3",
-      "Coldplay - Yellow.mp3"
+      "Coldplay - Yellow.mp3",
     ],
-    "artistID": 17
+    artistID: 24,
   },
   {
-    "path": "creed",
-    "artistName": "Creed",
-    "musics": [
+    path: "creed",
+    artistName: "Creed",
+    musics: [
       "Creed - My Sacrifice.mp3",
       "Creed - One Last Breath.mp3",
-      "Creed - With Arms Wide Open.mp3"
+      "Creed - With Arms Wide Open.mp3",
     ],
-    "artistID": 18
+    artistID: 25,
   },
   {
-    "path": "cueshe",
-    "artistName": "Cueshe",
-    "musics": [
+    path: "cueshe",
+    artistName: "Cueshe",
+    musics: [
       "Cueshe - 24 Hours.mp3",
       "Cueshe - Back To Me.mp3",
       "Cueshe - Borrowed Time.mp3",
       "Cueshe - Can't Let You Go.mp3",
       "Cueshe - Stay.mp3",
-      "Cueshe - Ulan.mp3"
+      "Cueshe - Ulan.mp3",
     ],
-    "artistID": 106
+    artistID: 26,
   },
   {
-    "path": "daughtry",
-    "artistName": "Daughtry",
-    "musics": [
-      "Daughtry - Home.mp3",
-      "Daughtry - Over You.mp3"
-    ],
-    "artistID": 18
+    path: "daughtry",
+    artistName: "Daughtry",
+    musics: ["Daughtry - Home.mp3", "Daughtry - Over You.mp3"],
+    artistID: 27,
   },
   {
-    "path": "december-avenue",
-    "artistName": "December Avenue",
-    "musics": [
+    path: "december-avenue",
+    artistName: "December Avenue",
+    musics: [
       "December Avenue - Bulong.mp3",
       "December Avenue - Eroplanong Papel.mp3",
       "December Avenue - Kahit 'Di Mo Alam.mp3",
       "December Avenue - Magkunwari.mp3",
-      "December Avenue - Sa Ngalan Ng Pag-Ibig.mp3"
+      "December Avenue - Sa Ngalan Ng Pag-Ibig.mp3",
     ],
-    "artistID": 19
+    artistID: 28,
   },
   {
-    "path": "disturbed",
-    "artistName": "Disturbed",
-    "musics": [
+    path: "disturbed",
+    artistName: "Disturbed",
+    musics: [
       "Disturbed - Down With The Sickness.mp3",
       "Disturbed - Stupify.mp3",
-      "Disturbed - The Sound Of Silence.mp3"
+      "Disturbed - The Sound Of Silence.mp3",
     ],
-    "artistID": 20
+    artistID: 29,
   },
   {
-    "path": "dreamy",
-    "artistName": "Dreamy",
-    "musics": [
+    path: "dreamy",
+    artistName: "Dreamy",
+    musics: [
       "Dreamy - Because music cures every problem ~ lofi hip hop mix.mp3",
       "Dreamy - Believe in the dream ~ lofi hip hop mix.mp3",
       "Dreamy - Breathing dreams like air ~ lofi hip hop mix.mp3",
@@ -422,12 +417,12 @@ export const bodyData = [
       "Dreamy - Yūgen ~ Japanese Lofi Hip-Hop.mp3",
       "Dreamy - Because music cures every problem ~ lofi hip hop mix.mp3",
     ],
-    "artistID": 21
+    artistID: 30,
   },
   {
-    "path": "e-ve",
-    "artistName": "E ve",
-    "musics": [
+    path: "e-ve",
+    artistName: "E ve",
+    musics: [
       "E ve - Dramaturgy.mp3",
       "E ve - Heart Forecast.mp3",
       "E ve - YORUWA HONOKA (Night is Faint).mp3",
@@ -437,12 +432,12 @@ export const bodyData = [
       "E ve - 蒼のワルツ.mp3",
       "E ve - 遊生夢死(Living idly and dying as if dreaming).mp3",
     ],
-    "artistID": 110
+    artistID: 31,
   },
   {
-    "path": "ed-sheeran",
-    "artistName": "Ed Sheeran",
-    "musics": [
+    path: "ed-sheeran",
+    artistName: "Ed Sheeran",
+    musics: [
       "Ed Sheeran - Afterglow.mp3",
       "Ed Sheeran - Barcelona.mp3",
       "Ed Sheeran - Castle On The Hill.mp3",
@@ -450,37 +445,37 @@ export const bodyData = [
       "Ed Sheeran - How Would You Feel.mp3",
       "Ed Sheeran - Perfect.mp3",
       "Ed Sheeran - Photograph.mp3",
-      "Ed Sheeran - Shape Of You.mp3"
+      "Ed Sheeran - Shape Of You.mp3",
     ],
-    "artistID": 22
+    artistID: 32,
   },
   {
-    "path": "eminem",
-    "artistName": "Eminem",
-    "musics": [
+    path: "eminem",
+    artistName: "Eminem",
+    musics: [
       "Eminem - Deep End.mp3",
       "Eminem - Lose Your Self.mp3",
       "Eminem - Love The Way You Lie.mp3",
       "Eminem - River.mp3",
       "Eminem - The Monster.mp3",
-      "Eminem - The Real Slim Shady.mp3"
+      "Eminem - The Real Slim Shady.mp3",
     ],
-    "artistID": 23
+    artistID: 33,
   },
   {
-    "path": "emman",
-    "artistName": "EMMAN",
-    "musics": [
+    path: "emman",
+    artistName: "EMMAN",
+    musics: [
       "EMMAN - Kung Pwede Lang.mp3",
       "EMMAN - Teka Lang.mp3",
-      "EMMAN - Uuwian.mp3"
+      "EMMAN - Uuwian.mp3",
     ],
-    "artistID": 24
+    artistID: 34,
   },
   {
-    "path": "eraserheads",
-    "artistName": "Eraserheads",
-    "musics": [
+    path: "eraserheads",
+    artistName: "Eraserheads",
+    musics: [
       "Eraserheads - Alapaap.mp3",
       "Eraserheads - Ang Huling El Bimbo.mp3",
       "Eraserheads - Harana.mp3",
@@ -498,77 +493,75 @@ export const bodyData = [
       "Eraserheads - Tindahan Ni Aling Nena.mp3",
       "Eraserheads - Toyang.mp3",
       "Eraserheads - Trip To Jerusalem.mp3",
-      "Eraserheads - With A Smile.mp3"
+      "Eraserheads - With A Smile.mp3",
     ],
-    "artistID": 25
+    artistID: 35,
   },
   {
-    "path": "evanescence",
-    "artistName": "Evanescence",
-    "musics": [
+    path: "evanescence",
+    artistName: "Evanescence",
+    musics: [
       "Evanescence - Bring Me To Life.mp3",
       "Evanescence - Going Under.mp3",
-      "Evanescence - My Immortal.mp3"
+      "Evanescence - My Immortal.mp3",
     ],
-    "artistID": 26
+    artistID: 36,
   },
   {
-    "path": "finding-hope",
-    "artistName": "Finding Hope",
-    "musics": [
+    path: "finding-hope",
+    artistName: "Finding Hope",
+    musics: [
       "Finding Hope - 3 AM.mp3",
       "Finding Hope - Heaven.mp3",
       "Finding Hope - Love.mp3",
       "Finding Hope - More & More.mp3",
       "Finding Hope - Strangers.mp3",
       "Finding Hope - Valentine's Day.mp3",
-      "Finding Hope - Without You.mp3"
+      "Finding Hope - Without You.mp3",
     ],
-    "artistID": 26
+    artistID: 37,
   },
   {
-    "path": "five-for-fighting",
-    "artistName": "Five For Fighting",
-    "musics": [
+    path: "five-for-fighting",
+    artistName: "Five For Fighting",
+    musics: [
       "Five for Fighting - 100 Years.mp3",
       "Five for Fighting - Superman.mp3",
-      "Five for Fighting - The Riddle.mp3"
+      "Five for Fighting - The Riddle.mp3",
     ],
-    "artistID": 27
+    artistID: 38,
   },
   {
-    "path": "fm-static",
-    "artistName": "Fm Static",
-    "musics": [
+    path: "fm-static",
+    artistName: "Fm Static",
+    musics: [
       "FM Static - Moment Of Truth.mp3",
       "FM Static - Tonight.mp3",
-      "FM Static - What It Feels Like.mp3"
+      "FM Static - What It Feels Like.mp3",
     ],
-    "artistID": 28
+    artistID: 39,
   },
   {
-    "path": "藤井-風-(fujii-kaze)",
-    "artistName": "藤井 風 (Fujii Kaze)",
-    "musics": [
+    path: "藤井-風-(fujii-kaze)",
+    artistName: "藤井 風 (Fujii Kaze)",
+    musics: [
       "藤井 風 (Fujii Kaze) - もうええわ (Mo-Eh-Wa).mp3",
       "藤井 風 (Fujii Kaze) - 優しさ (YASASHISA).mp3",
       "藤井 風 (Fujii Kaze) - 帰ろう (Kaerou).mp3",
-      "藤井 風 (Fujii Kaze) - 旅路 (Tabiji).mp3"
+      "藤井 風 (Fujii Kaze) - 旅路 (Tabiji).mp3",
     ],
-    "artistID": 28
+    artistID: 40,
   },
   {
-    "path": "gian",
-    "artistName": "GIAN",
-    "musics": [
-      "GIAN - Tayo.mp3"
-    ],
-    "artistID": 29
+    path: "gian",
+    artistName: "GIAN",
+    musics: ["GIAN - Tayo.mp3"],
+    artistID: 41,
   },
   {
-    "path": "giveon",
-    "artistName": "Giveon",
-    "musics": [
+    path: "giveon",
+    artistName: "Giveon",
+    musics: [
       "Giveon - All To Me.mp3",
       "Giveon - Favorite Mistake.mp3",
       "Giveon - For Tonight.mp3",
@@ -582,92 +575,92 @@ export const bodyData = [
       "Giveon - VANISH.mp3",
       "Giveon - WORLD WE CREATED.mp3",
     ],
-    "artistID": 112
+    artistID: 42,
   },
   {
-    "path": "green-day",
-    "artistName": "Green Day",
-    "musics": [
+    path: "green-day",
+    artistName: "Green Day",
+    musics: [
       "Green Day - 21 Guns.mp3",
       "Green Day - Basket Case.mp3",
       "Green Day - Boulevard Of Broken Dreams.mp3",
       "Green Day - Holiday.mp3",
-      "Green Day - Wake Me Up When September Ends.mp3"
+      "Green Day - Wake Me Up When September Ends.mp3",
     ],
-    "artistID": 30
+    artistID: 43,
   },
   {
-    "path": "guns-n'-roses",
-    "artistName": "Guns N' Roses",
-    "musics": [
+    path: "guns-n'-roses",
+    artistName: "Guns N' Roses",
+    musics: [
       "Guns N' Roses - November Rain.mp3",
       "Guns N' Roses - Patience.mp3",
       "Guns N' Roses - Sweet Child O' Mine.mp3",
-      "Guns N' Roses - Welcome To The Jungle.mp3"
+      "Guns N' Roses - Welcome To The Jungle.mp3",
     ],
-    "artistID": 31
+    artistID: 44,
   },
   {
-    "path": "halsey",
-    "artistName": "Halsey",
-    "musics": [
+    path: "halsey",
+    artistName: "Halsey",
+    musics: [
       "Halsey - 3AM.mp3",
       "Halsey - Alone.mp3",
       "Halsey - Colors.mp3",
       "Halsey - Eastside.mp3",
-      "Halsey - Without Me.mp3"
+      "Halsey - Without Me.mp3",
     ],
-    "artistID": 32
+    artistID: 45,
   },
   {
-    "path": "hinder",
-    "artistName": "Hinder",
-    "musics": [
+    path: "hinder",
+    artistName: "Hinder",
+    musics: [
       "Hinder - Better Than Me.mp3",
       "Hinder - Lips Of An Angel.mp3",
-      "Hinder - Without You.mp3"
+      "Hinder - Without You.mp3",
     ],
-    "artistID": 33
+    artistID: 46,
   },
   {
-    "path": "hoobastank",
-    "artistName": "Hoobastank",
-    "musics": [
+    path: "hoobastank",
+    artistName: "Hoobastank",
+    musics: [
       "Hoobastank - Crawling In The Dark.mp3",
       "Hoobastank - Running Away.mp3",
-      "Hoobastank - The Reason.mp3"
+      "Hoobastank - The Reason.mp3",
     ],
-    "artistID": 34
+    artistID: 47,
   },
   {
-    "path": "imaginedragons",
-    "artistName": "ImagineDragons",
-    "musics": [
+    path: "imaginedragons",
+    artistName: "ImagineDragons",
+    musics: [
       "ImagineDragons - Bad Liar.mp3",
       "ImagineDragons - Believer.mp3",
       "ImagineDragons - Birds.mp3",
       "ImagineDragons - Natural.mp3",
       "ImagineDragons - Next To Me.mp3",
-      "ImagineDragons - Whatever It Takes.mp3"
+      "ImagineDragons - Whatever It Takes.mp3",
     ],
-    "artistID": 35
+    artistID: 48,
   },
   {
-    "path": "iv-of-spades",
-    "artistName": "IV of Spades",
-    "musics": [
+    path: "iv-of-spades",
+    artistName: "IV of Spades",
+    musics: [
       "IV OF SPADES - Ang Pinagmulan.mp3",
       "IV OF SPADES - Bawat Kaluluwa.mp3",
       "IV OF SPADES - Hey Barbara.mp3",
       "IV OF SPADES - Ilaw Sa Daan.mp3",
-      "IV OF SPADES - Mundo.mp3"
+      "IV OF SPADES - Mundo.mp3",
     ],
-    "artistID": 36
+    artistID: 49,
   },
   {
-    "path": "joji",
-    "artistName": "Joji",
-    "musics": [
+    path: "joji",
+    artistName: "Joji",
+    musics: [
       "Joji - Ew.mp3",
       "Joji - Run.mp3",
       "Joji - Sanctuary.mp3",
@@ -675,14 +668,14 @@ export const bodyData = [
       "Joji - Tick Tock.mp3",
       "Joji - Upgrade.mp3",
       "Joji - YEAH RIGHT.mp3",
-      "Joji - Your Man.mp3"
+      "Joji - Your Man.mp3",
     ],
-    "artistID": 37
+    artistID: 50,
   },
   {
-    "path": "juice-wrld",
-    "artistName": "Juice WRLD",
-    "musics": [
+    path: "juice-wrld",
+    artistName: "Juice WRLD",
+    musics: [
       "Juice WRLD - Empty.mp3",
       "Juice WRLD - Lucid Dreams.mp3",
       "Juice WRLD - Real Shit.mp3",
@@ -692,22 +685,22 @@ export const bodyData = [
       "Juice WRLD - Smile.mp3",
       "Juice WRLD - Wishing Well.mp3",
     ],
-    "artistID": 38
+    artistID: 51,
   },
   {
-    "path": "justin-timberlake",
-    "artistName": "Justin Timberlake",
-    "musics": [
+    path: "justin-timberlake",
+    artistName: "Justin Timberlake",
+    musics: [
       "Justin Timberlake - Can't Stop the Feeling.mp3",
       "Justin Timberlake - Mirrors.mp3",
-      "Justin Timberlake - True Colors.mp3"
+      "Justin Timberlake - True Colors.mp3",
     ],
-    "artistID": 39
+    artistID: 52,
   },
   {
-    "path": "kamikazee",
-    "artistName": "Kamikazee",
-    "musics": [
+    path: "kamikazee",
+    artistName: "Kamikazee",
+    musics: [
       "Kamikazee - Chiksilog.mp3",
       "Kamikazee - Doo Bidoo.mp3",
       "Kamikazee - Huling Sayaw (feat. Kyla).mp3",
@@ -719,37 +712,52 @@ export const bodyData = [
       "Kamikazee - Tsinelas.mp3",
       "Kamikazee - Unang Tikim.mp3",
     ],
-    "artistID": 40
+    artistID: 53,
   },
   {
-    "path": "khalid",
-    "artistName": "Khalid",
-    "musics": [
+    path: "khalid",
+    artistName: "Khalid",
+    musics: [
       "Khalid - 8TEEN.mp3",
       "Khalid - Better.mp3",
       "Khalid - Location.mp3",
       "Khalid - OTW.mp3",
       "Khalid - Saturday Nights.mp3",
       "Khalid - Talk.mp3",
-      "Khalid - Young Dumb & Broke.mp3"
+      "Khalid - Young Dumb & Broke.mp3",
     ],
-    "artistID": 40
+    artistID: 54,
   },
   {
-    "path": "lady-gaga",
-    "artistName": "Lady Gaga",
-    "musics": [
+    path: "kiyo",
+    artistName: "Kiyo",
+    musics: [
+      "Kiyo - Ano Na.mp3",
+      "Kiyo - G Feat. Space Moses.mp3",
+      "Kiyo - Ikaw Lang.mp3",
+      "Kiyo - lust after love ft. shiloh.mp3",
+      "Kiyo - not even her ft. shiloh.mp3",
+      "Kiyo - sakay.mp3",
+      "Kiyo - untitled ft shiloh.mp3",
+      "Kiyo - Urong; Sulong.mp3",
+    ],
+    artistID: 55,
+  },
+  {
+    path: "lady-gaga",
+    artistName: "Lady Gaga",
+    musics: [
       "Lady Gaga - Bad Romance.mp3",
       "Lady Gaga - Born This Way.mp3",
       "Lady Gaga - Poker Face.mp3",
-      "Lady Gaga - Telephone.mp3"
+      "Lady Gaga - Telephone.mp3",
     ],
-    "artistID": 41
+    artistID: 56,
   },
   {
-    "path": "lany",
-    "artistName": "LANY",
-    "musics": [
+    path: "lany",
+    artistName: "LANY",
+    musics: [
       "LANY - 13.mp3",
       "LANY - Good Guys.mp3",
       "LANY - Hericane.mp3",
@@ -760,22 +768,22 @@ export const bodyData = [
       "LANY - Valentine's Day.mp3",
       "LANY - you!.mp3",
     ],
-    "artistID": 42
+    artistID: 57,
   },
   {
-    "path": "lauv",
-    "artistName": "Lauv",
-    "musics": [
+    path: "lauv",
+    artistName: "Lauv",
+    musics: [
       "Lauv - Getting Over You.mp3",
       "Lauv - I Like Me Better.mp3",
-      "Lauv - Paris In The Rain.mp3"
+      "Lauv - Paris In The Rain.mp3",
     ],
-    "artistID": 43
+    artistID: 58,
   },
   {
-    "path": "lil-uzi-vert",
-    "artistName": "Lil Uzi Vert",
-    "musics": [
+    path: "lil-uzi-vert",
+    artistName: "Lil Uzi Vert",
+    musics: [
       "Lil Uzi Vert - 7AM.mp3",
       "Lil Uzi Vert - 20 Min.mp3",
       "Lil Uzi Vert - Do What I Want.mp3",
@@ -788,47 +796,46 @@ export const bodyData = [
       "Lil Uzi Vert - XO Tour Llif3.mp3",
       "Lil Uzi Vert - Yessirskiii ft. 21 Savage.mp3",
       "Lil Uzi Vert - You Was Right.mp3",
-      "Lil Uzi Vert - 7AM.mp3",
     ],
-    "artistID": 109
+    artistID: 59,
   },
   {
-    "path": "linkin-park",
-    "artistName": "Linkin Park",
-    "musics": [
+    path: "linkin-park",
+    artistName: "Linkin Park",
+    musics: [
       "Linkin Park - Bleed It Out.mp3",
       "Linkin Park - In The End.mp3",
-      "Linkin Park - Numb.mp3"
+      "Linkin Park - Numb.mp3",
     ],
-    "artistID": 43
+    artistID: 60,
   },
   {
-    "path": "lowly",
-    "artistName": "Lowly",
-    "musics": [
+    path: "lowly",
+    artistName: "Lowly",
+    musics: [
       "Lowly - INZO - Angst.mp3",
       "Lowly - INZO - Overthinker.mp3",
-      "Lowly - LIHO - Surrender.mp3"
+      "Lowly - LIHO - Surrender.mp3",
     ],
-    "artistID": 43
+    artistID: 61,
   },
   {
-    "path": "maroon-5",
-    "artistName": "Maroon 5",
-    "musics": [
+    path: "maroon-5",
+    artistName: "Maroon 5",
+    musics: [
       "Maroon 5 - Animals.mp3",
       "Maroon 5 - Cold.mp3",
       "Maroon 5 - Maps.mp3",
       "Maroon 5 - Payphone.mp3",
       "Maroon 5 - Sugar.mp3",
-      "Maroon 5 - Won't Go Home Without You.mp3"
+      "Maroon 5 - Won't Go Home Without You.mp3",
     ],
-    "artistID": 44
+    artistID: 62,
   },
   {
-    "path": "marshmello",
-    "artistName": "Marshmello",
-    "musics": [
+    path: "marshmello",
+    artistName: "Marshmello",
+    musics: [
       "Marshmello - Alone.mp3",
       "Marshmello - Be Kind.mp3",
       "Marshmello - FLY.mp3",
@@ -836,14 +843,14 @@ export const bodyData = [
       "Marshmello - Keep It Mello.mp3",
       "Marshmello - Room To Fall.mp3",
       "Marshmello - Spotlight.mp3",
-      "Marshmello - Take It Back.mp3"
+      "Marshmello - Take It Back.mp3",
     ],
-    "artistID": 45
+    artistID: 63,
   },
   {
-    "path": "michael-bublé",
-    "artistName": "Michael Bublé",
-    "musics": [
+    path: "michael-bublé",
+    artistName: "Michael Bublé",
+    musics: [
       "Michael Bublé - Always On My Mind.mp3",
       "Michael Bublé - Christmas Exclusive First Listen.mp3",
       "Michael Bublé - Everything.mp3",
@@ -852,100 +859,112 @@ export const bodyData = [
       "Michael Bublé - Home.mp3",
       "Michael Bublé - It's A Beautiful Day.mp3",
       "Michael Bublé - Love You Anymore.mp3",
-      "Michael Bublé - Me and Mrs. Jones.mp3"
+      "Michael Bublé - Me and Mrs. Jones.mp3",
     ],
-    "artistID": 46
+    artistID: 64,
   },
   {
-    "path": "mike-posner",
-    "artistName": "Mike Posner",
-    "musics": [
+    path: "mike-posner",
+    artistName: "Mike Posner",
+    musics: [
       "Mike Posner - Be As You Are.mp3",
       "Mike Posner - Bow Chicka Wow Wow.mp3",
       "Mike Posner - I Took A Pill In Ibiza.mp3",
       "Mike Posner - Nothing Is Wrong.mp3",
-      "Mike Posner - Please Don't Go.mp3"
+      "Mike Posner - Please Don't Go.mp3",
     ],
-    "artistID": 47
+    artistID: 65,
   },
   {
-    "path": "miley-cyrus",
-    "artistName": "Miley Cyrus",
-    "musics": [
+    path: "miley-cyrus",
+    artistName: "Miley Cyrus",
+    musics: [
       "Miley Cyrus - Malibu.mp3",
       "Miley Cyrus - Party In The U.S.A..mp3",
       "Miley Cyrus - We Can't Stop.mp3",
-      "Miley Cyrus - Wrecking Ball.mp3"
+      "Miley Cyrus - Wrecking Ball.mp3",
     ],
-    "artistID": 48
+    artistID: 66,
   },
   {
-    "path": "munimuni",
-    "artistName": "Munimuni",
-    "musics": [
+    path: "munimuni",
+    artistName: "Munimuni",
+    musics: [
+      "Munimuni - Alat.mp3",
+      "Munimuni - Ambag Ko.mp3",
       "Munimuni - Bawat Piyesa.mp3",
+      "Munimuni - Bukas Makalawa.mp3",
       "Munimuni - Kalachuchi.mp3",
+      "Munimuni - Kasama Kita.mp3",
+      "Munimuni - Maligaya.mp3",
+      "Munimuni - Marilag.mp3",
+      "Munimuni - Nawa.mp3",
+      "Munimuni - Oras.mp3",
+      "Munimuni - Sa Hindi Pag-alala.mp3",
       "Munimuni - Sa'yo.mp3",
-      "Munimuni - Simula.mp3"
+      "Munimuni - Simula.mp3",
+      "Munimuni - Tahanan.mp3",
+      "Munimuni - Tinig.mp3",
     ],
-    "artistID": 49
+    artistID: 67,
   },
   {
-    "path": "my-chemical-romance",
-    "artistName": "My Chemical Romance",
-    "musics": [
+    path: "my-chemical-romance",
+    artistName: "My Chemical Romance",
+    musics: [
       "My Chemical Romance - Disenchanted.mp3",
       "My Chemical Romance - Famous Last Words.mp3",
       "My Chemical Romance - Helena.mp3",
       "My Chemical Romance - I Don't Love You.mp3",
       "My Chemical Romance - Teenagers.mp3",
-      "My Chemical Romance - Welcome To The Black Parade.mp3"
+      "My Chemical Romance - The World Is Ugly.mp3",
+      "My Chemical Romance - Welcome To The Black Parade.mp3",
     ],
-    "artistID": 50
+    artistID: 68,
   },
   {
-    "path": "oasis",
-    "artistName": "Oasis",
-    "musics": [
+    path: "oasis",
+    artistName: "Oasis",
+    musics: [
       "Oasis - Don't Go Away.mp3",
       "Oasis - Don't Look Back In Anger.mp3",
       "Oasis - Stand By Me.mp3",
       "Oasis - Stop Crying Your Heart Out.mp3",
-      "Oasis - Wonderwall.mp3"
+      "Oasis - Wonderwall.mp3",
     ],
-    "artistID": 51
+    artistID: 69,
   },
   {
-    "path": "oh-wonder",
-    "artistName": "Oh Wonder",
-    "musics": [
+    path: "oh-wonder",
+    artistName: "Oh Wonder",
+    musics: [
       "Oh Wonder - Drive.mp3",
       "Oh Wonder - Hallelujah.mp3",
       "Oh Wonder - I Wish I Never Met You.mp3",
       "Oh Wonder - In And Out Of Love.mp3",
       "Oh Wonder - Ultralife.mp3",
-      "Oh Wonder - Without You.mp3"
+      "Oh Wonder - Without You.mp3",
     ],
-    "artistID": 52
+    artistID: 70,
   },
   {
-    "path": "olivia-rodrigo",
-    "artistName": "Olivia Rodrigo",
-    "musics": [
+    path: "olivia-rodrigo",
+    artistName: "Olivia Rodrigo",
+    musics: [
       "Olivia Rodrigo - All I Want.mp3",
       "Olivia Rodrigo - deja vu.mp3",
       "Olivia Rodrigo - drivers license.mp3",
       "Olivia Rodrigo - favorite crime.mp3",
       "Olivia Rodrigo - happier.mp3",
       "Olivia Rodrigo - hope ur ok.mp3",
-      "Olivia Rodrigo - traitor.mp3"
+      "Olivia Rodrigo - traitor.mp3",
     ],
-    "artistID": 53
+    artistID: 71,
   },
   {
-    "path": "one-direction",
-    "artistName": "One Direction",
-    "musics": [
+    path: "one-direction",
+    artistName: "One Direction",
+    musics: [
       "One Direction - Drag Me Down.mp3",
       "One Direction - Gotta Be You.mp3",
       "One Direction - History.mp3",
@@ -953,34 +972,34 @@ export const bodyData = [
       "One Direction - Steal My Girl.mp3",
       "One Direction - Story of My Life.mp3",
       "One Direction - What Makes You Beautiful.mp3",
-      "One Direction - You and I.mp3"
+      "One Direction - You and I.mp3",
     ],
-    "artistID": 54
+    artistID: 72,
   },
   {
-    "path": "onerepublic",
-    "artistName": "OneRepublic",
-    "musics": [
+    path: "onerepublic",
+    artistName: "OneRepublic",
+    musics: [
       "OneRepublic - Counting Stars.mp3",
       "OneRepublic - Good Life.mp3",
-      "OneRepublic - If I Lose Myself.mp3"
+      "OneRepublic - If I Lose Myself.mp3",
     ],
-    "artistID": 55
+    artistID: 73,
   },
   {
-    "path": "owl-city",
-    "artistName": "Owl City",
-    "musics": [
+    path: "owl-city",
+    artistName: "Owl City",
+    musics: [
       "Owl City - Always.mp3",
       "Owl City - Fireflies.mp3",
-      "Owl City - Vanilla Twilight.mp3"
+      "Owl City - Vanilla Twilight.mp3",
     ],
-    "artistID": 56
+    artistID: 74,
   },
   {
-    "path": "paramore",
-    "artistName": "Paramore",
-    "musics": [
+    path: "paramore",
+    artistName: "Paramore",
+    musics: [
       "Paramore - Ain't It Fun.mp3",
       "Paramore - Brick By Boring Brick.mp3",
       "Paramore - CrushCrushCrush.mp3",
@@ -994,14 +1013,14 @@ export const bodyData = [
       "Paramore - That's What You Get.mp3",
       "Paramore - The Only Exception.mp3",
       "Paramore - Turn It Off.mp3",
-      "Paramore - When It Rains.mp3"
+      "Paramore - When It Rains.mp3",
     ],
-    "artistID": 57
+    artistID: 75,
   },
   {
-    "path": "parokya-ni-edgar",
-    "artistName": "Parokya Ni Edgar",
-    "musics": [
+    path: "parokya-ni-edgar",
+    artistName: "Parokya Ni Edgar",
+    musics: [
       "Parokya Ni Edgar - Alumni Homecoming.mp3",
       "Parokya Ni Edgar - Bagsakan.mp3",
       "Parokya Ni Edgar - Barkada.mp3",
@@ -1018,27 +1037,27 @@ export const bodyData = [
       "Parokya Ni Edgar - Sayang.mp3",
       "Parokya Ni Edgar - Silvertoes.mp3",
       "Parokya Ni Edgar - Wag Mo Na Sana.mp3",
-      "Parokya Ni Edgar - Your Song.mp3"
+      "Parokya Ni Edgar - Your Song.mp3",
     ],
-    "artistID": 58
+    artistID: 76,
   },
   {
-    "path": "planetshakers",
-    "artistName": "PlanetShakers",
-    "musics": [
+    path: "planetshakers",
+    artistName: "PlanetShakers",
+    musics: [
       "Planetshakers - All About You.mp3",
       "Planetshakers - Born to Praise.mp3",
       "Planetshakers - Bring It On.mp3",
       "Planetshakers - Dance.mp3",
       "Planetshakers - I'm Forever Yours.mp3",
-      "Planetshakers - Nothing Is Impossible.mp3"
+      "Planetshakers - Nothing Is Impossible.mp3",
     ],
-    "artistID": 59
+    artistID: 77,
   },
   {
-    "path": "post-malone",
-    "artistName": "Post Malone",
-    "musics": [
+    path: "post-malone",
+    artistName: "Post Malone",
+    musics: [
       "Post Malone - Better Now.mp3",
       "Post Malone - Broken Whiskey Glass.mp3",
       "Post Malone - Circles.mp3",
@@ -1057,17 +1076,18 @@ export const bodyData = [
       "Post Malone - White Iverson.mp3",
       "Post Malone - Yours Truly, Austin Post.mp3",
     ],
-    "artistID": 60
+    artistID: 78,
   },
   {
-    "path": "powfu",
-    "artistName": "Powfu",
-    "musics": [
+    path: "powfu",
+    artistName: "Powfu",
+    musics: [
       "Powfu - a castle by the sea.mp3",
       "Powfu - A world of chaos.mp3",
       "Powfu - Days we had.mp3",
       "Powfu - Death bed.mp3",
       "Powfu - Don't fall asleep yet.mp3",
+      "Powfu - future diary.mp3",
       "Powfu - I can't sleep.mp3",
       "Powfu - I know you're not happy.mp3",
       "Powfu - ice heart.mp3",
@@ -1081,25 +1101,24 @@ export const bodyData = [
       "Powfu - stay4ever.mp3",
       "Powfu - Step into my life.mp3",
       "Powfu - Talk Tomorrow.mp3",
+      "Powfu - the long way home.mp3",
       "powfu - The way that you see me.mp3",
       "Powfu - Travis Barker - mario kart.mp3",
       "Powfu - When the hospital was my home.mp3",
       "Powfu - Would look perfect.mp3",
     ],
-    "artistID": 61
+    artistID: 79,
   },
   {
-    "path": "public",
-    "artistName": "Public",
-    "musics": [
-      "Public - Make You Mine.mp3"
-    ],
-    "artistID": 110
+    path: "public",
+    artistName: "Public",
+    musics: ["Public - Make You Mine.mp3"],
+    artistID: 80,
   },
   {
-    "path": "queen",
-    "artistName": "Queen",
-    "musics": [
+    path: "queen",
+    artistName: "Queen",
+    musics: [
       "Queen - Another One Bites the Dust.mp3",
       "Queen - Bohemian Rhapsody.mp3",
       "Queen - Crazy Little Thing Called Love.mp3",
@@ -1109,65 +1128,68 @@ export const bodyData = [
       "Queen - Under Pressure.mp3",
       "Queen - We Are The Champions .mp3",
       "Queen - We Will Rock You.mp3",
-      "Queen - Who Wants To Live Forever.mp3"
+      "Queen - Who Wants To Live Forever.mp3",
     ],
-    "artistID": 62
+    artistID: 81,
   },
   {
-    "path": "radwimps",
-    "artistName": "RADWIMPS",
-    "musics": [
+    path: "radwimps",
+    artistName: "RADWIMPS",
+    musics: [
       "RADWIMPS - Nandemonaiya.mp3",
       "RADWIMPS - Sparkle.mp3",
       "RADWIMPS - 前前前世 (Zen Zen Zense).mp3",
     ],
-    "artistID": 111
+    artistID: 82,
   },
   {
-    "path": "red-hot-chili-peppers",
-    "artistName": "Red Hot Chili Peppers",
-    "musics": [
+    path: "red-hot-chili-peppers",
+    artistName: "Red Hot Chili Peppers",
+    musics: [
       "Red Hot Chili Peppers - Californication.mp3",
       "Red Hot Chili Peppers - Otherside.mp3",
       "Red Hot Chili Peppers - Scar Tissue.mp3",
     ],
-    "artistID": 113
+    artistID: 83,
   },
   {
-    "path": "rex-orange-county",
-    "artistName": "Rex Orange County",
-    "musics": [
+    path: "rex-orange-county",
+    artistName: "Rex Orange County",
+    musics: [
       "Rex Orange County - Best Friend.mp3",
       "Rex Orange County - Happiness.mp3",
       "Rex Orange County - Loving is Easy.mp3",
-      "Rex Orange County - Sunflower.mp3"
+      "Rex Orange County - Sunflower.mp3",
     ],
-    "artistID": 102
+    artistID: 84,
   },
   {
-    "path": "ricky-montgomery",
-    "artistName": "Ricky Montgomery",
-    "musics": [
+    path: "ricky-montgomery",
+    artistName: "Ricky Montgomery",
+    musics: [
+      "Ricky Montgomery - California.mp3",
       "Ricky Montgomery - Line Without a Hook.mp3",
       "Ricky Montgomery - Mr Loverman.mp3",
-      "Ricky Montgomery - Sorry for Me.mp3"
+      "Ricky Montgomery - My Heart Is Buried In Venice.mp3",
+      "Ricky Montgomery - Snow.mp3",
+      "Ricky Montgomery - Sorry for Me.mp3",
     ],
-    "artistID": 112
+    artistID: 85,
   },
   {
-    "path": "rini",
-    "artistName": "RINI",
-    "musics": [
+    path: "rini",
+    artistName: "RINI",
+    musics: [
       "RINI - Aphrodite.mp3",
       "RINI - Meet Me in Amsterdam.mp3",
-      "RINI - Oceane ft. Olivia Escuyos.mp3"
+      "RINI - Oceane ft. Olivia Escuyos.mp3",
     ],
-    "artistID": 63
+    artistID: 86,
   },
   {
-    "path": "silent-sanctuary",
-    "artistName": "Silent Sanctuary",
-    "musics": [
+    path: "silent-sanctuary",
+    artistName: "Silent Sanctuary",
+    musics: [
       "Silent Sanctuary - 14.mp3",
       "Silent Sanctuary - Abot Langit.mp3",
       "Silent Sanctuary - Bumalik Ka Na Sa'Kin.mp3",
@@ -1183,37 +1205,37 @@ export const bodyData = [
       "Silent Sanctuary - Pasensya Ka Na.mp3",
       "Silent Sanctuary - Rebound.mp3",
       "Silent Sanctuary - Sana Ngayong Pasko.mp3",
-      "Silent Sanctuary - Sayo.mp3"
+      "Silent Sanctuary - Sayo.mp3",
     ],
-    "artistID": 64
+    artistID: 87,
   },
   {
-    "path": "slipknot",
-    "artistName": "Slipknot",
-    "musics": [
+    path: "slipknot",
+    artistName: "Slipknot",
+    musics: [
       "Slipknot - Before I Forget.mp3",
       "Slipknot - Dead Memories.mp3",
       "Slipknot - Psychosocial.mp3",
       "Slipknot - Spit It Out.mp3",
       "Slipknot - Wait And Bleed.mp3",
     ],
-    "artistID": 115
+    artistID: 88,
   },
   {
-    "path": "system-of-a-down",
-    "artistName": "System Of A Down",
-    "musics": [
+    path: "system-of-a-down",
+    artistName: "System Of A Down",
+    musics: [
       "System Of A Down - Aerials.mp3",
       "System Of A Down - B.Y.O.B..mp3",
       "System Of A Down - Chop Suey!.mp3",
-      "System Of A Down - Toxicity.mp3"
+      "System Of A Down - Toxicity.mp3",
     ],
-    "artistID": 65
+    artistID: 89,
   },
   {
-    "path": "taylor-swift",
-    "artistName": "Taylor Swift",
-    "musics": [
+    path: "taylor-swift",
+    artistName: "Taylor Swift",
+    musics: [
       "Taylor Swift - Back To December.mp3",
       "Taylor Swift - Bad Blood.mp3",
       "Taylor Swift - Blank Space.mp3",
@@ -1226,14 +1248,14 @@ export const bodyData = [
       "Taylor Swift - Ours.mp3",
       "Taylor Swift - The Man.mp3",
       "Taylor Swift - The Way I Loved You.mp3",
-      "Taylor Swift - You Belong With Me.mp3"
+      "Taylor Swift - You Belong With Me.mp3",
     ],
-    "artistID": 66
+    artistID: 90,
   },
   {
-    "path": "the-1975",
-    "artistName": "The 1975",
-    "musics": [
+    path: "the-1975",
+    artistName: "The 1975",
+    musics: [
       "The 1975 - Chocolate.mp3",
       "The 1975 - Girls.mp3",
       "The 1975 - Love Me.mp3",
@@ -1241,25 +1263,25 @@ export const bodyData = [
       "The 1975 - Somebody Else.mp3",
       "The 1975 - The Sound.mp3",
     ],
-    "artistID": 99
+    artistID: 91,
   },
   {
-    "path": "the-black-eyed-peas",
-    "artistName": "The Black Eyed Peas",
-    "musics": [
+    path: "the-black-eyed-peas",
+    artistName: "The Black Eyed Peas",
+    musics: [
       "The Black Eyed Peas - I Gotta Feeling.mp3",
       "The Black Eyed Peas - My Humps.mp3",
       "The Black Eyed Peas - Shut Up.mp3",
       "The Black Eyed Peas - The APL Song.mp3",
       "The Black Eyed Peas - The Time.mp3",
-      "The Black Eyed Peas - Where Is The Love.mp3"
+      "The Black Eyed Peas - Where Is The Love.mp3",
     ],
-    "artistID": 67
+    artistID: 92,
   },
   {
-    "path": "the-bootleg-boy",
-    "artistName": "The Bootleg Boy",
-    "musics": [
+    path: "the-bootleg-boy",
+    artistName: "The Bootleg Boy",
+    musics: [
       "The Bootleg Boy - Addict. & Rewind - have you ever been in love_.mp3",
       "The Bootleg Boy - Chevy - I Know a Place.mp3",
       "The Bootleg Boy - Imfinenow & Joshua Mine - Be With You.mp3",
@@ -1279,12 +1301,12 @@ export const bodyData = [
       "The Bootleg Boy - Teqkoi - afraid of loving you.mp3",
       "The Bootleg Boy - Zaini - you felt like home.mp3",
     ],
-    "artistID": 68
+    artistID: 93,
   },
   {
-    "path": "the-chainsmokers",
-    "artistName": "The Chainsmokers",
-    "musics": [
+    path: "the-chainsmokers",
+    artistName: "The Chainsmokers",
+    musics: [
       "The Chainsmokers - All We Know.mp3",
       "The Chainsmokers - Closer.mp3",
       "The Chainsmokers - Don't Let Me Down.mp3",
@@ -1292,38 +1314,38 @@ export const bodyData = [
       "The Chainsmokers - Inside Out.mp3",
       "The Chainsmokers - Paris.mp3",
       "The Chainsmokers - Roses.mp3",
-      "The Chainsmokers - Something Just Like This.mp3"
+      "The Chainsmokers - Something Just Like This.mp3",
     ],
-    "artistID": 69
+    artistID: 94,
   },
   {
-    "path": "the-script",
-    "artistName": "The Script",
-    "musics": [
+    path: "the-script",
+    artistName: "The Script",
+    musics: [
       "The Script - Breakeven.mp3",
       "The Script - Superheroes.mp3",
-      "The Script - The Man Who Can’t Be Moved.mp3"
+      "The Script - The Man Who Can’t Be Moved.mp3",
     ],
-    "artistID": 70
+    artistID: 95,
   },
   {
-    "path": "the-walters",
-    "artistName": "The Walters",
-    "musics": [
+    path: "the-walters",
+    artistName: "The Walters",
+    musics: [
       "The Walters - Autumn Leaves.mp3",
       "The Walters - Cottage Roads.mp3",
       "The Walters - Goodbye Baby.mp3",
       "The Walters - I Love You So.mp3",
       "The Walters - Life.mp3",
       "The Walters - Sweet Marie.mp3",
-      "The Walters - What's Left.mp3"
+      "The Walters - What's Left.mp3",
     ],
-    "artistID": 113
+    artistID: 96,
   },
   {
-    "path": "the-weeknd",
-    "artistName": "The Weeknd",
-    "musics": [
+    path: "the-weeknd",
+    artistName: "The Weeknd",
+    musics: [
       "The Weeknd - Blinding Lights.mp3",
       "The Weeknd - Call Out My Name.mp3",
       "The Weeknd - Can't Feel My Face.mp3",
@@ -1333,25 +1355,25 @@ export const bodyData = [
       "The Weeknd - Starboy.mp3",
       "The Weeknd - Take My Breath.mp3",
       "The Weeknd - The Hills.mp3",
-      "The Weeknd - The Morning.mp3"
+      "The Weeknd - The Morning.mp3",
     ],
-    "artistID": 71
+    artistID: 97,
   },
   {
-    "path": "trap-nation",
-    "artistName": "Trap Nation",
-    "musics": [
+    path: "trap-nation",
+    artistName: "Trap Nation",
+    musics: [
       "Trap Nation - 8 Graves - Begging To Bleed.mp3",
       "Trap Nation - OMIDO - LSD.mp3",
       "Trap Nation - Vanic - Save Yourself.mp3",
-      "Trap Nation - Vanic x K.Flay - So Slow.mp3"
+      "Trap Nation - Vanic x K.Flay - So Slow.mp3",
     ],
-    "artistID": 72
+    artistID: 98,
   },
   {
-    "path": "twenty-one-pilots",
-    "artistName": "Twenty One Pilots",
-    "musics": [
+    path: "twenty-one-pilots",
+    artistName: "Twenty One Pilots",
+    musics: [
       "Twenty One Pilots - Cancer.mp3",
       "Twenty One Pilots - Chlorine.mp3",
       "Twenty One Pilots - Choker.mp3",
@@ -1361,14 +1383,14 @@ export const bodyData = [
       "Twenty One Pilots - Ride.mp3",
       "Twenty One Pilots - Shy Away.mp3",
       "Twenty One Pilots - Stressed Out.mp3",
-      "Twenty One Pilots - The Hype.mp3"
+      "Twenty One Pilots - The Hype.mp3",
     ],
-    "artistID": 73
+    artistID: 99,
   },
   {
-    "path": "twice",
-    "artistName": "TWICE",
-    "musics": [
+    path: "twice",
+    artistName: "TWICE",
+    musics: [
       "TWICE - BDZ.mp3",
       "TWICE - CHEER UP.mp3",
       "TWICE - CHILLAX.mp3",
@@ -1393,61 +1415,71 @@ export const bodyData = [
       "TWICE - YES or YES.mp3",
       "TWICE - 다시 해줘 Do it again.mp3",
     ],
-    "artistID": 1200
+    artistID: 100,
   },
   {
-    "path": "we-the-kings",
-    "artistName": "We The Kings",
-    "musics": [
+    path: "we-the-kings",
+    artistName: "We The Kings",
+    musics: [
       "We The Kings - Heaven Can Wait.mp3",
       "We The Kings - Sad Song (Slowed).mp3",
       "We The Kings - Sad Song.mp3",
-      "We The Kings - We'll Be A Dream.mp3"
+      "We The Kings - We'll Be A Dream.mp3",
     ],
-    "artistID": 74
+    artistID: 101,
   },
   {
-    "path": "wiz-khalifa",
-    "artistName": "Wiz Khalifa",
-    "musics": [
+    path: "wiz-khalifa",
+    artistName: "Wiz Khalifa",
+    musics: [
       "Wiz Khalifa - King Of Everything.mp3",
       "Wiz Khalifa - Medicated.mp3",
       "Wiz Khalifa - No Sleep.mp3",
       "Wiz Khalifa - Promises.mp3",
       "Wiz Khalifa - True Colors.mp3",
       "Wiz Khalifa - Work Hard Play Hard.mp3",
-      "Wiz Khalifa - Young, Wild & Free.mp3"
+      "Wiz Khalifa - Young, Wild & Free.mp3",
     ],
-    "artistID": 75
+    artistID: 102,
   },
   {
-    "path": "zack-tabudlo",
-    "artistName": "Zack Tabudlo",
-    "musics": [
+    path: "yoasobi",
+    artistName: "YOASOBI",
+    musics: [
+      "YOASOBI - 「ハルジオン・Halzion」.mp3",
+      "YOASOBI - Haruka ハルカ.mp3",
+      "YOASOBI - Probably.mp3",
+      "YOASOBI - Racing into the Night.mp3",
+      "YOASOBI - Tabun たぶん.mp3",
+    ],
+    artistID: 103,
+  },
+  {
+    path: "zack-tabudlo",
+    artistName: "Zack Tabudlo",
+    musics: [
       "Zack Tabudlo - Binibini.mp3",
+      "Zack Tabudlo - Habang Buhay.mp3",
       "Zack Tabudlo - Hindi Ko Kaya.mp3",
       "Zack Tabudlo - Iyong Iyo.mp3",
       "Zack Tabudlo - Nangangamba.mp3",
-      "Zack Tabudlo - Sigurado.mp3"
+      "Zack Tabudlo - Sigurado.mp3",
+      "Zack Tabudlo - Simula Palang Nung Una.mp3",
     ],
-    "artistID": 76
+    artistID: 104,
   },
   {
-    "path": "zedd",
-    "artistName": "Zedd",
-    "musics": [
-      "Zedd - Clarity.mp3",
-      "Zedd - Stay.mp3",
-      "Zedd - The Middle.mp3"
-    ],
-    "artistID": 77
-  }
+    path: "zedd",
+    artistName: "Zedd",
+    musics: ["Zedd - Clarity.mp3", "Zedd - Stay.mp3", "Zedd - The Middle.mp3"],
+    artistID: 105,
+  },
 ];
 
 export const playlists = [
   {
     playlistID: 0,
-    playlistName: 'Classic OPMs',
+    playlistName: "Classic OPMs",
     musics: [
       "Ben&Ben - Araw-Araw.mp3",
       "Ben&Ben - Di Ka Sayang.mp3",
@@ -1492,11 +1524,11 @@ export const playlists = [
       "Silent Sanctuary - Pasensya Ka Na.mp3",
       "Silent Sanctuary - Rebound.mp3",
       "Silent Sanctuary - Sayo.mp3",
-    ]
+    ],
   },
   {
     playlistID: 1,
-    playlistName: 'Lofi',
+    playlistName: "Lofi",
     musics: [
       "ChilledCow - 1 A.M Study Session - (lofi hip hop chill beats).mp3",
       "ChilledCow - 2 A.M Study Session - (lofi hip hop chill beats).mp3",
@@ -1540,9 +1572,10 @@ export const playlists = [
       "The Bootleg Boy - NÜ - i can't fight this (ft. Ivri).mp3",
       "The Bootleg Boy - Rnla & zevia - Toxicity.mp3",
       "The Bootleg Boy - Teqkoi - afraid of loving you.mp3",
-      "The Bootleg Boy - Zaini - you felt like home.mp3"
-    ]
-  }, {
+      "The Bootleg Boy - Zaini - you felt like home.mp3",
+    ],
+  },
+  {
     playlistID: 2,
     playlistName: "Japanese Songs ❤",
     musics: [
@@ -1552,9 +1585,14 @@ export const playlists = [
       "藤井 風 (Fujii Kaze) - 旅路 (Tabiji).mp3",
       "RADWIMPS - Nandemonaiya.mp3",
       "RADWIMPS - Sparkle.mp3",
-    ]
-  }
-]
+      "YOASOBI - 「ハルジオン・Halzion」.mp3",
+      "YOASOBI - Haruka ハルカ.mp3",
+      "YOASOBI - Probably.mp3",
+      "YOASOBI - Racing into the Night.mp3",
+      "YOASOBI - Tabun たぶん.mp3",
+    ],
+  },
+];
 
 // export const playlists = [
 //   {

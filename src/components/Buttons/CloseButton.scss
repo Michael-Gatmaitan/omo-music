@@ -8,7 +8,7 @@
   border-radius: 12px;
   transition: 0.1s ease-in;
   @include flexCenter;
-  @include fontProp('Montserrat', 700, 15px);
+  @include fontProp('Montserrat', 700, 15px, #000);
   user-select: none;
   cursor: pointer;
 

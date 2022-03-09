@@ -1,0 +1,150 @@
+@import '../../mixins.scss';
+
+.sidebar-container {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(#000, 0.3);
+  position: fixed;
+  top: 0;
+  left: 0;
+  // transition: 0.1s cubic-bezier(1, 0, 0, 1);
+
+  z-index: 100;
+
+  .sidebar {
+    width: 100%;
+    height: 100%;
+    padding: 0 22px;
+    background-color: $drk_blue;
+
+    .sidebar-nav {
+      width: 100%;
+      padding: 16px 22px;
+      position: relative;
+      @include flexCenter;
+
+      .close-sidebar {
+        width: 27px;
+        height: 27px;
+        position: absolute;
+        top: 50%;
+        left: 0;
+        transform: translateY(-50%);
+
+        img { height: 100%; }
+      }
+
+      .sidebar-nav-omo-logo {
+        height: 24px;
+
+        img { height: 100%; }
+      }
+    }
+
+    .omo-watermark {
+      display: flex;
+      gap: 8px;
+      margin-top: 40px;
+      background-color: $pri_blue;
+      border-radius: 16px;
+      padding: 12px;
+
+      .watermark-logo {
+        height: 42px;
+        width: 42px;
+        background-color: $drk_blue;
+        border-radius: 4px;
+        padding: 4px;
+        @include flexCenter;
+
+        img {
+          width: 100%;
+        }
+      }
+
+      .omo-info {
+
+        .omo-text {
+          @include fontProp('Montserrat', 700, 18px, #fff);
+        }
+
+        .omo-developer {
+          @include fontProp('Open Sans', 600, 12px, #fff);
+        }
+      }
+    }
+
+    .profile-container {
+      width: 100%;
+      border-radius: 12px;
+      background-color: $pri_blue;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      margin-top: 74px;
+      
+      .profile-picture-container {
+        // display: inline;
+        margin-top: -50px; // 50%
+
+        .profile-picture {
+          width: 100px;
+          height: 100px;
+          background-color: #fff;
+          border-radius: 50%;
+          margin: 0 auto;
+          @include flexCenter;
+          
+          img { height: 92px; }
+        }
+      }
+
+      .profile-info {
+        text-align: center;
+        margin-top: 12px;
+
+        .profile-label {
+          @include fontProp('Montserrat', 500, 14, rgba(#fff, 0.84));          
+        }
+
+        .profile-name {
+          margin-top: 5px;
+          @include fontProp('Montserrat', 700, 18px, #fff);
+        }
+      }
+
+      .icons-container {
+        margin-bottom: 36px;
+        
+        .icons-section {
+          margin-top: 12px;
+          display: flex;
+          justify-content: center;
+          gap: 8px;
+
+          .circle-icon {
+            background-color: #fff;
+            border-radius: 50%;
+            padding: 3px;
+            display: flex;
+
+            img { width: 32px; }
+          }
+        }
+
+        .icon-container-header {
+          @include fontProp('Montserrat', 700, 18px, #fff);
+          text-align: center;
+          margin-top: 26px;
+        }
+      }
+    }
+  }
+
+  @include desktop {
+
+    .sidebar {
+      max-width: 380px;
+    }
+  }
+}

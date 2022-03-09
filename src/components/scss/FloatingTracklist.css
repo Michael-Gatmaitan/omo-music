@@ -46,6 +46,7 @@
   font-family: "Montserrat", sans-serif !important;
   font-weight: 700 !important;
   font-size: 32px !important;
+  color: #000 !important;
   color: #323232;
 }
 
@@ -73,6 +74,7 @@
   font-family: "Montserrat", sans-serif !important;
   font-weight: 700 !important;
   font-size: 18px !important;
+  color: #000 !important;
 }
 
 .floating-tracklist .tracklist-container .tracklist-content-parent .tracklist-content .tracklist-music-block .tl-music-info .tl-artist {
@@ -80,6 +82,7 @@
   font-family: "Open sans", sans-serif !important;
   font-weight: 400 !important;
   font-size: 12px !important;
+  color: rgba(0, 0, 0, 0.6) !important;
 }
 
 .floating-tracklist .tracklist-container .tracklist-content-parent .tracklist-content .tracklist-music-block .tl-liner {

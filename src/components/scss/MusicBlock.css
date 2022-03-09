@@ -16,7 +16,7 @@
 }
 
 .music-block:hover {
-  background-color: rgba(41, 62, 248, 0.2);
+  background-color: rgba(41, 62, 248, 0.3);
 }
 
 .music-block:hover .music-info .music-title, .music-block:hover .music-info .music-artist {
@@ -51,6 +51,7 @@
   font-family: "Montserrat", sans-serif !important;
   font-weight: 700 !important;
   font-size: 18px !important;
+  color: #fff !important;
   margin-top: 3px;
 }
 
@@ -60,6 +61,7 @@
   font-family: "Open sans", sans-serif !important;
   font-weight: 400 !important;
   font-size: 12px !important;
+  color: #fff !important;
   color: rgba(255, 255, 255, 0.58);
 }
 
@@ -152,12 +154,14 @@
     font-family: "Montserrat", sans-serif !important;
     font-weight: 700 !important;
     font-size: 20px !important;
+    color: #fff !important;
     margin-top: 7px;
   }
   .music-block .music-info .music-artist {
     font-family: "Open sans", sans-serif !important;
     font-weight: 400 !important;
     font-size: 14px !important;
+    color: #fff !important;
   }
 }
 

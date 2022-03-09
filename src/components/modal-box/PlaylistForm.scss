@@ -9,7 +9,7 @@
   grid-template-columns: 100%;
 
   .header {
-    @include fontProp('Montserrat', 700, 24px);
+    @include fontProp('Montserrat', 700, 24px, #000);
     color: #000;
   }
 
@@ -34,7 +34,7 @@
     
     .error, .warning {
       margin: 8px 0 0 0;
-      @include fontProp('Montserrat', 500, 14px);
+      @include fontProp('Montserrat', 500, 14px, #000);
     }
     .error {
       color: #F85F57;
@@ -50,8 +50,7 @@
         width: 100%;
         margin-top: 12px;
         padding: 8px 12px;
-        @include fontProp('Montserrat', 600, 12px);
-        color: #323232;
+        @include fontProp('Montserrat', 600, 12px, #323232);
         border-radius: 8px;
         background-color: #D8DAED;
         transition: 0.1s ease-in;

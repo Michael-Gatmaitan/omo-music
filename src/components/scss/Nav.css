@@ -50,15 +50,19 @@
   }
 }
 
-@media (min-width: 780px) {
-  .nav .menu-block-container {
-    display: none;
-  }
-}
-
 .nav .menu-block-container {
   position: absolute;
   left: 22px;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .nav .nav-logo-container {
@@ -84,6 +88,7 @@
   font-family: "Montserrat", sans-serif !important;
   font-weight: 700 !important;
   font-size: 24px !important;
+  color: #fff !important;
 }
 
 @media (min-width: 780px) {

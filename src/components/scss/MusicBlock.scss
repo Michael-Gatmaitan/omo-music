@@ -11,7 +11,7 @@
   position: relative;                                               
 
   &:hover {
-    background-color: $darken_pri_blue;
+    background-color: rgba($pri-blue, 0.3);
     
     .music-info {
       .music-title, .music-artist {

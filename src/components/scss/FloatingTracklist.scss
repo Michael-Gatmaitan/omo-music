@@ -30,7 +30,7 @@
     grid-gap: 18px;
 
     .tracklist-head {
-      @include fontProp('Montserrat', 700, 32px);
+      @include fontProp('Montserrat', 700, 32px, #000);
       color: #323232;
     }
 
@@ -53,11 +53,11 @@
             .tl-title {
               color: #323232;
               padding-right: 40px;
-              @include fontProp('Montserrat', 700, 18px);
+              @include fontProp('Montserrat', 700, 18px, #000);
             }
             .tl-artist {
               color: rgba(#323232, 0.58);
-              @include fontProp('Open sans', 400, 12px);
+              @include fontProp('Open sans', 400, 12px, rgba(#000, 0.6));
             }
           }
 

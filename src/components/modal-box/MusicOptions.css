@@ -104,12 +104,14 @@
   font-family: "Montserrat", sans-serif !important;
   font-weight: 700 !important;
   font-size: 18px !important;
+  color: #fff !important;
 }
 
 .music-options-container .music-options-content .music-info-block-container .music-info-block .darken-bg .music-info .artist {
   font-family: "Open sans", sans-serif !important;
   font-weight: 500 !important;
   font-size: 12px !important;
+  color: #fff !important;
 }
 
 @media (min-width: 780px) {
@@ -202,6 +204,7 @@
   font-family: "Montserrat", sans-serif !important;
   font-weight: 600 !important;
   font-size: 18px !important;
+  color: #fff !important;
   cursor: pointer;
 }
 

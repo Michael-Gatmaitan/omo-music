@@ -19,12 +19,13 @@ const Musics = () => {
     bDataTemp.map((e, i) => e.artistID = i);
     console.log(bDataTemp);
 
-    let totalSongs = 0;
-    for (var i of bDataTemp) {
-      totalSongs += i["musics"].length;
-    }
+    // let totalSongs = 0;
+    // for (var i of bDataTemp) {
+    //   totalSongs += i["musics"].length;
+    // }
 
-    console.log(totalSongs);
+    // Displays Total song count
+    // console.log(totalSongs);
   }, []);
   
   return (

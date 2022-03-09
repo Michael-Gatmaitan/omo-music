@@ -1,0 +1,205 @@
+.sidebar-container {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+}
+
+.sidebar-container .sidebar {
+  width: 100%;
+  height: 100%;
+  padding: 0 22px;
+  background-color: #0B0B14;
+}
+
+.sidebar-container .sidebar .sidebar-nav {
+  width: 100%;
+  padding: 16px 22px;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.sidebar-container .sidebar .sidebar-nav .close-sidebar {
+  width: 27px;
+  height: 27px;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+.sidebar-container .sidebar .sidebar-nav .close-sidebar img {
+  height: 100%;
+}
+
+.sidebar-container .sidebar .sidebar-nav .sidebar-nav-omo-logo {
+  height: 24px;
+}
+
+.sidebar-container .sidebar .sidebar-nav .sidebar-nav-omo-logo img {
+  height: 100%;
+}
+
+.sidebar-container .sidebar .omo-watermark {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 8px;
+  margin-top: 40px;
+  background-color: #293EF8;
+  border-radius: 16px;
+  padding: 12px;
+}
+
+.sidebar-container .sidebar .omo-watermark .watermark-logo {
+  height: 42px;
+  width: 42px;
+  background-color: #0B0B14;
+  border-radius: 4px;
+  padding: 4px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.sidebar-container .sidebar .omo-watermark .watermark-logo img {
+  width: 100%;
+}
+
+.sidebar-container .sidebar .omo-watermark .omo-info .omo-text {
+  font-family: "Montserrat", sans-serif !important;
+  font-weight: 700 !important;
+  font-size: 18px !important;
+  color: #fff !important;
+}
+
+.sidebar-container .sidebar .omo-watermark .omo-info .omo-developer {
+  font-family: "Open Sans", sans-serif !important;
+  font-weight: 600 !important;
+  font-size: 12px !important;
+  color: #fff !important;
+}
+
+.sidebar-container .sidebar .profile-container {
+  width: 100%;
+  border-radius: 12px;
+  background-color: #293EF8;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 74px;
+}
+
+.sidebar-container .sidebar .profile-container .profile-picture-container {
+  margin-top: -50px;
+}
+
+.sidebar-container .sidebar .profile-container .profile-picture-container .profile-picture {
+  width: 100px;
+  height: 100px;
+  background-color: #fff;
+  border-radius: 50%;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.sidebar-container .sidebar .profile-container .profile-picture-container .profile-picture img {
+  height: 92px;
+}
+
+.sidebar-container .sidebar .profile-container .profile-info {
+  text-align: center;
+  margin-top: 12px;
+}
+
+.sidebar-container .sidebar .profile-container .profile-info .profile-label {
+  font-family: "Montserrat", sans-serif !important;
+  font-weight: 500 !important;
+  font-size: 14 !important;
+  color: rgba(255, 255, 255, 0.84) !important;
+}
+
+.sidebar-container .sidebar .profile-container .profile-info .profile-name {
+  margin-top: 5px;
+  font-family: "Montserrat", sans-serif !important;
+  font-weight: 700 !important;
+  font-size: 18px !important;
+  color: #fff !important;
+}
+
+.sidebar-container .sidebar .profile-container .icons-container {
+  margin-bottom: 36px;
+}
+
+.sidebar-container .sidebar .profile-container .icons-container .icons-section {
+  margin-top: 12px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 8px;
+}
+
+.sidebar-container .sidebar .profile-container .icons-container .icons-section .circle-icon {
+  background-color: #fff;
+  border-radius: 50%;
+  padding: 3px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.sidebar-container .sidebar .profile-container .icons-container .icons-section .circle-icon img {
+  width: 32px;
+}
+
+.sidebar-container .sidebar .profile-container .icons-container .icon-container-header {
+  font-family: "Montserrat", sans-serif !important;
+  font-weight: 700 !important;
+  font-size: 18px !important;
+  color: #fff !important;
+  text-align: center;
+  margin-top: 26px;
+}
+
+@media (min-width: 780px) {
+  .sidebar-container .sidebar {
+    max-width: 380px;
+  }
+}
+/*# sourceMappingURL=Sidebar.css.map */

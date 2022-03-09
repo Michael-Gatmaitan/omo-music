@@ -114,12 +114,14 @@
   font-family: "Montserrat", sans-serif !important;
   font-weight: 700 !important;
   font-size: 18px !important;
+  color: #fff !important;
 }
 
 .artists-route .artist-block .artist-info .artist-songs-length {
   font-family: "Open Sans", sans-serif !important;
   font-weight: 600 !important;
   font-size: 12px !important;
+  color: #fff !important;
 }
 
 @media (min-width: 780px) {

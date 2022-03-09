@@ -32,7 +32,9 @@ export default class EventContextProvider extends Component {
       playlistID: null,
       playlistName: "",
       imageLink: ""
-    }
+    },
+
+    showSidebar: false
   }
   
   // Event Functions for 'MusicTrackMobile.jsx'
@@ -74,14 +76,16 @@ export default class EventContextProvider extends Component {
     this.setState({ playlistOptionsData });
   }
 
+  setShowSidebar = bool => this.setState({ showSidebar: bool });
+
   render() {
 
     const events_states = {
-      // 
+      //
       setShowMusicTrackMobile: this.setShowMusicTrackMobile,
-      // 
+      //
       setShowTracklist: this.setShowTracklist,
-      // 
+      //
       ...{
         setShowMusicOptions: this.setShowMusicOptions,
         setShowSelectPlaylist: this.setShowSelectPlaylist,
@@ -99,7 +103,9 @@ export default class EventContextProvider extends Component {
 
         setPlaylistOptionsData: this.setPlaylistOptionsData,
         closeAllPlaylistOptions: this.closeAllPlaylistOptions,
-      }
+      },
+
+      setShowSidebar: this.setShowSidebar
     };
 
     return (

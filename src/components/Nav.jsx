@@ -1,12 +1,18 @@
-
+import { useContext } from 'react';
+import { EventContext } from '../context/EventContext';
 import './scss/Nav.css';
 
 const Nav = () => {
 
+  const {
+    showSidebar,
+    setShowSidebar
+  } = useContext(EventContext);
+
   return (
     <div className="nav">
 
-      <div className="menu-block-container">
+      <div className="menu-block-container" onClick={ () => setShowSidebar(true) }>
         <img src='../svg/burger-menu.svg' alt="burger-menu" />
       </div>
 
