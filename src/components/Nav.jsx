@@ -5,6 +5,7 @@ import './scss/Nav.css';
 const Nav = () => {
 
   const {
+    // eslint-disable-next-line no-unused-vars
     showSidebar,
     setShowSidebar
   } = useContext(EventContext);

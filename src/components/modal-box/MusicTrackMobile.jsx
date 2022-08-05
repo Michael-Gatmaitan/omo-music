@@ -1,4 +1,4 @@
-import { useContext } from 'react';
+import React, { useContext } from 'react';
 import { EventContext } from '../../context/EventContext';
 import FloatingMusicTrackComps from '../FloatingMusicTrackComps.jsx';
 import '../scss/MusicTrackMobile.css';

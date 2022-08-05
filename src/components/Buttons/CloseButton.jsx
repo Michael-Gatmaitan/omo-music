@@ -1,3 +1,4 @@
+// @ts-nocheck
 import './CloseButton.css';
 
 const CloseButton = ({ value, closeFunction }) => (

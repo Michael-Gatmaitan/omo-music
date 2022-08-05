@@ -1,4 +1,4 @@
-import { useState, useEffect, Suspense, lazy } from 'react';
+import React, { useState, useEffect, Suspense, lazy } from 'react';
 import { bodyData } from '../dataSource';
 import './scss/MusicBlock.css';
 // import MusicBlock from './MusicBlock';

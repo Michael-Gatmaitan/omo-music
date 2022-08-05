@@ -1,5 +1,4 @@
-// @ts-nocheck
-import { useContext } from 'react';
+import React, { useContext } from 'react';
 import { EventContext } from '../../context/EventContext';
 import { AudioContext } from '../../context/AudioContext';
 import CloseButton from '../Buttons/CloseButton';

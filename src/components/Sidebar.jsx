@@ -27,6 +27,10 @@ const Sidebar = () => {
     toolsUsed: ["figma", "git", "vscode"],
   };
 
+  const activeListeners = [
+    { imageSrc: "./listeners-image/listener_1.jpg", name: "Jasmine Sevilla" }
+  ];
+
   const stopPropagation = e => e.stopPropagation();
 
   return (
@@ -68,9 +72,9 @@ const Sidebar = () => {
 
             <div className="icons-section">
               {sidebarIcons.socMeds.map((icon, id) => (
-                <a target="_blank" href={icon.iconLink}>
+                <a target="_blank" href={icon.iconLink} rel="noreferrer">
                   <div className="circle-icon" key={id}>
-                    <img src={`./svg/sidebar-icons/${icon.iconName}.svg`} width="32" />
+                    <img src={`./svg/sidebar-icons/${icon.iconName}.svg`} width="32" alt="profile_icons"/>
                   </div>
                 </a>
               ))}
@@ -83,7 +87,7 @@ const Sidebar = () => {
             <div className="icons-section">
               {sidebarIcons.toolsUsed.map((icon, id) => (
                 <div className="circle-icon" key={id}>
-                  <img src={`./svg/sidebar-icons/${icon}.svg`} width="32" />
+                  <img src={`./svg/sidebar-icons/${icon}.svg`} width="32" alt="icons" />
                 </div>
               ))}
             </div>
@@ -92,10 +96,39 @@ const Sidebar = () => {
 
         </div>
 
+        {/* LISTENERS */}
+
+        <div className="active-listener">
+          
+          <div className="active-listener-header"> Active Listeners</div>
+
+          <div className="listener-card-container">
+            {activeListeners.map((listener, i) => (
+              <ActiveListenerCard listener={listener} />
+            ))}
+          </div>
+
+        </div>
+
       </div>
     </div>
   );
 };
+
+const ActiveListenerCard = ({listener}) => {
+  const { imageSrc, name } = listener;
+
+  return (
+    <div className="listener-card">
+      <div className="listener-image">
+        <img src={imageSrc} alt="listener" />
+      </div>
+      <div className="listener-name">
+        {name}
+      </div>
+    </div>
+  )
+}
 
 const SidebarNav = () => {
   
@@ -108,10 +141,11 @@ const SidebarNav = () => {
       </div>
 
       <div className="sidebar-nav-omo-logo">
-        <img src="./svg/omo-logo.svg" alt="" />
+        <img src="./svg/omo-logo.svg" alt="omo-logo" />
       </div>
     </div>
   )
 }
+
 
 export default Sidebar;

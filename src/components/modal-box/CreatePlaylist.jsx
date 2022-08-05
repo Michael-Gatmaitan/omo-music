@@ -1,3 +1,4 @@
+import React from 'react';
 import { useContext } from 'react';
 import './CreatePlaylist.css';
 import { EventContext } from '../../context/EventContext';

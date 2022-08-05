@@ -1,4 +1,5 @@
-import { useContext, useState, useEffect } from 'react';
+// @ts-nocheck
+import React, { useContext, useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import './MusicOptions.css';
 import CloseButton from '../Buttons/CloseButton';
