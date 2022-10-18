@@ -33,7 +33,6 @@ a {
   background-color: #0B0B14;
   position: fixed;
   top: 56px;
-  z-index: 99;
 }
 
 .route-container .route-grid-container .route-grid-wrap .app-body .location-title {
@@ -41,7 +40,7 @@ a {
   font-weight: 700 !important;
   font-size: 36px !important;
   color: #fff !important;
-  margin-top: 12px;
+  padding-top: 12px;
 }
 
 .route-container .route-grid-container .route-grid-wrap .app-body .location-title span {
@@ -138,13 +137,14 @@ a {
   }
   .route-container .route-grid-container .route-grid-wrap {
     margin-top: 0;
-    padding-top: 24px;
     height: 722px;
     overflow-y: scroll;
   }
   .route-container .route-grid-container .route-grid-wrap .app-body {
-    position: static;
-    top: 78px;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    z-index: 89;
   }
   .route-container .route-grid-container .route-grid-wrap .app-body .location-title {
     font-family: "Montserrat", sans-serif !important;

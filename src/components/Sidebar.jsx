@@ -72,8 +72,8 @@ const Sidebar = () => {
 
             <div className="icons-section">
               {sidebarIcons.socMeds.map((icon, id) => (
-                <a target="_blank" href={icon.iconLink} rel="noreferrer">
-                  <div className="circle-icon" key={id}>
+                <a target="_blank" href={icon.iconLink} rel="noreferrer" key={id}>
+                  <div className="circle-icon">
                     <img src={`./svg/sidebar-icons/${icon.iconName}.svg`} width="32" alt="profile_icons"/>
                   </div>
                 </a>
@@ -104,7 +104,7 @@ const Sidebar = () => {
 
           <div className="listener-card-container">
             {activeListeners.map((listener, i) => (
-              <ActiveListenerCard listener={listener} />
+              <ActiveListenerCard listener={listener} key={i} />
             ))}
           </div>
 

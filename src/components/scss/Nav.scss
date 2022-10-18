@@ -6,7 +6,7 @@
   background: $drk_blue;
   position: sticky;
   top: 0;
-  z-index: 99;
+  z-index: 90;
   @include flexCenter;
 
   @include desktop {

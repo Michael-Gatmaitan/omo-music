@@ -5,7 +5,7 @@
   position: -webkit-sticky;
   position: sticky;
   top: 0;
-  z-index: 99;
+  z-index: 90;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

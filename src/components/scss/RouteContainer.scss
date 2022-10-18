@@ -35,11 +35,10 @@ a {
         background-color: $drk_blue;
         position: fixed;
         top: 56px;
-        z-index: 99;
 
         .location-title {
           @include fontProp('Montserrat', 700, 36px);
-          margin-top: 12px;
+          padding-top: 12px;
 
           span {
             transition: 0.2s ease-out;
@@ -123,13 +122,16 @@ a {
       .route-grid-wrap {
         // margin-top: 125px;
         margin-top: 0;
-        padding-top: 24px;
+        // padding-top: 24px;
         height: 722px;
         overflow-y: scroll;
 
         .app-body {
-          position: static;
-          top: 78px;
+          // position: static;
+          // top: 78px;
+          position: sticky;
+          top: 0;
+          z-index: 89;
 
           .location-title {
             @include fontProp('Montserrat', 700, 48px);

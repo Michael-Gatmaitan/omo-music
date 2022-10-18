@@ -37,14 +37,16 @@ const CreatePlaylist = () => {
       }}
     >
 
-      {/* <PlaylistForm
-        headerTitle=""
-        closeFunction={func}
-        primaryButtonFunc={func}
-        closeButtonVal=""
-        primaryButtonVal=""
-        showAction={func}
-      /> */}
+      {/* Boiler plate
+        <PlaylistForm
+          headerTitle=""
+          closeFunction={func}
+          primaryButtonFunc={func}
+          closeButtonVal=""
+          primaryButtonVal=""
+          showAction={func}
+        />
+      */}
 
       <PlaylistForm
         headerTitle="Create Playlist"
