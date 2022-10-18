@@ -32,6 +32,7 @@ a {
   width: 100%;
   background-color: #0B0B14;
   position: fixed;
+  z-index: 89;
   top: 56px;
 }
 
@@ -144,7 +145,6 @@ a {
     position: -webkit-sticky;
     position: sticky;
     top: 0;
-    z-index: 89;
   }
   .route-container .route-grid-container .route-grid-wrap .app-body .location-title {
     font-family: "Montserrat", sans-serif !important;

@@ -26,3 +26,19 @@
     }
   }
 }
+
+.artist-not-found {
+  width: 90%;
+  @include fontProp('Open sans', 500, 14px);
+
+  code {
+    background-color: rgba($darken_pri_blue, 0.3);
+    border-radius: 4px;
+    padding: 2px;
+  }
+
+  .not-found_header {
+    padding-bottom: 8px;
+    @include fontProp('Montserrat', 700, 24px);
+  }
+}

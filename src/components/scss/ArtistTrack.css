@@ -30,4 +30,26 @@
   color: rgba(255, 255, 255, 0.8);
   margin: 3px 0 12px 0;
 }
+
+.artist-not-found {
+  width: 90%;
+  font-family: "Open sans", sans-serif !important;
+  font-weight: 500 !important;
+  font-size: 14px !important;
+  color: #fff !important;
+}
+
+.artist-not-found code {
+  background-color: rgba(6, 24, 181, 0.3);
+  border-radius: 4px;
+  padding: 2px;
+}
+
+.artist-not-found .not-found_header {
+  padding-bottom: 8px;
+  font-family: "Montserrat", sans-serif !important;
+  font-weight: 700 !important;
+  font-size: 24px !important;
+  color: #fff !important;
+}
 /*# sourceMappingURL=ArtistTrack.css.map */

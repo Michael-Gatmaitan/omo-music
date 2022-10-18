@@ -34,6 +34,7 @@ a {
         width: 100%;
         background-color: $drk_blue;
         position: fixed;
+        z-index: 89;
         top: 56px;
 
         .location-title {
@@ -131,7 +132,6 @@ a {
           // top: 78px;
           position: sticky;
           top: 0;
-          z-index: 89;
 
           .location-title {
             @include fontProp('Montserrat', 700, 48px);
