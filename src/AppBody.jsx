@@ -2,6 +2,8 @@ import { useContext } from 'react';
 import { Link, useHistory } from 'react-router-dom';
 import { AudioContext } from './context/AudioContext';
 
+const { PUBLIC_URL } = process.env;
+
 const AppBody = () => {
 
   let {
@@ -44,7 +46,7 @@ const AppBody = () => {
           pointerEvents: showBackArrow ? 'auto' : 'none'
         }}
       >
-        <img src="../svg/back-arrow.svg" alt="back-arrow" />
+        <img src={`${PUBLIC_URL}/svg/back-arrow.svg`} alt="back-arrow" />
       </div>
 
       <span

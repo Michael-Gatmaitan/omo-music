@@ -2,6 +2,8 @@ import { useContext } from 'react';
 import { EventContext } from '../context/EventContext';
 import './scss/Nav.css';
 
+const { PUBLIC_URL } = process.env;
+
 const Nav = () => {
 
   const {
@@ -14,11 +16,11 @@ const Nav = () => {
     <div className="nav">
 
       <div className="menu-block-container" onClick={ () => setShowSidebar(true) }>
-        <img src='../svg/burger-menu.svg' alt="burger-menu" />
+        <img src={`${PUBLIC_URL}/svg/burger-menu.svg`} alt="burger-menu" />
       </div>
 
       <div className="nav-logo-container">
-        <img src='../svg/omo-logo.svg' alt="omo-logo" />
+        <img src={`${PUBLIC_URL}/svg/omo-logo.svg`} alt="omo-logo" />
         <div className="logo-label">OMO Music</div>
       </div>
     </div>

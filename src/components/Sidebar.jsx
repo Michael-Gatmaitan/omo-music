@@ -3,6 +3,8 @@ import { useContext } from "react";
 import { EventContext } from "../context/EventContext";
 import "./scss/Sidebar.css";
 
+const { PUBLIC_URL } = process.env;
+
 const Sidebar = () => {
   const { showSidebar } = useContext(EventContext);
 
@@ -28,7 +30,7 @@ const Sidebar = () => {
   };
 
   const activeListeners = [
-    { imageSrc: "./listeners-image/listener_1.jpg", name: "Jasmine Sevilla" }
+    { imageSrc: `${PUBLIC_URL}/listeners-image/listener_1.jpg`, name: "Jasmine Sevilla" }
   ];
 
   const stopPropagation = e => e.stopPropagation();
@@ -58,7 +60,7 @@ const Sidebar = () => {
 
           <div className="profile-picture-container">
             <div className="profile-picture">
-              <img src="./svg/profile.png" alt="" />
+              <img src={`${PUBLIC_URL}/svg/profile.png`} alt="" />
             </div>
 
           </div>
@@ -74,7 +76,7 @@ const Sidebar = () => {
               {sidebarIcons.socMeds.map((icon, id) => (
                 <a target="_blank" href={icon.iconLink} rel="noreferrer" key={id}>
                   <div className="circle-icon">
-                    <img src={`./svg/sidebar-icons/${icon.iconName}.svg`} width="32" alt="profile_icons"/>
+                    <img src={`${PUBLIC_URL}/svg/sidebar-icons/${icon.iconName}.svg`} width="32" alt="profile_icons"/>
                   </div>
                 </a>
               ))}
@@ -87,7 +89,7 @@ const Sidebar = () => {
             <div className="icons-section">
               {sidebarIcons.toolsUsed.map((icon, id) => (
                 <div className="circle-icon" key={id}>
-                  <img src={`./svg/sidebar-icons/${icon}.svg`} width="32" alt="icons" />
+                  <img src={`${PUBLIC_URL}/svg/sidebar-icons/${icon}.svg`} width="32" alt="icons" />
                 </div>
               ))}
             </div>
@@ -137,11 +139,11 @@ const SidebarNav = () => {
   return (
     <div className="sidebar-nav">
       <div className="close-sidebar" onClick={ () => setShowSidebar(false) }>
-        <img src="./svg/floating-icons/close.svg" alt="" />
+        <img src={`${PUBLIC_URL}/svg/floating-icons/close.svg`} alt="" />
       </div>
 
       <div className="sidebar-nav-omo-logo">
-        <img src="./svg/omo-logo.svg" alt="omo-logo" />
+        <img src={`${PUBLIC_URL}/svg/omo-logo.svg`} alt="omo-logo" />
       </div>
     </div>
   )

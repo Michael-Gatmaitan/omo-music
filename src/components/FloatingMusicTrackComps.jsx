@@ -7,6 +7,7 @@ import { Link } from 'react-router-dom';
 // Components
 import FloatingTracklist from './FloatingTracklist';
 
+const { PUBLIC_URL } = process.env;
 const calcPercent = (curT, tDur) => (curT / tDur) * 100;
 
 const FloatingMusicTrackComps = () => {
@@ -70,7 +71,7 @@ const FloatingMusicTrackComps = () => {
       <FloatingTracklist />
       
       <div className="artist-image-bg">
-        <img src={`../artists-image/${path}.jpg`} alt="" />
+        <img src={`${PUBLIC_URL}/artists-image/${path}.jpg`} alt="" />
       </div>
       
       <div className="blur-bg" />
@@ -80,7 +81,7 @@ const FloatingMusicTrackComps = () => {
         <div className="floating-artist-image-container"
           style={{ opacity: path ? 1 : 0 }}
         >
-          <img src={`../artists-image/${path}.jpg`} alt="" />
+          <img src={`${PUBLIC_URL}/artists-image/${path}.jpg`} alt="" />
         </div>
 
         <div className="floating-music-info">
@@ -109,7 +110,7 @@ const FloatingMusicTrackComps = () => {
             onClick={() => setShowTracklist(true) }
             style={iconStyle}
           >
-            <img className="icon" src={`../svg/floating-icons/tracklist.svg`} alt="" />
+            <img className="icon" src={`${PUBLIC_URL}/svg/floating-icons/tracklist.svg`} alt="" />
           </div>
 
           {/* Shuffle / Order */}
@@ -120,7 +121,7 @@ const FloatingMusicTrackComps = () => {
                 opacity: activeMusic ? shuffle ? 1 : 0.30 : 0.30
             }}
           >
-            <img className="icon"src="../svg/floating-icons/shuffle.svg" alt="" />
+            <img className="icon" src={`${PUBLIC_URL}/svg/floating-icons/shuffle.svg`} alt="" />
           </div>
 
           {/* heart */}
@@ -128,7 +129,7 @@ const FloatingMusicTrackComps = () => {
             onClick={() => updateFavorites(activeMusicRawTitle)}
             style={iconStyle}
           >
-            <img className="icon"src={`../svg/floating-icons/heart_${isInFavorites ? 'filled' : 'unfilled'}.svg`} alt="" />
+            <img className="icon"src={`${PUBLIC_URL}/svg/floating-icons/heart_${isInFavorites ? 'filled' : 'unfilled'}.svg`} alt="" />
           </div>
 
           {/* More */}
@@ -139,7 +140,7 @@ const FloatingMusicTrackComps = () => {
             }}
             style={iconStyle}
           >
-            <img className="icon" src="../svg/floating-icons/more.svg" alt="" />
+            <img className="icon" src={`${PUBLIC_URL}/svg/floating-icons/more.svg`} alt="" />
           </div>
 
         </div>
@@ -180,7 +181,7 @@ const FloatingMusicTrackComps = () => {
             disabled={ trackHistory.length <= 1 || trackHistoryIndex === 0}
             onClick={ prev }
           >
-            <img className="icon" src="../svg/prev.svg" alt="prev" />
+            <img className="icon" src={`${PUBLIC_URL}/svg/prev.svg`} alt="prev" />
           </button>
 
           <button className="play_pause-but"
@@ -193,7 +194,7 @@ const FloatingMusicTrackComps = () => {
             {musicLoading ? "loading"
             : <img
               className="icon"
-              src={`../svg/${playing ? 'pause' : 'play'}.svg`}
+              src={`${PUBLIC_URL}/svg/${playing ? 'pause' : 'play'}.svg`}
               alt="play_pause"
             />}
           </button>
@@ -204,7 +205,7 @@ const FloatingMusicTrackComps = () => {
 
             onClick={ next }
           >
-            <img className="icon" src="../svg/next.svg" alt="next" />
+            <img className="icon" src={`${PUBLIC_URL}/svg/next.svg`} alt="next" />
           </button>
         </div>
       </div>

@@ -4,6 +4,8 @@ import { bodyData } from '../dataSource';
 import MusicBlock from './MusicBlock';
 import './scss/ArtistTrack.css';
 
+const { PUBLIC_URL } = process.env;
+
 const ArtistTrack = () => {
 
   const { artistID } = useParams();
@@ -43,7 +45,7 @@ const ArtistTrack = () => {
       <div className="artist-track-route">
         <div className="artist-track-info">
           <div className="artist-image-wrapper">
-            <img src={`../artists-image/${path}.jpg`} alt="" />
+            <img src={`${PUBLIC_URL}/artists-image/${path}.jpg`} alt={path} />
           </div>
           <div className="artist-name">
             {artistName}
