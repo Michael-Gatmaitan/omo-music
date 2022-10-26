@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { useContext, useMemo } from 'react';
 import { EventContext } from '../../context/EventContext';
 import { AudioContext } from '../../context/AudioContext';
 import CloseButton from '../Buttons/CloseButton';
@@ -24,11 +24,13 @@ const PlaylistOptions = () => {
     // imageLink
   } = playlistOptionsData;
 
-  const playlistOptionsStyle = {
-    opacity: showPlaylistOptions ? 1 : 0,
-    pointerEvents: showPlaylistOptions ? 'auto' : 'none',
-    transform: `translateY(${showPlaylistOptions ? '0' : '20px'})`
-  };
+  const playlistOptionsStyle = useMemo(() => {
+    return {
+      opacity: showPlaylistOptions ? 1 : 0,
+      pointerEvents: showPlaylistOptions ? 'auto' : 'none',
+      transform: `translateY(${showPlaylistOptions ? '0' : '20px'})`
+    }
+  }, [showPlaylistOptions]);
 
   return (
     <div className="playlist-options-container"

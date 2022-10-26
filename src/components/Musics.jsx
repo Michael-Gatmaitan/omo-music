@@ -1,7 +1,6 @@
 import React, { useState, useEffect, Suspense, lazy } from 'react';
 import { bodyData } from '../dataSource';
 import './scss/MusicBlock.css';
-// import MusicBlock from './MusicBlock';
 
 const MusicBlock = lazy(() => import('./MusicBlock'));
 
@@ -10,14 +9,16 @@ const Musics = () => {
 
   useEffect(() => {
     let dataTemp = [];
+
+    // Collecting all of musics from every artist.
     bodyData.map(body => dataTemp.push(...body.musics));
 
     setMusicDataTable(dataTemp);
 
-    // artistID aligner
-    let bDataTemp = [...bodyData];
-    bDataTemp.map((e, i) => e.artistID = i);
-    console.log(bDataTemp);
+    // artistID aligner *incase of new artists added*
+    // let bDataTemp = [...bodyData];
+    // bDataTemp.map((e, i) => e.artistID = i);
+    // console.log(bDataTemp);
 
     // let totalSongs = 0;
     // for (var i of bDataTemp) {
@@ -26,6 +27,7 @@ const Musics = () => {
 
     // Displays Total song count
     // console.log(totalSongs);
+    console.log(dataTemp);
   }, []);
   
   return (

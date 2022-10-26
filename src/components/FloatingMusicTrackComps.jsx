@@ -60,10 +60,12 @@ const FloatingMusicTrackComps = () => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [activeMusicRawTitle, favorites]);
 
-  const iconStyle = {
-    opacity: activeMusic ? 1 : 0.30,
-    display: activeMusic ? 'block' : 'none'
-  };
+  const iconStyle = useMemo(() => {
+    return {
+      opacity: activeMusic ? 1 : 0.30,
+      display: activeMusic ? 'block' : 'none'
+    }
+  }, [activeMusic]);
 
   return (
     <div className="floating-music-track">

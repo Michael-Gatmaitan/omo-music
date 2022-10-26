@@ -1,4 +1,4 @@
-import { useContext } from 'react';
+import { useContext, useMemo } from 'react';
 import { Link, useHistory } from 'react-router-dom';
 import { AudioContext } from './context/AudioContext';
 
@@ -14,11 +14,11 @@ const AppBody = () => {
 
   let history = useHistory();
 
-  let routes = [
+  let routes = useMemo(() => [
     { routeName: 'Musics', url: '/', id: 0 },
     { routeName: 'Playlists', url: '/playlists', id: 1 },
     { routeName: 'Artists', url: '/artists', id: 2 },
-  ];
+  ], []);
 
   let routeButtons;
 

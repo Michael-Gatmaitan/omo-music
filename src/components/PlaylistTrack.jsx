@@ -1,12 +1,13 @@
 // @ts-nocheck
-import { useEffect, useState, useContext } from 'react';
+import { useEffect, useState, useContext, lazy, Suspense } from 'react';
 import { useParams } from 'react-router-dom';
 import { AudioContext } from '../context/AudioContext';
 import { Link } from 'react-router-dom';
 // import { EventContext } from '../context/EventContext';
-import { playlists } from '../dataSource'; 
+import { playlists } from '../dataSource';
+import SuspenseFallback from './_suspenseFallback';
 
-import MusicBlock from './MusicBlock';
+const MusicBlock = lazy(() => import('./MusicBlock'));
 
 const PlaylistTrack = () => {
 
@@ -71,7 +72,7 @@ const PlaylistTrack = () => {
     <div className="playlist-track-route">
       <div className="pl-track-title">{playlistParam}</div>
 
-      {dataTable.length < 1 ? <div className="pl-empty">This playlist is Empty</div> : ''}
+      {/* {dataTable.length < 1 ? <div className="pl-empty">This playlist is Empty</div> : ''} */}
 
       <div className="mentioned-artists">
         <div className="mentioned-artists-wrapper">
@@ -98,14 +99,15 @@ const PlaylistTrack = () => {
 
       <div className="pl-track-content">
         {dataTable.map((data, i) => (
+          <Suspense key={i} fallback={<SuspenseFallback />}>
           <MusicBlock
             musicDataTable={dataTable}
             data={data}
-            key={i}
             displayArtistImage={true}
             isInCustomPlaylist={isInCustomPlaylist}
             playlistParam={playlistParam}
           />
+          </Suspense>
         ))}
       </div>
     </div>
