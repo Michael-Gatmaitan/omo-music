@@ -16,9 +16,9 @@ const Musics = () => {
     setMusicDataTable(dataTemp);
 
     // artistID aligner *incase of new artists added*
-    // let bDataTemp = [...bodyData];
-    // bDataTemp.map((e, i) => e.artistID = i);
-    // console.log(bDataTemp);
+    let bDataTemp = [...bodyData];
+    bDataTemp.map((e, i) => e.artistID = i);
+    console.log(bDataTemp);
 
     // let totalSongs = 0;
     // for (var i of bDataTemp) {
