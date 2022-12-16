@@ -613,6 +613,23 @@ export const bodyData = [
     artistID: 45,
   },
   {
+    path: "harry-styles",
+    artistName: "Harry Styles",
+    musics: [
+      "Harry Styles - Adore You.mp3",
+      "Harry Styles - As It Was.mp3",
+      "Harry Styles - Daylight.mp3",
+      "Harry Styles - Falling.mp3",
+      "Harry Styles - Golden.mp3",
+      "Harry Styles - Kiwi.mp3",
+      "Harry Styles - Late Night Talking.mp3",
+      "Harry Styles - Music For a Sushi Restaurant.mp3",
+      "Harry Styles - Satellite.mp3",
+      "Harry Styles - Sign of the Times.mp3"
+    ],
+    artistID: 901,
+  },
+  {
     path: "hinder",
     artistName: "Hinder",
     musics: [
@@ -1534,7 +1551,34 @@ export const bodyData = [
     musics: ["Zedd - Clarity.mp3", "Zedd - Stay.mp3", "Zedd - The Middle.mp3"],
     artistID: 105,
   },
+  {
+    path: "zild",
+    artistName: "Zild",
+    musics: [
+      "Zild - A Love Song.mp3",
+      "Zild - dila.mp3",
+      "Zild - Hele.mp3",
+      "Zild - Huminga.mp3",
+      "Zild - Ibang Planeta.mp3",
+      "Zild - iiwanan ng lahat.mp3",
+      "Zild - Kyusi.mp3",
+      "Zild - Paalam Mahal.mp3",
+      "Zild - sinungaling.mp3",
+      "Zild - takbo ng panahon.mp3"
+    ],
+    artistID: 902
+  }
 ];
+
+// Bundle all of musics from all of the music artists.
+
+const allMusicsTemp = [];
+let  i = 0;
+for (i = 0; i < bodyData.length; i++) {
+  allMusicsTemp.push(...bodyData[i].musics);
+}
+
+export const allMusics = allMusicsTemp;
 
 export const playlists = [
   {

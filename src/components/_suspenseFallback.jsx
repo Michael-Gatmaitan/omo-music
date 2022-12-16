@@ -1,5 +1,3 @@
-
-
 const SuspenseFallback = () => {
 
   const style = {
