@@ -1,0 +1,6 @@
+@import '../../../mixins.scss';
+
+.search-nav {
+  @include defaultNavStyle;
+  background-color: #f00 !important;
+}

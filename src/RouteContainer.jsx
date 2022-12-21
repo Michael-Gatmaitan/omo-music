@@ -1,24 +1,25 @@
+import React, { Suspense } from 'react';
 import {
   Switch,
   Route,
   // useHistory,
-  // useLocation
+  useLocation
 } from "react-router-dom";
 
 // Components
-import ArtistTrack from './components/ArtistTrack';
-import Musics from './components/Musics';
-import Artists from './components/Artists';
 import AppBody from './AppBody';
-import Playlists from './components/Playlists';
 import FloatingMusicTrack from './components/FloatingMusicTrack';
-
+import ArtistTrack from './components/ArtistTrack';
 import PlaylistTrack from './components/PlaylistTrack';
-
 import './components/scss/RouteContainer.css';
 
-const RouteContainer = () => {
+// Route Components
+const Musics = React.lazy(() => import('./components/Musics'));
+const Artists = React.lazy(() => import('./components/Artists'));
+const Playlists = React.lazy(() => import('./components/Playlists'));
+const Search = React.lazy(() => import('./components/Search'));
 
+const RouteContainer = () => {
   // const history = useHistory();
   // const location = useLocation();
 
@@ -30,6 +31,8 @@ const RouteContainer = () => {
   //   });
   // }, [])
 
+  const {pathname} = useLocation();
+
   return (
     <div className="route-container">
 
@@ -38,23 +41,29 @@ const RouteContainer = () => {
         <div className="route-grid-wrap">
 
           {/* Routes inside AppBody */}
-          <AppBody />
+          { pathname !== "/search" && <AppBody /> }
 
-          <div id="main-routes-container" style={{ paddingTop: "12px" }}>
+          <div className="main-routes-container">
             <Switch>
               <Route exact path="/">
-                <Musics />
+                <Suspense fallback={<div>Page loading</div>}>
+                  <Musics />
+                </Suspense>
               </Route>
               <Route exact path="/playlists">
-                <Playlists />
+                <Suspense fallback={<div>Page loading</div>}>
+                  <Playlists />
+                </Suspense>
               </Route>
               <Route exact path="/artists">
-                <Artists />
+                <Suspense fallback={<div>Page loading</div>}>
+                  <Artists />
+                </Suspense>
               </Route>
 
               {/* nested routes */}
               <Route path="/artists/:artistID">
-                <ArtistTrack />
+                  <ArtistTrack />
               </Route>
 
               {/* Routers for "Playlists" */}
@@ -65,10 +74,17 @@ const RouteContainer = () => {
               */}
 
               <Route path="/playlists/:playlistID">
-                <PlaylistTrack />
+                  <PlaylistTrack />
+              </Route>
+
+              <Route exact path="/search">
+                <Suspense fallback={<div>Page loading</div>}>
+                  <Search />
+                </Suspense>
               </Route>
             </Switch>
           </div>
+            
         </div>
 
         <FloatingMusicTrack />

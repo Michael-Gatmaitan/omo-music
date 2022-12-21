@@ -29,7 +29,7 @@ const Playlists = () => {
   }, [yourPlaylists]);
 
   return (
-    <div className="playlists-route">
+    <div className="playlists-route route-parent">
       
       <div className="pl-header">
         Made for you

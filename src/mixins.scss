@@ -35,6 +35,20 @@ $darken_pri_blue: darken($pri_blue, 20);
   }
 }
 
+@mixin defaultNavStyle {
+  width: 100%;
+  height: 56px;
+  padding: 16px 22px;
+  background: $drk_blue;
+  position: sticky;
+  top: 0;
+  z-index: 90;
+
+  @include desktop {
+    height: 78px;
+  }
+}
+
 @mixin modalBoxContainerFlex {
   display: flex;
   justify-content: flex-end;

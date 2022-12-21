@@ -45,8 +45,13 @@ const FloatingMusicTrackComps = () => {
 
   const { title, artistName, path } = activeMusicInfo;
 
-  let { curMin, curSec } = { curMin: Math.floor(currentTime / 60).toString(), curSec: Math.round(currentTime % 60).toString() };
-  let { durMin, durSec } = { durMin: Math.floor(duration / 60).toString(), durSec: Math.round(duration % 60).toString() };
+  let { curMin, curSec } = {
+    curMin: Math.floor(currentTime / 60).toString(),
+    curSec: Math.round(currentTime % 60).toString()
+  };
+  let { durMin, durSec } = {
+    durMin: Math.floor(duration / 60).toString(),
+    durSec: Math.round(duration % 60).toString() };
 
   let [isInFavorites, setIsInFavorites] = useState(false);
 

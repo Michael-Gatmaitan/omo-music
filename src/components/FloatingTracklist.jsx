@@ -21,11 +21,7 @@ const FloatingTracklist = () => {
     setShowTracklist
   } = eventContext;
 
-  const floatingTracklilstStyle = {
-    opacity: showTracklist ? 1 : 0,
-    pointerEvents: showTracklist ? 'auto' : 'none',
-    transform: `translateY(${showTracklist ? '0' : '20px'})`
-  };
+  const floatingTracklilstStyle = { display: showTracklist ? 'flex' : 'none'};
 
   return (
     <div className="floating-tracklist" style={floatingTracklilstStyle}>

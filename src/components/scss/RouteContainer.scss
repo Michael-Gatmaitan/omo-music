@@ -22,28 +22,24 @@ a {
   // position: relative;
 
   .route-grid-container {
-    grid-template-columns: auto;
-    // position: relative;
 
     // FloatingMusicTrack has a scss file
 
     .route-grid-wrap {
-      margin-top: 110px;
 
       .app-body {
         width: 100%;
         background-color: $drk_blue;
-        position: fixed;
-        z-index: 89;
+        // position: fixed;
+        position: sticky;
         top: 56px;
+        z-index: 89;
+        padding-top: 12px;
 
         .location-title {
           @include fontProp('Montserrat', 700, 36px);
-          padding-top: 12px;
 
-          span {
-            transition: 0.2s ease-out;
-          }
+          span { transition: 0.2s ease-out; }
 
           .back-arrow {
             position: absolute;
@@ -89,6 +85,14 @@ a {
           }
         }
       }
+
+      // .main-routes-container {
+      //   padding-top: calc(110px + 12px);
+
+      //   @include desktop {
+      //     padding-top: calc(110px + 24px);
+      //   }
+      // }
     }
   }
   
@@ -121,16 +125,11 @@ a {
       grid-gap: 24px;
 
       .route-grid-wrap {
-        // margin-top: 125px;
         margin-top: 0;
-        // padding-top: 24px;
         height: 722px;
         overflow-y: scroll;
 
         .app-body {
-          // position: static;
-          // top: 78px;
-          position: sticky;
           top: 0;
 
           .location-title {

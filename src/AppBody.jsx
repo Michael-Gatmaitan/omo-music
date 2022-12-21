@@ -1,5 +1,5 @@
-import { useContext, useMemo } from 'react';
-import { Link, useHistory } from 'react-router-dom';
+import { useContext, useMemo, useEffect } from 'react';
+import { Link, useHistory, useLocation } from 'react-router-dom';
 import { AudioContext } from './context/AudioContext';
 
 const { PUBLIC_URL } = process.env;
@@ -12,28 +12,31 @@ const AppBody = () => {
     setCurrentPage
   } = useContext(AudioContext);
 
-  let history = useHistory();
+  const history = useHistory();
+  const location = useLocation();
+  const { pathname } = location;
 
   let routes = useMemo(() => [
     { routeName: 'Musics', url: '/', id: 0 },
     { routeName: 'Playlists', url: '/playlists', id: 1 },
     { routeName: 'Artists', url: '/artists', id: 2 },
+    // { routeName: 'Search', url: '/search', id: 3 },
   ], []);
 
-  let routeButtons;
+  useEffect(() => {
+    let slashCount = 0;
+    pathname.split("").forEach(char => slashCount += char === "/" ? 1 : 0);
+    if (pathname === "/search" || slashCount >= 2) {
+      return;
+    }
+    setCurrentPage(pathname);
+    
+    let routeButtons = [...document.getElementsByClassName("route-button")];
+    let actvBtn = routes.filter(e => e.url === pathname)[0].id;
 
-  const handleSetPage = (page, id) => {
-    routeButtons = [...document.getElementsByClassName("route-button")];
-    setCurrentPage(page);
-
-    routeButtons.map((e, i) => {
-      if (id === i)
-        e.classList.add("active-route");
-      else
-        e.classList.remove("active-route");
-      return 0;
-    });
-  }
+    routeButtons.map((e, i) => actvBtn === i ? e.classList.add("active-route") : e.classList.remove("active-route"));
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [pathname]);
 
   return (
     <div className="app-body">
@@ -49,20 +52,11 @@ const AppBody = () => {
         <img src={`${PUBLIC_URL}/svg/back-arrow.svg`} alt="back-arrow" />
       </div>
 
-      <span
-        style={{
-          marginLeft: showBackArrow ? '46px' : '0px'
-        }}
-      >{currentPage}</span>
+      <span style={{ marginLeft: showBackArrow ? '46px' : '0px' }}>{currentPage}</span>
     </div>
     <ul className="route-links">
       {routes.map(e => (
-        <Link
-          onClick={ () => handleSetPage(e.routeName, e.id) }
-          key={e.id}
-          to={e.url}
-          className={`route-button ${e.id === 0 ? "active-route" : ""}`}
-        >
+        <Link key={e.id} to={e.url} className={`route-button`}>
           <li>
               {e.routeName}
           </li>

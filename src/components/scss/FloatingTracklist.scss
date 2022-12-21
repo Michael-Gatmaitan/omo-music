@@ -9,13 +9,10 @@
   left: 0;
   z-index: 20;
   padding: 8px;
-  display: flex;
+  // display: flex;
+  display: none;
   justify-content: flex-end;
   flex-direction: column;
-  transition: 0.1s ease-in;
-  opacity: 0;
-  pointer-events: none;
-  transform: translateY(20px);
 
   .tracklist-container {
     width: 100%;

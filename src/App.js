@@ -56,12 +56,10 @@ function App() {
 
   function countSlashURL(url) {
     let count = 0;
-    let slash = "/";
 
-    for (let i = 0; i < url.length; i += 1) {
-      if (url[i] === slash)
-        count += 1
-    }
+    url.split("")
+      .forEach(ch => count += ch === "/" ? 1 : 0);
+
     return count;
   }
 

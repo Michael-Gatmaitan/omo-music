@@ -28,7 +28,7 @@ const Musics = () => {
   }, []);
   
   return (
-    <div className="music-route">
+    <div className="music-route route-parent">
       {musicDataTable.map((data, i) => (
         <Suspense fallback={<SuspenseFallback />} key={i}>
           <MusicBlock

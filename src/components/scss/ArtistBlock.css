@@ -1,0 +1,65 @@
+.artist-block {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  background-color: #0618b5;
+  border-radius: 12px;
+  overflow: hidden;
+  position: relative;
+  -webkit-transition: 0.1 ease-in;
+  transition: 0.1 ease-in;
+}
+
+.artist-block:focus {
+  border: solid 2px #fff;
+}
+
+.artist-block .dark-fade {
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0)), to(rgba(0, 0, 0, 0.7)));
+  background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.7));
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.artist-block .artist-info {
+  width: 100%;
+  margin-top: 50px;
+  padding: 0 24px 0 0;
+  position: absolute;
+  bottom: 12px;
+  left: 12px;
+}
+
+.artist-block .artist-info a {
+  text-decoration: none;
+}
+
+.artist-block .artist-info div {
+  -webkit-transition: 0.1s ease-in;
+  transition: 0.1s ease-in;
+}
+
+.artist-block .artist-info .artist-name-blck {
+  font-family: "Montserrat", sans-serif !important;
+  font-weight: 700 !important;
+  font-size: 18px !important;
+  color: #fff !important;
+}
+
+.artist-block .artist-info .artist-songs-length {
+  font-family: "Open Sans", sans-serif !important;
+  font-weight: 600 !important;
+  font-size: 12px !important;
+  color: #fff !important;
+}
+
+@media (min-width: 780px) {
+  .artist-block:hover .artist-info .artist-name-blck,
+  .artist-block:hover .artist-info .artist-songs-length {
+    color: #293EF8 !important;
+  }
+}
+/*# sourceMappingURL=ArtistBlock.css.map */
