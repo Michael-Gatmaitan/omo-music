@@ -56,6 +56,8 @@ export default class AudioContextProvider extends Component {
 		}
 	}
 
+
+	// Setting all state to localstorage bc of state changes
 	UNSAFE_componentWillUpdate(nextProps, nextState) {
 		let isOnlyCurrentTimeChanged = this.state.playing && this.state.currentTime !== nextState.currentTime;
 		if (isOnlyCurrentTimeChanged) {

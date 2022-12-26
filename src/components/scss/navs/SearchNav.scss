@@ -2,5 +2,35 @@
 
 .search-nav {
   @include defaultNavStyle;
-  background-color: #f00 !important;
+  background-color: $drk_blue !important;
+
+  padding: 8px 22px;
+  display: grid;
+  grid-template-columns: auto 1fr calc(28px + (12px * 2));
+  grid-gap: 8px;
+  align-items: center;
+  
+  a {
+    .nav-back-arrow {
+      @include flexCenter;
+    }
+  }
+
+  .search-input {
+    height: 100%;
+    padding: 8px;
+    @include fontProp("Montserrat", 400, 16px, #121212);
+    border-radius: 4px;
+    min-width: 0;
+  }
+
+  .close-search {
+    // height: calc(100% + (8px * 2));
+    height: 100%;
+    // position: absolute;
+    right: 22px;
+    // width: calc(28px + (12px * 2));
+    // transform: translateY(-8px);
+    background-color: #00f;
+  }
 }

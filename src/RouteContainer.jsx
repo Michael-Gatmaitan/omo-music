@@ -10,9 +10,10 @@ import {
 import AppBody from './AppBody';
 import FloatingMusicTrack from './components/FloatingMusicTrack';
 import ArtistTrack from './components/ArtistTrack';
-import PlaylistTrack from './components/PlaylistTrack';
+// import PlaylistTrack from './components/PlaylistTrack';
+import { PageFallback } from './components/_FallbackComponents';
 import './components/scss/RouteContainer.css';
-
+const PlaylistTrack = React.lazy(() => import('./components/PlaylistTrack'));
 // Route Components
 const Musics = React.lazy(() => import('./components/Musics'));
 const Artists = React.lazy(() => import('./components/Artists'));
@@ -46,17 +47,17 @@ const RouteContainer = () => {
           <div className="main-routes-container">
             <Switch>
               <Route exact path="/">
-                <Suspense fallback={<div>Page loading</div>}>
+                <Suspense fallback={<PageFallback />}>
                   <Musics />
                 </Suspense>
               </Route>
               <Route exact path="/playlists">
-                <Suspense fallback={<div>Page loading</div>}>
+                <Suspense fallback={<PageFallback />}>
                   <Playlists />
                 </Suspense>
               </Route>
               <Route exact path="/artists">
-                <Suspense fallback={<div>Page loading</div>}>
+                <Suspense fallback={<PageFallback />}>
                   <Artists />
                 </Suspense>
               </Route>
@@ -74,11 +75,13 @@ const RouteContainer = () => {
               */}
 
               <Route path="/playlists/:playlistID">
+                <Suspense fallback={<PageFallback />}>
                   <PlaylistTrack />
+                </Suspense>
               </Route>
 
               <Route exact path="/search">
-                <Suspense fallback={<div>Page loading</div>}>
+                <Suspense fallback={<PageFallback />}>
                   <Search />
                 </Suspense>
               </Route>

@@ -108,7 +108,7 @@
   position: absolute;
   right: 22px;
   height: 100%;
-  width: 28px;
+  width: calc(28px + (12px * 2));
   background-color: #f00;
   padding: 4px;
 }

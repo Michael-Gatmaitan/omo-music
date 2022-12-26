@@ -1,5 +1,5 @@
 import React, { useState, useEffect, Suspense, lazy } from 'react';
-import SuspenseFallback from './_suspenseFallback';
+import { MusicBlockFallback } from './_FallbackComponents';
 import { allMusics } from '../dataSource';
 import './scss/MusicBlock.css';
 
@@ -30,7 +30,7 @@ const Musics = () => {
   return (
     <div className="music-route route-parent">
       {musicDataTable.map((data, i) => (
-        <Suspense fallback={<SuspenseFallback />} key={i}>
+        <Suspense fallback={<MusicBlockFallback />} key={i}>
           <MusicBlock
             musicDataTable={musicDataTable}
             data={data}

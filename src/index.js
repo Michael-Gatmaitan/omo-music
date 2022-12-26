@@ -7,13 +7,16 @@ import { BrowserRouter as Router } from 'react-router-dom';
 // Contexts
 import AudioContextProvider from './context/AudioContext';
 import EventContextProvider from './context/EventContext';
+import SearchContextProvider from './context/SearchContext';
 
 ReactDOM.render(
   <Router>
     <AudioContextProvider>
       {/* {localStorage.length === 0 ? <LandingPage /> : <App />} */}
       <EventContextProvider>
-        <App />
+        <SearchContextProvider>
+          <App />
+        </SearchContextProvider>
       </EventContextProvider>
     </AudioContextProvider>
   </Router>,

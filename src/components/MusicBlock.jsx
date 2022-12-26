@@ -2,6 +2,8 @@ import { useContext, useEffect, useState } from 'react';
 import { useHistory } from 'react-router-dom';
 import { AudioContext } from '../context/AudioContext';
 import { EventContext } from '../context/EventContext';
+import { SearchContext } from '../context/SearchContext';
+import './scss/MusicBlock.css';
 
 const MusicBlock = props => {
   const history = useHistory();
@@ -26,21 +28,22 @@ const MusicBlock = props => {
     setShowMusicTrackMobile
   } = useContext(EventContext);
 
+  const { musicsResults } = useContext(SearchContext);
+
   let [isActiveMusic, setIsActiveMusic] = useState(false);
 
   useEffect(() => {
     const { title, artistName } = activeMusicInfo;
-    
     setIsActiveMusic(data === `${artistName} - ${title}.mp3`);
     // eslint-disable-next-line
-  }, [activeMusicInfo]);
+  }, [activeMusicInfo, musicsResults]);
 
   const musicTitle = data.slice(data.indexOf(" - ") + 3, -4);
   const musicArtist = data.slice(0, data.indexOf(" - "));
   const customPath = musicArtist.replaceAll(" ", "-").toLowerCase();
   
   const mbClassIsActiveMusic = isActiveMusic ? 'active-music' : "";
-  const mbClassHasImage = displayArtistImage ? "" : 'music-block music-block-no-artist-image';
+  const mbClassHasImage = displayArtistImage ? "" : 'music-block-no-artist-image';
   const mbClassHasRemove = isInCustomPlaylist ? 'removable-music-block' : "";
 
 

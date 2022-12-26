@@ -1,0 +1,47 @@
+@import '../../mixins.scss';
+
+.musicblock-fallback {
+  width: 100%;
+  height: 56px;
+  margin-bottom: 5px;
+  background-color: rgba($sec-blue, 0.4);
+  border-radius: 9px;
+  padding: 5px;
+
+  .shadows {
+    display: grid;
+    gap: 3px;
+
+    .title-shadow {
+      border-radius: 4px;
+      width: 80%;
+      height: 22px;
+      background-color: rgba(#fff, 0.3);
+    }
+
+    .artist-shadow {
+      border-radius: 4px;
+      width: 10%;
+      height: 17px;
+      background-color: rgba(#fff, 0.3);
+    }
+
+  }
+}
+
+.page-fallback {
+  width: 100%;
+  height: 300px;
+  display: grid;
+  place-items: center;
+
+  .loading-container {
+    display: grid;
+    gap: 12px;
+    place-items: center;
+    
+    .loading-label {
+      @include fontProp("Montserrat", 400, 18px);
+    }
+  }
+}

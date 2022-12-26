@@ -1,4 +1,152 @@
-.search-route {
-  background-color: #f00;
+.search-route .search-filters {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 8px;
+  padding: 12px 0;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 56px;
+  z-index: 10;
+  background-color: #0B0B14;
+}
+
+.search-route .search-filters div {
+  padding: 9px;
+  background-color: transparent;
+  border-radius: 8px;
+  border: solid 3px #0000FF;
+  font-family: "Montserrat", sans-serif !important;
+  font-weight: 400 !important;
+  font-size: 14px !important;
+  color: #fff !important;
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+.search-route .search-filters .active-filt {
+  background-color: #0000FF;
+}
+
+@media (min-width: 780px) {
+  .search-route .search-filters {
+    top: 0;
+  }
+}
+
+.search-route .musics-results .search-header-text, .search-route .artists-results .search-header-text {
+  margin-bottom: 12px;
+  font-family: "Montserrat", sans-serif !important;
+  font-weight: 700 !important;
+  font-size: 24px !important;
+  color: #fff !important;
+}
+
+@media (min-width: 780px) {
+  .search-route .musics-results .search-header-text, .search-route .artists-results .search-header-text {
+    font-size: 32px !important;
+  }
+}
+
+.search-route .search-something, .search-route .no-results, .search-route .results-for {
+  font-family: "Montserrat", sans-serif !important;
+  font-weight: 700 !important;
+  font-size: 32px !important;
+  color: #fff !important;
+  margin-top: 32px;
+}
+
+@media (min-width: 780px) {
+  .search-route .search-something, .search-route .no-results, .search-route .results-for {
+    font-size: 48px !important;
+  }
+}
+
+.search-route .results-for {
+  margin: 12px 0 !important;
+  font-size: 18px !important;
+}
+
+@media (min-width: 780px) {
+  .search-route .results-for {
+    font-size: 24px !important;
+  }
+}
+
+.search-route .artists-results {
+  margin-top: 12px;
+}
+
+.search-route .artists-results .artists-results-grid {
+  width: 100%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  grid-auto-rows: 153px;
+  grid-gap: 10px;
+}
+
+@media (min-width: 780px) {
+  .search-route .artists-results .artists-results-grid {
+    grid-gap: 15px;
+    padding-right: 15px;
+  }
+}
+
+@media (min-width: 460px) {
+  .search-route .artists-results .artists-results-grid {
+    grid-auto-rows: 203px;
+  }
+}
+
+@media (min-width: 560px) {
+  .search-route .artists-results .artists-results-grid {
+    grid-auto-rows: 253px;
+  }
+}
+
+@media (min-width: 660px) {
+  .search-route .artists-results .artists-results-grid {
+    -ms-grid-columns: (auto)[3];
+        grid-template-columns: repeat(3, auto);
+    grid-auto-rows: 153px;
+  }
+}
+
+@media (min-width: 760px) {
+  .search-route .artists-results .artists-results-grid {
+    -ms-grid-columns: (auto)[4];
+        grid-template-columns: repeat(4, auto);
+    grid-auto-rows: 163px;
+  }
+}
+
+@media (min-width: 780px) {
+  .search-route .artists-results .artists-results-grid {
+    -ms-grid-columns: (auto)[2];
+        grid-template-columns: repeat(2, auto);
+    grid-auto-rows: 163px;
+  }
+}
+
+@media (min-width: 1050px) {
+  .search-route .artists-results .artists-results-grid {
+    -ms-grid-columns: (auto)[3];
+        grid-template-columns: repeat(3, auto);
+    grid-auto-rows: 163px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .search-route .artists-results .artists-results-grid {
+    -ms-grid-columns: (auto)[4];
+        grid-template-columns: repeat(4, auto);
+    grid-auto-rows: 163px;
+  }
 }
 /*# sourceMappingURL=Search.css.map */

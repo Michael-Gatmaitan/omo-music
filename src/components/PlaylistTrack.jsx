@@ -5,7 +5,7 @@ import { AudioContext } from '../context/AudioContext';
 import { Link } from 'react-router-dom';
 // import { EventContext } from '../context/EventContext';
 import { playlists } from '../dataSource';
-import SuspenseFallback from './_suspenseFallback';
+import { MusicBlockFallback } from './_FallbackComponents';
 
 const MusicBlock = lazy(() => import('./MusicBlock'));
 
@@ -99,14 +99,14 @@ const PlaylistTrack = () => {
 
       <div className="pl-track-content">
         {dataTable.map((data, i) => (
-          <Suspense key={i} fallback={<SuspenseFallback />}>
-          <MusicBlock
-            musicDataTable={dataTable}
-            data={data}
-            displayArtistImage={true}
-            isInCustomPlaylist={isInCustomPlaylist}
-            playlistParam={playlistParam}
-          />
+          <Suspense key={i} fallback={<MusicBlockFallback />}>
+            <MusicBlock
+              musicDataTable={dataTable}
+              data={data}
+              displayArtistImage={true}
+              isInCustomPlaylist={isInCustomPlaylist}
+              playlistParam={playlistParam}
+            />
           </Suspense>
         ))}
       </div>

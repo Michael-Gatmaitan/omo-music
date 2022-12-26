@@ -1,6 +1,7 @@
-import { useContext } from 'react';
+import React, { useContext } from 'react';
 import { EventContext } from '../context/EventContext';
-import { Link, useLocation } from 'react-router-dom';
+import { SearchContext } from '../context/SearchContext';
+import { Link, useLocation, useHistory } from 'react-router-dom';
 import './scss/navs/Nav.css';
 import './scss/navs/SearchNav.css';
 
@@ -23,7 +24,7 @@ const Nav = () => {
       pathname !== "/search" ?
         <NavContent setShowSidebar={setShowSidebar} />
       :
-        <SearchbarContent />
+        <SearchNavContent />
       }
     </div>
   )
@@ -48,10 +49,29 @@ const NavContent = ({ setShowSidebar }) => (
   </>
 );
 
-const SearchbarContent = () => {
+const SearchNavContent = () => {
+
+  const {
+    performSearch
+  } = useContext(SearchContext);
+
+  const history = useHistory();
 
   return (
-    <div className="search-content">mama mo search</div>
+    <React.Fragment>
+      <Link to="/">
+        <div className="nav-back-arrow" onClick={() => history.goBack()}>
+          <img src={`${PUBLIC_URL}/svg/back-arrow.svg`} alt="back" />
+        </div>
+      </Link>
+      <input
+        type="text"
+        className="search-input"
+        placeholder="Search song or artist"
+        onChange={ e => performSearch(e.target.value)}
+      />
+      <div className="close-search"></div>
+    </React.Fragment>
   )
 }
 
