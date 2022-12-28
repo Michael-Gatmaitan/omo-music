@@ -1,4 +1,4 @@
-import React, { useEffect, useContext, useState, lazy, Suspense } from 'react';
+import React, { useEffect, useState, useContext, lazy, Suspense } from 'react';
 import ArtistBlock from './ArtistBlock';
 import { SearchContext } from '../context/SearchContext';
 import { MusicBlockFallback } from './_FallbackComponents';

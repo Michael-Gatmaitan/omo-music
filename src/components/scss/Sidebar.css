@@ -33,17 +33,24 @@
 }
 
 .sidebar-container .sidebar .sidebar-nav .close-sidebar {
-  width: 27px;
-  height: 27px;
+  width: calc(28px + (22px * 2));
+  height: 100%;
   position: absolute;
-  top: 50%;
-  left: 0;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
+  left: -22px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .sidebar-container .sidebar .sidebar-nav .close-sidebar img {
-  height: 100%;
+  width: 28px;
+  height: 28px;
 }
 
 .sidebar-container .sidebar .sidebar-nav .sidebar-nav-omo-logo {
@@ -98,6 +105,28 @@
   font-weight: 600 !important;
   font-size: 12px !important;
   color: #fff !important;
+}
+
+.sidebar-container .sidebar .sidebar-buttons {
+  display: -ms-grid;
+  display: grid;
+  gap: 12px;
+  margin: 28px 0;
+}
+
+.sidebar-container .sidebar .sidebar-buttons .button-container .button {
+  padding: 12px;
+  display: inline-block;
+  font-family: "Montserrat", sans-serif !important;
+  font-weight: 600 !important;
+  font-size: 24px !important;
+  color: #fff !important;
+  background-color: rgba(10, 19, 68, 0.58);
+  border-radius: 8px;
+}
+
+.sidebar-container .sidebar .sidebar-buttons .button-container .button:hover {
+  background-color: #293EF8;
 }
 
 .sidebar-container .sidebar .profile-container {

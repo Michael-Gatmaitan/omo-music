@@ -197,6 +197,13 @@
   z-index: 10;
 }
 
+.removable-music-block .remove .remove-icon {
+  width: 50%;
+  height: 4px;
+  background-color: #fff;
+  border-radius: 4px;
+}
+
 @media (min-width: 780px) {
   .removable-music-block .remove {
     height: 60px;

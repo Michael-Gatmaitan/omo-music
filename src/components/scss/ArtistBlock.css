@@ -31,6 +31,7 @@
   position: absolute;
   bottom: 12px;
   left: 12px;
+  text-shadow: 0 4px 8px rgba(0, 0, 0, 0.8);
 }
 
 .artist-block .artist-info a {

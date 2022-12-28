@@ -58,7 +58,7 @@ const MusicBlock = props => {
     removeMusicInPlaylist(playlistParam, data);
     /* Direct to previous section when
        some music deleted in playlist */
-    history.goBack();
+    // history.goBack();
   }
 
   const handleMusicEvent = e => isActiveMusic ? setShowMusicTrackMobile(true) : functionsToFire(data, musicDataTable);
@@ -85,7 +85,9 @@ const MusicBlock = props => {
       </div>
 
       {isInCustomPlaylist ?
-      <div className="remove" onClick={ handleRemoveEvent }></div>
+      <div className="remove" onClick={ handleRemoveEvent }>
+        <div className="remove-icon" />
+      </div>
       : ""}
 
       <div className="music-options-parent" onClick={ handleOptionsEvent }>

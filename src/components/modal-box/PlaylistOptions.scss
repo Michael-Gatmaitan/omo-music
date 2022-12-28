@@ -11,7 +11,7 @@
     
     .header {
       @include fontProp("Montserrat", 700, 24px);
-      color: #000;
+      color: #000 !important;
     }
 
     .option-selection-container {
@@ -23,7 +23,7 @@
         
         .delete-message {
           @include fontProp("Montserrat", 400, 18px);
-          color: #000;
+          color: #000 !important;
           margin: 16px 0 18px 0;
         }
 
@@ -78,7 +78,7 @@
 
           .option-title {
             @include fontProp("Montserrat", 400, 18px);
-            color: #000;
+            color: #000 !important;
             transition: 0.1s ease-in;
           }
 

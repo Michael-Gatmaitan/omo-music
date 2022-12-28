@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { useEffect, useRef, useContext } from 'react';
 import { EventContext } from '../context/EventContext';
 import { SearchContext } from '../context/SearchContext';
 import { Link, useLocation, useHistory } from 'react-router-dom';
@@ -43,7 +43,9 @@ const NavContent = ({ setShowSidebar }) => (
 
     <div className="search-container">
       <Link to="/search">
-        <div className="search"></div>      
+        <div className="search">
+          <img src={`${PUBLIC_URL}/svg/search.svg`} alt="search-icon" />
+        </div>      
       </Link>
     </div>
   </>
@@ -54,6 +56,10 @@ const SearchNavContent = () => {
   const {
     performSearch
   } = useContext(SearchContext);
+
+  const inputBoxRef = useRef(null);
+
+  useEffect(() => inputBoxRef.current.focus(), []);
 
   const history = useHistory();
 
@@ -69,6 +75,7 @@ const SearchNavContent = () => {
         className="search-input"
         placeholder="Search song or artist"
         onChange={ e => performSearch(e.target.value)}
+        ref={inputBoxRef}
       />
       <div className="close-search"></div>
     </React.Fragment>

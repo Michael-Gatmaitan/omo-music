@@ -1,17 +1,24 @@
-// @ts-nocheck
-import { useContext } from "react";
-import { EventContext } from "../context/EventContext";
+import { useContext } from 'react';
+import { EventContext } from '../context/EventContext';
+import { Link } from 'react-router-dom';
 import "./scss/Sidebar.css";
 
 const { PUBLIC_URL } = process.env;
 
 const Sidebar = () => {
-  const { showSidebar } = useContext(EventContext);
+  const { showSidebar, setShowSidebar } = useContext(EventContext);
 
   const sidebarStyle = {
     opacity: showSidebar ? 1 : 0,
     pointerEvents: showSidebar ? "auto" : "none",
   };
+
+  const sidebarButtons = [
+    { text: "My Portfolio", path: "/" },
+    { text: "About OMO Music", path: "/playlists" },
+    { text: "Contact Developer", path: "/artists" },
+    { text: "Github repo", path: "/search" },
+  ];
 
   const sidebarIcons = {
     socMeds: [
@@ -55,6 +62,19 @@ const Sidebar = () => {
             <div className="omo-developer">Michael Gatmaitan, 2021</div>
           </div>
         </div>
+
+        {/* Buttons */}
+
+        <div className="sidebar-buttons">
+          {sidebarButtons.map(button => (
+            <div className="button-container">
+              <Link to={button.path} onClick={ () => setShowSidebar(false) }>
+                <div className="button">{button.text}</div>
+              </Link>
+            </div>
+          ))}
+        </div>
+
 
         <div className="profile-container">
 

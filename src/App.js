@@ -21,7 +21,6 @@ import Nav from './components/Nav';
 import RouteContainer from './RouteContainer.jsx';
 
 function App() {
-  const audioContext = useContext(AudioContext);
   const {
     // States need to update
     activeMusic,
@@ -38,7 +37,7 @@ function App() {
     // TODO,
     // musicLoading,
     triggerMusicLoading
-  } = audioContext;
+  } = useContext(AudioContext);
 
   let aud = useRef(null);
 

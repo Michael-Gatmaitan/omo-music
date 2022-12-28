@@ -1,5 +1,5 @@
 // @ts-nocheck
-import { useEffect, useState, useContext, lazy, Suspense } from 'react';
+import React, { useEffect, useState, useContext, lazy, Suspense } from 'react';
 import { useParams } from 'react-router-dom';
 import { AudioContext } from '../context/AudioContext';
 import { Link } from 'react-router-dom';
@@ -52,7 +52,7 @@ const PlaylistTrack = () => {
       setDataTable(searchedPlaylist.musics);
     }
     // eslint-disable-next-line
-  }, []);
+  }, [yourPlaylists]);
 
   // Setting mentioned Artists
   useEffect(() => {
@@ -72,44 +72,48 @@ const PlaylistTrack = () => {
     <div className="playlist-track-route">
       <div className="pl-track-title">{playlistParam}</div>
 
-      {/* {dataTable.length < 1 ? <div className="pl-empty">This playlist is Empty</div> : ''} */}
+      {dataTable.length < 1 ?
+        <div className="pl-empty">This playlist is Empty</div>
+      :
+        <React.Fragment>
+          <div className="mentioned-artists">
+            <div className="mentioned-artists-wrapper">
+              {mentionedArtist.map((artist, i) => {
+                let artistFilteredName = artist.toLowerCase().replaceAll(" ", "-");
+                let artistLink = `/artists/${artistFilteredName}`;
+                
+                return (
+                  <Link to={artistLink} key={i}>
+                    <div className="artist">
 
-      <div className="mentioned-artists">
-        <div className="mentioned-artists-wrapper">
-          {mentionedArtist.map((artist, i) => {
-            let artistFilteredName = artist.toLowerCase().replaceAll(" ", "-");
-            let artistLink = `/artists/${artistFilteredName}`;
-            
-            return (
-              <Link to={artistLink} key={i}>
-                <div className="artist">
+                      <div className="mentioned-artist-image">
+                        <img src={`../artists-image/${artistFilteredName}.jpg`} alt="" />
+                      </div>
 
-                  <div className="mentioned-artist-image">
-                    <img src={`../artists-image/${artistFilteredName}.jpg`} alt="" />
-                  </div>
+                      {artist}
 
-                  {artist}
+                    </div>
+                  </Link>
+                );
+              })}
+            </div>
+          </div>
 
-                </div>
-              </Link>
-            );
-          })}
-        </div>
-      </div>
-
-      <div className="pl-track-content">
-        {dataTable.map((data, i) => (
-          <Suspense key={i} fallback={<MusicBlockFallback />}>
-            <MusicBlock
-              musicDataTable={dataTable}
-              data={data}
-              displayArtistImage={true}
-              isInCustomPlaylist={isInCustomPlaylist}
-              playlistParam={playlistParam}
-            />
-          </Suspense>
-        ))}
-      </div>
+          <div className="pl-track-content">
+            {dataTable.map((data, i) => (
+              <Suspense key={i} fallback={<MusicBlockFallback />}>
+                <MusicBlock
+                  musicDataTable={dataTable}
+                  data={data}
+                  displayArtistImage={true}
+                  isInCustomPlaylist={isInCustomPlaylist}
+                  playlistParam={playlistParam}
+                />
+              </Suspense>
+            ))}
+          </div>
+        </React.Fragment>
+      }
     </div>
   )
 }

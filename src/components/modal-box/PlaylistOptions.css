@@ -40,7 +40,7 @@
   font-weight: 700 !important;
   font-size: 24px !important;
   color: #fff !important;
-  color: #000;
+  color: #000 !important;
 }
 
 .playlist-options-container .playlist-options-content .option-selection-container {
@@ -59,7 +59,7 @@
   font-weight: 400 !important;
   font-size: 18px !important;
   color: #fff !important;
-  color: #000;
+  color: #000 !important;
   margin: 16px 0 18px 0;
 }
 
@@ -140,7 +140,7 @@
   font-weight: 400 !important;
   font-size: 18px !important;
   color: #fff !important;
-  color: #000;
+  color: #000 !important;
   -webkit-transition: 0.1s ease-in;
   transition: 0.1s ease-in;
 }

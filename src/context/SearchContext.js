@@ -48,8 +48,10 @@ export default class SearchContextProvider extends Component {
         if (a.length === 0) {
           for (let i = 0; i < m.length; i++) {
             let relatedArtist = m[i].slice(0, m[i].indexOf("-") - 1);
+
             for (let j = 0; j < bodyData.length; j++) {
               if (bodyData[j].artistName === relatedArtist) {
+                if (a.includes(bodyData[j])) continue;
                 a.push(bodyData[j]);
               }
             }

@@ -9,8 +9,8 @@
   grid-template-columns: 100%;
 
   .header {
-    @include fontProp('Montserrat', 700, 24px, #000);
-    color: #000;
+    @include fontProp('Montserrat', 700, 24px);
+    color: #000 !important;
   }
 
   .input-field {
@@ -22,7 +22,7 @@
         margin-top: 16px;
         padding: 16px 12px;
         @include fontProp('Montserrat', 600, 18px);
-        color: #323232;
+        color: #323232 !important;
         border-radius: 8px;
         background-color: #D8DAED;
         transition: 0.1s ease-in;
@@ -37,7 +37,7 @@
       @include fontProp('Montserrat', 500, 14px, #000);
     }
     .error {
-      color: #F85F57;
+      color: #110d0d;
     }
     .warning {
       color: #F8851B;

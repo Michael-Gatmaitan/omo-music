@@ -30,7 +30,7 @@
 
 .close-modal:hover {
   background-color: #293EF8;
-  color: #fff;
+  color: #fff !important;
 }
 
 @media (min-width: 780px) {

@@ -26,14 +26,16 @@
       @include flexCenter;
 
       .close-sidebar {
-        width: 27px;
-        height: 27px;
+        width: calc(28px + (22px * 2));
+        height: 100%;
         position: absolute;
-        top: 50%;
-        left: 0;
-        transform: translateY(-50%);
+        left: -22px;
+        @include flexCenter;
 
-        img { height: 100%; }
+        img {
+          width: 28px;
+          height: 28px;
+        }
       }
 
       .sidebar-nav-omo-logo {
@@ -72,6 +74,29 @@
 
         .omo-developer {
           @include fontProp('Open Sans', 600, 12px, #fff);
+        }
+      }
+    }
+
+    // Buttons
+
+    .sidebar-buttons {
+      display: grid;
+      gap: 12px;
+      margin: 28px 0;
+
+      .button-container {
+        .button {
+          padding: 12px;
+          display: inline-block;
+          @include fontProp('Montserrat', 600, 24px);
+          background-color: $hgl_blue;
+          border-radius: 8px;
+          cursor: pointer;
+          
+          &:hover {
+            background-color: $pri-blue;
+          }
         }
       }
     }

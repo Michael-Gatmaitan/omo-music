@@ -107,18 +107,18 @@ const PlaylistFrom = props => {
             />
           </div>
 
-          {titleExist ?
+          {titleExist &&
           <div className="error">
             Playlist Title already existed.
-          </div> : ""}
-          {titleEmpty ?
+          </div>}
+          {titleEmpty &&
           <div className="warning">
             Playlist Title cannot be empty.
-          </div> : ""}
-          {invalidChar ?
+          </div>}
+          {invalidChar &&
           <div className="error">
             Playlist Title cannot include "/", "#", "?" or "%".
-          </div> : ""}
+          </div>}
 
           <div className="image-link-con">
             <input
