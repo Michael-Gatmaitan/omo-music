@@ -1,13 +1,10 @@
 import { useContext, useEffect, useState } from 'react';
-import { useHistory } from 'react-router-dom';
 import { AudioContext } from '../context/AudioContext';
 import { EventContext } from '../context/EventContext';
 import { SearchContext } from '../context/SearchContext';
 import './scss/MusicBlock.css';
 
 const MusicBlock = props => {
-  const history = useHistory();
-
   const {
     data,
     musicDataTable,
@@ -56,9 +53,6 @@ const MusicBlock = props => {
   const handleRemoveEvent = e => {
     e.stopPropagation();
     removeMusicInPlaylist(playlistParam, data);
-    /* Direct to previous section when
-       some music deleted in playlist */
-    // history.goBack();
   }
 
   const handleMusicEvent = e => isActiveMusic ? setShowMusicTrackMobile(true) : functionsToFire(data, musicDataTable);

@@ -75,6 +75,8 @@ export default class AudioContextProvider extends Component {
 		musics.splice(musics.indexOf(rawTitle), 1);
 
 		this.setState({ yourPlaylists: yourPlaylistsTemp });
+
+		console.log(rawTitle, " successfully removed from playlist.");
 	}
 
 	updatePlaylistMusics = (obj, rawTitle) => {

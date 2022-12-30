@@ -14,10 +14,10 @@ const Sidebar = () => {
   };
 
   const sidebarButtons = [
-    { text: "My Portfolio", path: "/" },
-    { text: "About OMO Music", path: "/playlists" },
-    { text: "Contact Developer", path: "/artists" },
-    { text: "Github repo", path: "/search" },
+    { text: "My Portfolio", path: "/", id: 1 },
+    { text: "About OMO Music", path: "/playlists", id: 2 },
+    { text: "Contact Developer", path: "/artists", id: 3 },
+    { text: "Github repo", path: "https://github.com/Michael-Gatmaitan/omo-music", id: 4 },
   ];
 
   const sidebarIcons = {
@@ -67,8 +67,8 @@ const Sidebar = () => {
 
         <div className="sidebar-buttons">
           {sidebarButtons.map(button => (
-            <div className="button-container">
-              <Link to={button.path} onClick={ () => setShowSidebar(false) }>
+            <div className="button-container" key={button.id}>
+              <Link to={button.path} target="_blank" onClick={ () => setShowSidebar(false) }>
                 <div className="button">{button.text}</div>
               </Link>
             </div>

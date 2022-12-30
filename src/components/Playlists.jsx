@@ -1,4 +1,4 @@
-import { useContext, useEffect } from 'react';
+import { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import { AudioContext } from '../context/AudioContext';
 import { EventContext } from '../context/EventContext';
@@ -23,10 +23,6 @@ const Playlists = () => {
 
     ]
   };
-
-  useEffect(() => {
-    localStorage.setItem("yourPlaylists", JSON.stringify(yourPlaylists));
-  }, [yourPlaylists]);
 
   return (
     <div className="playlists-route route-parent">

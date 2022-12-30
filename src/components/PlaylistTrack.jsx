@@ -37,10 +37,13 @@ const PlaylistTrack = () => {
      We will get the dataTable in states
      of AudioContext */
   useEffect(() => {
+    localStorage.setItem("yourPlaylists", JSON.stringify(yourPlaylists));
+    
     if (playlistParam === "Favorites") {
       setDataTable(favorites);
     } else {
       // The data will be searched in made_for_you playlists except in "Favorites";
+      
       let searchedPlaylist =
         playlists.find(e => e.playlistName === playlistParam) ||
         JSON.parse(localStorage.getItem("yourPlaylists"))
@@ -53,6 +56,8 @@ const PlaylistTrack = () => {
     }
     // eslint-disable-next-line
   }, [yourPlaylists]);
+
+  // useEffect(() => console.log(, [yourPlaylists]);
 
   // Setting mentioned Artists
   useEffect(() => {
