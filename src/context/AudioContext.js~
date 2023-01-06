@@ -60,9 +60,10 @@ export default class AudioContextProvider extends Component {
 	// Setting all state to localstorage bc of state changes
 	UNSAFE_componentWillUpdate(nextProps, nextState) {
 		let isOnlyCurrentTimeChanged = this.state.playing && this.state.currentTime !== nextState.currentTime;
-		
-		// If only time of music is changed, do nothing, else set all state to localStorage
-		if (!isOnlyCurrentTimeChanged) {
+		if (isOnlyCurrentTimeChanged) {
+			// Only seconds changed
+		} else {
+			// Something changed
 			localStorage.setItem("bodyState", JSON.stringify(this.state));
 		}
 	}
@@ -155,7 +156,7 @@ export default class AudioContextProvider extends Component {
 	};
 
 	// Functions compiled
-	onMusicSelect = (data, dataTable) => {
+	functionsToFire = (data, dataTable) => {
 		this.musicSelectedFromLoc(data);
 		this.updateTrackList(dataTable);
 		this.updateTrackHistory(data);
@@ -284,7 +285,7 @@ export default class AudioContextProvider extends Component {
 			updateTrackList: this.updateTrackList,
 			updateTrackHistory: this.updateTrackHistory,
 
-			onMusicSelect: this.onMusicSelect,
+			functionsToFire: this.functionsToFire,
 
 			prev: this.prev,
 			next: this.next,

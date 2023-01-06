@@ -3,10 +3,10 @@
 .nav {
   @include defaultNavStyle;
   @include flexCenter;
+  justify-content: space-between !important;
 
   @include desktop {
     padding: 24px 112px;
-    justify-content: flex-start;
 
     @include customMediaQuery(780px) {
       padding: 24px 40px;
@@ -32,33 +32,56 @@
     // }
   }
 
-  .menu-block-container {
-    position: absolute;
-    left: 0;
-    width: calc(28px + (22px * 2));
-    height: 100%;
-    @include flexCenter;
-  }
 
-  .nav-logo-container {
-    display: grid;
-    grid-template-columns: auto auto;
+  .menu-left-side {
+    display: flex;
+    align-items: center;
+    
+    .menu-block-container {
+      cursor: pointer;
+      position: absolute;
+      left: 0;
+      width: calc(28px + (22px * 2));
 
-    img {
-      height: 24px;
+      height: 100%;
+      @include flexCenter;
 
       @include desktop {
+        position: static;
+        margin-left: -22px;
         height: 30px;
       }
     }
 
-    .logo-label {
-      margin-left: 24px;
-      display: none;
-      @include fontProp('Montserrat', 700, 24px);
+    .nav-logo-container {
+      display: grid;
+      grid-template-columns: auto auto;
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+
+      img {
+        height: 24px;
+
+        @include desktop {
+          height: 30px;
+        }
+      }
+
+      .logo-label {
+        margin-left: 24px;
+        display: none;
+        @include fontProp('Montserrat', 700, 24px);
+
+        @include desktop {
+          display: block;
+        }
+      }
 
       @include desktop {
-        display: block;
+        position: static;
+        transform: translateX(0);
+        left: 0;
       }
     }
   }
@@ -73,6 +96,12 @@
       width: 100%;
       height: 100%;
       @include flexCenter;
+    }
+
+    @include desktop {
+      position: static;
+      height: 30px;
+      margin-right: -22px;
     }
   }
 }

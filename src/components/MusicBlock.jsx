@@ -14,7 +14,7 @@ const MusicBlock = props => {
   } = props;
 
   const {
-    functionsToFire,
+    onMusicSelect,
     removeMusicInPlaylist,
     activeMusicInfo
   } = useContext(AudioContext);
@@ -55,7 +55,7 @@ const MusicBlock = props => {
     removeMusicInPlaylist(playlistParam, data);
   }
 
-  const handleMusicEvent = e => isActiveMusic ? setShowMusicTrackMobile(true) : functionsToFire(data, musicDataTable);
+  const handleMusicEvent = e => isActiveMusic ? setShowMusicTrackMobile(true) : onMusicSelect(data, musicDataTable);
 
   let musicArtistImageStyle = {
     display: displayArtistImage ? 'block' : 'none'

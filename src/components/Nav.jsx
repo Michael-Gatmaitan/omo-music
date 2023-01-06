@@ -32,13 +32,16 @@ const Nav = () => {
 
 const NavContent = ({ setShowSidebar }) => (
   <>
-    <div className="menu-block-container" onClick={ () => setShowSidebar(true) }>
-      <img src={`${PUBLIC_URL}/svg/burger-menu.svg`} alt="burger-menu" />
-    </div>
 
-    <div className="nav-logo-container">
-      <img src={`${PUBLIC_URL}/svg/omo-logo.svg`} alt="omo-logo" />
-      <div className="logo-label">OMO Music</div>
+    <div className="menu-left-side">
+      <div className="menu-block-container" onClick={ () => setShowSidebar(true) }>
+        <img src={`${PUBLIC_URL}/svg/burger-menu.svg`} alt="burger-menu" />
+      </div>
+
+      <div className="nav-logo-container">
+        <img src={`${PUBLIC_URL}/svg/omo-logo.svg`} alt="omo-logo" />
+        <div className="logo-label">OMO Music</div>
+      </div>
     </div>
 
     <div className="search-container">
@@ -74,10 +77,17 @@ const SearchNavContent = () => {
         type="text"
         className="search-input"
         placeholder="Search song or artist"
-        onChange={ e => performSearch(e.target.value)}
+        onChange={ e => performSearch(e.target.value) }
         ref={inputBoxRef}
+        on={ _ => console.log("sub") }
+        onSubmitCapture={ _ => console.log("sub cap") }
       />
-      <div className="close-search"></div>
+      <div
+        className="submit-search"
+        onClick={ () => inputBoxRef.current.blur() }
+      >
+        Search
+      </div>
     </React.Fragment>
   )
 }

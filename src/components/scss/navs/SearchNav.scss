@@ -6,7 +6,7 @@
 
   padding: 8px 22px;
   display: grid;
-  grid-template-columns: auto 1fr calc(28px + (12px * 2));
+  grid-template-columns: auto 1fr auto;
   grid-gap: 8px;
   align-items: center;
   
@@ -24,13 +24,18 @@
     min-width: 0;
   }
 
-  .close-search {
-    // height: calc(100% + (8px * 2));
+  .submit-search {
+    @include flexCenter;
     height: 100%;
-    // position: absolute;
-    right: 22px;
-    // width: calc(28px + (12px * 2));
-    // transform: translateY(-8px);
-    background-color: #00f;
+    border-radius: 4px;
+    background-color: $pri-blue;
+    padding: 0 12px;
+    @include fontProp("Montserrat", 500, 14px, #fff);
+    cursor: pointer;
+
+    @include desktop {
+      font-size: 16px !important;
+      padding: 0 16px;
+    }
   }
 }

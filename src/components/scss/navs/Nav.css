@@ -16,6 +16,9 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-pack: justify !important;
+      -ms-flex-pack: justify !important;
+          justify-content: space-between !important;
 }
 
 @media (min-width: 780px) {
@@ -27,9 +30,6 @@
 @media (min-width: 780px) {
   .nav {
     padding: 24px 112px;
-    -webkit-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: flex-start;
   }
 }
 
@@ -57,7 +57,17 @@
   }
 }
 
-.nav .menu-block-container {
+.nav .menu-left-side {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.nav .menu-left-side .menu-block-container {
+  cursor: pointer;
   position: absolute;
   left: 0;
   width: calc(28px + (22px * 2));
@@ -73,24 +83,36 @@
           align-items: center;
 }
 
-.nav .nav-logo-container {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: auto auto;
-      grid-template-columns: auto auto;
-}
-
-.nav .nav-logo-container img {
-  height: 24px;
-}
-
 @media (min-width: 780px) {
-  .nav .nav-logo-container img {
+  .nav .menu-left-side .menu-block-container {
+    position: static;
+    margin-left: -22px;
     height: 30px;
   }
 }
 
-.nav .nav-logo-container .logo-label {
+.nav .menu-left-side .nav-logo-container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: auto auto;
+      grid-template-columns: auto auto;
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+.nav .menu-left-side .nav-logo-container img {
+  height: 24px;
+}
+
+@media (min-width: 780px) {
+  .nav .menu-left-side .nav-logo-container img {
+    height: 30px;
+  }
+}
+
+.nav .menu-left-side .nav-logo-container .logo-label {
   margin-left: 24px;
   display: none;
   font-family: "Montserrat", sans-serif !important;
@@ -100,8 +122,17 @@
 }
 
 @media (min-width: 780px) {
-  .nav .nav-logo-container .logo-label {
+  .nav .menu-left-side .nav-logo-container .logo-label {
     display: block;
+  }
+}
+
+@media (min-width: 780px) {
+  .nav .menu-left-side .nav-logo-container {
+    position: static;
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    left: 0;
   }
 }
 
@@ -124,5 +155,13 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+@media (min-width: 780px) {
+  .nav .search-container {
+    position: static;
+    height: 30px;
+    margin-right: -22px;
+  }
 }
 /*# sourceMappingURL=Nav.css.map */
