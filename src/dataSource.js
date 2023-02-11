@@ -140,8 +140,10 @@ export const bodyData = [
     musics: [
       "Ben&Ben - Araw-Araw.mp3",
       "Ben&Ben - Bibingka.mp3",
+      "Ben&Ben - Dear.mp3",
       "Ben&Ben - Di Ka Sayang.mp3",
       "Ben&Ben - Leaves.mp3",
+      "Ben&Ben - Ben&Ben - Masyado Pang Maaga.mp3",
       "Ben&Ben - Maybe The Night.mp3",
       "Ben&Ben - Nakikinig ka ba sa Akin.mp3",
       "Ben&Ben - Pagtingin.mp3",
@@ -764,6 +766,7 @@ export const bodyData = [
       "Joji - 1AM FREESTYLE.mp3",
       "Joji - 777.mp3",
       "Joji - Afterthought.mp3",
+      "Joji - ATTENTION.mp3",
       "Joji - Before The Day Is Over.mp3",
       "Joji - BLAHBLAHBLAH DEMO.mp3",
       "Joji - Daylight.mp3",
@@ -802,6 +805,21 @@ export const bodyData = [
       "Juice WRLD - Wishing Well.mp3",
     ],
     artistID: 51,
+  },
+  {
+    path: "just-hush",
+    artistName: "Just Hush",
+    musics: [
+      "Just Hush - B.O.Y.M feat. OJ River.mp3",
+      "Just Hush - bkrgrl.mp3",
+      "Just Hush - Co-Pilot.mp3",
+      "Just Hush - Iraya.mp3",
+      "Just Hush - Maikees Letters.mp3",
+      "Just Hush - Masiram Feat. Paul Royale.mp3",
+      "Just Hush - Red Planet.mp3",
+      "Just Hush - SHINOBI.mp3",
+    ],
+    artistID: 1000,
   },
   {
     path: "justin-timberlake",
@@ -1028,6 +1046,17 @@ export const bodyData = [
       "Miley Cyrus - Wrecking Ball.mp3",
     ],
     artistID: 66,
+  },
+  {
+    path: "mrld",
+    artistName: "mrld",
+    musics: [
+      "mrld - Ikaw Pa Rin.mp3",
+      "mrld - Just Because.mp3",
+      "mrld - Ligaya.mp3",
+      "mrld - Maligayang Pagkunwari.mp3",
+    ],
+    artistID: 1001,
   },
   {
     path: "munimuni",
@@ -1776,6 +1805,12 @@ export const bodyData = [
     artistID: 105,
   },
   {
+    path: "zelle",
+    artistName: "Zelle",
+    musics: ["Zelle - Sabihin.mp3"],
+    artistID: 106,
+  },
+  {
     path: "zild",
     artistName: "Zild",
     musics: [
@@ -1790,7 +1825,7 @@ export const bodyData = [
       "Zild - sinungaling.mp3",
       "Zild - takbo ng panahon.mp3"
     ],
-    artistID: 902
+    artistID: 107
   }
 ];
 
