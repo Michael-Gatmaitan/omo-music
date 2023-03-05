@@ -135,6 +135,22 @@ export const bodyData = [
     artistID: 7,
   },
   {
+    path: "beegees",
+    artistName: "Beegees",
+    musics: [
+      "Beegees - Don't Forget To Remember.mp3",
+      "Beegees - How Deep Is Your Love.mp3",
+      "Beegees - I Started A Joke.mp3",
+      "Beegees - Massachusetts.mp3",
+      "Beegees - Night Fever.mp3",
+      "Beegees - To Love Somebody.mp3",
+      "Beegees - Too Much Heaven.mp3",
+      "Beegees - Tragedy.mp3",
+      "Beegees - Wish You Were Here.mp3",
+    ],
+    artistID: 1010,
+  },
+  {
     path: "ben&ben",
     artistName: "Ben&Ben",
     musics: [
@@ -1828,6 +1844,12 @@ export const bodyData = [
     artistID: 107
   }
 ];
+
+export const albumCovers = {
+  "gian": {
+    "GIAN - Tayo.mp3": "Tayo.jpg",
+  }
+}
 
 // Bundle all of musics from all of the music artists.
 

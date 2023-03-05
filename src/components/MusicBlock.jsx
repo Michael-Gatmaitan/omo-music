@@ -14,9 +14,11 @@ const MusicBlock = props => {
   } = props;
 
   const {
+    activeMusic,
     onMusicSelect,
     removeMusicInPlaylist,
-    activeMusicInfo
+    activeMusicInfo,
+    albumCoverChecker
   } = useContext(AudioContext);
 
   const {
@@ -30,8 +32,7 @@ const MusicBlock = props => {
   let [isActiveMusic, setIsActiveMusic] = useState(false);
 
   useEffect(() => {
-    const { title, artistName } = activeMusicInfo;
-    setIsActiveMusic(data === `${artistName} - ${title}.mp3`);
+    setIsActiveMusic(data === activeMusic);
     // eslint-disable-next-line
   }, [activeMusicInfo, musicsResults]);
 
@@ -61,6 +62,16 @@ const MusicBlock = props => {
     display: displayArtistImage ? 'block' : 'none'
   }
 
+  // Checking for available albumCovers
+  const cover_artistName = musicArtist.replaceAll(" ", "-").toLowerCase();
+  const cover_musicTitle = data;
+  
+  let [cover_fileName, set_cover_fileName] = useState(undefined);
+
+  useEffect(() => {
+    set_cover_fileName(albumCoverChecker(cover_artistName, cover_musicTitle));
+  }, [albumCoverChecker, cover_artistName, cover_musicTitle]);
+
   return (
     <div
       className={`music-block ${mbClassIsActiveMusic} ${mbClassHasImage} ${mbClassHasRemove}`}
@@ -69,7 +80,11 @@ const MusicBlock = props => {
       <div className="music-artist-image"
         style={ musicArtistImageStyle }
       >
-        <img src={`../artists-image/${customPath}.jpg`} alt="" />
+        <img src={
+          cover_fileName !== undefined ?
+            `../album-covers/${cover_artistName}/${cover_fileName}` :
+            `../artists-image/${customPath}.jpg`
+        } alt="" />
       </div>
       
       <div className="music-info">

@@ -1,5 +1,6 @@
 // @ts-nocheck
 import { Component, createContext } from 'react';
+import { albumCovers } from '../dataSource.js';
 export const AudioContext = createContext();
 
 export default class AudioContextProvider extends Component {
@@ -267,6 +268,18 @@ export default class AudioContextProvider extends Component {
 		this.setState({ trackHistory: trackHistoryTemp });
 	}
 
+	// Check for albumCover of current music playing
+  albumCoverChecker = (artistName, musicTitle) => {
+    let data;
+    try {
+      data = albumCovers[artistName][musicTitle];
+    } catch(err) { data = undefined }
+
+    console.log(data);
+
+    return data;
+  }
+
 	render() {
 		
 		const events_states = {
@@ -304,7 +317,9 @@ export default class AudioContextProvider extends Component {
 			editYourPlaylists: this.editYourPlaylists,
 
 			updatePlaylistMusics: this.updatePlaylistMusics,
-			removeMusicInPlaylist: this.removeMusicInPlaylist
+			removeMusicInPlaylist: this.removeMusicInPlaylist,
+
+			albumCoverChecker: this.albumCoverChecker,
 		};
 
 		return (
