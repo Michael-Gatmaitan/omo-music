@@ -14,7 +14,6 @@ const MusicBlock = props => {
   } = props;
 
   const {
-    activeMusic,
     onMusicSelect,
     removeMusicInPlaylist,
     activeMusicInfo,
@@ -32,7 +31,8 @@ const MusicBlock = props => {
   let [isActiveMusic, setIsActiveMusic] = useState(false);
 
   useEffect(() => {
-    setIsActiveMusic(data === activeMusic);
+    const { title, artistName } = activeMusicInfo;
+    setIsActiveMusic(data === `${artistName} - ${title}.mp3`);
     // eslint-disable-next-line
   }, [activeMusicInfo, musicsResults]);
 
