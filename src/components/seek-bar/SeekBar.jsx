@@ -17,11 +17,11 @@ const SeekBar = ({ currentTime, duration }) => {
   useEffect(() => (slider.current.value = currentTime), [currentTime, slider]);
 
   return (
-    <inputs
+    <input
       type='range'
       min='0'
       max={duration}
-      name='audio-seekbar'
+      name='Audio-seekbar'
       ref={slider}
     />
   );
