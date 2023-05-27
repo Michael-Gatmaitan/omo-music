@@ -1,7 +1,6 @@
 .floating-music-track-container {
   display: none;
 }
-
 @media (min-width: 780px) {
   .floating-music-track-container {
     display: block;
@@ -10,28 +9,23 @@
     right: 112px;
   }
 }
-
 @media (min-width: 780px) and (min-width: 780px) {
   .floating-music-track-container {
     right: 40px;
   }
 }
-
 @media (min-width: 780px) and (min-width: 860px) {
   .floating-music-track-container {
     right: 60px;
   }
 }
-
 @media (min-width: 780px) and (min-width: 980px) {
   .floating-music-track-container {
     right: 90px;
   }
 }
-
 @media (min-width: 780px) and (min-width: 1180px) {
   .floating-music-track-container {
     right: 112px;
   }
-}
-/*# sourceMappingURL=FloatingMusicTrack.css.map */
+}/*# sourceMappingURL=FloatingMusicTrack.css.map */

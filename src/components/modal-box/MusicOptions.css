@@ -1,69 +1,49 @@
 .music-options-container {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  justify-content: flex-end;
+  flex-direction: column;
   width: 100vw;
   height: 100vh;
   position: fixed;
   top: 0;
   left: 0;
   padding: 8px;
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.3)), to(black));
   background: linear-gradient(rgba(0, 0, 0, 0.3), black);
   z-index: 500;
-  -webkit-transition: 0.1s ease-in;
   transition: 0.1s ease-in;
 }
-
 .music-options-container .music-options-content {
   width: 100%;
   background-color: #EEEFF8;
   padding: 18px;
   border-radius: 16px;
-  display: -ms-grid;
   display: grid;
   grid-gap: 32px;
-  -ms-grid-columns: 100%;
-      grid-template-columns: 100%;
-  -ms-grid-rows: 184px auto;
-      grid-template-rows: 184px auto;
+  grid-template-columns: 100%;
+  grid-template-rows: 184px auto;
 }
-
 @media (min-width: 780px) {
   .music-options-container .music-options-content {
     position: absolute;
     top: 50%;
     left: 50%;
-    -webkit-transform: translate(-50%, -50%);
-            transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
     padding: 20px;
     width: auto;
     grid-gap: 24px;
-    -ms-grid-columns: 232px 350px;
-        grid-template-columns: 232px 350px;
-    -ms-grid-rows: 232px;
-        grid-template-rows: 232px;
+    grid-template-columns: 232px 350px;
+    grid-template-rows: 232px;
   }
 }
-
 .music-options-container .music-options-content .music-info-block-container {
   width: 100%;
   height: 184px;
 }
-
 @media (min-width: 780px) {
   .music-options-container .music-options-content .music-info-block-container {
     height: 100%;
   }
 }
-
 .music-options-container .music-options-content .music-info-block-container .music-info-block {
   height: 100%;
   width: 184px;
@@ -72,48 +52,40 @@
   overflow: hidden;
   position: relative;
 }
-
 @media (min-width: 780px) {
   .music-options-container .music-options-content .music-info-block-container .music-info-block {
     width: 232px;
   }
 }
-
 .music-options-container .music-options-content .music-info-block-container .music-info-block img {
   width: 100%;
 }
-
 .music-options-container .music-options-content .music-info-block-container .music-info-block .darken-bg {
   width: 100%;
   height: 100%;
   position: absolute;
   top: 0;
   left: 0;
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0)), to(rgba(0, 0, 0, 0.6)));
   background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.6));
 }
-
 .music-options-container .music-options-content .music-info-block-container .music-info-block .darken-bg .music-info {
   position: absolute;
   bottom: 15px;
   left: 15px;
   padding-right: 15px;
 }
-
 .music-options-container .music-options-content .music-info-block-container .music-info-block .darken-bg .music-info .title {
   font-family: "Montserrat", sans-serif !important;
   font-weight: 700 !important;
   font-size: 18px !important;
   color: #fff !important;
 }
-
 .music-options-container .music-options-content .music-info-block-container .music-info-block .darken-bg .music-info .artist {
   font-family: "Open sans", sans-serif !important;
   font-weight: 500 !important;
   font-size: 12px !important;
   color: #fff !important;
 }
-
 @media (min-width: 780px) {
   .music-options-container .music-options-content .music-info-block-container .music-info-block .darken-bg .music-info {
     bottom: 20px;
@@ -126,73 +98,53 @@
     font-size: 14px !important;
   }
 }
-
 .music-options-container .music-options-content .options-selection-container {
-  display: -ms-grid;
   display: grid;
   grid-gap: 18px;
 }
-
 .music-options-container .music-options-content .options-selection-container .option-selection {
-  display: -ms-grid;
   display: grid;
   grid-gap: 12px;
 }
-
 .music-options-container .music-options-content .options-selection-container .option-selection .option {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
   cursor: pointer;
 }
-
 .music-options-container .music-options-content .options-selection-container .option-selection .option .option-icon {
   width: 28px;
   height: 28px;
 }
-
 .music-options-container .music-options-content .options-selection-container .option-selection .option .option-icon img {
   width: 100%;
 }
-
 .music-options-container .music-options-content .options-selection-container .option-selection .option .option-title {
   font-size: 18px;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   color: #000;
   margin-left: 12px;
-  -webkit-transition: 0.1s ease-in;
   transition: 0.1s ease-in;
 }
-
 .music-options-container .music-options-content .options-selection-container .option-selection .option:hover .option-title {
   color: #293EF8 !important;
 }
-
 .music-options-container .music-options-content .options-selection-container .select-playlist {
   width: 100%;
   height: 215px;
-  display: -ms-grid;
   display: grid;
   grid-auto-rows: auto;
   grid-gap: 6px;
   overflow: scroll;
   border-radius: 12px;
 }
-
 .music-options-container .music-options-content .options-selection-container .select-playlist::-webkit-scrollbar {
   display: none;
 }
-
 .music-options-container .music-options-content .options-selection-container .select-playlist .playlist-option-container {
-  display: -ms-grid;
   display: grid;
   grid-auto-rows: auto;
   grid-gap: 6px;
 }
-
 .music-options-container .music-options-content .options-selection-container .select-playlist .playlist-option-container .playlist-option {
   width: 100%;
   height: auto;
@@ -207,52 +159,35 @@
   color: #fff !important;
   cursor: pointer;
 }
-
 .music-options-container .music-options-content .options-selection-container .select-playlist .playlist-option-container .playlist-option:hover {
   background-color: #F85F57;
 }
-
 .music-options-container .music-options-content .options-selection-container .bottom-buttons {
-  display: -ms-grid;
   display: grid;
   grid-gap: 12px;
-  -ms-grid-columns: 1fr auto;
-      grid-template-columns: 1fr auto;
-  -ms-grid-rows: 100%;
-      grid-template-rows: 100%;
+  grid-template-columns: 1fr auto;
+  grid-template-rows: 100%;
 }
-
 .music-options-container .music-options-content .options-selection-container .bottom-buttons a {
   height: 100%;
 }
-
 .music-options-container .music-options-content .options-selection-container .bottom-buttons a .download-music-button {
   background-color: #60CE6B;
   border-radius: 12px;
-  -webkit-transition: 0.1s ease-in;
   transition: 0.1s ease-in;
   width: 64px;
   padding: 18px;
   height: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: center;
+  align-items: center;
 }
-
 .music-options-container .music-options-content .options-selection-container .bottom-buttons a .download-music-button img {
   width: 28px;
 }
-
 .music-options-container .music-options-content .options-selection-container .bottom-buttons a .download-music-button:hover {
   background-color: #67b56f;
 }
-
 @media (min-width: 780px) {
   .music-options-container .music-options-content .options-selection-container .bottom-buttons a .download-music-button {
     width: 64px;
@@ -261,7 +196,6 @@
     width: 32px;
   }
 }
-
 @media (min-width: 780px) {
   .music-options-container .music-options-content .options-selection-container {
     grid-gap: 24px;
@@ -280,5 +214,4 @@
   .music-options-container .music-options-content .options-selection-container .select-playlist {
     height: 100%;
   }
-}
-/*# sourceMappingURL=MusicOptions.css.map */
+}/*# sourceMappingURL=MusicOptions.css.map */

@@ -2,11 +2,9 @@ ul {
   padding: 0;
   margin: 0;
 }
-
 ul li {
   list-style-type: none;
 }
-
 ul li a {
   text-decoration: none;
 }
@@ -16,71 +14,55 @@ a {
 }
 
 .route-container {
-  padding: 0 22px calc(80px + 22px) 22px;
+  padding: 0 22px 102px 22px;
 }
-
 .route-container .route-grid-container .route-grid-wrap .app-body {
   width: 100%;
   background-color: #0B0B14;
-  position: -webkit-sticky;
   position: sticky;
   top: 56px;
   z-index: 89;
   padding-top: 12px;
 }
-
 .route-container .route-grid-container .route-grid-wrap .app-body .location-title {
   font-family: "Montserrat", sans-serif !important;
   font-weight: 700 !important;
   font-size: 36px !important;
   color: #fff !important;
 }
-
 .route-container .route-grid-container .route-grid-wrap .app-body .location-title span {
-  -webkit-transition: 0.2s ease-out;
   transition: 0.2s ease-out;
 }
-
 .route-container .route-grid-container .route-grid-wrap .app-body .location-title .back-arrow {
   position: absolute;
   cursor: pointer;
-  -webkit-transition: 0.2s ease-in;
   transition: 0.2s ease-in;
 }
-
 .route-container .route-grid-container .route-grid-wrap .app-body .route-links {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   gap: 8px;
   padding: 8px 0;
 }
-
 .route-container .route-grid-container .route-grid-wrap .app-body .route-links .active-route {
   background-color: rgba(6, 24, 181, 0.3);
 }
-
 .route-container .route-grid-container .route-grid-wrap .app-body .route-links .active-route li {
   color: #293EF8 !important;
 }
-
 .route-container .route-grid-container .route-grid-wrap .app-body .route-links .route-button {
   border-radius: 4px;
   padding: 10px;
   color: #fff;
 }
-
 .route-container .route-grid-container .route-grid-wrap .app-body .route-links .route-button:hover li {
   color: #293EF8 !important;
 }
-
 .route-container .route-grid-container .route-grid-wrap .app-body .route-links .route-button li {
   font-family: "Montserrat", sans-serif !important;
   font-weight: 700 !important;
   font-size: 14px !important;
   color: #fff !important;
 }
-
 @media (min-width: 780px) {
   .route-container .route-grid-container .route-grid-wrap .app-body .route-links .route-button li {
     font-family: "Montserrat", sans-serif !important;
@@ -89,48 +71,40 @@ a {
     color: #fff !important;
   }
 }
-
 @media (min-width: 780px) {
   .route-container {
-    padding: 0 112px 80px 112px;
+    padding: 0 112px 0 112px;
   }
 }
-
 @media (min-width: 780px) and (min-width: 780px) {
   .route-container {
-    padding: 0 40px 80px 40px;
+    padding: 0 40px 0 40px;
   }
 }
-
 @media (min-width: 780px) and (min-width: 860px) {
   .route-container {
-    padding: 0 60px 80px 60px;
+    padding: 0 60px 0 60px;
   }
 }
-
 @media (min-width: 780px) and (min-width: 980px) {
   .route-container {
-    padding: 0 90px 80px 90px;
+    padding: 0 90px 0 90px;
   }
 }
-
 @media (min-width: 780px) and (min-width: 1180px) {
   .route-container {
-    padding: 0 112px 80px 112px;
+    padding: 0 112px 0 112px;
   }
 }
-
 @media (min-width: 780px) {
   .route-container .route-grid-container {
-    display: -ms-grid;
     display: grid;
-    -ms-grid-columns: auto 360px;
-        grid-template-columns: auto 360px;
+    grid-template-columns: auto 360px;
     grid-gap: 24px;
   }
   .route-container .route-grid-container .route-grid-wrap {
     margin-top: 0;
-    height: 722px;
+    height: calc(100vh - 78px);
     overflow-y: scroll;
   }
   .route-container .route-grid-container .route-grid-wrap .app-body {
@@ -142,5 +116,4 @@ a {
     font-size: 48px !important;
     color: #fff !important;
   }
-}
-/*# sourceMappingURL=RouteContainer.css.map */
+}/*# sourceMappingURL=RouteContainer.css.map */

@@ -1,52 +1,40 @@
 .music-block {
-  display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 46px 1fr 46px;
-      grid-template-columns: 46px 1fr 46px;
-  -ms-grid-rows: 46px;
-      grid-template-rows: 46px;
+  grid-template-columns: 46px 1fr 46px;
+  grid-template-rows: 46px;
   padding: 5px 0 5px 5px;
   margin-bottom: 5px;
   border-radius: 13px;
   -webkit-user-select: none;
      -moz-user-select: none;
-      -ms-user-select: none;
           user-select: none;
   position: relative;
 }
-
 .music-block:hover {
   background-color: rgba(41, 62, 248, 0.3);
 }
-
 .music-block:hover .music-info .music-title, .music-block:hover .music-info .music-artist {
   color: #293EF8;
 }
-
 .music-block:hover .music-options-parent::before {
   background: transparent;
 }
-
 .music-block .music-artist-image {
   width: 46px;
   height: 46px;
   border-radius: 8px;
   overflow: hidden;
 }
-
 .music-block .music-artist-image img {
   width: 100%;
   height: 100%;
 }
-
 .music-block .music-info {
   white-space: nowrap;
   overflow: hidden;
   margin-left: 8px;
 }
-
 .music-block .music-info .music-title {
-  -webkit-transition: 0.1s ease-out;
   transition: 0.1s ease-out;
   font-family: "Montserrat", sans-serif !important;
   font-weight: 700 !important;
@@ -54,9 +42,7 @@
   color: #fff !important;
   margin-top: 3px;
 }
-
 .music-block .music-info .music-artist {
-  -webkit-transition: 0.1s ease-out;
   transition: 0.1s ease-out;
   font-family: "Open sans", sans-serif !important;
   font-weight: 400 !important;
@@ -64,58 +50,39 @@
   color: #fff !important;
   color: rgba(255, 255, 255, 0.58);
 }
-
 .music-block .music-options-parent {
   height: 100%;
   width: 46px;
   position: relative;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: center;
+  align-items: center;
 }
-
 .music-block .music-options-parent .music-options-button {
   width: 34px;
   height: 34px;
   border-radius: 8px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: center;
+  align-items: center;
 }
-
 .music-block .music-options-parent .music-options-button:hover {
   background-color: rgba(255, 255, 255, 0.1);
 }
-
 .music-block .music-options-parent .music-options-button img {
   width: 28px;
 }
-
 .music-block .music-options-parent::before {
-  content: '';
+  content: "";
   width: 50px;
   height: 100%;
   position: absolute;
   top: 0;
   left: -50px;
   z-index: 5;
-  background: -webkit-gradient(linear, left top, right top, from(rgba(11, 11, 20, 0)), to(#0b0b14));
   background: linear-gradient(90deg, rgba(11, 11, 20, 0), #0b0b14);
   pointer-events: none;
 }
-
 @media (min-width: 780px) {
   .music-block .music-options-parent .music-options-parent {
     width: 60px;
@@ -128,13 +95,10 @@
     width: 32px;
   }
 }
-
 @media (min-width: 780px) {
   .music-block {
-    -ms-grid-columns: 60px 1fr 60px;
-        grid-template-columns: 60px 1fr 60px;
-    -ms-grid-rows: 60px;
-        grid-template-rows: 60px;
+    grid-template-columns: 60px 1fr 60px;
+    grid-template-rows: 60px;
     padding: 8px 0 8px 8px;
   }
   .music-block .music-artist-image {
@@ -166,14 +130,11 @@
 }
 
 .music-block-no-artist-image {
-  -ms-grid-columns: 1fr 46px !important;
-      grid-template-columns: 1fr 46px !important;
+  grid-template-columns: 1fr 46px !important;
 }
-
 @media (min-width: 780px) {
   .music-block-no-artist-image {
-    -ms-grid-columns: 1fr 60px !important;
-        grid-template-columns: 1fr 60px !important;
+    grid-template-columns: 1fr 60px !important;
   }
 }
 
@@ -183,27 +144,18 @@
   position: absolute;
   top: 50%;
   right: 46px;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
-  display: -webkit-box;
-  display: -ms-flexbox;
+  transform: translateY(-50%);
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: center;
+  align-items: center;
   z-index: 10;
 }
-
 .removable-music-block .remove .remove-icon {
   width: 50%;
   height: 4px;
   background-color: #fff;
   border-radius: 4px;
 }
-
 @media (min-width: 780px) {
   .removable-music-block .remove {
     height: 60px;
@@ -215,22 +167,15 @@
 .active-music {
   background-color: #293EF8;
 }
-
 .active-music:hover {
   background-color: #293EF8;
 }
-
 .active-music:hover .music-info .music-title, .active-music:hover .music-info .music-artist {
   color: #fff;
 }
-
 .active-music:hover .music-options-parent::before {
-  background: -webkit-gradient(linear, left top, right top, from(rgba(41, 62, 248, 0)), to(#293ef8));
   background: linear-gradient(90deg, rgba(41, 62, 248, 0), #293ef8);
 }
-
 .active-music .music-options-parent::before {
-  background: -webkit-gradient(linear, left top, right top, from(rgba(41, 62, 248, 0)), to(#293ef8));
   background: linear-gradient(90deg, rgba(41, 62, 248, 0), #293ef8);
-}
-/*# sourceMappingURL=MusicBlock.css.map */
+}/*# sourceMappingURL=MusicBlock.css.map */

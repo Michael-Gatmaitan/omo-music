@@ -1,82 +1,59 @@
 .playlists-route {
-  display: -ms-grid;
   display: grid;
   grid-gap: 12px;
 }
-
 @media (min-width: 780px) {
   .playlists-route {
     grid-gap: 18px;
   }
 }
-
 .playlists-route .pl-header {
   font-family: "Montserrat", sans-serif !important;
   font-weight: 700 !important;
   font-size: 24px !important;
   color: #fff !important;
 }
-
 @media (min-width: 780px) {
   .playlists-route .pl-header {
     font-size: 32px !important;
   }
 }
-
 .playlists-route .divider {
   width: 100%;
   height: 0.5px;
   background-color: rgba(255, 255, 255, 0.42);
 }
-
 .playlists-route .create-pl {
-  display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 46px 1fr;
-      grid-template-columns: 46px 1fr;
+  grid-template-columns: 46px 1fr;
   grid-gap: 8px;
   padding: 5px 0;
   cursor: pointer;
 }
-
 .playlists-route .create-pl .create-logo {
   width: 46px;
   height: 46px;
   border-radius: 8px;
   background-color: #293EF8;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: center;
+  align-items: center;
 }
-
 .playlists-route .create-pl .create-logo img {
   width: 24px;
 }
-
 .playlists-route .create-pl .create-text {
   height: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
   font-family: "Montserrat", sans-serif !important;
   font-weight: 700 !important;
   font-size: 18px !important;
   color: #fff !important;
 }
-
 @media (min-width: 780px) {
   .playlists-route .create-pl {
-    -ms-grid-columns: 60px 1fr;
-        grid-template-columns: 60px 1fr;
+    grid-template-columns: 60px 1fr;
     grid-gap: 12px;
     padding: 10px 0;
   }
@@ -92,38 +69,26 @@
     font-size: 20px !important;
   }
 }
-
 .playlists-route .pl-block {
   width: 100%;
-  display: -ms-grid;
   display: grid;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -ms-grid-columns: auto 46px;
-      grid-template-columns: auto 46px;
+  align-items: center;
+  grid-template-columns: auto 46px;
 }
-
 @media (min-width: 780px) {
   .playlists-route .pl-block {
-    -ms-grid-columns: auto 60px;
-        grid-template-columns: auto 60px;
+    grid-template-columns: auto 60px;
   }
 }
-
 .playlists-route .pl-block:hover a .pl-info .name, .playlists-route .pl-block:hover a .pl-info .song-len {
   color: #293EF8 !important;
 }
-
 .playlists-route .pl-block a {
-  display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 46px auto;
-      grid-template-columns: 46px auto;
+  grid-template-columns: 46px auto;
   grid-gap: 8px;
   padding: 5px 0;
 }
-
 .playlists-route .pl-block a .pl-image {
   width: 46px;
   height: 46px;
@@ -132,53 +97,43 @@
   overflow: hidden;
   position: relative;
 }
-
 .playlists-route .pl-block a .pl-image .link {
   width: 100%;
   position: absolute;
   left: 0;
   top: 0;
 }
-
 .playlists-route .pl-block a .pl-image .svg {
   width: 80%;
   position: absolute;
   top: 50%;
   left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
 }
-
 .playlists-route .pl-block a .pl-info {
   margin-top: 3px;
   white-space: nowrap;
   overflow: hidden;
   position: relative;
 }
-
 .playlists-route .pl-block a .pl-info:before {
-  content: '';
+  content: "";
   width: 50px;
   height: 100%;
   position: absolute;
   top: 0;
   right: 0;
-  background: -webkit-gradient(linear, left top, right top, from(rgba(11, 11, 20, 0)), to(#0b0b14));
   background: linear-gradient(90deg, rgba(11, 11, 20, 0), #0b0b14);
 }
-
 .playlists-route .pl-block a .pl-info .name, .playlists-route .pl-block a .pl-info .song-len {
-  -webkit-transition: 0.1s ease-in;
   transition: 0.1s ease-in;
 }
-
 .playlists-route .pl-block a .pl-info .name {
   font-family: "Montserrat", sans-serif !important;
   font-weight: 700 !important;
   font-size: 18px !important;
   color: #fff !important;
 }
-
 .playlists-route .pl-block a .pl-info .song-len {
   font-family: "Open sans", sans-serif !important;
   font-weight: 400 !important;
@@ -186,11 +141,9 @@
   color: #fff !important;
   color: rgba(255, 255, 255, 0.58);
 }
-
 @media (min-width: 780px) {
   .playlists-route .pl-block a {
-    -ms-grid-columns: 60px auto;
-        grid-template-columns: 60px auto;
+    grid-template-columns: 60px auto;
     grid-gap: 12px;
     padding: 10px 0;
   }
@@ -211,17 +164,14 @@
 }
 
 .playlist-track-route {
-  display: -ms-grid;
   display: grid;
   grid-gap: 12px;
 }
-
 @media (min-width: 780px) {
   .playlist-track-route {
     grid-gap: 18px;
   }
 }
-
 .playlist-track-route .pl-track-title {
   white-space: nowrap;
   overflow: hidden;
@@ -231,24 +181,20 @@
   font-size: 24px !important;
   color: #fff !important;
 }
-
 .playlist-track-route .pl-track-title:before {
-  content: '';
+  content: "";
   width: 50px;
   height: 100%;
   position: absolute;
   top: 0;
   right: 0;
-  background: -webkit-gradient(linear, left top, right top, from(rgba(11, 11, 20, 0)), to(#0b0b14));
   background: linear-gradient(90deg, rgba(11, 11, 20, 0), #0b0b14);
 }
-
 @media (min-width: 780px) {
   .playlist-track-route .pl-track-title {
     font-size: 32px !important;
   }
 }
-
 .playlist-track-route .pl-empty {
   font-family: "Montserrat", sans-serif !important;
   font-weight: 700 !important;
@@ -257,24 +203,18 @@
   text-align: center;
   margin-top: 24px;
 }
-
 .playlist-track-route .mentioned-artists {
   overflow-x: scroll;
   border-radius: 4px;
 }
-
 .playlist-track-route .mentioned-artists .mentioned-artists-wrapper {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   gap: 8px;
 }
-
 .playlist-track-route .mentioned-artists .mentioned-artists-wrapper div {
   white-space: nowrap;
   display: inline-block;
 }
-
 .playlist-track-route .mentioned-artists .mentioned-artists-wrapper .artist {
   padding: 6px;
   border-radius: 4px;
@@ -283,34 +223,24 @@
   font-weight: 500 !important;
   font-size: 14px !important;
   color: #fff !important;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   gap: 6px;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
 }
-
 .playlist-track-route .mentioned-artists .mentioned-artists-wrapper .artist:hover {
   background-color: rgba(6, 24, 181, 0.3);
   color: #293EF8 !important;
 }
-
 .playlist-track-route .mentioned-artists .mentioned-artists-wrapper .artist .mentioned-artist-image {
   height: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
 }
-
 .playlist-track-route .mentioned-artists .mentioned-artists-wrapper .artist .mentioned-artist-image img {
   height: 36px;
   padding: 0;
   margin: 0;
   border-radius: 2px;
 }
-
 @media (min-width: 780px) {
   .playlist-track-route .mentioned-artists {
     padding-bottom: 8px;
@@ -319,5 +249,4 @@
     padding: 12px 10px;
     font-size: 16px !important;
   }
-}
-/*# sourceMappingURL=Playlists.css.map */
+}/*# sourceMappingURL=Playlists.css.map */

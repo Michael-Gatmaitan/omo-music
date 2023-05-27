@@ -1,24 +1,24 @@
 // @ts-nocheck
 
-import { useEffect, useRef, useContext } from 'react';
-import ReactAudioPlayer from 'react-audio-player';
-import { useLocation } from 'react-router-dom';
+import { useEffect, useRef, useContext } from "react";
+import ReactAudioPlayer from "react-audio-player";
+import { useLocation } from "react-router-dom";
 
 // Components
-import MusicTrackBar from './components/MusicTrackBar';
-import MusicTrackMobile from './components/modal-box/MusicTrackMobile';
-import MusicOptions from './components/modal-box/MusicOptions';
-import CreatePlaylist from './components/modal-box/CreatePlaylist';
-import PlaylistOptions from './components/modal-box/PlaylistOptions';
-import Sidebar from './components/Sidebar';
+import MusicTrackBar from "./components/MusicTrackBar";
+import MusicTrackMobile from "./components/modal-box/MusicTrackMobile";
+import MusicOptions from "./components/modal-box/MusicOptions";
+import CreatePlaylist from "./components/modal-box/CreatePlaylist";
+import PlaylistOptions from "./components/modal-box/PlaylistOptions";
+import Sidebar from "./components/Sidebar";
 
-// Contexts 
-import { AudioContext } from './context/AudioContext';
+// Contexts
+import { AudioContext } from "./context/AudioContext";
 // import { EventContext } from './context/EventContext';
 
 // Routes
-import Nav from './components/Nav';
-import RouteContainer from './RouteContainer.jsx';
+import Nav from "./components/Nav";
+import RouteContainer from "./RouteContainer.jsx";
 
 function App() {
   const {
@@ -26,7 +26,7 @@ function App() {
     activeMusic,
     updateTotalDuration,
     updateCurrentTime,
-    
+
     triggerPlaying,
     // Used for shuffling || ordering music onEnd.
     next,
@@ -36,15 +36,15 @@ function App() {
 
     // TODO,
     // musicLoading,
-    triggerMusicLoading
+    triggerMusicLoading,
   } = useContext(AudioContext);
 
   let aud = useRef(null);
 
   // Basically loads audioEl after changing SRC
   useEffect(() => {
-    if (activeMusic !== '') {
-      aud.audioEl.current.load(); 
+    if (activeMusic !== "") {
+      aud.audioEl.current.load();
     }
 
     triggerMusicLoading(true);
@@ -56,8 +56,7 @@ function App() {
   function countSlashURL(url) {
     let count = 0;
 
-    url.split("")
-      .forEach(ch => count += ch === "/" ? 1 : 0);
+    url.split("").forEach((ch) => (count += ch === "/" ? 1 : 0));
 
     return count;
   }
@@ -67,9 +66,13 @@ function App() {
     triggerShowBackArrow(countSlashURL(pathname) > 1);
 
     setCurrentPage(
-      pathname.length === 1 ? "Musics" :
-      pathname.includes("playlists") ? "Playlists" :
-      pathname.includes("artists") ? "Artists" : ""
+      pathname.length === 1
+        ? "Musics"
+        : pathname.includes("playlists")
+        ? "Playlists"
+        : pathname.includes("artists")
+        ? "Artists"
+        : ""
     );
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [location]);
@@ -77,19 +80,18 @@ function App() {
   return (
     <>
       <ReactAudioPlayer
-        src={ activeMusic }
+        src={activeMusic}
         autoPlay
-        ref={ e => aud = e }
+        ref={(e) => (aud = e)}
         listenInterval={1000}
-        onCanPlay={ _ => {
+        onCanPlay={(_) => {
           updateTotalDuration(aud.audioEl.current.duration);
           triggerMusicLoading(false);
         }}
-        onListen={ e => updateCurrentTime(e) }
-        onEnded={ next }
-
-        onPlay={ _ => triggerPlaying(true) }
-        onPause={ _ => triggerPlaying(false) }
+        onListen={(e) => updateCurrentTime(e)}
+        onEnded={next}
+        onPlay={(_) => triggerPlaying(true)}
+        onPause={(_) => triggerPlaying(false)}
       />
 
       <Nav />
@@ -108,7 +110,7 @@ function App() {
 
       <Sidebar />
     </>
-  )
+  );
 }
 
 export default App;

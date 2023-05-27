@@ -1,4 +1,4 @@
-@import '../../mixins.scss';
+@import "../../mixins.scss";
 
 ul {
   padding: 0;
@@ -6,7 +6,7 @@ ul {
 
   li {
     list-style-type: none;
-    
+
     a {
       text-decoration: none;
     }
@@ -22,11 +22,9 @@ a {
   // position: relative;
 
   .route-grid-container {
-
     // FloatingMusicTrack has a scss file
 
     .route-grid-wrap {
-
       .app-body {
         width: 100%;
         background-color: $drk_blue;
@@ -37,9 +35,11 @@ a {
         padding-top: 12px;
 
         .location-title {
-          @include fontProp('Montserrat', 700, 36px);
+          @include fontProp("Montserrat", 700, 36px);
 
-          span { transition: 0.2s ease-out; }
+          span {
+            transition: 0.2s ease-out;
+          }
 
           .back-arrow {
             position: absolute;
@@ -55,17 +55,17 @@ a {
 
           .active-route {
             background-color: rgba($darken_pri_blue, 0.3);
-            
+
             li {
               color: $pri-blue !important;
             }
           }
-          
+
           .route-button {
             border-radius: 4px;
             padding: 10px;
             color: #fff;
-            
+
             &:hover {
               li {
                 color: $pri-blue !important;
@@ -73,13 +73,12 @@ a {
             }
 
             li {
-              @include fontProp('Montserrat', 700, 14px);
+              @include fontProp("Montserrat", 700, 14px);
             }
 
             @include desktop {
-
               li {
-                @include fontProp('Montserrat', 700, 16px);
+                @include fontProp("Montserrat", 700, 16px);
               }
             }
           }
@@ -95,28 +94,28 @@ a {
       // }
     }
   }
-  
+
   @include desktop {
-    padding: 0 112px 80px 112px;
+    padding: 0 112px 0 112px;
 
     // 40
     @include customMediaQuery(780px) {
-      padding: 0 40px 80px 40px;
+      padding: 0 40px 0 40px;
     }
 
     // 60
     @include customMediaQuery(860px) {
-      padding: 0 60px 80px 60px;
+      padding: 0 60px 0 60px;
     }
 
     // 90
     @include customMediaQuery(980px) {
-      padding: 0 90px 80px 90px;
+      padding: 0 90px 0 90px;
     }
 
     // 112
     @include customMediaQuery(1180px) {
-      padding: 0 112px 80px 112px;
+      padding: 0 112px 0 112px;
     }
 
     .route-grid-container {
@@ -125,15 +124,17 @@ a {
       grid-gap: 24px;
 
       .route-grid-wrap {
+        $navHeightOnDesktopMode: 78px;
         margin-top: 0;
-        height: 722px;
+        // height: 722px;
+        height: calc(100vh - $navHeightOnDesktopMode);
         overflow-y: scroll;
 
         .app-body {
           top: 0;
 
           .location-title {
-            @include fontProp('Montserrat', 700, 48px);
+            @include fontProp("Montserrat", 700, 48px);
           }
         }
       }

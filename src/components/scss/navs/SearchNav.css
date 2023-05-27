@@ -3,40 +3,26 @@
   height: 56px;
   padding: 16px 22px;
   background: #0B0B14;
-  position: -webkit-sticky;
   position: sticky;
   top: 0;
   z-index: 90;
   background-color: #0B0B14 !important;
   padding: 8px 22px;
-  display: -ms-grid;
   display: grid;
-  -ms-grid-columns: auto 1fr auto;
-      grid-template-columns: auto 1fr auto;
+  grid-template-columns: auto 1fr auto;
   grid-gap: 8px;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
 }
-
 @media (min-width: 780px) {
   .search-nav {
     height: 78px;
   }
 }
-
 .search-nav a .nav-back-arrow {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: center;
+  align-items: center;
 }
-
 .search-nav .search-input {
   height: 100%;
   padding: 8px;
@@ -47,17 +33,10 @@
   border-radius: 4px;
   min-width: 0;
 }
-
 .search-nav .submit-search {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: center;
+  align-items: center;
   height: 100%;
   border-radius: 4px;
   background-color: #293EF8;
@@ -66,12 +45,11 @@
   font-weight: 500 !important;
   font-size: 14px !important;
   color: #fff !important;
+  cursor: pointer;
 }
-
 @media (min-width: 780px) {
   .search-nav .submit-search {
     font-size: 16px !important;
     padding: 0 16px;
   }
-}
-/*# sourceMappingURL=SearchNav.css.map */
+}/*# sourceMappingURL=SearchNav.css.map */

@@ -1,338 +1,340 @@
 // @ts-nocheck
-import { Component, createContext } from 'react';
-import { albumCovers } from '../dataSource.js';
+import { Component, createContext } from "react";
+import { albumCovers } from "../dataSource.js";
 export const AudioContext = createContext();
 
 export default class AudioContextProvider extends Component {
-	
-	state = JSON.parse(localStorage.getItem("bodyState")) || {
-		showBackArrow: false,
-		currentPage: 'Musics',
+  state = JSON.parse(localStorage.getItem("bodyState")) || {
+    showBackArrow: false,
+    currentPage: "Musics",
 
-		activeMusicRawTitle: '',
-		activeMusic: '',
+    activeMusicRawTitle: "",
+    activeMusic: "",
 
-		currentTime: 0,
-		duration: 0,
-		
-		order: false,
-		shuffle: true,
+    currentTime: 0,
+    duration: 0,
 
-		playing: false,
+    order: false,
+    shuffle: true,
 
-		musicLoading: false,
+    playing: false,
 
-		trackList: [],
+    musicLoading: false,
 
-		trackHistoryIndex: null,
-		trackHistory: [],
+    trackList: [],
 
-		recentPlayed: [],
+    trackHistoryIndex: null,
+    trackHistory: [],
 
-		favorites: [],
+    recentPlayed: [],
 
-		yourPlaylists: [
-			// {
-			// 	playlistID: number,
-			// 	playlistName: string,
-			// 	musics: string[],
-			// 	imageLink: string
-			// },
-		],
+    favorites: [],
 
-		activeMusicInfo: {
-			path: '',
-			title: '',
-			artistName: ''
-		},
+    yourPlaylists: [
+      // {
+      // 	playlistID: number,
+      // 	playlistName: string,
+      // 	musics: string[],
+      // 	imageLink: string
+      // },
+    ],
 
-		// playlists
-	};
+    activeMusicInfo: {
+      path: "",
+      title: "",
+      artistName: "",
+    },
 
-	componentDidMount() {
-		if (localStorage.getItem("bodyState") !== null) {
-			let audioEl = document.getElementsByTagName("audio")[0];
-			audioEl.pause();
-			audioEl.load();
-		}
-	}
+    // playlists
+  };
 
+  componentDidMount() {
+    if (localStorage.getItem("bodyState") !== null) {
+      let audioEl = document.getElementsByTagName("audio")[0];
+      audioEl.pause();
+      audioEl.load();
+    }
+  }
 
-	// Setting all state to localstorage bc of state changes
-	UNSAFE_componentWillUpdate(nextProps, nextState) {
-		let isOnlyCurrentTimeChanged = this.state.playing && this.state.currentTime !== nextState.currentTime;
-		
-		// If only time of music is changed, do nothing, else set all state to localStorage
-		if (!isOnlyCurrentTimeChanged) {
-			localStorage.setItem("bodyState", JSON.stringify(this.state));
-		}
-	}
+  // Setting all state to localstorage bc of state changes
+  UNSAFE_componentWillUpdate(nextProps, nextState) {
+    let isOnlyCurrentTimeChanged =
+      this.state.playing && this.state.currentTime !== nextState.currentTime;
 
-	removeMusicInPlaylist = (objName, rawTitle) => {		
-		let yourPlaylistsTemp = [...this.state.yourPlaylists];
-		let musicObjParent = yourPlaylistsTemp.filter(e => e.playlistName === objName)[0];
-		let { musics } = musicObjParent;
-		musics.splice(musics.indexOf(rawTitle), 1);
+    // If only time of music is changed, do nothing, else set all state to localStorage
+    if (!isOnlyCurrentTimeChanged) {
+      localStorage.setItem("bodyState", JSON.stringify(this.state));
+    }
+  }
 
-		this.setState({ yourPlaylists: yourPlaylistsTemp });
+  removeMusicInPlaylist = (objName, rawTitle) => {
+    let yourPlaylistsTemp = [...this.state.yourPlaylists];
+    let musicObjParent = yourPlaylistsTemp.filter(
+      (e) => e.playlistName === objName
+    )[0];
+    let { musics } = musicObjParent;
+    musics.splice(musics.indexOf(rawTitle), 1);
 
-		console.log(rawTitle, " successfully removed from playlist.");
-	}
+    this.setState({ yourPlaylists: yourPlaylistsTemp });
 
-	updatePlaylistMusics = (obj, rawTitle) => {
-		let yourPlaylistsTemp = [...this.state.yourPlaylists];
+    console.log(rawTitle, " successfully removed from playlist.");
+  };
 
-		let index = yourPlaylistsTemp.indexOf(obj);
-		let updateObj = yourPlaylistsTemp[index];
+  updatePlaylistMusics = (obj, rawTitle) => {
+    let yourPlaylistsTemp = [...this.state.yourPlaylists];
 
-		if (updateObj.musics.includes(rawTitle)) {
-			alert(`${rawTitle} is already in playlist ${updateObj.playlistName}`);
-		} else {
-			updateObj.musics.unshift(rawTitle);
-			yourPlaylistsTemp[index] = updateObj;
-			this.setState({ yourPlaylists: yourPlaylistsTemp });
-		}
-	}
+    let index = yourPlaylistsTemp.indexOf(obj);
+    let updateObj = yourPlaylistsTemp[index];
 
-	deleteYourPlaylists = plObj => {
-		let yourPlaylistsTemp = [...this.state.yourPlaylists];
+    if (updateObj.musics.includes(rawTitle)) {
+      alert(`${rawTitle} is already in playlist ${updateObj.playlistName}`);
+    } else {
+      updateObj.musics.unshift(rawTitle);
+      yourPlaylistsTemp[index] = updateObj;
+      this.setState({ yourPlaylists: yourPlaylistsTemp });
+    }
+  };
 
-		yourPlaylistsTemp.splice(plObj, 1);
-		this.setState({ yourPlaylists: yourPlaylistsTemp });
-	}
+  deleteYourPlaylists = (plObj) => {
+    let yourPlaylistsTemp = [...this.state.yourPlaylists];
 
-	editYourPlaylists = (index, plObj) => {
-		let yourPlaylistsTemp = [...this.state.yourPlaylists];
-		yourPlaylistsTemp[index] = {
-			playlistID: yourPlaylistsTemp[index].playlistID,
-			...plObj
-		};
+    yourPlaylistsTemp.splice(plObj, 1);
+    this.setState({ yourPlaylists: yourPlaylistsTemp });
+  };
 
-		this.setState({ yourPlaylists: yourPlaylistsTemp });
-	}
-	
-	createYourPlaylists = plObj => {
-		let yourPlaylistsTemp = [...this.state.yourPlaylists];
-		yourPlaylistsTemp.unshift(plObj);
-		this.setState({ yourPlaylists: yourPlaylistsTemp });
-	}
+  editYourPlaylists = (index, plObj) => {
+    let yourPlaylistsTemp = [...this.state.yourPlaylists];
+    yourPlaylistsTemp[index] = {
+      playlistID: yourPlaylistsTemp[index].playlistID,
+      ...plObj,
+    };
 
-	updateFavorites = item => {
-		let favoritesTemp = [...this.state.favorites];
+    this.setState({ yourPlaylists: yourPlaylistsTemp });
+  };
 
-		if (favoritesTemp.includes(item)) {
-			favoritesTemp.splice(favoritesTemp.indexOf(item), 1);
-		} else {
-			favoritesTemp.unshift(item);
-		}
-		this.setState({ favorites: favoritesTemp });
-	}
+  createYourPlaylists = (plObj) => {
+    let yourPlaylistsTemp = [...this.state.yourPlaylists];
+    yourPlaylistsTemp.unshift(plObj);
+    this.setState({ yourPlaylists: yourPlaylistsTemp });
+  };
 
-	triggerMusicLoading = bool => this.setState({ musicLoading: bool });
+  updateFavorites = (item) => {
+    let favoritesTemp = [...this.state.favorites];
 
-	triggerShowBackArrow = bool => this.setState({ showBackArrow: bool });
+    if (favoritesTemp.includes(item)) {
+      favoritesTemp.splice(favoritesTemp.indexOf(item), 1);
+    } else {
+      favoritesTemp.unshift(item);
+    }
+    this.setState({ favorites: favoritesTemp });
+  };
 
-	setCurrentPage = title => this.setState({ currentPage: title });
+  triggerMusicLoading = (bool) => this.setState({ musicLoading: bool });
 
-	triggerPlaying = bool => this.setState({ playing: bool });
+  triggerShowBackArrow = (bool) => this.setState({ showBackArrow: bool });
 
-	prev = () => {
-		let { trackHistoryIndex, trackHistory } = this.state;
-		trackHistoryIndex -= 1;
-		this.setState({ trackHistoryIndex });
+  setCurrentPage = (title) => this.setState({ currentPage: title });
 
-		let stepBack = trackHistory[trackHistoryIndex];
-		this.musicSelectedFromLoc(stepBack);
-	}
-	
-	next = () => {
-		if (this.state.trackList.length > 1) {
-			this.musicSelectedFromLoc(this.handleMusicEnded());
-		} else {
-			let audEl = document.getElementsByTagName("audio")[0];
-			this.setState({ currentTime: 0 });
-			audEl.pause();
-		}
-	};
+  triggerPlaying = (bool) => this.setState({ playing: bool });
 
-	// Functions compiled
-	onMusicSelect = (data, dataTable) => {
-		this.musicSelectedFromLoc(data);
-		this.updateTrackList(dataTable);
-		this.updateTrackHistory(data);
-	}
+  prev = () => {
+    let { trackHistoryIndex, trackHistory } = this.state;
+    trackHistoryIndex -= 1;
+    this.setState({ trackHistoryIndex });
 
-	updateRecentPlayed = newItem => {
-		let recentPlayed = [...this.state.recentPlayed];
-		recentPlayed.unshift(newItem);
-		this.setState({ recentPlayed });
-	}
+    let stepBack = trackHistory[trackHistoryIndex];
+    this.musicSelectedFromLoc(stepBack);
+  };
 
-	updateTrackHistory = track => {
-		let trackHistory = [...this.state.trackHistory];
-		
-		if (!(track === trackHistory[trackHistory.length - 1])) {
+  next = () => {
+    if (this.state.trackList.length > 1) {
+      this.musicSelectedFromLoc(this.handleMusicEnded());
+    } else {
+      let audEl = document.getElementsByTagName("audio")[0];
+      this.setState({ currentTime: 0 });
+      audEl.pause();
+    }
+  };
 
-			// If track is already in history, it will be removed then
-			// it'll be at the bottom to avoid history duplication.
-			trackHistory = trackHistory.includes(track)
-			? trackHistory.filter(history => history !== track)
-			: trackHistory;
+  // Functions compiled
+  onMusicSelect = (data, dataTable) => {
+    this.musicSelectedFromLoc(data);
+    this.updateTrackList(dataTable);
+    this.updateTrackHistory(data);
+  };
 
-			// Removing first element when length
-			// of trackList reaches 100
-			if (trackHistory.length >= 100)
-				trackHistory.shift();
-			
-			trackHistory.push(track);
-			this.setState({ trackHistory });
-		}
+  updateRecentPlayed = (newItem) => {
+    let recentPlayed = [...this.state.recentPlayed];
+    recentPlayed.unshift(newItem);
+    this.setState({ recentPlayed });
+  };
 
-		this.updateRecentPlayed(track);
-		
-		let trackHistoryIndex = trackHistory.lastIndexOf(track);
-		this.setState({ trackHistoryIndex });
-	}
+  updateTrackHistory = (track) => {
+    let trackHistory = [...this.state.trackHistory];
 
-	updateTrackLoc = loc => this.setState({ trackLoc: loc });
+    if (!(track === trackHistory[trackHistory.length - 1])) {
+      // If track is already in history, it will be removed then
+      // it'll be at the bottom to avoid history duplication.
+      trackHistory = trackHistory.includes(track)
+        ? trackHistory.filter((history) => history !== track)
+        : trackHistory;
 
-	musicSelectedFromLoc = mscName => {
-		const musicArtist = mscName.slice(0, mscName.indexOf(" - "));
-		const customPath = musicArtist.replaceAll(" ", "-").toLowerCase();
-		const music = `../music-data/${customPath}/${mscName}`;
+      // Removing first element when length
+      // of trackList reaches 100
+      if (trackHistory.length >= 100) trackHistory.shift();
 
-		const musicInfo = {
-			path: customPath,
-			title: mscName.slice(mscName.indexOf(" - ") + 3, -4),
-			artistName: musicArtist
-		}
+      trackHistory.push(track);
+      this.setState({ trackHistory });
+    }
 
-		document.title = mscName.slice(0, -4);
+    this.updateRecentPlayed(track);
 
-		this.handleChangeMusic(mscName, music, musicInfo);
-	}
-	
-	handleChangeMusic = (mscName, activeMusic, activeMusicInfo) => {
-		this.setState({ activeMusicRawTitle: mscName });
-		this.setState({ activeMusic });
-		this.setState({ activeMusicInfo });
-	}
+    let trackHistoryIndex = trackHistory.lastIndexOf(track);
+    this.setState({ trackHistoryIndex });
+  };
 
-	updateTrackList = trackList => this.setState({ trackList });
+  updateTrackLoc = (loc) => this.setState({ trackLoc: loc });
 
-	updateCurrentTime = currentTime => this.setState({ currentTime });
-	
-	updateTotalDuration = duration => this.setState({ duration });
+  musicSelectedFromLoc = (mscName) => {
+    const musicArtist = mscName.slice(0, mscName.indexOf(" - "));
+    const customPath = musicArtist.replaceAll(" ", "-").toLowerCase();
+    const music = `../music-data/${customPath}/${mscName}`;
 
-	handleMusicEnded = () => {
-		// Next song state will be option here
-		const { activeMusicRawTitle, trackList } = this.state;
-		const { order, shuffle } = this.state;
-		let { trackHistoryIndex, trackHistory } = this.state;
+    const musicInfo = {
+      path: customPath,
+      title: mscName.slice(mscName.indexOf(" - ") + 3, -4),
+      artistName: musicArtist,
+    };
 
-		let nextSong;
-		
-		const currentMusicIndex = trackList.lastIndexOf(activeMusicRawTitle);
+    document.title = mscName.slice(0, -4);
 
-		if (trackHistoryIndex === trackHistory.length - 1) {
-			if (order) {
-				nextSong = currentMusicIndex === trackList.length - 1 ?
-				trackList[0] : trackList[currentMusicIndex + 1];
-			} else if (shuffle) {
-				do {
-					nextSong = trackList[Math.floor(Math.random() * trackList.length)];
-				} while (trackList.indexOf(nextSong) === currentMusicIndex);
-			}
-		} else {
-			trackHistoryIndex += 1;
-			this.setState({ trackHistoryIndex });
-			nextSong = trackHistory[trackHistoryIndex];
-		}
+    this.handleChangeMusic(mscName, music, musicInfo);
+  };
 
-		if (!(trackHistoryIndex !== trackHistory.length - 1)) {
-			this.updateTrackHistory(nextSong);
-		}
-		return nextSong;
-	}
- 
-	changeMusicEndState = () => {
-		this.setState({ order: !this.state.order });
-		this.setState({ shuffle: !this.state.shuffle });
-	}
+  handleChangeMusic = (mscName, activeMusic, activeMusicInfo) => {
+    this.setState({ activeMusicRawTitle: mscName });
+    this.setState({ activeMusic });
+    this.setState({ activeMusicInfo });
+  };
 
-	// Music Blocks Option's Function
-	addQueue = music => {
-		let trackHistoryTemp = [...this.state.trackHistory];
-		trackHistoryTemp.push(music);
-		
-		this.setState({ trackHistory: trackHistoryTemp });
-	}
+  updateTrackList = (trackList) => this.setState({ trackList });
 
-	// Check for albumCover of current music playing
+  updateCurrentTime = (currentTime) => this.setState({ currentTime });
+
+  updateTotalDuration = (duration) => this.setState({ duration });
+
+  handleMusicEnded = () => {
+    // Next song state will be option here
+    const { activeMusicRawTitle, trackList } = this.state;
+    const { order, shuffle } = this.state;
+    let { trackHistoryIndex, trackHistory } = this.state;
+
+    let nextSong;
+
+    const currentMusicIndex = trackList.lastIndexOf(activeMusicRawTitle);
+
+    if (trackHistoryIndex === trackHistory.length - 1) {
+      if (order) {
+        nextSong =
+          currentMusicIndex === trackList.length - 1
+            ? trackList[0]
+            : trackList[currentMusicIndex + 1];
+      } else if (shuffle) {
+        do {
+          nextSong = trackList[Math.floor(Math.random() * trackList.length)];
+        } while (trackList.indexOf(nextSong) === currentMusicIndex);
+      }
+    } else {
+      trackHistoryIndex += 1;
+      this.setState({ trackHistoryIndex });
+      nextSong = trackHistory[trackHistoryIndex];
+    }
+
+    if (!(trackHistoryIndex !== trackHistory.length - 1)) {
+      this.updateTrackHistory(nextSong);
+    }
+    return nextSong;
+  };
+
+  changeMusicEndState = () => {
+    this.setState({ order: !this.state.order });
+    this.setState({ shuffle: !this.state.shuffle });
+  };
+
+  // Music Blocks Option's Function
+  addQueue = (music) => {
+    let trackHistoryTemp = [...this.state.trackHistory];
+    trackHistoryTemp.push(music);
+
+    this.setState({ trackHistory: trackHistoryTemp });
+  };
+
+  // Check for albumCover of current music playing
   albumCoverChecker = (artistName, musicTitle) => {
     let data;
     try {
       data = albumCovers[artistName][musicTitle];
-    } catch(err) { data = undefined }
+    } catch (err) {
+      data = undefined;
+    }
 
     console.log(data);
 
     return data;
+  };
+
+  render() {
+    const events_states = {
+      triggerPlaying: this.triggerPlaying,
+
+      updateTotalDuration: this.updateTotalDuration,
+      updateCurrentTime: this.updateCurrentTime,
+
+      handleChangeMusic: this.handleChangeMusic,
+      handleMusicEnded: this.handleMusicEnded,
+      changeMusicEndState: this.changeMusicEndState,
+      updateTrackLoc: this.updateTrackLoc,
+
+      musicSelectedFromLoc: this.musicSelectedFromLoc,
+      updateTrackList: this.updateTrackList,
+      updateTrackHistory: this.updateTrackHistory,
+
+      onMusicSelect: this.onMusicSelect,
+
+      prev: this.prev,
+      next: this.next,
+
+      triggerShowBackArrow: this.triggerShowBackArrow,
+
+      setCurrentPage: this.setCurrentPage,
+
+      triggerMusicLoading: this.triggerMusicLoading,
+
+      updateFavorites: this.updateFavorites,
+
+      addQueue: this.addQueue,
+
+      deleteYourPlaylists: this.deleteYourPlaylists,
+      createYourPlaylists: this.createYourPlaylists,
+      editYourPlaylists: this.editYourPlaylists,
+
+      updatePlaylistMusics: this.updatePlaylistMusics,
+      removeMusicInPlaylist: this.removeMusicInPlaylist,
+
+      albumCoverChecker: this.albumCoverChecker,
+
+      sliderSeeked: this.sliderSeeked,
+    };
+
+    return (
+      <AudioContext.Provider
+        value={{
+          ...this.state,
+          ...events_states,
+        }}
+      >
+        {this.props.children}
+      </AudioContext.Provider>
+    );
   }
-
-	render() {
-		
-		const events_states = {
-			triggerPlaying: this.triggerPlaying,
-
-			updateTotalDuration: this.updateTotalDuration,
-			updateCurrentTime: this.updateCurrentTime,
-
-			handleChangeMusic: this.handleChangeMusic,
-			handleMusicEnded: this.handleMusicEnded,
-			changeMusicEndState: this.changeMusicEndState,
-			updateTrackLoc: this.updateTrackLoc,
-
-			musicSelectedFromLoc: this.musicSelectedFromLoc,
-			updateTrackList: this.updateTrackList,
-			updateTrackHistory: this.updateTrackHistory,
-
-			onMusicSelect: this.onMusicSelect,
-
-			prev: this.prev,
-			next: this.next,
-			
-			triggerShowBackArrow: this.triggerShowBackArrow,
-
-			setCurrentPage: this.setCurrentPage,
-
-			triggerMusicLoading: this.triggerMusicLoading,
-
-			updateFavorites: this.updateFavorites,
-
-			addQueue: this.addQueue,
-
-			deleteYourPlaylists: this.deleteYourPlaylists,
-			createYourPlaylists: this.createYourPlaylists,
-			editYourPlaylists: this.editYourPlaylists,
-
-			updatePlaylistMusics: this.updatePlaylistMusics,
-			removeMusicInPlaylist: this.removeMusicInPlaylist,
-
-			albumCoverChecker: this.albumCoverChecker,
-		};
-
-		return (
-			<AudioContext.Provider
-				value={
-					{
-						...this.state,
-						...events_states
-					}
-				}
-			>
-				{this.props.children}
-			</AudioContext.Provider>
-		)
-	}
 }

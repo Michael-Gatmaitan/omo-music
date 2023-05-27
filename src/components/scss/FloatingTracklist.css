@@ -2,22 +2,15 @@
   width: 100%;
   height: 100%;
   position: absolute;
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.3)), to(black));
   background: linear-gradient(rgba(0, 0, 0, 0.3), black);
   top: 0;
   left: 0;
   z-index: 20;
   padding: 8px;
   display: none;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  justify-content: flex-end;
+  flex-direction: column;
 }
-
 .floating-tracklist .tracklist-container {
   width: 100%;
   height: 100%;
@@ -25,15 +18,11 @@
   background-color: #EEEFF8;
   border-radius: 16px;
   padding: 18px;
-  display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 100%;
-      grid-template-columns: 100%;
-  -ms-grid-rows: auto 1fr auto;
-      grid-template-rows: auto 1fr auto;
+  grid-template-columns: 100%;
+  grid-template-rows: auto 1fr auto;
   grid-gap: 18px;
 }
-
 .floating-tracklist .tracklist-container .tracklist-head {
   font-family: "Montserrat", sans-serif !important;
   font-weight: 700 !important;
@@ -41,25 +30,20 @@
   color: #000 !important;
   color: #323232;
 }
-
 .floating-tracklist .tracklist-container .tracklist-content-parent {
   overflow-y: scroll;
 }
-
 .floating-tracklist .tracklist-container .tracklist-content-parent::-webkit-scrollbar-track {
   background-color: #EEEFF8;
 }
-
 .floating-tracklist .tracklist-container .tracklist-content-parent .tracklist-content .tracklist-music-block {
   padding: 10px 0 8px 0;
   position: relative;
   -webkit-user-select: none;
      -moz-user-select: none;
-      -ms-user-select: none;
           user-select: none;
   cursor: pointer;
 }
-
 .floating-tracklist .tracklist-container .tracklist-content-parent .tracklist-content .tracklist-music-block .tl-music-info .tl-title {
   color: #323232;
   padding-right: 40px;
@@ -68,7 +52,6 @@
   font-size: 18px !important;
   color: #000 !important;
 }
-
 .floating-tracklist .tracklist-container .tracklist-content-parent .tracklist-content .tracklist-music-block .tl-music-info .tl-artist {
   color: rgba(50, 50, 50, 0.58);
   font-family: "Open sans", sans-serif !important;
@@ -76,7 +59,6 @@
   font-size: 12px !important;
   color: rgba(0, 0, 0, 0.6) !important;
 }
-
 .floating-tracklist .tracklist-container .tracklist-content-parent .tracklist-content .tracklist-music-block .tl-liner {
   width: 100%;
   height: 0.5px;
@@ -84,7 +66,6 @@
   position: absolute;
   bottom: 0;
 }
-
 @media (min-width: 780px) {
   .floating-tracklist {
     padding: 0;
@@ -92,5 +73,4 @@
   .floating-tracklist .tracklist-container {
     max-height: 100%;
   }
-}
-/*# sourceMappingURL=FloatingTracklist.css.map */
+}/*# sourceMappingURL=FloatingTracklist.css.map */
