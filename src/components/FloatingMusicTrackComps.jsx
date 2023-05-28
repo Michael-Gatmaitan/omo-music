@@ -58,12 +58,6 @@ const FloatingMusicTrackComps = () => {
 
   let [isInFavorites, setIsInFavorites] = useState(false);
 
-  // eslint-disable-next-line
-  let durationPercent = useMemo(
-    () => calcPercent(currentTime, duration),
-    [currentTime, duration]
-  );
-
   useEffect(() => {
     if (activeMusicRawTitle)
       setIsInFavorites(favorites.includes(activeMusicRawTitle));

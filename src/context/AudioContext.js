@@ -62,71 +62,68 @@ export default class AudioContextProvider extends Component {
       this.state.playing && this.state.currentTime !== nextState.currentTime;
 
     // If only time of music is changed, do nothing, else set all state to localStorage
-    if (!isOnlyCurrentTimeChanged) {
+    if (!isOnlyCurrentTimeChanged)
       localStorage.setItem("bodyState", JSON.stringify(this.state));
-    }
   }
 
   removeMusicInPlaylist = (objName, rawTitle) => {
-    let yourPlaylistsTemp = [...this.state.yourPlaylists];
-    let musicObjParent = yourPlaylistsTemp.filter(
+    let yourPlaylists = [...this.state.yourPlaylists];
+    let musicObjParent = yourPlaylists.filter(
       (e) => e.playlistName === objName
     )[0];
     let { musics } = musicObjParent;
     musics.splice(musics.indexOf(rawTitle), 1);
 
-    this.setState({ yourPlaylists: yourPlaylistsTemp });
+    this.setState({ yourPlaylists });
 
     console.log(rawTitle, " successfully removed from playlist.");
   };
 
   updatePlaylistMusics = (obj, rawTitle) => {
-    let yourPlaylistsTemp = [...this.state.yourPlaylists];
+    let yourPlaylists = [...this.state.yourPlaylists];
 
-    let index = yourPlaylistsTemp.indexOf(obj);
-    let updateObj = yourPlaylistsTemp[index];
+    let index = yourPlaylists.indexOf(obj);
+    let updateObj = yourPlaylists[index];
 
     if (updateObj.musics.includes(rawTitle)) {
       alert(`${rawTitle} is already in playlist ${updateObj.playlistName}`);
     } else {
       updateObj.musics.unshift(rawTitle);
-      yourPlaylistsTemp[index] = updateObj;
-      this.setState({ yourPlaylists: yourPlaylistsTemp });
+      yourPlaylists[index] = updateObj;
+      this.setState({ yourPlaylists });
     }
   };
 
   deleteYourPlaylists = (plObj) => {
-    let yourPlaylistsTemp = [...this.state.yourPlaylists];
+    let yourPlaylists = [...this.state.yourPlaylists];
 
-    yourPlaylistsTemp.splice(plObj, 1);
-    this.setState({ yourPlaylists: yourPlaylistsTemp });
+    yourPlaylists.splice(plObj, 1);
+    this.setState({ yourPlaylists });
   };
 
   editYourPlaylists = (index, plObj) => {
-    let yourPlaylistsTemp = [...this.state.yourPlaylists];
-    yourPlaylistsTemp[index] = {
-      playlistID: yourPlaylistsTemp[index].playlistID,
+    let yourPlaylists = [...this.state.yourPlaylists];
+    yourPlaylists[index] = {
+      playlistID: yourPlaylists[index].playlistID,
       ...plObj,
     };
 
-    this.setState({ yourPlaylists: yourPlaylistsTemp });
+    this.setState({ yourPlaylists });
   };
 
   createYourPlaylists = (plObj) => {
-    let yourPlaylistsTemp = [...this.state.yourPlaylists];
-    yourPlaylistsTemp.unshift(plObj);
-    this.setState({ yourPlaylists: yourPlaylistsTemp });
+    let yourPlaylists = [...this.state.yourPlaylists];
+    yourPlaylists.unshift(plObj);
+    this.setState({ yourPlaylists });
   };
 
   updateFavorites = (item) => {
-    let favoritesTemp = [...this.state.favorites];
+    let favorites = [...this.state.favorites];
 
-    if (favoritesTemp.includes(item)) {
-      favoritesTemp.splice(favoritesTemp.indexOf(item), 1);
-    } else {
-      favoritesTemp.unshift(item);
-    }
-    this.setState({ favorites: favoritesTemp });
+    if (favorites.includes(item)) favorites.splice(favorites.indexOf(item), 1);
+    else favorites.unshift(item);
+
+    this.setState({ favorites });
   };
 
   triggerMusicLoading = (bool) => this.setState({ musicLoading: bool });
@@ -240,9 +237,8 @@ export default class AudioContextProvider extends Component {
             ? trackList[0]
             : trackList[currentMusicIndex + 1];
       } else if (shuffle) {
-        do {
-          nextSong = trackList[Math.floor(Math.random() * trackList.length)];
-        } while (trackList.indexOf(nextSong) === currentMusicIndex);
+        do nextSong = trackList[Math.floor(Math.random() * trackList.length)];
+        while (trackList.indexOf(nextSong) === currentMusicIndex);
       }
     } else {
       trackHistoryIndex += 1;
@@ -263,10 +259,10 @@ export default class AudioContextProvider extends Component {
 
   // Music Blocks Option's Function
   addQueue = (music) => {
-    let trackHistoryTemp = [...this.state.trackHistory];
-    trackHistoryTemp.push(music);
+    let trackHistory = [...this.state.trackHistory];
+    trackHistory.push(music);
 
-    this.setState({ trackHistory: trackHistoryTemp });
+    this.setState({ trackHistory });
   };
 
   // Check for albumCover of current music playing
