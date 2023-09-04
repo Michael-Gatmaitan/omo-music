@@ -9,7 +9,7 @@
 /coverage
 
 # production
-/build
+/dist
 
 # artist_image
 /public/disp-image

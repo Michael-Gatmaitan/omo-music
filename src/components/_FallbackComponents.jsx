@@ -1,6 +1,6 @@
 import './scss/FallbackComponents.css';
 
-const { PUBLIC_URL } = process.env;
+
 
 export const MusicBlockFallback = () => {
 
@@ -18,7 +18,7 @@ export const PageFallback = () => {
   return (
     <div className="page-fallback">
       <div className="loading-container">
-        <img src={`${PUBLIC_URL}/svg/omo-logo.svg`} alt="Logo" />
+        <img src={`/svg/omo-logo.svg`} alt="Logo" />
         <div className="loading-label">
           Loading, please wait.
         </div>

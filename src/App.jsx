@@ -109,6 +109,7 @@ function App() {
       <PlaylistOptions />
 
       <Sidebar />
+
     </>
   );
 }

@@ -1,13 +1,13 @@
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
+import ReactDOM from "react-dom";
+import "./index.css";
+import App from "./App";
 // import LandingPage from './LandingPage';
 
-import { BrowserRouter as Router } from 'react-router-dom';
+import { BrowserRouter as Router } from "react-router-dom";
 // Contexts
-import AudioContextProvider from './context/AudioContext';
-import EventContextProvider from './context/EventContext';
-import SearchContextProvider from './context/SearchContext';
+import AudioContextProvider from "./context/AudioContext";
+import EventContextProvider from "./context/EventContext";
+import SearchContextProvider from "./context/SearchContext";
 
 ReactDOM.render(
   <Router>
@@ -20,7 +20,7 @@ ReactDOM.render(
       </EventContextProvider>
     </AudioContextProvider>
   </Router>,
-  document.getElementById('root')
+  document.getElementById("root")
 );
 
 // music-data\ali-gatie

@@ -2,7 +2,7 @@ import { useContext, useMemo, useEffect } from 'react';
 import { Link, useHistory, useLocation } from 'react-router-dom';
 import { AudioContext } from './context/AudioContext';
 
-const { PUBLIC_URL } = process.env;
+
 
 const AppBody = () => {
 
@@ -49,7 +49,7 @@ const AppBody = () => {
           pointerEvents: showBackArrow ? 'auto' : 'none'
         }}
       >
-        <img src={`${PUBLIC_URL}/svg/back-arrow.svg`} alt="back-arrow" />
+        <img src={`/svg/back-arrow.svg`} alt="back-arrow" />
       </div>
 
       <span style={{ marginLeft: showBackArrow ? '46px' : '0px' }}>{currentPage}</span>

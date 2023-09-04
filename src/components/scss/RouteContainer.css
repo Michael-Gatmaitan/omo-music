@@ -73,30 +73,8 @@ a {
 }
 @media (min-width: 780px) {
   .route-container {
-    padding: 0 112px 0 112px;
-  }
-}
-@media (min-width: 780px) and (min-width: 780px) {
-  .route-container {
     padding: 0 40px 0 40px;
   }
-}
-@media (min-width: 780px) and (min-width: 860px) {
-  .route-container {
-    padding: 0 60px 0 60px;
-  }
-}
-@media (min-width: 780px) and (min-width: 980px) {
-  .route-container {
-    padding: 0 90px 0 90px;
-  }
-}
-@media (min-width: 780px) and (min-width: 1180px) {
-  .route-container {
-    padding: 0 112px 0 112px;
-  }
-}
-@media (min-width: 780px) {
   .route-container .route-grid-container {
     display: grid;
     grid-template-columns: auto 360px;
@@ -115,5 +93,20 @@ a {
     font-weight: 700 !important;
     font-size: 48px !important;
     color: #fff !important;
+  }
+}
+@media (min-width: 860px) {
+  .route-container {
+    padding: 0 60px 0 60px;
+  }
+}
+@media (min-width: 980px) {
+  .route-container {
+    padding: 0 90px 0 90px;
+  }
+}
+@media (min-width: 1180px) {
+  .route-container {
+    padding: 0 112px 0 112px;
   }
 }/*# sourceMappingURL=RouteContainer.css.map */

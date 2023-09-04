@@ -96,27 +96,7 @@ a {
   }
 
   @include desktop {
-    padding: 0 112px 0 112px;
-
-    // 40
-    @include customMediaQuery(780px) {
-      padding: 0 40px 0 40px;
-    }
-
-    // 60
-    @include customMediaQuery(860px) {
-      padding: 0 60px 0 60px;
-    }
-
-    // 90
-    @include customMediaQuery(980px) {
-      padding: 0 90px 0 90px;
-    }
-
-    // 112
-    @include customMediaQuery(1180px) {
-      padding: 0 112px 0 112px;
-    }
+    padding: 0 40px 0 40px;
 
     .route-grid-container {
       display: grid;
@@ -139,5 +119,20 @@ a {
         }
       }
     }
+  }
+
+  // 60
+  @include customMediaQuery(860px) {
+    padding: 0 60px 0 60px;
+  }
+
+  // 90
+  @include customMediaQuery(980px) {
+    padding: 0 90px 0 90px;
+  }
+
+  // 112
+  @include customMediaQuery(1180px) {
+    padding: 0 112px 0 112px;
   }
 }
