@@ -8,7 +8,7 @@ import { Link } from "react-router-dom";
 import FloatingTracklist from "./FloatingTracklist";
 import SeekBar from "./seek-bar/SeekBar";
 
-const { PUBLIC_URL } = process.env;
+
 const calcPercent = (curT, tDur) => (curT / tDur) * 100;
 
 const FloatingMusicTrackComps = () => {
@@ -76,7 +76,7 @@ const FloatingMusicTrackComps = () => {
       <FloatingTracklist />
 
       <div className='artist-image-bg'>
-        <img src={`${PUBLIC_URL}/artists-image/${path}.jpg`} alt='' />
+        <img src={`/artists-image/${path}.jpg`} alt='' />
       </div>
 
       <div className='blur-bg' />
@@ -86,7 +86,7 @@ const FloatingMusicTrackComps = () => {
           className='floating-artist-image-container'
           style={{ opacity: path ? 1 : 0 }}
         >
-          <img src={`${PUBLIC_URL}/artists-image/${path}.jpg`} alt='' />
+          <img src={`/artists-image/${path}.jpg`} alt='' />
         </div>
 
         <div className='floating-music-info'>
@@ -119,7 +119,7 @@ const FloatingMusicTrackComps = () => {
           >
             <img
               className='icon'
-              src={`${PUBLIC_URL}/svg/floating-icons/tracklist.svg`}
+              src={`/svg/floating-icons/tracklist.svg`}
               alt=''
             />
           </div>
@@ -135,7 +135,7 @@ const FloatingMusicTrackComps = () => {
           >
             <img
               className='icon'
-              src={`${PUBLIC_URL}/svg/floating-icons/shuffle.svg`}
+              src={`/svg/floating-icons/shuffle.svg`}
               alt=''
             />
           </div>
@@ -148,7 +148,7 @@ const FloatingMusicTrackComps = () => {
           >
             <img
               className='icon'
-              src={`${PUBLIC_URL}/svg/floating-icons/heart_${
+              src={`/svg/floating-icons/heart_${
                 isInFavorites ? "filled" : "unfilled"
               }.svg`}
               alt=''
@@ -170,7 +170,7 @@ const FloatingMusicTrackComps = () => {
           >
             <img
               className='icon'
-              src={`${PUBLIC_URL}/svg/floating-icons/more.svg`}
+              src={`/svg/floating-icons/more.svg`}
               alt=''
             />
           </div>
@@ -200,7 +200,7 @@ const FloatingMusicTrackComps = () => {
           >
             <img
               className='icon'
-              src={`${PUBLIC_URL}/svg/prev.svg`}
+              src={`/svg/prev.svg`}
               alt='prev'
             />
           </button>
@@ -218,7 +218,7 @@ const FloatingMusicTrackComps = () => {
             ) : (
               <img
                 className='icon'
-                src={`${PUBLIC_URL}/svg/${playing ? "pause" : "play"}.svg`}
+                src={`/svg/${playing ? "pause" : "play"}.svg`}
                 alt='play_pause'
               />
             )}
@@ -231,7 +231,7 @@ const FloatingMusicTrackComps = () => {
           >
             <img
               className='icon'
-              src={`${PUBLIC_URL}/svg/next.svg`}
+              src={`/svg/next.svg`}
               alt='next'
             />
           </button>

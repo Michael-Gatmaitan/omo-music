@@ -2,17 +2,20 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <link rel="icon" type="image/x-icon"href="%PUBLIC_URL%/favicon.ico" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#000000" />
-    <meta name="description" content="OMO Music, a website created by Michael Gatmaitan on Feb 2021, OMO music allows you to listen on Michael's Favorite songs on all time. This website is built using JS Framework, ReactJS. Liste over 450+ songs and 70+ artists." />
-    <link rel="apple-touch-icon" href="%PUBLIC_URL%/omo192.png" />
+    <meta
+      name="description"
+      content="OMO Music, a website created by Michael Gatmaitan on Feb 2021, OMO music allows you to listen on Michael's Favorite songs on all time. This website is built using JS Framework, ReactJS. Liste over 450+ songs and 70+ artists."
+    />
+    <link rel="apple-touch-icon" href="/omo192.png" />
     <!--
       manifest.json provides metadata used when your web app is installed on a
       user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
     -->
-    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+    <link rel="manifest" href="/manifest.json" />
     <!--
       Notice the use of %PUBLIC_URL% in the tags above.
       It will be replaced with the URL of the `public` folder during the build.
@@ -29,6 +32,9 @@
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
+
+    <!-- This line are needed for migrating CRA to VITE tool -->
+    <script type="module" src="/src/index.jsx"></script>
     <!--
       This HTML file is a template.
       If you open it directly in the browser, you will see an empty page.

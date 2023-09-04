@@ -38,4 +38,24 @@
       padding: 0 16px;
     }
   }
+
+  @include desktop {
+    padding: 16px 40px;
+    grid-gap: 12px;
+  }
+
+  // 60
+  @include customMediaQuery(860px) {
+    padding: 16px 60px 16px 60px;
+  }
+
+  // 90
+  @include customMediaQuery(980px) {
+    padding: 16px 90px 16px 90px;
+  }
+
+  // 112
+  @include customMediaQuery(1180px) {
+    padding: 16px 112px 16px 112px;
+  }
 }
