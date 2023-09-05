@@ -8,8 +8,7 @@ import { Link } from "react-router-dom";
 import FloatingTracklist from "./FloatingTracklist";
 import SeekBar from "./seek-bar/SeekBar";
 
-
-const calcPercent = (curT, tDur) => (curT / tDur) * 100;
+// const calcPercent = (curT, tDur) => (curT / tDur) * 100;
 
 const FloatingMusicTrackComps = () => {
   const {
@@ -168,11 +167,7 @@ const FloatingMusicTrackComps = () => {
             }}
             style={iconStyle}
           >
-            <img
-              className='icon'
-              src={`/svg/floating-icons/more.svg`}
-              alt=''
-            />
+            <img className='icon' src={`/svg/floating-icons/more.svg`} alt='' />
           </div>
         </div>
 
@@ -198,11 +193,7 @@ const FloatingMusicTrackComps = () => {
             disabled={trackHistory.length <= 1 || trackHistoryIndex === 0}
             onClick={prev}
           >
-            <img
-              className='icon'
-              src={`/svg/prev.svg`}
-              alt='prev'
-            />
+            <img className='icon' src={`/svg/prev.svg`} alt='prev' />
           </button>
 
           <button
@@ -229,11 +220,7 @@ const FloatingMusicTrackComps = () => {
             disabled={!activeMusic || trackList.length === 1}
             onClick={next}
           >
-            <img
-              className='icon'
-              src={`/svg/next.svg`}
-              alt='next'
-            />
+            <img className='icon' src={`/svg/next.svg`} alt='next' />
           </button>
         </div>
       </div>
