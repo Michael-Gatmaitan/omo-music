@@ -195,7 +195,7 @@ export default class AudioContextProvider extends Component {
   musicSelectedFromLoc = (mscName) => {
     const musicArtist = mscName.slice(0, mscName.indexOf(" - "));
     const customPath = musicArtist.replaceAll(" ", "-").toLowerCase();
-    const music = `../music-data/${customPath}/${mscName}`;
+    const music = `/music-data/${customPath}/${mscName}`;
 
     const musicInfo = {
       path: customPath,

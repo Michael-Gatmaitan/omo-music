@@ -90,7 +90,7 @@ const FloatingMusicTrackComps = () => {
 
         <div className='floating-music-info'>
           <Link
-            to={`../music-data/${path}/${activeMusicRawTitle}`}
+            to={`/music-data/${path}/${activeMusicRawTitle}`}
             target='_blank'
             download
           >
