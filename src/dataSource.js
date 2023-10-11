@@ -159,7 +159,7 @@ export const bodyData = [
       "Ben&Ben - Dear.mp3",
       "Ben&Ben - Di Ka Sayang.mp3",
       "Ben&Ben - Leaves.mp3",
-      "Ben&Ben - Ben&Ben - Masyado Pang Maaga.mp3",
+      "Ben&Ben - Masyado Pang Maaga.mp3",
       "Ben&Ben - Maybe The Night.mp3",
       "Ben&Ben - Nakikinig ka ba sa Akin.mp3",
       "Ben&Ben - Pagtingin.mp3",
