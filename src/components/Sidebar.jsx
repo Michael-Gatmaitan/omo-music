@@ -3,8 +3,6 @@ import { EventContext } from '../context/EventContext';
 import { Link } from 'react-router-dom';
 import "./scss/Sidebar.css";
 
-
-
 const Sidebar = () => {
   const { showSidebar, setShowSidebar } = useContext(EventContext);
 
@@ -54,7 +52,7 @@ const Sidebar = () => {
 
         <div className="omo-watermark">
           <div className="watermark-logo">
-            <img src="./svg/omo-logo.svg" alt="" />
+            <img src="/svg/omo-logo.svg" alt="omo-logo" />
           </div>
 
           <div className="omo-info">

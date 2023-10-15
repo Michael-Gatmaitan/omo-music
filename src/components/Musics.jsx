@@ -3,6 +3,8 @@ import { MusicBlockFallback } from './_FallbackComponents';
 import { allMusics } from '../dataSource';
 import './scss/MusicBlock.css';
 
+import { bodyData } from '../dataSource';
+
 const MusicBlock = lazy(() => import('./MusicBlock'));
 
 const Musics = () => {
@@ -13,6 +15,11 @@ const Musics = () => {
     // "allMusics" have a bundled all songs of artists
     console.log(`OMO Music has total of ${allMusics.length} songs.`);
     setMusicDataTable(allMusics);
+
+    // let bodyDataTemp = [...bodyData];
+    // console.log(bodyDataTemp);
+    // bodyDataTemp.map((artistData, newID) => artistData.artistID = newID);
+    // console.log(bodyDataTemp);
 
     // artistID aligner *incase of new artists added*
     // let bDataTemp = [...allMusics];

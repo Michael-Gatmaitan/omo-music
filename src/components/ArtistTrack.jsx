@@ -45,7 +45,7 @@ const ArtistTrack = () => {
       <div className="artist-track-route">
         <div className="artist-track-info">
           <div className="artist-image-wrapper">
-            <img src={`/artists-image/${path}.jpg`} alt={path} />
+            <img src={`/artists-image/${path}.jpg`} alt={path} loading='lazy' />
           </div>
           <div className="artist-name">
             {artistName}

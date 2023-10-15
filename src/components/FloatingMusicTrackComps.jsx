@@ -75,7 +75,7 @@ const FloatingMusicTrackComps = () => {
       <FloatingTracklist />
 
       <div className='artist-image-bg'>
-        <img src={`/artists-image/${path}.jpg`} alt='' />
+        <img src={`/artists-image/${path}.jpg`} alt='' loading="lazy" />
       </div>
 
       <div className='blur-bg' />
@@ -85,7 +85,7 @@ const FloatingMusicTrackComps = () => {
           className='floating-artist-image-container'
           style={{ opacity: path ? 1 : 0 }}
         >
-          <img src={`/artists-image/${path}.jpg`} alt='' />
+          <img src={`/artists-image/${path}.jpg`} alt='' loading="lazy" />
         </div>
 
         <div className='floating-music-info'>

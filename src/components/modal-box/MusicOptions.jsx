@@ -51,7 +51,7 @@ const MusicOptions = () => {
           <div className='bottom-buttons'>
             <CloseButton closeFunction={closeAllMusicOptions} />
             <Link
-              to={`../../music-data/${artistFolder}/${rawTitle}`}
+              to={`/music-data/${artistFolder}/${rawTitle}`}
               // rel="noopener noreferrer"
               target='_blank'
               download
@@ -134,7 +134,7 @@ const OptionSelection = (props) => {
       >
         <div className='option-icon'>
           <img
-            src={`../svg/black-icons/${
+            src={`/svg/black-icons/${
               isInFavorites ? "heart_filled" : "heart_unfilled"
             }.svg`}
             alt=''
@@ -147,7 +147,7 @@ const OptionSelection = (props) => {
 
       <div className='option' onClick={() => setShowSelectPlaylist(true)}>
         <div className='option-icon'>
-          <img src='../svg/black-icons/add_to_playlist_black.svg' alt='' />
+          <img src='/svg/black-icons/add_to_playlist_black.svg' alt='' />
         </div>
         <div className='option-title'>Add to Playlist</div>
       </div>

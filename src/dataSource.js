@@ -43,7 +43,7 @@ export const bodyData = [
       "Akon - Sunny Day.mp3",
       "Akon - We Don't Care.mp3",
     ],
-    artistID: 902
+    artistID: 2,
   },
   {
     path: "ali-gatie",
@@ -55,7 +55,7 @@ export const bodyData = [
       "Ali Gatie - Moonlight.mp3",
       "Ali Gatie - What If I Told You That I Love You.mp3",
     ],
-    artistID: 2,
+    artistID: 3,
   },
   {
     path: "ariana-grande",
@@ -67,7 +67,7 @@ export const bodyData = [
       "Ariana Grande - Positions.mp3",
       "Ariana Grande - 7 rings.mp3",
     ],
-    artistID: 3,
+    artistID: 4,
   },
   {
     path: "arthur-nery",
@@ -77,7 +77,7 @@ export const bodyData = [
       "Arthur Nery - Pagsamo.mp3",
       "Arthur Nery - TAKE ALL THE LOVE.mp3",
     ],
-    artistID: 4,
+    artistID: 5,
   },
   {
     path: "avicii",
@@ -106,7 +106,7 @@ export const bodyData = [
       "Avicii - WithOut You.mp3",
       "Avicii - You Be Love.mp3",
     ],
-    artistID: 5,
+    artistID: 6,
   },
   {
     path: "avril-lavigne",
@@ -120,7 +120,7 @@ export const bodyData = [
       "Avril Lavigne - When You're Gone.mp3",
       "Avril Lavigne - Wish You Were Here.mp3",
     ],
-    artistID: 6,
+    artistID: 7,
   },
   {
     path: "bazzi",
@@ -132,7 +132,7 @@ export const bodyData = [
       "Bazzi - Myself.mp3",
       "Bazzi - Paradise.mp3",
     ],
-    artistID: 7,
+    artistID: 8,
   },
   {
     path: "beegees",
@@ -148,7 +148,7 @@ export const bodyData = [
       "Beegees - Tragedy.mp3",
       "Beegees - Wish You Were Here.mp3",
     ],
-    artistID: 1010,
+    artistID: 9,
   },
   {
     path: "ben&ben",
@@ -167,7 +167,7 @@ export const bodyData = [
       "Ben&Ben - Ride Home.mp3",
       "Ben&Ben - Sugat (feat. Munimuni).mp3",
     ],
-    artistID: 8,
+    artistID: 10,
   },
   {
     path: "billie-eilish",
@@ -189,7 +189,7 @@ export const bodyData = [
       "Billie Eilish - You Should See Me In A Crown.mp3",
       "Billie Eilish - Your Power.mp3",
     ],
-    artistID: 9,
+    artistID: 11,
   },
   {
     path: "blackpink",
@@ -199,7 +199,7 @@ export const bodyData = [
       "BLACKPINK - Ice Cream.mp3",
       "BLACKPINK - Lovesick Girls.mp3",
     ],
-    artistID: 10,
+    artistID: 12,
   },
   {
     path: "blink-182",
@@ -212,7 +212,7 @@ export const bodyData = [
       "Blink-182 - Stay Together For The Kids.mp3",
       "Blink-182 - What's My Age Again.mp3",
     ],
-    artistID: 11,
+    artistID: 13,
   },
   {
     path: "bon-jovi",
@@ -222,7 +222,7 @@ export const bodyData = [
       "Bon Jovi - It's My Life.mp3",
       "Bon Jovi - Livin' On A Prayer.mp3",
     ],
-    artistID: 12,
+    artistID: 14,
   },
   {
     path: "bruno-mars",
@@ -237,13 +237,13 @@ export const bodyData = [
       "Bruno Mars - Today My Life Begins.mp3",
       "Bruno Mars - Versace On The Floor.mp3",
     ],
-    artistID: 13,
+    artistID: 15,
   },
   {
     path: "bruz",
     artistName: "BRUZ",
     musics: ["BRUZ - SHYBOI.mp3"],
-    artistID: 14,
+    artistID: 16,
   },
   {
     path: "bryan-adams",
@@ -253,7 +253,23 @@ export const bodyData = [
       "Bryan Adams - Please Forgive Me.mp3",
       "Bryan Adams - Summer Of '69.mp3",
     ],
-    artistID: 15,
+    artistID: 17,
+  },
+  {
+    path: "bugoy-drilon",
+    artistName: "Bugoy Drilon",
+    musics: [
+      "Bugoy Drilon - Bulag Sa Katotohanan.mp3",
+      "Bugoy Drilon - Dahil Tanging Ikaw - Minus One.mp3",
+      "Bugoy Drilon - Having You Near Me.mp3",
+      "Bugoy Drilon - Hindi Na Bale.mp3",
+      "Bugoy Drilon - Muli.mp3",
+      "Bugoy Drilon - Nang Dahil Sa Pag Ibig.mp3",
+      "Bugoy Drilon - Paano Na Kaya.mp3",
+      "Bugoy Drilon - Pagkat Mahal Kita - Minus One.mp3",
+      "Bugoy Drilon - Pwede Bang Ako Na Lang Ulit.mp3",
+    ],
+    artistID: 18,
   },
   {
     path: "cavetown",
@@ -267,7 +283,7 @@ export const bodyData = [
       "Cavetown - Trying.mp3",
       "Cavetown - Wishing Well.mp3",
     ],
-    artistID: 16,
+    artistID: 19,
   },
   {
     path: "charlie-puth",
@@ -279,7 +295,7 @@ export const bodyData = [
       "Charlie Puth - Up All Night.mp3",
       "Charlie Puth - We Don't Talk Anymore.mp3",
     ],
-    artistID: 17,
+    artistID: 20,
   },
   {
     path: "chelsea-cutler",
@@ -291,7 +307,7 @@ export const bodyData = [
       "Chelsea Cutler - The stars.mp3",
       "Chelsea Cutler - Your Shirt.mp3",
     ],
-    artistID: 18,
+    artistID: 21,
   },
   {
     path: "chilledcow",
@@ -314,7 +330,7 @@ export const bodyData = [
       "ChilledCow - Refeeld x Project AER - Chance Encounter.mp3",
       "ChilledCow - Tysu x Spencer Hunt - Window Seat.mp3",
     ],
-    artistID: 19,
+    artistID: 22,
   },
   {
     path: "chillhop-music",
@@ -328,7 +344,7 @@ export const bodyData = [
       "Chillhop Music - Endless Sunday [Chillhop instrumental beats].mp3",
       "Chillhop Music - Endless Sunday 2 [lofi jazz instrumental hip hop beats].mp3",
     ],
-    artistID: 20,
+    artistID: 23,
   },
   {
     path: "cigarettes-after-sex",
@@ -342,7 +358,7 @@ export const bodyData = [
       "Cigarettes After Sex - Nothing's Gonna Hurt You Baby.mp3",
       "Cigarettes After Sex - Sweet.mp3",
     ],
-    artistID: 21,
+    artistID: 24,
   },
   {
     path: "claire-cottrill",
@@ -355,7 +371,7 @@ export const bodyData = [
       "Claire Cottrill - Sofia.mp3",
       "Claire Cottrill - Softly.mp3",
     ],
-    artistID: 22,
+    artistID: 25,
   },
   {
     path: "claire-rosinkranz",
@@ -367,7 +383,7 @@ export const bodyData = [
       "Claire Rosinkranz - Real Life.mp3",
       "Claire Rosinkranz - Tough Guy.mp3",
     ],
-    artistID: 23,
+    artistID: 26,
   },
   {
     path: "coldplay",
@@ -383,7 +399,7 @@ export const bodyData = [
       "Coldplay - The Scientist.mp3",
       "Coldplay - Yellow.mp3",
     ],
-    artistID: 24,
+    artistID: 27,
   },
   {
     path: "creed",
@@ -393,7 +409,7 @@ export const bodyData = [
       "Creed - One Last Breath.mp3",
       "Creed - With Arms Wide Open.mp3",
     ],
-    artistID: 25,
+    artistID: 28,
   },
   {
     path: "cueshe",
@@ -406,13 +422,13 @@ export const bodyData = [
       "Cueshe - Stay.mp3",
       "Cueshe - Ulan.mp3",
     ],
-    artistID: 26,
+    artistID: 29,
   },
   {
     path: "daughtry",
     artistName: "Daughtry",
     musics: ["Daughtry - Home.mp3", "Daughtry - Over You.mp3"],
-    artistID: 27,
+    artistID: 30,
   },
   {
     path: "december-avenue",
@@ -424,7 +440,18 @@ export const bodyData = [
       "December Avenue - Magkunwari.mp3",
       "December Avenue - Sa Ngalan Ng Pag-Ibig.mp3",
     ],
-    artistID: 28,
+    artistID: 31,
+  },
+  {
+    path: "dilaw",
+    artistName: "Dilaw",
+    musics: [
+      "Dilaw - Janice.mp3",
+      "Dilaw - Orasa.mp3",
+      "Dilaw - Sansinukob.mp3",
+      "Dilaw - Uhaw (Tayong Lahat).mp3",
+    ],
+    artistID: 32,
   },
   {
     path: "disturbed",
@@ -434,7 +461,7 @@ export const bodyData = [
       "Disturbed - Stupify.mp3",
       "Disturbed - The Sound Of Silence.mp3",
     ],
-    artistID: 29,
+    artistID: 33,
   },
   {
     path: "drake",
@@ -451,7 +478,7 @@ export const bodyData = [
       "Drake - Toosie Slide.mp3",
       "Drake - Trust Issues.mp3",
     ],
-    artistID: 29,
+    artistID: 34,
   },
   {
     path: "dreamy",
@@ -473,7 +500,7 @@ export const bodyData = [
       "Dreamy - Yūgen ~ Japanese Lofi Hip-Hop.mp3",
       "Dreamy - Because music cures every problem ~ lofi hip hop mix.mp3",
     ],
-    artistID: 30,
+    artistID: 35,
   },
   {
     path: "e-ve",
@@ -488,7 +515,7 @@ export const bodyData = [
       "E ve - 蒼のワルツ.mp3",
       "E ve - 遊生夢死(Living idly and dying as if dreaming).mp3",
     ],
-    artistID: 31,
+    artistID: 36,
   },
   {
     path: "ed-sheeran",
@@ -503,7 +530,7 @@ export const bodyData = [
       "Ed Sheeran - Photograph.mp3",
       "Ed Sheeran - Shape Of You.mp3",
     ],
-    artistID: 32,
+    artistID: 37,
   },
   {
     path: "eminem",
@@ -516,7 +543,7 @@ export const bodyData = [
       "Eminem - The Monster.mp3",
       "Eminem - The Real Slim Shady.mp3",
     ],
-    artistID: 33,
+    artistID: 38,
   },
   {
     path: "emman",
@@ -526,7 +553,7 @@ export const bodyData = [
       "EMMAN - Teka Lang.mp3",
       "EMMAN - Uuwian.mp3",
     ],
-    artistID: 34,
+    artistID: 39,
   },
   {
     path: "eraserheads",
@@ -551,7 +578,7 @@ export const bodyData = [
       "Eraserheads - Trip To Jerusalem.mp3",
       "Eraserheads - With A Smile.mp3",
     ],
-    artistID: 35,
+    artistID: 40,
   },
   {
     path: "evanescence",
@@ -561,7 +588,7 @@ export const bodyData = [
       "Evanescence - Going Under.mp3",
       "Evanescence - My Immortal.mp3",
     ],
-    artistID: 36,
+    artistID: 41,
   },
   {
     path: "finding-hope",
@@ -575,7 +602,7 @@ export const bodyData = [
       "Finding Hope - Valentine's Day.mp3",
       "Finding Hope - Without You.mp3",
     ],
-    artistID: 37,
+    artistID: 42,
   },
   {
     path: "five-for-fighting",
@@ -585,7 +612,7 @@ export const bodyData = [
       "Five for Fighting - Superman.mp3",
       "Five for Fighting - The Riddle.mp3",
     ],
-    artistID: 38,
+    artistID: 43,
   },
   {
     path: "fm-static",
@@ -595,7 +622,7 @@ export const bodyData = [
       "FM Static - Tonight.mp3",
       "FM Static - What It Feels Like.mp3",
     ],
-    artistID: 39,
+    artistID: 44,
   },
   {
     path: "藤井-風-(fujii-kaze)",
@@ -606,13 +633,13 @@ export const bodyData = [
       "藤井 風 (Fujii Kaze) - 帰ろう (Kaerou).mp3",
       "藤井 風 (Fujii Kaze) - 旅路 (Tabiji).mp3",
     ],
-    artistID: 40,
+    artistID: 45,
   },
   {
     path: "gian",
     artistName: "GIAN",
     musics: ["GIAN - Tayo.mp3"],
-    artistID: 41,
+    artistID: 46,
   },
   {
     path: "giveon",
@@ -631,7 +658,7 @@ export const bodyData = [
       "Giveon - VANISH.mp3",
       "Giveon - WORLD WE CREATED.mp3",
     ],
-    artistID: 42,
+    artistID: 47,
   },
   {
     path: "green-day",
@@ -643,7 +670,7 @@ export const bodyData = [
       "Green Day - Holiday.mp3",
       "Green Day - Wake Me Up When September Ends.mp3",
     ],
-    artistID: 43,
+    artistID: 48,
   },
   {
     path: "guns-n'-roses",
@@ -654,7 +681,7 @@ export const bodyData = [
       "Guns N' Roses - Sweet Child O' Mine.mp3",
       "Guns N' Roses - Welcome To The Jungle.mp3",
     ],
-    artistID: 44,
+    artistID: 49,
   },
   {
     path: "halsey",
@@ -666,7 +693,7 @@ export const bodyData = [
       "Halsey - Eastside.mp3",
       "Halsey - Without Me.mp3",
     ],
-    artistID: 45,
+    artistID: 50,
   },
   {
     path: "harry-styles",
@@ -681,9 +708,9 @@ export const bodyData = [
       "Harry Styles - Late Night Talking.mp3",
       "Harry Styles - Music For a Sushi Restaurant.mp3",
       "Harry Styles - Satellite.mp3",
-      "Harry Styles - Sign of the Times.mp3"
+      "Harry Styles - Sign of the Times.mp3",
     ],
-    artistID: 901,
+    artistID: 51,
   },
   {
     path: "hinder",
@@ -693,7 +720,7 @@ export const bodyData = [
       "Hinder - Lips Of An Angel.mp3",
       "Hinder - Without You.mp3",
     ],
-    artistID: 46,
+    artistID: 52,
   },
   {
     path: "hoobastank",
@@ -703,7 +730,7 @@ export const bodyData = [
       "Hoobastank - Running Away.mp3",
       "Hoobastank - The Reason.mp3",
     ],
-    artistID: 47,
+    artistID: 53,
   },
   {
     path: "imaginedragons",
@@ -716,7 +743,7 @@ export const bodyData = [
       "ImagineDragons - Next To Me.mp3",
       "ImagineDragons - Whatever It Takes.mp3",
     ],
-    artistID: 48,
+    artistID: 54,
   },
   {
     path: "iv-of-spades",
@@ -728,7 +755,7 @@ export const bodyData = [
       "IV OF SPADES - Ilaw Sa Daan.mp3",
       "IV OF SPADES - Mundo.mp3",
     ],
-    artistID: 49,
+    artistID: 55,
   },
   {
     path: "jason-derulo",
@@ -746,7 +773,7 @@ export const bodyData = [
       "Jason Derulo - Want To Want Me.mp3",
       "Jason Derulo - Whatcha Say.mp3",
     ],
-    artistID: 49,
+    artistID: 56,
   },
   {
     path: "jay-z",
@@ -772,7 +799,7 @@ export const bodyData = [
       "Jay-Z - Bam.mp3",
       "JAY-Z - Change The Game.mp3",
     ],
-    artistID: 49,
+    artistID: 57,
   },
   {
     path: "joji",
@@ -803,9 +830,22 @@ export const bodyData = [
       "Joji - XNXX.mp3",
       "Joji - YEAH RIGHT.mp3",
       "Joji - Your Man.mp3",
-      "Joji - YUKON.mp3"
+      "Joji - YUKON.mp3",
     ],
-    artistID: 50,
+    artistID: 58,
+  },
+  {
+    path: "juan-karlos",
+    artistName: "Juan Karlos",
+    musics: [
+      "Juan Karlos - Buwan.mp3",
+      "Juan Karlos - ERE.mp3",
+      "Juan Karlos - Kalawakan.mp3",
+      "Juan Karlos - May Halaga Pa Ba Ako Sayo.mp3",
+      "Juan Karlos - Para Sayo.mp3",
+      "Juan Karlos - Sistema.mp3",
+    ],
+    artistID: 59,
   },
   {
     path: "juice-wrld",
@@ -820,7 +860,7 @@ export const bodyData = [
       "Juice WRLD - Smile.mp3",
       "Juice WRLD - Wishing Well.mp3",
     ],
-    artistID: 51,
+    artistID: 60,
   },
   {
     path: "just-hush",
@@ -835,7 +875,7 @@ export const bodyData = [
       "Just Hush - Red Planet.mp3",
       "Just Hush - SHINOBI.mp3",
     ],
-    artistID: 1000,
+    artistID: 61,
   },
   {
     path: "justin-timberlake",
@@ -845,7 +885,7 @@ export const bodyData = [
       "Justin Timberlake - Mirrors.mp3",
       "Justin Timberlake - True Colors.mp3",
     ],
-    artistID: 52,
+    artistID: 62,
   },
   {
     path: "kamikazee",
@@ -862,7 +902,7 @@ export const bodyData = [
       "Kamikazee - Tsinelas.mp3",
       "Kamikazee - Unang Tikim.mp3",
     ],
-    artistID: 53,
+    artistID: 63,
   },
   {
     path: "kesha",
@@ -881,7 +921,7 @@ export const bodyData = [
       "Kesha - Woman.mp3",
       "Kesha - Your Love Is My Drug.mp3",
     ],
-    artistID: 53,
+    artistID: 64,
   },
   {
     path: "khalid",
@@ -895,7 +935,7 @@ export const bodyData = [
       "Khalid - Talk.mp3",
       "Khalid - Young Dumb & Broke.mp3",
     ],
-    artistID: 54,
+    artistID: 65,
   },
   {
     path: "kiyo",
@@ -910,7 +950,7 @@ export const bodyData = [
       "Kiyo - untitled ft shiloh.mp3",
       "Kiyo - Urong; Sulong.mp3",
     ],
-    artistID: 55,
+    artistID: 66,
   },
   {
     path: "lady-gaga",
@@ -929,7 +969,7 @@ export const bodyData = [
       "Lady Gaga - The Edge Of Glory.mp3",
       "Lady Gaga - Yoü And I.mp3",
     ],
-    artistID: 56,
+    artistID: 67,
   },
   {
     path: "lany",
@@ -945,7 +985,7 @@ export const bodyData = [
       "LANY - Valentine's Day.mp3",
       "LANY - you!.mp3",
     ],
-    artistID: 57,
+    artistID: 68,
   },
   {
     path: "lauv",
@@ -955,7 +995,7 @@ export const bodyData = [
       "Lauv - I Like Me Better.mp3",
       "Lauv - Paris In The Rain.mp3",
     ],
-    artistID: 58,
+    artistID: 69,
   },
   {
     path: "lil-uzi-vert",
@@ -974,7 +1014,7 @@ export const bodyData = [
       "Lil Uzi Vert - Yessirskiii ft. 21 Savage.mp3",
       "Lil Uzi Vert - You Was Right.mp3",
     ],
-    artistID: 59,
+    artistID: 70,
   },
   {
     path: "linkin-park",
@@ -984,7 +1024,7 @@ export const bodyData = [
       "Linkin Park - In The End.mp3",
       "Linkin Park - Numb.mp3",
     ],
-    artistID: 60,
+    artistID: 71,
   },
   {
     path: "lowly",
@@ -994,7 +1034,7 @@ export const bodyData = [
       "Lowly - INZO - Overthinker.mp3",
       "Lowly - LIHO - Surrender.mp3",
     ],
-    artistID: 61,
+    artistID: 72,
   },
   {
     path: "maroon-5",
@@ -1007,7 +1047,7 @@ export const bodyData = [
       "Maroon 5 - Sugar.mp3",
       "Maroon 5 - Won't Go Home Without You.mp3",
     ],
-    artistID: 62,
+    artistID: 73,
   },
   {
     path: "marshmello",
@@ -1022,7 +1062,7 @@ export const bodyData = [
       "Marshmello - Spotlight.mp3",
       "Marshmello - Take It Back.mp3",
     ],
-    artistID: 63,
+    artistID: 74,
   },
   {
     path: "michael-bublé",
@@ -1038,7 +1078,7 @@ export const bodyData = [
       "Michael Bublé - Love You Anymore.mp3",
       "Michael Bublé - Me and Mrs. Jones.mp3",
     ],
-    artistID: 64,
+    artistID: 75,
   },
   {
     path: "mike-posner",
@@ -1050,7 +1090,7 @@ export const bodyData = [
       "Mike Posner - Nothing Is Wrong.mp3",
       "Mike Posner - Please Don't Go.mp3",
     ],
-    artistID: 65,
+    artistID: 76,
   },
   {
     path: "miley-cyrus",
@@ -1061,7 +1101,7 @@ export const bodyData = [
       "Miley Cyrus - We Can't Stop.mp3",
       "Miley Cyrus - Wrecking Ball.mp3",
     ],
-    artistID: 66,
+    artistID: 77,
   },
   {
     path: "mrld",
@@ -1072,7 +1112,7 @@ export const bodyData = [
       "mrld - Ligaya.mp3",
       "mrld - Maligayang Pagkunwari.mp3",
     ],
-    artistID: 1001,
+    artistID: 78,
   },
   {
     path: "munimuni",
@@ -1094,7 +1134,7 @@ export const bodyData = [
       "Munimuni - Tahanan.mp3",
       "Munimuni - Tinig.mp3",
     ],
-    artistID: 67,
+    artistID: 79,
   },
   {
     path: "my-chemical-romance",
@@ -1108,7 +1148,7 @@ export const bodyData = [
       "My Chemical Romance - The World Is Ugly.mp3",
       "My Chemical Romance - Welcome To The Black Parade.mp3",
     ],
-    artistID: 68,
+    artistID: 80,
   },
   {
     path: "ne-yo",
@@ -1123,7 +1163,7 @@ export const bodyData = [
       "Ne Yo - Sexy Love.mp3",
       "Ne Yo - So Sick.mp3",
     ],
-    artistID: 68,
+    artistID: 81,
   },
   {
     path: "oasis",
@@ -1135,7 +1175,7 @@ export const bodyData = [
       "Oasis - Stop Crying Your Heart Out.mp3",
       "Oasis - Wonderwall.mp3",
     ],
-    artistID: 69,
+    artistID: 82,
   },
   {
     path: "oh-wonder",
@@ -1148,7 +1188,7 @@ export const bodyData = [
       "Oh Wonder - Ultralife.mp3",
       "Oh Wonder - Without You.mp3",
     ],
-    artistID: 70,
+    artistID: 83,
   },
   {
     path: "olivia-rodrigo",
@@ -1162,7 +1202,7 @@ export const bodyData = [
       "Olivia Rodrigo - hope ur ok.mp3",
       "Olivia Rodrigo - traitor.mp3",
     ],
-    artistID: 71,
+    artistID: 84,
   },
   {
     path: "one-direction",
@@ -1177,7 +1217,7 @@ export const bodyData = [
       "One Direction - What Makes You Beautiful.mp3",
       "One Direction - You and I.mp3",
     ],
-    artistID: 72,
+    artistID: 85,
   },
   {
     path: "onerepublic",
@@ -1187,7 +1227,7 @@ export const bodyData = [
       "OneRepublic - Good Life.mp3",
       "OneRepublic - If I Lose Myself.mp3",
     ],
-    artistID: 73,
+    artistID: 86,
   },
   {
     path: "owl-city",
@@ -1197,7 +1237,7 @@ export const bodyData = [
       "Owl City - Fireflies.mp3",
       "Owl City - Vanilla Twilight.mp3",
     ],
-    artistID: 74,
+    artistID: 87,
   },
   {
     path: "paramore",
@@ -1218,7 +1258,7 @@ export const bodyData = [
       "Paramore - Turn It Off.mp3",
       "Paramore - When It Rains.mp3",
     ],
-    artistID: 75,
+    artistID: 88,
   },
   {
     path: "parokya-ni-edgar",
@@ -1242,7 +1282,7 @@ export const bodyData = [
       "Parokya Ni Edgar - Wag Mo Na Sana.mp3",
       "Parokya Ni Edgar - Your Song.mp3",
     ],
-    artistID: 76,
+    artistID: 89,
   },
   {
     path: "planetshakers",
@@ -1255,7 +1295,7 @@ export const bodyData = [
       "Planetshakers - I'm Forever Yours.mp3",
       "Planetshakers - Nothing Is Impossible.mp3",
     ],
-    artistID: 77,
+    artistID: 90,
   },
   {
     path: "post-malone",
@@ -1279,7 +1319,7 @@ export const bodyData = [
       "Post Malone - White Iverson.mp3",
       "Post Malone - Yours Truly, Austin Post.mp3",
     ],
-    artistID: 78,
+    artistID: 91,
   },
   {
     path: "powfu",
@@ -1310,13 +1350,13 @@ export const bodyData = [
       "Powfu - When the hospital was my home.mp3",
       "Powfu - Would look perfect.mp3",
     ],
-    artistID: 79,
+    artistID: 92,
   },
   {
     path: "public",
     artistName: "Public",
     musics: ["Public - Make You Mine.mp3"],
-    artistID: 80,
+    artistID: 93,
   },
   {
     path: "queen",
@@ -1333,7 +1373,7 @@ export const bodyData = [
       "Queen - We Will Rock You.mp3",
       "Queen - Who Wants To Live Forever.mp3",
     ],
-    artistID: 81,
+    artistID: 94,
   },
   {
     path: "radwimps",
@@ -1343,7 +1383,7 @@ export const bodyData = [
       "RADWIMPS - Sparkle.mp3",
       "RADWIMPS - 前前前世 (Zen Zen Zense).mp3",
     ],
-    artistID: 82,
+    artistID: 95,
   },
   {
     path: "red-hot-chili-peppers",
@@ -1353,7 +1393,7 @@ export const bodyData = [
       "Red Hot Chili Peppers - Otherside.mp3",
       "Red Hot Chili Peppers - Scar Tissue.mp3",
     ],
-    artistID: 83,
+    artistID: 96,
   },
   {
     path: "rex-orange-county",
@@ -1364,7 +1404,7 @@ export const bodyData = [
       "Rex Orange County - Loving is Easy.mp3",
       "Rex Orange County - Sunflower.mp3",
     ],
-    artistID: 84,
+    artistID: 97,
   },
   {
     path: "ricky-montgomery",
@@ -1377,7 +1417,7 @@ export const bodyData = [
       "Ricky Montgomery - Snow.mp3",
       "Ricky Montgomery - Sorry for Me.mp3",
     ],
-    artistID: 85,
+    artistID: 98,
   },
   {
     path: "rihanna",
@@ -1399,7 +1439,7 @@ export const bodyData = [
       "Rihanna - Where Have You Been.mp3",
       "Rihanna - Work.mp3",
     ],
-    artistID: 85,
+    artistID: 99,
   },
   {
     path: "rini",
@@ -1409,7 +1449,7 @@ export const bodyData = [
       "RINI - Meet Me in Amsterdam.mp3",
       "RINI - Oceane ft. Olivia Escuyos.mp3",
     ],
-    artistID: 86,
+    artistID: 100,
   },
   {
     path: "rivermaya",
@@ -1431,7 +1471,7 @@ export const bodyData = [
       "Rivermaya - Umaaraw Umuulan.mp3",
       "Rivermaya - You'll Be Safe Here.mp3",
     ],
-    artistID: 86,
+    artistID: 101,
   },
   {
     path: "russ",
@@ -1459,9 +1499,9 @@ export const bodyData = [
       "Russ - That Was Me.mp3",
       "Russ - The Flute Song.mp3",
       "Russ - Waves.mp3",
-      "Russ - Yes Sir.mp3"
+      "Russ - Yes Sir.mp3",
     ],
-    artistID: 124,
+    artistID: 102,
   },
   {
     path: "silent-sanctuary",
@@ -1484,7 +1524,7 @@ export const bodyData = [
       "Silent Sanctuary - Sana Ngayong Pasko.mp3",
       "Silent Sanctuary - Sayo.mp3",
     ],
-    artistID: 87,
+    artistID: 103,
   },
   {
     path: "slipknot",
@@ -1496,7 +1536,7 @@ export const bodyData = [
       "Slipknot - Spit It Out.mp3",
       "Slipknot - Wait And Bleed.mp3",
     ],
-    artistID: 88,
+    artistID: 104,
   },
   {
     path: "snoop-dogg",
@@ -1505,7 +1545,7 @@ export const bodyData = [
       "Snoop Dogg - Drop It Like Its Hot.mp3",
       "Snoop Dogg - SMOKE WEED EVERYDAY.mp3",
     ],
-    artistID: 88,
+    artistID: 105,
   },
   {
     path: "system-of-a-down",
@@ -1516,7 +1556,7 @@ export const bodyData = [
       "System Of A Down - Chop Suey!.mp3",
       "System Of A Down - Toxicity.mp3",
     ],
-    artistID: 89,
+    artistID: 106,
   },
   {
     path: "taylor-swift",
@@ -1536,7 +1576,7 @@ export const bodyData = [
       "Taylor Swift - The Way I Loved You.mp3",
       "Taylor Swift - You Belong With Me.mp3",
     ],
-    artistID: 90,
+    artistID: 107,
   },
   {
     path: "the-1975",
@@ -1549,7 +1589,7 @@ export const bodyData = [
       "The 1975 - Somebody Else.mp3",
       "The 1975 - The Sound.mp3",
     ],
-    artistID: 91,
+    artistID: 108,
   },
   {
     path: "the-black-eyed-peas",
@@ -1562,7 +1602,7 @@ export const bodyData = [
       "The Black Eyed Peas - The Time.mp3",
       "The Black Eyed Peas - Where Is The Love.mp3",
     ],
-    artistID: 92,
+    artistID: 109,
   },
   {
     path: "the-bootleg-boy",
@@ -1587,7 +1627,7 @@ export const bodyData = [
       "The Bootleg Boy - Teqkoi - afraid of loving you.mp3",
       "The Bootleg Boy - Zaini - you felt like home.mp3",
     ],
-    artistID: 93,
+    artistID: 110,
   },
   {
     path: "the-chainsmokers",
@@ -1602,7 +1642,7 @@ export const bodyData = [
       "The Chainsmokers - Roses.mp3",
       "The Chainsmokers - Something Just Like This.mp3",
     ],
-    artistID: 94,
+    artistID: 111,
   },
   {
     path: "the-script",
@@ -1612,7 +1652,7 @@ export const bodyData = [
       "The Script - Superheroes.mp3",
       "The Script - The Man Who Can’t Be Moved.mp3",
     ],
-    artistID: 95,
+    artistID: 112,
   },
   {
     path: "the-walters",
@@ -1626,7 +1666,7 @@ export const bodyData = [
       "The Walters - Sweet Marie.mp3",
       "The Walters - What's Left.mp3",
     ],
-    artistID: 96,
+    artistID: 113,
   },
   {
     path: "the-weeknd",
@@ -1656,7 +1696,7 @@ export const bodyData = [
       "The Weeknd - The Morning.mp3",
       "The Weeknd - Too Late.mp3",
     ],
-    artistID: 97,
+    artistID: 114,
   },
   {
     path: "trap-nation",
@@ -1667,7 +1707,7 @@ export const bodyData = [
       "Trap Nation - Vanic - Save Yourself.mp3",
       "Trap Nation - Vanic x K.Flay - So Slow.mp3",
     ],
-    artistID: 98,
+    artistID: 115,
   },
   {
     path: "troye-sivan",
@@ -1685,7 +1725,7 @@ export const bodyData = [
       "Troye Sivan - WILD.mp3",
       "Troye Sivan - YOUTH.mp3",
     ],
-    artistID: 98,
+    artistID: 116,
   },
   {
     path: "twenty-one-pilots",
@@ -1702,7 +1742,7 @@ export const bodyData = [
       "Twenty One Pilots - Stressed Out.mp3",
       "Twenty One Pilots - The Hype.mp3",
     ],
-    artistID: 99,
+    artistID: 117,
   },
   {
     path: "twice",
@@ -1732,7 +1772,7 @@ export const bodyData = [
       "TWICE - YES or YES.mp3",
       "TWICE - 다시 해줘 Do it again.mp3",
     ],
-    artistID: 100,
+    artistID: 118,
   },
   {
     path: "unique-salonga",
@@ -1747,7 +1787,7 @@ export const bodyData = [
       "Unique Salonga - Pahinga.mp3",
       "Unique Salonga - Sino.mp3",
     ],
-    artistID: 910,
+    artistID: 119,
   },
   {
     path: "we-the-kings",
@@ -1758,7 +1798,7 @@ export const bodyData = [
       "We The Kings - Sad Song.mp3",
       "We The Kings - We'll Be A Dream.mp3",
     ],
-    artistID: 101,
+    artistID: 120,
   },
   {
     path: "wiz-khalifa",
@@ -1786,7 +1826,7 @@ export const bodyData = [
       "Wiz Khalifa - Work Hard Play Hard.mp3",
       "Wiz Khalifa - Young, Wild & Free.mp3",
     ],
-    artistID: 102,
+    artistID: 121,
   },
   {
     path: "yoasobi",
@@ -1798,7 +1838,7 @@ export const bodyData = [
       "YOASOBI - Racing into the Night.mp3",
       "YOASOBI - Tabun たぶん.mp3",
     ],
-    artistID: 103,
+    artistID: 122,
   },
   {
     path: "zack-tabudlo",
@@ -1812,19 +1852,19 @@ export const bodyData = [
       "Zack Tabudlo - Sigurado.mp3",
       "Zack Tabudlo - Simula Palang Nung Una.mp3",
     ],
-    artistID: 104,
+    artistID: 123,
   },
   {
     path: "zedd",
     artistName: "Zedd",
     musics: ["Zedd - Clarity.mp3", "Zedd - Stay.mp3", "Zedd - The Middle.mp3"],
-    artistID: 105,
+    artistID: 124,
   },
   {
     path: "zelle",
     artistName: "Zelle",
     musics: ["Zelle - Sabihin.mp3"],
-    artistID: 106,
+    artistID: 125,
   },
   {
     path: "zild",
@@ -1839,22 +1879,22 @@ export const bodyData = [
       "Zild - Kyusi.mp3",
       "Zild - Paalam Mahal.mp3",
       "Zild - sinungaling.mp3",
-      "Zild - takbo ng panahon.mp3"
+      "Zild - takbo ng panahon.mp3",
     ],
-    artistID: 107
-  }
+    artistID: 126,
+  },
 ];
 
 export const albumCovers = {
-  "gian": {
+  gian: {
     "GIAN - Tayo.mp3": "Tayo.jpg",
-  }
-}
+  },
+};
 
 // Bundle all of musics from all of the music artists.
 
 const allMusicsTemp = [];
-let  i = 0;
+let i = 0;
 for (i = 0; i < bodyData.length; i++) {
   allMusicsTemp.push(...bodyData[i].musics);
 }

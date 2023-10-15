@@ -37,8 +37,8 @@ const MusicTrackBar = () => {
   };
 
   const imgSrc = path
-    ? `../artists-image/${path}.jpg`
-    : "../svg/dark-omo-logo.svg";
+    ? `/artists-image/${path}.jpg`
+    : "/svg/dark-omo-logo.svg";
 
   return (
     <div
@@ -58,7 +58,7 @@ const MusicTrackBar = () => {
 
       <div className='music-info-displays'>
         <div className='music-artist-image'>
-          {/* {`../artists-image/${path}.jpg`} */}
+          {/* {`/artists-image/${path}.jpg`} */}
           <img src={imgSrc} alt='' />
         </div>
 
@@ -90,7 +90,7 @@ const MusicTrackBar = () => {
           {musicLoading ? (
             "loading"
           ) : (
-            <img src={`../svg/${playing ? "pause" : "play"}.svg`} alt='' />
+            <img src={`/svg/${playing ? "pause" : "play"}.svg`} alt='' />
           )}
         </button>
 

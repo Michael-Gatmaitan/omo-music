@@ -86,6 +86,7 @@ const MusicBlock = (props) => {
               : `/artists-image/${customPath}.jpg`
           }
           alt=''
+          loading="lazy"
         />
       </div>
 

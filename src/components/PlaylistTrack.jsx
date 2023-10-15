@@ -92,7 +92,7 @@ const PlaylistTrack = () => {
                     <div className="artist">
 
                       <div className="mentioned-artist-image">
-                        <img src={`../artists-image/${artistFilteredName}.jpg`} alt="" />
+                        <img src={`/artists-image/${artistFilteredName}.jpg`} alt="" />
                       </div>
 
                       {artist}
