@@ -1,7 +1,7 @@
 import {
   Link
 } from "react-router-dom";
-import './scss/ArtistBlock.css';
+import '../../scss/ArtistBlock.css';
 
 const ArtistBlock = ({ data }) => (
   <div

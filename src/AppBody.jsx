@@ -9,15 +9,15 @@ const AppBody = () => {
   const location = useLocation();
   const { pathname } = location;
 
-  let routes = useMemo(
-    () => [
-      { routeName: "Musics", url: "/", id: 0 },
-      { routeName: "Playlists", url: "/playlists", id: 1 },
-      { routeName: "Artists", url: "/artists", id: 2 },
-      // { routeName: 'Search', url: '/search', id: 3 },
-    ],
-    []
-  );
+  let routes = [
+    { routeName: "Musics", url: "/", id: 0 },
+    { routeName: "Playlists", url: "/playlists", id: 1 },
+    { routeName: "Artists", url: "/artists", id: 2 },
+    { routeName: "About", url: "/about", id: 3 },
+    { routeName: "Contact", url: "/contact", id: 4 },
+    { routeName: "What is OMO Music?", url: "/omo-music", id: 5 },
+    // { routeName: 'Search', url: '/search', id: 3 },
+  ];
 
   useEffect(() => {
     let slashCount = 0;
@@ -52,26 +52,26 @@ const AppBody = () => {
   }, [pathname]);
 
   return (
-    <div className='app-body'>
-      <div className='location-title'>
+    <div className="app-body">
+      <div className="location-title">
         <div
-          className='back-arrow'
+          className="back-arrow"
           onClick={() => history.goBack()}
           style={{
             opacity: showBackArrow ? 1 : 0,
             pointerEvents: showBackArrow ? "auto" : "none",
           }}
         >
-          <img src={`/svg/back-arrow.svg`} alt='back-arrow' />
+          <img src={`/svg/back-arrow.svg`} alt="back-arrow" />
         </div>
 
         <span style={{ marginLeft: showBackArrow ? "46px" : "0px" }}>
           {currentPage}
         </span>
       </div>
-      <ul className='route-links'>
+      <ul className="route-links">
         {routes.map((e) => (
-          <Link key={e.id} to={e.url} className={`route-button`}>
+          <Link key={e.id} to={e.url} className="route-button">
             <li>{e.routeName}</li>
           </Link>
         ))}

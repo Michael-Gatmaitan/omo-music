@@ -64,17 +64,7 @@ function App() {
   useEffect(() => {
     let { pathname } = location;
     triggerShowBackArrow(countSlashURL(pathname) > 1);
-
-    setCurrentPage(
-      pathname.length === 1
-        ? "Musics"
-        : pathname.includes("playlists")
-        ? "Playlists"
-        : pathname.includes("artists")
-        ? "Artists"
-        : ""
-    );
-    // eslint-disable-next-line react-hooks/exhaustive-deps
+    
   }, [location]);
 
   return (

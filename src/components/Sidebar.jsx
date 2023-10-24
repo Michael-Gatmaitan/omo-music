@@ -3,6 +3,33 @@ import { EventContext } from '../context/EventContext';
 import { Link } from 'react-router-dom';
 import "./scss/Sidebar.css";
 
+const sidebarButtons = [
+  { text: "My Portfolio", path: "/", id: 1 },
+  { text: "About OMO Music", path: "/about", id: 2 },
+  { text: "Contact Developer", path: "/contact", id: 3 },
+  { text: "Github repo", path: "https://www.github.com/Michael-Gatmaitan/omo-music", id: 4 },
+];
+
+const sidebarIcons = {
+  socMeds: [
+    {
+      iconName: "facebook",
+      iconLink: "https://facebook.com/michael.gatmaitan29/"
+    }, {
+      iconName: "github",
+      iconLink: "https://github.com/Michael-Gatmaitan"
+    }, {
+      iconName: "instagram",
+      iconLink: "https://www.instagram.com/mchlgtmtn/"
+    }
+  ],
+  toolsUsed: ["figma", "git", "vscode"],
+};
+
+const activeListeners = [
+  { imageSrc: `/listeners-image/listener_1.jpg`, name: "Jasmine Sevilla" }
+];
+
 const Sidebar = () => {
   const { showSidebar, setShowSidebar } = useContext(EventContext);
 
@@ -10,33 +37,6 @@ const Sidebar = () => {
     opacity: showSidebar ? 1 : 0,
     pointerEvents: showSidebar ? "auto" : "none",
   };
-
-  const sidebarButtons = [
-    { text: "My Portfolio", path: "/", id: 1 },
-    { text: "About OMO Music", path: "/playlists", id: 2 },
-    { text: "Contact Developer", path: "/artists", id: 3 },
-    { text: "Github repo", path: "https://github.com/Michael-Gatmaitan/omo-music", id: 4 },
-  ];
-
-  const sidebarIcons = {
-    socMeds: [
-      {
-        iconName: "facebook",
-        iconLink: "https://facebook.com/michael.gatmaitan29/"
-      }, {
-        iconName: "github",
-        iconLink: "https://github.com/Michael-Gatmaitan"
-      }, {
-        iconName: "instagram",
-        iconLink: "https://www.instagram.com/mchlgtmtn/"
-      }
-    ],
-    toolsUsed: ["figma", "git", "vscode"],
-  };
-
-  const activeListeners = [
-    { imageSrc: `/listeners-image/listener_1.jpg`, name: "Jasmine Sevilla" }
-  ];
 
   const stopPropagation = e => e.stopPropagation();
 
@@ -66,7 +66,7 @@ const Sidebar = () => {
         <div className="sidebar-buttons">
           {sidebarButtons.map(button => (
             <div className="button-container" key={button.id}>
-              <Link to={button.path} target="_blank" onClick={ () => setShowSidebar(false) }>
+              <Link to={button.path} onClick={ () => setShowSidebar(false) }>
                 <div className="button">{button.text}</div>
               </Link>
             </div>

@@ -8,18 +8,21 @@ import { BrowserRouter as Router } from "react-router-dom";
 import AudioContextProvider from "./context/AudioContext";
 import EventContextProvider from "./context/EventContext";
 import SearchContextProvider from "./context/SearchContext";
+import { StrictMode } from "react";
 
 ReactDOM.render(
-  <Router>
-    <AudioContextProvider>
-      {/* {localStorage.length === 0 ? <LandingPage /> : <App />} */}
-      <EventContextProvider>
-        <SearchContextProvider>
-          <App />
-        </SearchContextProvider>
-      </EventContextProvider>
-    </AudioContextProvider>
-  </Router>,
+  <StrictMode>
+    <Router>
+      <AudioContextProvider>
+        {/* {localStorage.length === 0 ? <LandingPage /> : <App />} */}
+        <EventContextProvider>
+          <SearchContextProvider>
+            <App />
+          </SearchContextProvider>
+        </EventContextProvider>
+      </AudioContextProvider>
+    </Router>
+  </StrictMode>,
   document.getElementById("root")
 );
 

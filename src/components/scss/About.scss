@@ -1,0 +1,17 @@
+@import '../../mixins.scss';
+
+.about-route {
+  .about-header {
+    @include fontProp("Montserrat", 700, 24px, #fff);
+  }
+
+  .about-description {
+    @include fontProp('Open Sans', 400, 16px, rgba(#fff, 0.8));
+    margin-top: 8px;
+  }
+  
+  .about-watermark {
+    @include fontProp('Open Sans', 400, 14px, rgba(#fff, 0.5));
+    margin-top: 12px;
+  }
+}

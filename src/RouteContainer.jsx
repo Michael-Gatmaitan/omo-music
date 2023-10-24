@@ -1,4 +1,4 @@
-import React, { Suspense } from "react";
+import React, { Suspense, lazy } from "react";
 import {
   Switch,
   Route,
@@ -9,16 +9,21 @@ import {
 // Components
 import AppBody from "./AppBody";
 import FloatingMusicTrack from "./components/FloatingMusicTrack";
-import ArtistTrack from "./components/ArtistTrack";
+import ArtistTrack from "./components/pages/artists/artistTrack/ArtistTrack";
 // import PlaylistTrack from './components/PlaylistTrack';
 import { PageFallback } from "./components/_FallbackComponents";
 import "./components/scss/RouteContainer.css";
-const PlaylistTrack = React.lazy(() => import("./components/PlaylistTrack"));
+
 // Route Components
-const Musics = React.lazy(() => import("./components/Musics"));
-const Artists = React.lazy(() => import("./components/Artists"));
-const Playlists = React.lazy(() => import("./components/Playlists"));
-const Search = React.lazy(() => import("./components/Search"));
+const Musics = lazy(() => import("./components/pages/musics/Musics"));
+const Artists = lazy(() => import("./components/pages/artists/Artists"));
+const Playlists = lazy(() => import("./components/pages/playlists/Playlists"));
+const Search = lazy(() => import("./components/pages/search/Search"));
+const PlaylistTrack = lazy(() => import("./components/pages/playlists/PlaylistTrack"));
+
+const About = lazy(() => import("./components/pages/about/About"));
+const Contact = lazy(() => import("./components/pages/contact/Contact"));
+const OmoMusic = lazy(() => import("./components/pages/omo-music/OmoMusic"));
 
 const RouteContainer = () => {
   // const history = useHistory();
@@ -56,6 +61,24 @@ const RouteContainer = () => {
               <Route exact path='/artists'>
                 <Suspense fallback={<PageFallback />}>
                   <Artists />
+                </Suspense>
+              </Route>
+
+              <Route exact path='/about'>
+                <Suspense fallback={<PageFallback />}>
+                  <About />
+                </Suspense>
+              </Route>
+
+              <Route exact path='/contact'>
+                <Suspense fallback={<PageFallback />}>
+                  <Contact />
+                </Suspense>
+              </Route>
+
+              <Route exact path='/omo-music'>
+                <Suspense fallback={<PageFallback />}>
+                  <OmoMusic />
                 </Suspense>
               </Route>
 

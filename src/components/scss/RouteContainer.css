@@ -42,6 +42,8 @@ a {
   display: flex;
   gap: 8px;
   padding: 8px 0;
+  margin-left: -10px;
+  overflow-y: scroll;
 }
 .route-container .route-grid-container .route-grid-wrap .app-body .route-links .active-route {
   background-color: rgba(6, 24, 181, 0.3);
@@ -53,6 +55,7 @@ a {
   border-radius: 4px;
   padding: 10px;
   color: #fff;
+  white-space: nowrap;
 }
 .route-container .route-grid-container .route-grid-wrap .app-body .route-links .route-button:hover li {
   color: #293EF8 !important;

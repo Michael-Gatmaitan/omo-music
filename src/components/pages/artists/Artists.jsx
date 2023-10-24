@@ -1,7 +1,7 @@
-import React from 'react';
-import './scss/Artists.css';
-import ArtistBlock from './ArtistBlock';
-import { bodyData } from '../dataSource';
+import React from "react";
+import "../../scss/Artists.css";
+import ArtistBlock from "./ArtistBlock";
+import { bodyData } from "../../../dataSource";
 
 const Artists = () => (
   <div className="artists-route route-parent">
@@ -10,6 +10,6 @@ const Artists = () => (
       <ArtistBlock data={data} key={i} />
     ))}
   </div>
-)
+);
 
 export default Artists;

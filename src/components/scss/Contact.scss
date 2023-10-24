@@ -1,0 +1,18 @@
+@import '../../mixins.scss';
+
+.contact-route {
+
+  .contact-header {
+    @include fontProp("Montserrat", 700, 24px, #fff);
+  }
+
+  .contact-label {
+    @include fontProp('Open Sans', 400, 16px, rgba(#fff, 0.8));
+    margin-top: 8px;
+
+    a {
+      text-decoration: underline;
+      color: $pri-blue;
+    }
+  }
+}

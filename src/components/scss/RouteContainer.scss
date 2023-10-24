@@ -52,6 +52,8 @@ a {
           display: flex;
           gap: 8px;
           padding: 8px 0;
+          margin-left: -10px;
+          overflow-y: scroll;
 
           .active-route {
             background-color: rgba($darken_pri_blue, 0.3);
@@ -65,6 +67,7 @@ a {
             border-radius: 4px;
             padding: 10px;
             color: #fff;
+            white-space: nowrap;
 
             &:hover {
               li {

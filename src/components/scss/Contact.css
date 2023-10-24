@@ -1,0 +1,17 @@
+.contact-route .contact-header {
+  font-family: "Montserrat", sans-serif !important;
+  font-weight: 700 !important;
+  font-size: 24px !important;
+  color: #fff !important;
+}
+.contact-route .contact-label {
+  font-family: "Open Sans", sans-serif !important;
+  font-weight: 400 !important;
+  font-size: 16px !important;
+  color: rgba(255, 255, 255, 0.8) !important;
+  margin-top: 8px;
+}
+.contact-route .contact-label a {
+  text-decoration: underline;
+  color: #293EF8;
+}/*# sourceMappingURL=Contact.css.map */

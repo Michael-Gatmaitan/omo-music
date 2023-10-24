@@ -130,7 +130,11 @@ export default class AudioContextProvider extends Component {
 
   triggerShowBackArrow = (bool) => this.setState({ showBackArrow: bool });
 
-  setCurrentPage = (title) => this.setState({ currentPage: title });
+  setCurrentPage = (title) => {
+    title = title.slice(1, title.length);
+    const newTitle = title === "" ? "Musics" : title.charAt(0).toUpperCase() + title.slice(1);
+    this.setState({ currentPage: newTitle });
+  };
 
   triggerPlaying = (bool) => this.setState({ playing: bool });
 
@@ -274,7 +278,7 @@ export default class AudioContextProvider extends Component {
       data = undefined;
     }
 
-    console.log(data);
+    // console.log(data);
 
     return data;
   };

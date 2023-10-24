@@ -1,13 +1,13 @@
 // @ts-nocheck
 import React, { useEffect, useState, useContext, lazy, Suspense } from 'react';
 import { useParams } from 'react-router-dom';
-import { AudioContext } from '../context/AudioContext';
+import { AudioContext } from '../../../context/AudioContext';
 import { Link } from 'react-router-dom';
 // import { EventContext } from '../context/EventContext';
-import { playlists } from '../dataSource';
-import { MusicBlockFallback } from './_FallbackComponents';
+import { playlists } from '../../../dataSource';
+import { MusicBlockFallback } from '../../_FallbackComponents';
 
-const MusicBlock = lazy(() => import('./MusicBlock'));
+const MusicBlock = lazy(() => import('../../MusicBlock'));
 
 const PlaylistTrack = () => {
 

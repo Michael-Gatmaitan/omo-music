@@ -1,10 +1,10 @@
 import React, { useEffect, useState, useContext, lazy, Suspense } from 'react';
-import ArtistBlock from './ArtistBlock';
-import { SearchContext } from '../context/SearchContext';
-import { MusicBlockFallback } from './_FallbackComponents';
-import './scss/Search.css';
+import ArtistBlock from '../artists/ArtistBlock';
+import { SearchContext } from '../../../context/SearchContext';
+import { MusicBlockFallback } from '../../_FallbackComponents';
+import '../../scss/Search.css';
 
-const MusicBlock = lazy(() => import("./MusicBlock"));
+const MusicBlock = lazy(() => import("../../MusicBlock"));
 
 const Search = () => {
 

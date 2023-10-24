@@ -1,9 +1,9 @@
 import { useContext } from "react";
 import { Link } from "react-router-dom";
-import { AudioContext } from "../context/AudioContext";
-import { EventContext } from "../context/EventContext";
-import { playlists } from "../dataSource";
-import "./scss/Playlists.css";
+import { AudioContext } from "../../../context/AudioContext";
+import { EventContext } from "../../../context/EventContext";
+import { playlists } from "../../../dataSource";
+import "../../scss/Playlists.css";
 
 const Playlists = () => {
   const { favorites, yourPlaylists } = useContext(AudioContext);

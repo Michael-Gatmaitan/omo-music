@@ -1,11 +1,11 @@
 import React, { useState, useEffect, Suspense, lazy } from 'react';
-import { MusicBlockFallback } from './_FallbackComponents';
-import { allMusics } from '../dataSource';
-import './scss/MusicBlock.css';
+import { MusicBlockFallback } from '../../_FallbackComponents';
+import { allMusics } from '../../../dataSource';
+import '../../scss/MusicBlock.css';
 
-import { bodyData } from '../dataSource';
+import { bodyData } from '../../../dataSource';
 
-const MusicBlock = lazy(() => import('./MusicBlock'));
+const MusicBlock = lazy(() => import('../../MusicBlock'));
 
 const Musics = () => {
   let [musicDataTable, setMusicDataTable] = useState([]);
