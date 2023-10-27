@@ -86,12 +86,12 @@
   font-weight: 500 !important;
   font-size: 15px !important;
   color: #fff !important;
-  background-color: #60CE6B;
+  background-color: #09af19;
   border-radius: 12px;
   transition: 0.1s ease-in;
 }
 .playlist-form-content .input-field .button-option .but-con button:hover {
-  background-color: #67b56f;
+  background-color: #086512;
 }
 .playlist-form-content .input-field .button-option .but-con button:disabled {
   opacity: 0.38;

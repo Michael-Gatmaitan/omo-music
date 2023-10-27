@@ -57,7 +57,18 @@ export default class AudioContextProvider extends Component {
   }
 
   // Setting all state to localstorage bc of state changes
-  UNSAFE_componentWillUpdate(nextProps, nextState) {
+  // UNSAFE_componentWillUpdate(nextProps, nextState) {
+  //   let isOnlyCurrentTimeChanged =
+  //     this.state.playing && this.state.currentTime !== nextState.currentTime;
+
+  //     console.log("UPdated");
+
+  //   // If only time of music is changed, do nothing, else set all state to localStorage
+  //   if (!isOnlyCurrentTimeChanged)
+  //     localStorage.setItem("bodyState", JSON.stringify(this.state));
+  // }
+
+  componentDidUpdate(nextProps, nextState) {
     let isOnlyCurrentTimeChanged =
       this.state.playing && this.state.currentTime !== nextState.currentTime;
 
@@ -65,6 +76,8 @@ export default class AudioContextProvider extends Component {
     if (!isOnlyCurrentTimeChanged)
       localStorage.setItem("bodyState", JSON.stringify(this.state));
   }
+
+  // component
 
   removeMusicInPlaylist = (objName, rawTitle) => {
     let yourPlaylists = [...this.state.yourPlaylists];
@@ -132,7 +145,8 @@ export default class AudioContextProvider extends Component {
 
   setCurrentPage = (title) => {
     title = title.slice(1, title.length);
-    const newTitle = title === "" ? "Musics" : title.charAt(0).toUpperCase() + title.slice(1);
+    const newTitle =
+      title === "" ? "Musics" : title.charAt(0).toUpperCase() + title.slice(1);
     this.setState({ currentPage: newTitle });
   };
 
@@ -220,7 +234,7 @@ export default class AudioContextProvider extends Component {
 
   updateTrackList = (trackList) => this.setState({ trackList });
 
-  updateCurrentTime = (currentTime) => this.setState({ currentTime });
+  updateCurrentTime = (currentTime) => this.setState({ currentTime: parseInt(currentTime) });
 
   updateTotalDuration = (duration) => this.setState({ duration });
 

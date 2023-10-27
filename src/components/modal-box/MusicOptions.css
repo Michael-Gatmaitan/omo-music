@@ -172,7 +172,7 @@
   height: 100%;
 }
 .music-options-container .music-options-content .options-selection-container .bottom-buttons a .download-music-button {
-  background-color: #60CE6B;
+  background-color: #09af19;
   border-radius: 12px;
   transition: 0.1s ease-in;
   width: 64px;
@@ -186,13 +186,13 @@
   width: 28px;
 }
 .music-options-container .music-options-content .options-selection-container .bottom-buttons a .download-music-button:hover {
-  background-color: #67b56f;
+  background-color: #086512;
 }
 @media (min-width: 780px) {
   .music-options-container .music-options-content .options-selection-container .bottom-buttons a .download-music-button {
     width: 64px;
   }
-  .music-options-container .music-options-content .options-selection-container .bottom-buttons a .download-music-button img {
+  .music-options-container .music-options-content .options-selection-container .bottom-buttons a .download-music-button ca img {
     width: 32px;
   }
 }
