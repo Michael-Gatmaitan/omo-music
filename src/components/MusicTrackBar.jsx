@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useState, useEffect } from "react";
 import { AudioContext } from "../context/AudioContext";
 import { EventContext } from "../context/EventContext";
 import "./scss/MusicTrackBar.css";
@@ -22,6 +22,8 @@ const MusicTrackBar = () => {
     next,
     playing,
     musicLoading,
+
+    albumCoverChecker,
   } = audioContext;
 
   const eventContext = useContext(EventContext);
@@ -36,51 +38,61 @@ const MusicTrackBar = () => {
     }
   };
 
+  const cover_artistName = artistName.replaceAll(" ", "-").toLowerCase();
+  const cover_musicTitle = `${artistName} - ${title}.mp3`;
+  let [cover_fileName, set_cover_fileName] = useState(undefined);
+
+  useEffect(() => {
+    set_cover_fileName(albumCoverChecker(cover_artistName, cover_musicTitle));
+  }, [albumCoverChecker, cover_artistName, cover_musicTitle]);
+
   const imgSrc = path
-    ? `/artists-image/${path}.jpg`
+    ? cover_fileName !== undefined
+      ? `/album-covers/${cover_artistName}/${cover_fileName}`
+      : `/artists-image/${path}.jpg`
     : "/svg/dark-omo-logo.svg";
 
   return (
     <div
-      className='music-track-bar'
+      className="music-track-bar"
       onClick={path ? handleTrackOpenAction : null}
     >
-      <div className='duration-progress-container'>
+      <div className="duration-progress-container">
         <div
-          className='duration-progress'
+          className="duration-progress"
           style={{
             width: `${(currentTime / duration) * 100}%`,
           }}
         />
       </div>
 
-      <div className='click-indication' />
+      <div className="click-indication" />
 
-      <div className='music-info-displays'>
-        <div className='music-artist-image'>
+      <div className="music-info-displays">
+        <div className="music-artist-image">
           {/* {`/artists-image/${path}.jpg`} */}
-          <img src={imgSrc} alt='' />
+          <img src={imgSrc} alt="" />
         </div>
 
-        <div className='music-texts'>
-          <div className='music-title'>{title || "OMO Music"}</div>
-          <div className='music-artist-name'>
+        <div className="music-texts">
+          <div className="music-title">{title || "OMO Music"}</div>
+          <div className="music-artist-name">
             {artistName || "M. Gatmaitan, 2021"}
           </div>
         </div>
       </div>
 
-      <div className='music-track-events'>
+      <div className="music-track-events">
         <button
-          className='prev-but'
+          className="prev-but"
           disabled={trackHistory.length <= 1 || trackHistoryIndex === 0}
           onClick={prev}
         >
-          <img src='/svg/prev.svg' alt='prev' />
+          <img src="/svg/prev.svg" alt="prev" />
         </button>
 
         <button
-          className='play_pause-but'
+          className="play_pause-but"
           disabled={!activeMusic}
           onClick={() => {
             const aud = document.getElementsByTagName("audio")[0];
@@ -90,16 +102,16 @@ const MusicTrackBar = () => {
           {musicLoading ? (
             "loading"
           ) : (
-            <img src={`/svg/${playing ? "pause" : "play"}.svg`} alt='' />
+            <img src={`/svg/${playing ? "pause" : "play"}.svg`} alt="" />
           )}
         </button>
 
         <button
-          className='next-but'
+          className="next-but"
           disabled={!activeMusic || trackList.length === 1}
           onClick={next}
         >
-          <img src='/svg/next.svg' alt='next' />
+          <img src="/svg/next.svg" alt="next" />
         </button>
       </div>
     </div>

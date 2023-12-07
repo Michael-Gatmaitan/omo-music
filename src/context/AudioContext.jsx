@@ -234,7 +234,8 @@ export default class AudioContextProvider extends Component {
 
   updateTrackList = (trackList) => this.setState({ trackList });
 
-  updateCurrentTime = (currentTime) => this.setState({ currentTime: parseInt(currentTime) });
+  updateCurrentTime = (currentTime) =>
+    this.setState({ currentTime: parseInt(currentTime) });
 
   updateTotalDuration = (duration) => this.setState({ duration });
 

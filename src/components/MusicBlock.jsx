@@ -78,35 +78,35 @@ const MusicBlock = (props) => {
       className={`music-block ${mbClassIsActiveMusic} ${mbClassHasImage} ${mbClassHasRemove}`}
       onClick={handleMusicEvent}
     >
-      <div className='music-artist-image' style={musicArtistImageStyle}>
+      <div className="music-artist-image" style={musicArtistImageStyle}>
         <img
           src={
             cover_fileName !== undefined
               ? `/album-covers/${cover_artistName}/${cover_fileName}`
               : `/artists-image/${customPath}.jpg`
           }
-          alt=''
+          alt=""
           loading="lazy"
         />
       </div>
 
-      <div className='music-info'>
-        <div className='music-title'>{musicTitle}</div>
+      <div className="music-info">
+        <div className="music-title">{musicTitle}</div>
 
-        <div className='music-artist'>{musicArtist}</div>
+        <div className="music-artist">{musicArtist}</div>
       </div>
 
       {isInCustomPlaylist ? (
-        <div className='remove' onClick={handleRemoveEvent}>
-          <div className='remove-icon' />
+        <div className="remove" onClick={handleRemoveEvent}>
+          <div className="remove-icon" />
         </div>
       ) : (
         ""
       )}
 
-      <div className='music-options-parent' onClick={handleOptionsEvent}>
-        <div className='music-options-button'>
-          <img src='/svg/floating-icons/more.svg' className='options' alt='' />
+      <div className="music-options-parent" onClick={handleOptionsEvent}>
+        <div className="music-options-button">
+          <img src="/svg/floating-icons/more.svg" className="options" alt="" />
         </div>
       </div>
     </div>

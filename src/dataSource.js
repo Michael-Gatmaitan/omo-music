@@ -1835,8 +1835,8 @@ export const bodyData = [
       "YOASOBI - 「ハルジオン・Halzion」.mp3",
       "YOASOBI - Haruka ハルカ.mp3",
       "YOASOBI - Probably.mp3",
-      "YOASOBI - Racing into the Night.mp3",
       "YOASOBI - Tabun たぶん.mp3",
+      "YOASOBI - 夜に駆ける.mp3",
     ],
     artistID: 122,
   },
@@ -1888,6 +1888,13 @@ export const bodyData = [
 export const albumCovers = {
   gian: {
     "GIAN - Tayo.mp3": "Tayo.jpg",
+  },
+
+  yoasobi: {
+    "YOASOBI - 夜に駆ける.mp3": "racing-in-to-the-night.jpeg",
+    "YOASOBI - Tabun たぶん.mp3": "Tabun たぶん.jpeg",
+    "YOASOBI - Probably.mp3": "Tabun たぶん.jpeg",
+    "YOASOBI - Haruka ハルカ.mp3": "haruka.jpeg",
   },
 };
 

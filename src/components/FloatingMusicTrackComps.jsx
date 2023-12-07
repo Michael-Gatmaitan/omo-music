@@ -34,6 +34,9 @@ const FloatingMusicTrackComps = () => {
     shuffle,
     // order,
     changeMusicEndState,
+
+    // Album cover checker
+    albumCoverChecker,
   } = useContext(AudioContext);
 
   const {
@@ -70,32 +73,45 @@ const FloatingMusicTrackComps = () => {
     };
   }, [activeMusic]);
 
+  const cover_artistName = artistName.replaceAll(" ", "-").toLowerCase();
+  const cover_musicTitle = `${artistName} - ${title}.mp3`;
+  let [cover_fileName, set_cover_fileName] = useState(undefined);
+
+  useEffect(() => {
+    set_cover_fileName(albumCoverChecker(cover_artistName, cover_musicTitle));
+  }, [albumCoverChecker, cover_artistName, cover_musicTitle]);
+
+  const trackImage =
+    cover_fileName !== undefined
+      ? `/album-covers/${cover_artistName}/${cover_fileName}`
+      : `/artists-image/${path}.jpg`;
+
   return (
-    <div className='floating-music-track'>
+    <div className="floating-music-track">
       <FloatingTracklist />
 
-      <div className='artist-image-bg'>
-        <img src={`/artists-image/${path}.jpg`} alt='' loading="lazy" />
+      <div className="artist-image-bg">
+        <img src={trackImage} alt="" loading="lazy" />
       </div>
 
-      <div className='blur-bg' />
+      <div className="blur-bg" />
 
-      <div className='floating-childs-parent'>
+      <div className="floating-childs-parent">
         <div
-          className='floating-artist-image-container'
+          className="floating-artist-image-container"
           style={{ opacity: path ? 1 : 0 }}
         >
-          <img src={`/artists-image/${path}.jpg`} alt='' loading="lazy" />
+          <img src={trackImage} alt="" loading="lazy" />
         </div>
 
-        <div className='floating-music-info'>
+        <div className="floating-music-info">
           <Link
             to={`/music-data/${path}/${activeMusicRawTitle}`}
-            target='_blank'
+            target="_blank"
             download
           >
-            <div className='music-title-container'>
-              <div className='music-title'>{title || "OMO Music"}</div>
+            <div className="music-title-container">
+              <div className="music-title">{title || "OMO Music"}</div>
             </div>
           </Link>
 
@@ -103,29 +119,29 @@ const FloatingMusicTrackComps = () => {
             to={`/artists/${path}`}
             onClick={() => setShowMusicTrackMobile(false)}
           >
-            <div className='artist-name'>
+            <div className="artist-name">
               {artistName || "M. Gatmaitan, 2021"}
             </div>
           </Link>
         </div>
 
-        <div className='floating-icons'>
+        <div className="floating-icons">
           {/* tracklist */}
           <div
-            className='tracklist icon-container'
+            className="tracklist icon-container"
             onClick={() => setShowTracklist(true)}
             style={iconStyle}
           >
             <img
-              className='icon'
+              className="icon"
               src={`/svg/floating-icons/tracklist.svg`}
-              alt=''
+              alt=""
             />
           </div>
 
           {/* Shuffle / Order */}
           <div
-            className='shuf-ord icon-container'
+            className="shuf-ord icon-container"
             onClick={changeMusicEndState}
             style={{
               ...iconStyle,
@@ -133,30 +149,30 @@ const FloatingMusicTrackComps = () => {
             }}
           >
             <img
-              className='icon'
+              className="icon"
               src={`/svg/floating-icons/shuffle.svg`}
-              alt=''
+              alt=""
             />
           </div>
 
           {/* heart */}
           <div
-            className='heart icon-container'
+            className="heart icon-container"
             onClick={() => updateFavorites(activeMusicRawTitle)}
             style={iconStyle}
           >
             <img
-              className='icon'
+              className="icon"
               src={`/svg/floating-icons/heart_${
                 isInFavorites ? "filled" : "unfilled"
               }.svg`}
-              alt=''
+              alt=""
             />
           </div>
 
           {/* More */}
           <div
-            className='more icon-container'
+            className="more icon-container"
             onClick={() => {
               setShowMusicOptions(activeMusicRawTitle);
               setMusicOptionsData(
@@ -167,37 +183,37 @@ const FloatingMusicTrackComps = () => {
             }}
             style={iconStyle}
           >
-            <img className='icon' src={`/svg/floating-icons/more.svg`} alt='' />
+            <img className="icon" src={`/svg/floating-icons/more.svg`} alt="" />
           </div>
         </div>
 
-        <div className='floating-seekbar'>
-          <div className='current-time seekbar-times'>
+        <div className="floating-seekbar">
+          <div className="current-time seekbar-times">
             {`${curMin.length === 2 ? curMin : `0${curMin}`}`}:
             {`${curSec.length === 2 ? curSec : `0${curSec}`}`}
           </div>
 
-          <div className='seekbar-container'>
+          <div className="seekbar-container">
             <SeekBar currentTime={currentTime} duration={duration} />
           </div>
 
-          <div className='total-time seekbar-times'>
+          <div className="total-time seekbar-times">
             {`${durMin.length === 2 ? durMin : `0${durMin}`}`}:
             {`${durSec.length === 2 ? durSec : `0${durSec}`}`}
           </div>
         </div>
 
-        <div className='music-track-events'>
+        <div className="music-track-events">
           <button
-            className='prev-but'
+            className="prev-but"
             disabled={trackHistory.length <= 1 || trackHistoryIndex === 0}
             onClick={prev}
           >
-            <img className='icon' src={`/svg/prev.svg`} alt='prev' />
+            <img className="icon" src={`/svg/prev.svg`} alt="prev" />
           </button>
 
           <button
-            className='play_pause-but'
+            className="play_pause-but"
             disabled={!activeMusic || musicLoading}
             onClick={() => {
               const aud = document.getElementsByTagName("audio")[0];
@@ -208,19 +224,19 @@ const FloatingMusicTrackComps = () => {
               "loading"
             ) : (
               <img
-                className='icon'
+                className="icon"
                 src={`/svg/${playing ? "pause" : "play"}.svg`}
-                alt='play_pause'
+                alt="play_pause"
               />
             )}
           </button>
 
           <button
-            className='next-but'
+            className="next-but"
             disabled={!activeMusic || trackList.length === 1}
             onClick={next}
           >
-            <img className='icon' src={`/svg/next.svg`} alt='next' />
+            <img className="icon" src={`/svg/next.svg`} alt="next" />
           </button>
         </div>
       </div>
