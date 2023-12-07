@@ -2020,8 +2020,8 @@ export const playlists = [
       "YOASOBI - 「ハルジオン・Halzion」.mp3",
       "YOASOBI - Haruka ハルカ.mp3",
       "YOASOBI - Probably.mp3",
-      "YOASOBI - Racing into the Night.mp3",
       "YOASOBI - Tabun たぶん.mp3",
+      "YOASOBI - 夜に駆ける.mp3",
     ],
   },
 ];
