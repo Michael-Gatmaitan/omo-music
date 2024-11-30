@@ -1,11 +1,11 @@
-import React, { useState, useEffect, Suspense, lazy } from 'react';
-import { MusicBlockFallback } from '../../_FallbackComponents';
-import { allMusics } from '../../../dataSource';
-import '../../scss/MusicBlock.css';
+import React, { useState, useEffect, Suspense, lazy } from "react";
+import { MusicBlockFallback } from "../../_FallbackComponents";
+import { allMusics } from "../../../dataSource";
+import "../../scss/MusicBlock.css";
 
-import { bodyData } from '../../../dataSource';
+import { bodyData } from "../../../dataSource";
 
-const MusicBlock = lazy(() => import('../../MusicBlock'));
+const MusicBlock = lazy(() => import("../../MusicBlock"));
 
 const Musics = () => {
   let [musicDataTable, setMusicDataTable] = useState([]);
@@ -26,14 +26,14 @@ const Musics = () => {
     // bDataTemp.map((e, i) => e.artistID = i);
 
     // console.log(bDataTemp);
-    
+
     // Displays Total song count
     // let totalSongs = 0;
     // for (var i of bDataTemp) {
     //   totalSongs += i["musics"].length;
     // }
   }, []);
-  
+
   return (
     <div className="music-route route-parent">
       {musicDataTable.map((data, i) => (
@@ -47,6 +47,7 @@ const Musics = () => {
       ))}
     </div>
   );
-}
+};
 
 export default Musics;
+

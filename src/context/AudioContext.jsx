@@ -82,7 +82,7 @@ export default class AudioContextProvider extends Component {
   removeMusicInPlaylist = (objName, rawTitle) => {
     let yourPlaylists = [...this.state.yourPlaylists];
     let musicObjParent = yourPlaylists.filter(
-      (e) => e.playlistName === objName
+      (e) => e.playlistName === objName,
     )[0];
     let { musics } = musicObjParent;
     musics.splice(musics.indexOf(rawTitle), 1);
