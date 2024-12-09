@@ -26,7 +26,7 @@ const sidebarIcons = {
     },
     {
       iconName: "instagram",
-      iconLink: "https://www.instagram.com/mchlgtmtn/",
+      iconLink: "https://www.instagram.com/jabikel/",
     },
   ],
   toolsUsed: ["figma", "git", "vscode"],

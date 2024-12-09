@@ -122,6 +122,7 @@ export const bodyData = [
     musics: [
       "Avicii - Addicted To You.mp3",
       "Avicii - Broken Arrows.mp3",
+      "Avicii - Dear Boy.mp3",
       "Avicii - Fades Away.mp3",
       "Avicii - For A Better Day.mp3",
       "Avicii - Friend Of Mine.mp3",
@@ -1019,6 +1020,7 @@ export const bodyData = [
       "LANY - ILYSB.mp3",
       "LANY - Malibu Nights.mp3",
       "LANY - Super Far.mp3",
+      "LANY - up to me.mp3",
       "LANY - Valentine's Day.mp3",
       "LANY - you!.mp3",
     ],
