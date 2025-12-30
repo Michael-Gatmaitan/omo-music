@@ -8,7 +8,7 @@ I used reactjs in this project because react is where I capable with and It can 
 
 ### Feb, 2021 - July 2021
 
-It takes me 5 months to build this project due to internet connection problems (financial prolems), and lots of responsibilities as a teenager.
+It takes me 5 months to build this project due to internet connection problems, and lots of responsibilities as a teenager.
 <<<<<<< HEAD
 =======
 
