@@ -1,9 +1,10 @@
 import React, { Suspense, lazy } from "react";
 import {
-  Switch,
+  // Switch,
   Route,
   // useHistory,
   useLocation,
+  Routes,
 } from "react-router-dom";
 
 // Components
@@ -19,7 +20,9 @@ const Musics = lazy(() => import("./components/pages/musics/Musics"));
 const Artists = lazy(() => import("./components/pages/artists/Artists"));
 const Playlists = lazy(() => import("./components/pages/playlists/Playlists"));
 const Search = lazy(() => import("./components/pages/search/Search"));
-const PlaylistTrack = lazy(() => import("./components/pages/playlists/PlaylistTrack"));
+const PlaylistTrack = lazy(() =>
+  import("./components/pages/playlists/PlaylistTrack")
+);
 
 const About = lazy(() => import("./components/pages/about/About"));
 const Contact = lazy(() => import("./components/pages/contact/Contact"));
@@ -40,52 +43,77 @@ const RouteContainer = () => {
   const { pathname } = useLocation();
 
   return (
-    <div className='route-container'>
-      <div className='route-grid-container'>
-        <div className='route-grid-wrap'>
+    <div className="route-container">
+      <div className="route-grid-container">
+        <div className="route-grid-wrap">
           {/* Routes inside AppBody */}
           {pathname !== "/search" && <AppBody />}
 
-          <div className='main-routes-container'>
-            <Switch>
-              <Route exact path='/'>
-                <Suspense fallback={<PageFallback />}>
-                  <Musics />
-                </Suspense>
-              </Route>
-              <Route exact path='/playlists'>
-                <Suspense fallback={<PageFallback />}>
-                  <Playlists />
-                </Suspense>
-              </Route>
-              <Route exact path='/artists'>
-                <Suspense fallback={<PageFallback />}>
-                  <Artists />
-                </Suspense>
-              </Route>
+          <div className="main-routes-container">
+            {/* <Switch> */}
+            <Routes>
+              <Route
+                exact
+                path="/"
+                element={
+                  <Suspense fallback={<PageFallback />}>
+                    <Musics />
+                  </Suspense>
+                }
+              />
 
-              <Route exact path='/about'>
-                <Suspense fallback={<PageFallback />}>
-                  <About />
-                </Suspense>
-              </Route>
+              <Route
+                exact
+                path="playlists/*"
+                element={
+                  <Suspense fallback={<PageFallback />}>
+                    <Playlists />
+                  </Suspense>
+                }
+              />
 
-              <Route exact path='/contact'>
-                <Suspense fallback={<PageFallback />}>
-                  <Contact />
-                </Suspense>
-              </Route>
+              <Route
+                exact
+                path="artists/*"
+                element={
+                  <Suspense fallback={<PageFallback />}>
+                    <Artists />
+                  </Suspense>
+                }
+              />
 
-              <Route exact path='/omo-music'>
-                <Suspense fallback={<PageFallback />}>
-                  <OmoMusic />
-                </Suspense>
-              </Route>
+              <Route
+                exact
+                path="about"
+                element={
+                  <Suspense fallback={<PageFallback />}>
+                    <About />
+                  </Suspense>
+                }
+              />
+
+              <Route
+                exact
+                path="contact"
+                element={
+                  <Suspense fallback={<PageFallback />}>
+                    <Contact />
+                  </Suspense>
+                }
+              />
+
+              <Route
+                exact
+                path="omo-music"
+                element={
+                  <Suspense fallback={<PageFallback />}>
+                    <OmoMusic />
+                  </Suspense>
+                }
+              />
 
               {/* nested routes */}
-              <Route path='/artists/:artistID'>
-                <ArtistTrack />
-              </Route>
+              <Route path="artists/:artistID" element={<ArtistTrack />} />
 
               {/* Routers for "Playlists" */}
               {/*
@@ -94,22 +122,32 @@ const RouteContainer = () => {
                ** Custom Playlists
                */}
 
-              <Route path='/playlists/:playlistID'>
-                <Suspense fallback={<PageFallback />}>
-                  <PlaylistTrack />
-                </Suspense>
-              </Route>
+              <Route
+                path="playlists/:playlistID"
+                element={
+                  <Suspense fallback={<PageFallback />}>
+                    <PlaylistTrack />
+                  </Suspense>
+                }
+              />
+              {/* </Routes> */}
 
-              <Route exact path='/search'>
-                <Suspense fallback={<PageFallback />}>
-                  <Search />
-                </Suspense>
-              </Route>
+              <Route
+                exact
+                path="search"
+                element={
+                  <Suspense fallback={<PageFallback />}>
+                    <Search />
+                  </Suspense>
+                }
+              />
 
-              <Route path='*'>
-                <div className='404'>Page not found!</div>
-              </Route>
-            </Switch>
+              <Route
+                path="*"
+                element={<div className="404">Page not found!</div>}
+              />
+            </Routes>
+            {/* </Switch> */}
           </div>
         </div>
 

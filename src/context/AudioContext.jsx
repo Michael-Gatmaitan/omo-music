@@ -9,7 +9,7 @@ export default class AudioContextProvider extends Component {
     currentPage: "Musics",
 
     activeMusicRawTitle: "",
-    activeMusic: "",
+    activeMusic: null,
 
     currentTime: 0,
     duration: 0,

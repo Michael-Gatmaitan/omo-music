@@ -1,11 +1,11 @@
-import { useContext, useMemo, useEffect } from "react";
-import { Link, useHistory, useLocation } from "react-router-dom";
+import { useContext, useEffect } from "react";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AudioContext } from "./context/AudioContext";
 
 const AppBody = () => {
   let { showBackArrow, currentPage, setCurrentPage } = useContext(AudioContext);
 
-  const history = useHistory();
+  const navigation = useNavigate();
   const location = useLocation();
   const { pathname } = location;
 
@@ -56,7 +56,11 @@ const AppBody = () => {
       <div className="location-title">
         <div
           className="back-arrow"
-          onClick={() => history.goBack()}
+          onClick={() => {
+            console.log("Go back");
+            // navigate("/");
+            navigation("/");
+          }}
           style={{
             opacity: showBackArrow ? 1 : 0,
             pointerEvents: showBackArrow ? "auto" : "none",

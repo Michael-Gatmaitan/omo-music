@@ -1,4 +1,3 @@
-import ReactDOM from "react-dom";
 import "./index.css";
 import App from "./App";
 // import LandingPage from './LandingPage';
@@ -10,7 +9,11 @@ import EventContextProvider from "./context/EventContext";
 import SearchContextProvider from "./context/SearchContext";
 import { StrictMode } from "react";
 
-ReactDOM.render(
+import { createRoot } from 'react-dom/client';
+const container = document.getElementById("root");
+const root = createRoot(container);
+
+root.render(
   <StrictMode>
     <Router>
       <AudioContextProvider>
@@ -22,8 +25,7 @@ ReactDOM.render(
         </EventContextProvider>
       </AudioContextProvider>
     </Router>
-  </StrictMode>,
-  document.getElementById("root")
+  </StrictMode>
 );
 
 // music-data\ali-gatie

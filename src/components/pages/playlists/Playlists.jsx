@@ -21,11 +21,11 @@ const Playlists = () => {
   };
 
   return (
-    <div className='playlists-route route-parent'>
-      <div className='pl-header'>Made for you</div>
+    <div className="playlists-route route-parent">
+      <div className="pl-header">Made for you</div>
 
       {/* Built-in playlist like [Favorites, OPM, etc...] */}
-      <div className='pl-section'>
+      <div className="pl-section">
         {playlistList.made_for_you.map((pl) => (
           <PlaylistBlock
             pl={pl}
@@ -36,25 +36,25 @@ const Playlists = () => {
         ))}
       </div>
 
-      <div className='divider' />
+      <div className="divider" />
 
-      <div className='pl-header'>Your Playlists</div>
+      <div className="pl-header">Your Playlists</div>
 
       <div
-        className='create-pl'
+        className="create-pl"
         onClick={() => {
           setShowCreatePlaylist(true);
           document.getElementById("create-playlist").focus();
         }}
       >
-        <div className='create-logo'>
-          <img src='/svg/create.svg' alt='' />
+        <div className="create-logo">
+          <img src="/svg/create.svg" alt="" />
         </div>
-        <div className='create-text'>Create Playlist</div>
+        <div className="create-text">Create Playlist</div>
       </div>
 
       {/* Custom-built playlist by user */}
-      <div className='pl-section'>
+      <div className="pl-section">
         {yourPlaylists.map((pl) => (
           <PlaylistBlock
             pl={pl}
@@ -75,39 +75,39 @@ const PlaylistBlock = ({ pl, hasImageLink, deletable }) => {
   const { playlistID, playlistName, imageLink, musics } = pl;
 
   return (
-    <div className='pl-block'>
-      <Link to={`playlists/${playlistName}`}>
-        <div className='pl-image'>
+    <div className="pl-block">
+      <Link to={`${playlistName}`}>
+        <div className="pl-image">
           {hasImageLink ? (
             imageLink === "" ? (
-              <img src='/svg/omo-logo.svg' className='svg' alt='' />
+              <img src="/svg/omo-logo.svg" className="svg" alt="" />
             ) : (
-              <img src={imageLink} className='link' alt='' />
+              <img src={imageLink} className="link" alt="" />
             )
           ) : (
-            <img src='/svg/omo-logo.svg' className='svg' alt='' />
+            <img src="/svg/omo-logo.svg" className="svg" alt="" />
           )}
         </div>
 
-        <div className='pl-info'>
-          <div className='name'>{playlistName}</div>
-          <div className='song-len'>{musics.length} Songs</div>
+        <div className="pl-info">
+          <div className="name">{playlistName}</div>
+          <div className="song-len">{musics.length} Songs</div>
         </div>
       </Link>
 
       {deletable ? (
         <div
-          className='music-options-parent'
+          className="music-options-parent"
           onClick={() => {
             setPlaylistOptionsData(playlistID, playlistName, imageLink);
             setShowPlaylistOptions(true);
           }}
         >
-          <div className='music-options-button'>
+          <div className="music-options-button">
             <img
-              src='/svg/floating-icons/more.svg'
-              className='options'
-              alt=''
+              src="/svg/floating-icons/more.svg"
+              className="options"
+              alt=""
             />
           </div>
         </div>

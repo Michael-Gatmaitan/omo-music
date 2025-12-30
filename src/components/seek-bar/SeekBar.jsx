@@ -7,21 +7,32 @@ const SeekBar = ({ currentTime, duration }) => {
 
   useEffect(() => {
     const audioEl = document.getElementsByTagName("audio")[0];
+    if (!slider.current) return;
 
-    slider.current.addEventListener("change", (_) => {
+    const handleChange = (_) => {
       audioEl.currentTime = slider.current.value;
       updateCurrentTime(slider.current.value);
-    });
+    };
+
+    slider.current.addEventListener("change", handleChange);
+
+    return () => {
+      if (slider.current) {
+        slider.current.removeEventListener("change", handleChange);
+      }
+    };
   }, [slider, updateCurrentTime]);
 
-  useEffect(() => (slider.current.value = currentTime), [currentTime, slider]);
+  useEffect(() => {
+    slider.current.value = currentTime;
+  }, [currentTime, slider]);
 
   return (
     <input
-      type='range'
-      min='0'
+      type="range"
+      min="0"
       max={duration}
-      name='Audio-seekbar'
+      name="Audio-seekbar"
       ref={slider}
     />
   );
