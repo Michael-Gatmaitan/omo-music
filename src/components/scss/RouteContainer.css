@@ -42,7 +42,6 @@ a {
   display: flex;
   gap: 8px;
   padding: 8px 0;
-  margin-left: -10px;
   overflow-y: scroll;
 }
 .route-container .route-grid-container .route-grid-wrap .app-body .route-links .active-route {
