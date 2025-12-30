@@ -1,9 +1,8 @@
-import { Component, createContext } from 'react';
-import { allMusics, bodyData } from '../dataSource';
+import { Component, createContext } from "react";
+import { allMusics, bodyData } from "../dataSource";
 export const SearchContext = createContext();
 
 export default class SearchContextProvider extends Component {
-
   state = {
     searchValue: "",
     musicsResults: [],
@@ -13,15 +12,15 @@ export default class SearchContextProvider extends Component {
 
     isResultEmpty: false,
 
-    relatedArtist: []
+    relatedArtist: [],
   };
 
   emptyResults = () => {
     this.setState({ musicsResults: [] });
     this.setState({ artistsResults: [] });
-  }
+  };
 
-  performSearch = inpVal => {
+  performSearch = (inpVal) => {
     inpVal = inpVal.trim();
     this.setState({ searchValue: inpVal });
     if (inpVal === "" || inpVal <= 2) {
@@ -31,18 +30,22 @@ export default class SearchContextProvider extends Component {
       return;
     }
 
-    if(this.state.typingTimeout) clearTimeout(this.state.typingTimeout);
+    if (this.state.typingTimeout) clearTimeout(this.state.typingTimeout);
 
     // Function that fire after 1s of not typing
     const typingStoppedCallback = () => {
       console.log("User stopped typing, search performing...");
       let inpValLowerCase = inpVal.toLowerCase();
       // Search for Musics
-      const m = allMusics.filter(data => data.toLowerCase().slice(0, -4).includes(inpValLowerCase) === true);
+      const m = allMusics.filter((data) =>
+        data.toLowerCase().slice(0, -4).includes(inpValLowerCase),
+      );
       this.setState({ musicsResults: m });
 
       // Search for Artists
-      let a = bodyData.filter(data => data.artistName.toLowerCase().includes(inpValLowerCase));
+      let a = bodyData.filter((data) =>
+        data.artistName.toLowerCase().includes(inpValLowerCase),
+      );
       this.setState({ artistsResults: a });
 
       if (a.length === 0) {
@@ -61,34 +64,31 @@ export default class SearchContextProvider extends Component {
       // Results isn't empty
       if (m.length === 0 && a.length === 0)
         this.setState({ isResultEmpty: true });
-      else
-        this.setState({ isResultEmpty: false });
+      else this.setState({ isResultEmpty: false });
 
       // Set related artist if there is no artist fetched at song search : Sa susunod nalang haha
-    }
+    };
 
     this.setState({
-      typingTimeout: setTimeout(typingStoppedCallback, 1000)
+      typingTimeout: setTimeout(typingStoppedCallback, 1000),
     });
-
-  }
+  };
 
   render() {
-
     const searchEvents = {
       emptyResults: this.emptyResults,
-      performSearch: this.performSearch
+      performSearch: this.performSearch,
     };
 
     return (
       <SearchContext.Provider
         value={{
           ...this.state,
-          ...searchEvents
+          ...searchEvents,
         }}
       >
         {this.props.children}
       </SearchContext.Provider>
-    )
+    );
   }
 }
