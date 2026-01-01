@@ -36,35 +36,47 @@ export default class SearchContextProvider extends Component {
     const typingStoppedCallback = () => {
       console.log("User stopped typing, search performing...");
       let inpValLowerCase = inpVal.toLowerCase();
+
+      const start = Date.now();
       // Search for Musics
-      const m = allMusics.filter((data) =>
-        data.toLowerCase().slice(0, -4).includes(inpValLowerCase),
+      const searchedMusics = allMusics.filter((data) =>
+        data.toLowerCase().slice(0, -4).includes(inpValLowerCase)
       );
-      this.setState({ musicsResults: m });
+      this.setState({ musicsResults: searchedMusics });
 
       // Search for Artists
-      let a = bodyData.filter((data) =>
-        data.artistName.toLowerCase().includes(inpValLowerCase),
+      let searchedArtists = bodyData.filter((data) =>
+        data.artistName.toLowerCase().includes(inpValLowerCase)
       );
-      this.setState({ artistsResults: a });
+      this.setState({ artistsResults: searchedArtists });
 
-      if (a.length === 0) {
-        for (let i = 0; i < m.length; i++) {
-          let relatedArtist = m[i].slice(0, m[i].indexOf("-") - 1);
+      if (searchedArtists.length === 0) {
+        for (let i = 0; i < searchedMusics.length; i++) {
+          let relatedArtist = searchedMusics[i].slice(
+            0,
+            searchedMusics[i].indexOf("-") - 1
+          );
 
           for (let j = 0; j < bodyData.length; j++) {
             if (bodyData[j].artistName === relatedArtist) {
-              if (a.includes(bodyData[j])) continue;
-              a.push(bodyData[j]);
+              if (searchedArtists.includes(bodyData[j])) continue;
+              searchedArtists.push(bodyData[j]);
             }
           }
         }
-        this.setState({ artistsResults: a });
+        this.setState({ artistsResults: searchedArtists });
       }
+
+      const end = Date.now();
+      const diff = end - start;
+      console.log(
+        `Search timing - Start: ${start}ms, End: ${end}ms, Duration: ${diff}ms`
+      );
+
       // Results isn't empty
-      if (m.length === 0 && a.length === 0)
-        this.setState({ isResultEmpty: true });
-      else this.setState({ isResultEmpty: false });
+      const isResultsEmpty =
+        searchedMusics.length === 0 && searchedArtists.length === 0;
+      this.setState({ isResultsEmpty });
 
       // Set related artist if there is no artist fetched at song search : Sa susunod nalang haha
     };

@@ -8,7 +8,7 @@ const ArtistBlock = ({ data }) => (
       backgroundImage: `url("/artists-image/${data.path}.jpg")`,
     }}
   >
-    <Link to={`${data.path}`}>
+    <Link to={`/artists/${data.path}`}>
       <div className="dark-fade" />
 
       <div className="artist-info">

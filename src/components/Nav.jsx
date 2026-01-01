@@ -53,7 +53,7 @@ const SearchNavContent = () => {
   const { performSearch } = useContext(SearchContext);
 
   // const history = useHistory();
-  const navigate = useNavigation();
+  // const navigate = useNavigation();
 
   return (
     <React.Fragment>
